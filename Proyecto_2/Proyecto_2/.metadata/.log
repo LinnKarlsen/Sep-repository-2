@@ -2656,3 +2656,84 @@ Don't forget to modify blconfig.h to reflect the offset where your SREC image re
 
 !ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:01:47.752
 !MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-10-05 18:05:28.945
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: bootgen_files_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-10-05 18:05:28.946
+!MESSAGE Preference loaded using local preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-10-05 18:05:28.947
+!MESSAGE Workspace path used is: C:\Users\Karlsen\Sep-repository-2\Proyecto_2\Proyecto_2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:08:36.846
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss ], Thread: Worker-12: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:08:36.855
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-12: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:08:36.856
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Thread: Worker-12: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:08:36.862
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-12: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-10-05 18:08:36.863
+!MESSAGE Generating MD5 hash for file: C:\Users\Karlsen\Sep-repository-2\Proyecto_2\Proyecto_2\Proyecto_2_HW\export\Proyecto_2_HW\sw\Proyecto_2_HW\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:08:36.865
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Thread: Worker-12: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:08:36.870
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-12: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:21.407
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss ], Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:21.418
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:21.419
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:21.426
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-10-05 18:09:21.427
+!MESSAGE Generating MD5 hash for file: C:\Users\Karlsen\Sep-repository-2\Proyecto_2\Proyecto_2\Proyecto_2_HW\export\Proyecto_2_HW\sw\Proyecto_2_HW\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:21.429
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:21.433
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:45.662
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss ], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:45.670
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:45.671
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:45.678
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/hw/design_1_wrapper.xsa C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-10-05 18:09:45.679
+!MESSAGE Generating MD5 hash for file: C:\Users\Karlsen\Sep-repository-2\Proyecto_2\Proyecto_2\Proyecto_2_HW\export\Proyecto_2_HW\sw\Proyecto_2_HW\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:45.680
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-10-05 18:09:45.685
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/Karlsen/Sep-repository-2/Proyecto_2/Proyecto_2/Proyecto_2_HW/export/Proyecto_2_HW/sw/Proyecto_2_HW/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-3: Build Project
