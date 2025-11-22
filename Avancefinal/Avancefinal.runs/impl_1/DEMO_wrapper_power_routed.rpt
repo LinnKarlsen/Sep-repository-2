@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Mon Nov 10 00:41:10 2025
-| Host             : Armando running 64-bit major release  (build 9200)
+| Date             : Sat Nov 22 08:35:52 2025
+| Host             : TROND-ENVYX360 running 64-bit major release  (build 9200)
 | Command          : report_power -file DEMO_wrapper_power_routed.rpt -pb DEMO_wrapper_power_summary_routed.pb -rpx DEMO_wrapper_power_routed.rpx
 | Design           : DEMO_wrapper
 | Device           : xc7z010clg400-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.754        |
+| Total On-Chip Power (W)  | 1.753        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.628        |
+| Dynamic (W)              | 1.627        |
 | Device Static (W)        | 0.126        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 64.8         |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.054 |        5 |       --- |             --- |
-| Slice Logic              |     0.056 |    33718 |       --- |             --- |
-|   LUT as Logic           |     0.049 |    12852 |     17600 |           73.02 |
-|   CARRY4                 |     0.003 |      965 |      4400 |           21.93 |
-|   Register               |     0.002 |    14004 |     35200 |           39.78 |
+| Clocks                   |     0.053 |        5 |       --- |             --- |
+| Slice Logic              |     0.056 |    34434 |       --- |             --- |
+|   LUT as Logic           |     0.049 |    13190 |     17600 |           74.94 |
+|   CARRY4                 |     0.003 |     1013 |      4400 |           23.02 |
+|   Register               |     0.002 |    14235 |     35200 |           40.44 |
 |   LUT as Distributed RAM |    <0.001 |      953 |      6000 |           15.88 |
-|   F7/F8 Muxes            |    <0.001 |      225 |     17600 |            1.28 |
 |   LUT as Shift Register  |    <0.001 |      307 |      6000 |            5.12 |
-|   Others                 |     0.000 |     1083 |       --- |             --- |
-| Signals                  |     0.073 |    25092 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |      225 |     17600 |            1.28 |
+|   Others                 |     0.000 |     1131 |       --- |             --- |
+| Signals                  |     0.073 |    25488 |       --- |             --- |
 | Block RAM                |     0.036 |      9.5 |        60 |           15.83 |
 | DSPs                     |     0.000 |        3 |        80 |            3.75 |
 | I/O                      |     0.010 |       18 |       100 |           18.00 |
 | PS7                      |     1.400 |        1 |       --- |             --- |
 | Static Power             |     0.126 |          |           |                 |
-| Total                    |     1.754 |          |           |                 |
+| Total                    |     1.753 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.223 |       0.216 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.223 |       0.215 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.009 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -155,7 +155,7 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| DEMO_wrapper               |     1.628 |
+| DEMO_wrapper               |     1.627 |
 |   DEMO_i                   |     1.615 |
 |     BuzzerBooster_Driver_0 |     0.023 |
 |       U0                   |     0.023 |
@@ -167,24 +167,26 @@ Table of Contents
 |       U0                   |     0.004 |
 |     axi_smc                |     0.006 |
 |       inst                 |     0.006 |
-|     axi_smc_1              |     0.016 |
-|       inst                 |     0.016 |
+|     axi_smc_1              |     0.015 |
+|       inst                 |     0.015 |
 |     axi_timer_0            |     0.003 |
 |       U0                   |     0.003 |
 |     axi_timer_1            |     0.003 |
 |       U0                   |     0.003 |
+|     axi_timer_2            |     0.003 |
+|       U0                   |     0.003 |
 |     axi_traffic_gen_0      |     0.002 |
 |       inst                 |     0.002 |
-|     axi_traffic_gen_1      |     0.075 |
-|       inst                 |     0.075 |
+|     axi_traffic_gen_1      |     0.074 |
+|       inst                 |     0.074 |
 |     ila_0                  |     0.007 |
 |       U0                   |     0.007 |
 |     processing_system7_0   |     1.401 |
 |       inst                 |     1.401 |
-|     ps7_0_axi_periph       |     0.005 |
-|       s00_couplers         |     0.004 |
-|     rgb_rainbow_0          |     0.061 |
-|       U0                   |     0.061 |
+|     ps7_0_axi_periph       |     0.004 |
+|       s00_couplers         |     0.003 |
+|     rgb_rainbow_0          |     0.060 |
+|       U0                   |     0.060 |
 |     vio_0                  |     0.001 |
 |       inst                 |     0.001 |
 |     vio_1                  |     0.001 |

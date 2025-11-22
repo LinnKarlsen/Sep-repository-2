@@ -31,6 +31,8 @@ vlib questa_lib/msim/smartconnect_v1_0
 vlib questa_lib/msim/axi_timer_v2_0_23
 vlib questa_lib/msim/xlconcat_v2_1_3
 vlib questa_lib/msim/axi_protocol_converter_v2_1_21
+vlib questa_lib/msim/util_vector_logic_v2_0_1
+vlib questa_lib/msim/util_reduced_logic_v2_0_4
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
 vmap xpm questa_lib/msim/xpm
@@ -62,6 +64,8 @@ vmap smartconnect_v1_0 questa_lib/msim/smartconnect_v1_0
 vmap axi_timer_v2_0_23 questa_lib/msim/axi_timer_v2_0_23
 vmap xlconcat_v2_1_3 questa_lib/msim/xlconcat_v2_1_3
 vmap axi_protocol_converter_v2_1_21 questa_lib/msim/axi_protocol_converter_v2_1_21
+vmap util_vector_logic_v2_0_1 questa_lib/msim/util_vector_logic_v2_0_1
+vmap util_reduced_logic_v2_0_4 questa_lib/msim/util_reduced_logic_v2_0_4
 
 vlog -work xilinx_vip  -sv -L axi_vip_v1_1_7 -L smartconnect_v1_0 -L processing_system7_vip_v1_0_9 -L xilinx_vip "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "C:/Xilinx/Vivado/2020.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -285,8 +289,6 @@ vcom -work xil_defaultlib  -93 \
 "../../../bd/DEMO/ip/DEMO_ila_0_0/sim/DEMO_ila_0_0.vhd" \
 "../../../bd/DEMO/ipshared/84ec/Debouncer.vhd" \
 "../../../bd/DEMO/ip/DEMO_debouncer_0_0/sim/DEMO_debouncer_0_0.vhd" \
-"../../../bd/DEMO/ipshared/f1fe/src/state_machine.vhd" \
-"../../../bd/DEMO/ip/DEMO_state_machine_0_1/sim/DEMO_state_machine_0_1.vhd" \
 
 vcom -work axi_timer_v2_0_23  -93 \
 "../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/eb71/hdl/axi_timer_v2_0_vh_rfs.vhd" \
@@ -306,12 +308,30 @@ vcom -work xil_defaultlib  -93 \
 "../../../bd/DEMO/ipshared/fd3b/src/BuzzerBooster_Driver_v1_0_S00_AXI.vhd" \
 "../../../bd/DEMO/ipshared/fd3b/src/BuzzerBooster_Driver_v1_0.vhd" \
 "../../../bd/DEMO/ip/DEMO_BuzzerBooster_Driver_0_1/sim/DEMO_BuzzerBooster_Driver_0_1.vhd" \
+"../../../bd/DEMO/ip/DEMO_axi_timer_2_0/sim/DEMO_axi_timer_2_0.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_21  "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/ec67/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/6b56/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/src/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/2702/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4676/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1b7e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/122e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/46fd/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/b205/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib  "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/ec67/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/6b56/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/src/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/2702/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4676/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1b7e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/122e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/46fd/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/b205/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
 "../../../bd/DEMO/ip/DEMO_auto_pc_0/sim/DEMO_auto_pc_0.v" \
+
+vcom -work xil_defaultlib  -93 \
+"../../../bd/DEMO/ipshared/afa6/src/state_machine.vhd" \
+"../../../bd/DEMO/ip/DEMO_state_machine_0_2/sim/DEMO_state_machine_0_2.vhd" \
+
+vlog -work util_vector_logic_v2_0_1  "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/ec67/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/6b56/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/src/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/2702/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4676/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1b7e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/122e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/46fd/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/b205/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/2137/hdl/util_vector_logic_v2_0_vl_rfs.v" \
+
+vlog -work xil_defaultlib  "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/ec67/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/6b56/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/src/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/2702/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4676/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1b7e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/122e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/46fd/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/b205/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../bd/DEMO/ip/DEMO_util_vector_logic_1_0/sim/DEMO_util_vector_logic_1_0.v" \
+
+vlog -work util_reduced_logic_v2_0_4  "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/ec67/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/6b56/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/src/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/2702/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4676/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1b7e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/122e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/46fd/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/b205/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4c94/hdl/util_reduced_logic_v2_0_vl_rfs.v" \
+
+vlog -work xil_defaultlib  "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/ec67/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/6b56/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/src/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/2702/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4676/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1b7e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/122e/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/46fd/hdl" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/b205/hdl/verilog" "+incdir+../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../bd/DEMO/ip/DEMO_util_reduced_logic_0_1/sim/DEMO_util_reduced_logic_0_1.v" \
+"../../../bd/DEMO/ip/DEMO_xlconstant_0_0/sim/DEMO_xlconstant_0_0.v" \
 
 vcom -work xil_defaultlib  -93 \
 "../../../bd/DEMO/sim/DEMO.vhd" \

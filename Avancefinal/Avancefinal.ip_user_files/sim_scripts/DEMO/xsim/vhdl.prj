@@ -18,14 +18,15 @@ vhdl xil_defaultlib  \
 "../../../bd/DEMO/ip/DEMO_ila_0_0/sim/DEMO_ila_0_0.vhd" \
 "../../../bd/DEMO/ipshared/84ec/Debouncer.vhd" \
 "../../../bd/DEMO/ip/DEMO_debouncer_0_0/sim/DEMO_debouncer_0_0.vhd" \
-"../../../bd/DEMO/ipshared/f1fe/src/state_machine.vhd" \
-"../../../bd/DEMO/ip/DEMO_state_machine_0_1/sim/DEMO_state_machine_0_1.vhd" \
 "../../../bd/DEMO/ip/DEMO_axi_timer_0_0/sim/DEMO_axi_timer_0_0.vhd" \
 "../../../bd/DEMO/ip/DEMO_axi_timer_1_0/sim/DEMO_axi_timer_1_0.vhd" \
 "../../../bd/DEMO/ip/DEMO_axi_gpio_1_0/sim/DEMO_axi_gpio_1_0.vhd" \
 "../../../bd/DEMO/ipshared/fd3b/src/BuzzerBooster_Driver_v1_0_S00_AXI.vhd" \
 "../../../bd/DEMO/ipshared/fd3b/src/BuzzerBooster_Driver_v1_0.vhd" \
 "../../../bd/DEMO/ip/DEMO_BuzzerBooster_Driver_0_1/sim/DEMO_BuzzerBooster_Driver_0_1.vhd" \
+"../../../bd/DEMO/ip/DEMO_axi_timer_2_0/sim/DEMO_axi_timer_2_0.vhd" \
+"../../../bd/DEMO/ipshared/afa6/src/state_machine.vhd" \
+"../../../bd/DEMO/ip/DEMO_state_machine_0_2/sim/DEMO_state_machine_0_2.vhd" \
 "../../../bd/DEMO/sim/DEMO.vhd" \
 
 nosort

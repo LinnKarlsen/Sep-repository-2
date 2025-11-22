@@ -220,8 +220,6 @@
   "../../../bd/DEMO/ip/DEMO_ila_0_0/sim/DEMO_ila_0_0.vhd" \
   "../../../bd/DEMO/ipshared/84ec/Debouncer.vhd" \
   "../../../bd/DEMO/ip/DEMO_debouncer_0_0/sim/DEMO_debouncer_0_0.vhd" \
-  "../../../bd/DEMO/ipshared/f1fe/src/state_machine.vhd" \
-  "../../../bd/DEMO/ip/DEMO_state_machine_0_1/sim/DEMO_state_machine_0_1.vhd" \
 -endlib
 -makelib ies_lib/axi_timer_v2_0_23 \
   "../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/eb71/hdl/axi_timer_v2_0_vh_rfs.vhd" \
@@ -241,12 +239,30 @@
   "../../../bd/DEMO/ipshared/fd3b/src/BuzzerBooster_Driver_v1_0_S00_AXI.vhd" \
   "../../../bd/DEMO/ipshared/fd3b/src/BuzzerBooster_Driver_v1_0.vhd" \
   "../../../bd/DEMO/ip/DEMO_BuzzerBooster_Driver_0_1/sim/DEMO_BuzzerBooster_Driver_0_1.vhd" \
+  "../../../bd/DEMO/ip/DEMO_axi_timer_2_0/sim/DEMO_axi_timer_2_0.vhd" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_21 \
   "../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/DEMO/ip/DEMO_auto_pc_0/sim/DEMO_auto_pc_0.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/DEMO/ipshared/afa6/src/state_machine.vhd" \
+  "../../../bd/DEMO/ip/DEMO_state_machine_0_2/sim/DEMO_state_machine_0_2.vhd" \
+-endlib
+-makelib ies_lib/util_vector_logic_v2_0_1 \
+  "../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/2137/hdl/util_vector_logic_v2_0_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/DEMO/ip/DEMO_util_vector_logic_1_0/sim/DEMO_util_vector_logic_1_0.v" \
+-endlib
+-makelib ies_lib/util_reduced_logic_v2_0_4 \
+  "../../../../Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4c94/hdl/util_reduced_logic_v2_0_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/DEMO/ip/DEMO_util_reduced_logic_0_1/sim/DEMO_util_reduced_logic_0_1.v" \
+  "../../../bd/DEMO/ip/DEMO_xlconstant_0_0/sim/DEMO_xlconstant_0_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/DEMO/sim/DEMO.vhd" \

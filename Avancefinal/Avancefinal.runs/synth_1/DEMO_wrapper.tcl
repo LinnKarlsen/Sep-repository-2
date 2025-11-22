@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.runs/synth_1/DEMO_wrapper.tcl"
+  variable script "C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/DEMO_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -78,82 +77,86 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.cache/wt [current_project]
-set_property parent.project_path C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.cache/wt [current_project]
+set_property parent.project_path C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_repo_paths {
-  c:/Users/fuent/Desktop/Sep-repository-2-main/Sep-repository-2-main/IPCores
-  c:/Users/fuent/Desktop/Avancesemanal/Buzzer_repo
-  c:/Users/fuent/Desktop/Sep-repository-2-main/Sep-repository-2-main/ip_repo
+  c:/Users/linnh/Sep-repository-2-main/Sep-repository-2-main/IPCores
+  c:/Users/linnh/Sep-repository-2/IPCores
+  c:/Users/linnh/Sep-repository-2/ip_repo
+  c:/Users/linnh/Sep-repository-2/Buzzer_repo
+  c:/Users/linnh/Sep-repository-2-main/Sep-repository-2-main/ip_repo
 } [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.cache/ip [current_project]
+set_property ip_output_repo c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/imports/COE1/data.coe
-add_files C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/imports/COE1/addr.coe
-add_files C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/imports/COE1/mask.coe
-add_files C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/imports/COE1/ctrl.coe
-read_vhdl -library xil_defaultlib C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
-add_files C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/DEMO.bd
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_processing_system7_0_0/DEMO_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/DEMO_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/DEMO_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/DEMO_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_ps7_0_50M_0/DEMO_rst_ps7_0_50M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_ps7_0_50M_0/DEMO_rst_ps7_0_50M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_iic_0_1/DEMO_axi_iic_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_iic_0_1/DEMO_axi_iic_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_traffic_gen_1_0/DEMO_axi_traffic_gen_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_0_0/DEMO_vio_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_1/bd_2e8b_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_1/bd_2e8b_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_5/bd_2e8b_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_6/bd_2e8b_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_7/bd_2e8b_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_8/bd_2e8b_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_9/bd_2e8b_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_10/bd_2e8b_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_11/bd_2e8b_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_clk_125M_2/DEMO_rst_clk_125M_2_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_clk_125M_2/DEMO_rst_clk_125M_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_1/bd_088f_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_1/bd_088f_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_5/bd_088f_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_6/bd_088f_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_7/bd_088f_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_8/bd_088f_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_9/bd_088f_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_10/bd_088f_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_11/bd_088f_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_1_0/DEMO_vio_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_2_0/DEMO_vio_2_0.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_1_0/DEMO_axi_timer_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_1_0/DEMO_axi_timer_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/DEMO_axi_gpio_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/DEMO_axi_gpio_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/DEMO_axi_gpio_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/DEMO_ooc.xdc]
+add_files C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/imports/COE1/data.coe
+add_files C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/imports/COE1/addr.coe
+add_files C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/imports/COE1/mask.coe
+add_files C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/imports/COE1/ctrl.coe
+read_vhdl -library xil_defaultlib C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd
+add_files C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/DEMO.bd
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_processing_system7_0_0/DEMO_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/DEMO_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/DEMO_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/DEMO_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_ps7_0_50M_0/DEMO_rst_ps7_0_50M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_ps7_0_50M_0/DEMO_rst_ps7_0_50M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_iic_0_1/DEMO_axi_iic_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_iic_0_1/DEMO_axi_iic_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_traffic_gen_1_0/DEMO_axi_traffic_gen_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_0_0/DEMO_vio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_1/bd_2e8b_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_1/bd_2e8b_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_5/bd_2e8b_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_6/bd_2e8b_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_7/bd_2e8b_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_8/bd_2e8b_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_9/bd_2e8b_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_10/bd_2e8b_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/ip/ip_11/bd_2e8b_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_clk_125M_2/DEMO_rst_clk_125M_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_clk_125M_2/DEMO_rst_clk_125M_2.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_1/bd_088f_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_1/bd_088f_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_5/bd_088f_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_6/bd_088f_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_7/bd_088f_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_8/bd_088f_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_9/bd_088f_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_10/bd_088f_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_11/bd_088f_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_1_0/DEMO_vio_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_2_0/DEMO_vio_2_0.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_1_0/DEMO_axi_timer_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_1_0/DEMO_axi_timer_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/DEMO_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/DEMO_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/DEMO_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_2_0/DEMO_axi_timer_2_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_2_0/DEMO_axi_timer_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/DEMO_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -164,8 +167,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/fuent/Desktop/Avancesemanal/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc]
+read_xdc C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
