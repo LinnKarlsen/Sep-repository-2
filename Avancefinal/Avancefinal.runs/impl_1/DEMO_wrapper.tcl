@@ -131,11 +131,11 @@ OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.cache/wt [current_project]
   set_property parent.project_path C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.xpr [current_project]
   set_property ip_repo_paths {
-  c:/Users/linnh/Sep-repository-2-main/Sep-repository-2-main/IPCores
-  c:/Users/linnh/Sep-repository-2/IPCores
+  C:/Users/linnh/Sep-repository-2-main/Sep-repository-2-main/IPCores
+  C:/Users/linnh/Sep-repository-2/IPCores
   C:/Users/linnh/Sep-repository-2/ip_repo
-  c:/Users/linnh/Sep-repository-2/Buzzer_repo
-  c:/Users/linnh/Sep-repository-2-main/Sep-repository-2-main/ip_repo
+  C:/Users/linnh/Sep-repository-2/Buzzer_repo
+  C:/Users/linnh/Sep-repository-2-main/Sep-repository-2-main/ip_repo
 } [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.cache/ip [current_project]

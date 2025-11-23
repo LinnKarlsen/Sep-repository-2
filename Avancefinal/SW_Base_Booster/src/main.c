@@ -34,11 +34,14 @@ extern const unsigned char font[];
 #define TIMER_INTR_ID_GRAPHICS   XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
 #define TIMER_DEVICE_ID_MEASURE  XPAR_AXI_TIMER_2_DEVICE_ID
 #define TIMER_INTR_ID_MEASURE    XPAR_FABRIC_AXI_TIMER_2_INTERRUPT_INTR
+#define TIMER_DEVICE_ID_LTMEASURE  XPAR_AXI_TIMER_3_DEVICE_ID
+#define TIMER_INTR_ID_LTMEASURE    XPAR_FABRIC_AXI_TIMER_3_INTERRUPT_INTR
 #define INTC_DEVICE_ID           XPAR_SCUGIC_SINGLE_DEVICE_ID
 
 // Timer instances
 XTmrCtr TimerInstanceGraphics;  // Para los gráficos
 XTmrCtr TimerInstanceMeasure;   // Para las mediciones
+XTmrCtr TimerInstanceLTMeasure;   // Para las mediciones
 XScuGic InterruptController;
 
 // External melody variables (from sound.c)
@@ -50,6 +53,8 @@ void Graphics_Timer_Interrupt_Handler(void *CallBackRef);
 extern volatile int graphics_update_needed;
 void Measure_Timer_Interrupt_Handler(void *CallBackRef);
 extern volatile int measure_update_needed;
+void LTMeasure_Timer_Interrupt_Handler(void *CallBackRef);
+extern volatile int LTmeasure_update_needed;
 
 // ==================== LCD and Sensor Config ====================
 #define BACKGROUND  WHITE
@@ -98,8 +103,6 @@ int main() {
     LCD_Init(LCD_ScanDir);
     LCD_Clear(GUI_BACKGROUND);
     GUI_INTRO();
-    delay_ms(500);
-    LCD_Clear(GUI_BACKGROUND);
 
     xil_printf("LCD Ready\r\n");
 
@@ -132,6 +135,8 @@ int main() {
 
     // -------------------- AUDIO INITIALIZATION --------------------
 
+	xil_printf("Initiating Audio Timer...\r\n");
+
     // Initialize the sound timer
     Status = Sound_Initialize_Timer(TIMER_DEVICE_ID_SOUND);
     if (Status != XST_SUCCESS) {
@@ -147,6 +152,8 @@ int main() {
 	}
 
     // -------------------- GRAPHICS INITIALIZATION --------------------
+
+	xil_printf("Initiating Graphics Timer...\r\n");
 
     // Initialize the graphics timer
     Status = XTmrCtr_Initialize(&TimerInstanceGraphics, TIMER_DEVICE_ID_GRAPHICS);
@@ -176,6 +183,8 @@ int main() {
 
     // -------------------- MEASURE INITIALIZATION --------------------
 
+    xil_printf("Initiating Measure Timer...\r\n");
+
     // Initialize the measure timer
 	Status = XTmrCtr_Initialize(&TimerInstanceMeasure, TIMER_DEVICE_ID_MEASURE);
 	if (Status != XST_SUCCESS) {
@@ -183,14 +192,18 @@ int main() {
 		return XST_FAILURE;
 	}
 
-    // Configure graphics timer options
+    // Configure measure timer options
     XTmrCtr_SetOptions(&TimerInstanceMeasure, 0,
                        XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
 
-    // Set graphics timer period (e.g., 50ms for 20Hz refresh)
-    XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0, 5000000);
+    // Set measure timer period (e.g., 50ms for 20Hz refresh)
+    XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0, 1000000);
+    //u32 period = 50000000;
+    //XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0,
+	//					  0xFFFFFFFF - period);
 
-    // Set up graphics timer interrupt
+
+    // Set up measure timer interrupt
     Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_MEASURE,
                             (Xil_InterruptHandler)Measure_Timer_Interrupt_Handler,
                             (void *)&TimerInstanceMeasure);
@@ -199,21 +212,56 @@ int main() {
         return XST_FAILURE;
     }
 
-    // Enable graphics timer interrupt in the controller
+    // Enable measure timer interrupt in the controller
     XScuGic_Enable(&InterruptController, TIMER_INTR_ID_MEASURE);
+
+    // -------------------- LIGHT-TEMPERATURE MEASURE INITIALIZATION --------------------
+
+    xil_printf("Initiating Light-Temperature Timer...\r\n");
+
+	// Initialize the measure timer
+	Status = XTmrCtr_Initialize(&TimerInstanceLTMeasure, TIMER_DEVICE_ID_LTMEASURE);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Failed to initialize light-temperature measure timer\r\n");
+		return XST_FAILURE;
+	}
+
+	// Configure measure timer options
+	XTmrCtr_SetOptions(&TimerInstanceLTMeasure, 0,
+					   XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+
+	// Set measure timer period (e.g., 50ms for 20Hz refresh)
+	XTmrCtr_SetResetValue(&TimerInstanceLTMeasure, 0, 50000000);
+
+	// Set up measure timer interrupt
+	Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_LTMEASURE,
+							(Xil_InterruptHandler)LTMeasure_Timer_Interrupt_Handler,
+							(void *)&TimerInstanceLTMeasure);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Failed to connect measure light-temperature timer interrupt\r\n");
+		return XST_FAILURE;
+	}
+
+	// Enable measure timer interrupt in the controller
+	XScuGic_Enable(&InterruptController, TIMER_INTR_ID_LTMEASURE);
+
+	// -------------------- CLEAR EN PANTALLA --------------------
+
+	LCD_Clear(GUI_BACKGROUND);
 
     // -------------------- START TIMERS --------------------
 
     // Start both timers
     XTmrCtr_Start(&TimerInstanceGraphics, 0);
     XTmrCtr_Start(&TimerInstanceMeasure, 0);
+    XTmrCtr_Start(&TimerInstanceLTMeasure, 0);
 
-    xil_printf("Audio and Graphics System Initialized. Preparing to play melody...\r\n");
+    xil_printf("Graphics and Measurement Systems Initialized. Preparing to play melody...\r\n");
 
     // -------------------- START MELODY --------------------
 
     // Initialize the melody
-    initialize_melody(available_melodies[2], melody, &melody_length);
+    initialize_melody(available_melodies[1], melody, &melody_length);
 
     // Start playing the melody
     current_note = 0;
@@ -221,15 +269,32 @@ int main() {
 
     xil_printf("Melody playback started...\r\n");
 
+    // -------------------- GIC PRIORITY SETUP --------------------
+
+    // Highest priority: LTMEASURE
+    XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_LTMEASURE, 0x10, 0x3);
+
+    // Medium: MEASURE
+    XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_MEASURE, 0x40, 0x3);
+
+    // Low: GRAPHICS
+    XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
+
     // -------------------- MAIN CODE BLOCK --------------------
 
     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
 
+    int joyx_val, joyy_val, acx_val, acy_val;
+    int pot1_val, pot2_val, mic_val;
+    int tmp_val = 0;
+	int opt_val = 0;
+
     while (1) {
 
     	if(measure_update_needed)
     		{
+
     			// Clear old values
 				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
@@ -242,15 +307,26 @@ int main() {
 				GUI_DisString_EN(95,100,mic,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 
 				// Read sensors
-				sprintf(joyx, "%d", read_joyx());
-				sprintf(joyy, "%d", read_joyy());
-				sprintf(tmp, "%d", read_tmp());
-				sprintf(opt, "%d", read_opt());
-				sprintf(pot1, "%d", read_POT1());
-				sprintf(pot2, "%d", read_POT2());
-				sprintf(acx, "%d", read_acx());
-				sprintf(acy, "%d", read_acy());
-				sprintf(mic, "%d", read_MIC());
+				joyx_val = read_joyx();
+				joyy_val = read_joyy();
+				//tmp_val = read_tmp();
+				//opt_val = read_opt();
+				pot1_val = read_POT1();
+				pot2_val = read_POT2();
+				acx_val = read_acx();
+				acy_val = read_acy();
+				mic_val = read_MIC();
+
+				// Store as char
+				sprintf(joyx, "%d", joyx_val);
+				sprintf(joyy, "%d", joyy_val);
+				sprintf(tmp, "%d", tmp_val);
+				sprintf(opt, "%d", opt_val);
+				sprintf(pot1, "%d", pot1_val);
+				sprintf(pot2, "%d", pot2_val);
+				sprintf(acx, "%d", acx_val);
+				sprintf(acy, "%d", acy_val);
+				sprintf(mic, "%d", mic_val);
 
 				// Display values
 				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
@@ -267,7 +343,20 @@ int main() {
 				//xil_printf("JX:%d JY:%d ACX:%d ACY:%d MIC:%d POT1:%d POT2:%d TMP:%d LUZ:%d\r\n",
 				//           read_joyx(), read_joyy(), read_acx(), read_acy(),
 				//           read_MIC(), read_POT1(), read_POT2(), read_tmp(), read_opt());
+
+				measure_update_needed = 0;
     		}
+
+    	if(LTmeasure_update_needed)
+    	{
+    		tmp_val = read_tmp();
+    		opt_val = read_opt();
+
+    		xil_printf("TEMPERATURA: %d\n", tmp_val);
+			xil_printf("LUZ: %d\n\n", opt_val);
+
+			LTmeasure_update_needed = 0;
+    	}
 
     }
 
@@ -305,4 +394,20 @@ void Measure_Timer_Interrupt_Handler(void *CallBackRef)
 
     // Set the flag to indicate that graphics update is needed
     measure_update_needed = 1;
+}
+
+// Variable global para control de actualización de mediciones
+volatile int LTmeasure_update_needed = 0;
+
+// Graphics Timer Interrupt Handler
+void LTMeasure_Timer_Interrupt_Handler(void *CallBackRef)
+{
+    XTmrCtr *InstancePtr = (XTmrCtr *)CallBackRef;
+
+    // Clear the interrupt
+    u32 ControlStatusReg = XTmrCtr_GetControlStatusReg(InstancePtr->BaseAddress, 0);
+    XTmrCtr_SetControlStatusReg(InstancePtr->BaseAddress, 0, ControlStatusReg);
+
+    // Set the flag to indicate that graphics update is needed
+    LTmeasure_update_needed = 1;
 }

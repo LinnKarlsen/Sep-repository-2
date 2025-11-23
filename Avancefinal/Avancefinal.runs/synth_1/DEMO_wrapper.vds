@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sat Nov 22 08:13:36 2025
-# Process ID: 17644
+# Start of session at: Sat Nov 22 20:48:22 2025
+# Process ID: 3696
 # Current directory: C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1
 # Command line: vivado.exe -log DEMO_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DEMO_wrapper.tcl
 # Log file: C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/DEMO_wrapper.vds
@@ -19,7 +19,7 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/linnh/Sep-repository
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/linnh/Sep-repository-2-main/Sep-repository-2-main/ip_repo'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
-add_files: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1062.137 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1062.254 ; gain = 0.000
 Command: synth_design -top DEMO_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
@@ -27,16 +27,16 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24912
+INFO: [Synth 8-7075] Helper process launched with PID 38448
 WARNING: [Synth 8-2507] parameter declaration becomes local in axi_traffic_gen_v3_0_7_systeminit_dmg with formal parameter declaration list [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13766]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 1088.629 ; gain = 26.492
+Starting RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1091.000 ; gain = 28.746
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2048] function gpo_bit_used does not always return a value [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/d1e4/hdl/axi_iic_v2_0_vh_rfs.vhd:1147]
 INFO: [Synth 8-638] synthesizing module 'DEMO_wrapper' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd:58]
-INFO: [Synth 8-3491] module 'DEMO' declared at 'C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:2706' bound to instance 'DEMO_i' of component 'DEMO' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd:142]
-INFO: [Synth 8-638] synthesizing module 'DEMO' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:2766]
-INFO: [Synth 8-3491] module 'DEMO_BuzzerBooster_Driver_0_1' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_BuzzerBooster_Driver_0_1/synth/DEMO_BuzzerBooster_Driver_0_1.vhd:56' bound to instance 'BuzzerBooster_Driver_0' of component 'DEMO_BuzzerBooster_Driver_0_1' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4013]
+INFO: [Synth 8-3491] module 'DEMO' declared at 'C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:2935' bound to instance 'DEMO_i' of component 'DEMO' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'DEMO' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:2995]
+INFO: [Synth 8-3491] module 'DEMO_BuzzerBooster_Driver_0_1' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_BuzzerBooster_Driver_0_1/synth/DEMO_BuzzerBooster_Driver_0_1.vhd:56' bound to instance 'BuzzerBooster_Driver_0' of component 'DEMO_BuzzerBooster_Driver_0_1' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4294]
 INFO: [Synth 8-638] synthesizing module 'DEMO_BuzzerBooster_Driver_0_1' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_BuzzerBooster_Driver_0_1/synth/DEMO_BuzzerBooster_Driver_0_1.vhd:84]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
@@ -55,7 +55,7 @@ INFO: [Synth 8-226] default block is never used [c:/Users/linnh/Sep-repository-2
 INFO: [Synth 8-256] done synthesizing module 'BuzzerBooster_Driver_v1_0_S00_AXI' (1#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/fd3b/src/BuzzerBooster_Driver_v1_0_S00_AXI.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'BuzzerBooster_Driver_v1_0' (2#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/fd3b/src/BuzzerBooster_Driver_v1_0.vhd:50]
 INFO: [Synth 8-256] done synthesizing module 'DEMO_BuzzerBooster_Driver_0_1' (3#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_BuzzerBooster_Driver_0_1/synth/DEMO_BuzzerBooster_Driver_0_1.vhd:84]
-INFO: [Synth 8-3491] module 'DEMO_axi_gpio_0_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/synth/DEMO_axi_gpio_0_0.vhd:59' bound to instance 'axi_gpio_0' of component 'DEMO_axi_gpio_0_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4039]
+INFO: [Synth 8-3491] module 'DEMO_axi_gpio_0_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/synth/DEMO_axi_gpio_0_0.vhd:59' bound to instance 'axi_gpio_0' of component 'DEMO_axi_gpio_0_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4320]
 INFO: [Synth 8-638] synthesizing module 'DEMO_axi_gpio_0_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/synth/DEMO_axi_gpio_0_0.vhd:85]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -182,7 +182,7 @@ INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (8#1) [c:/Users/linnh/Se
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (9#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/bb35/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (10#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/bb35/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
 INFO: [Synth 8-256] done synthesizing module 'DEMO_axi_gpio_0_0' (11#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_0_0/synth/DEMO_axi_gpio_0_0.vhd:85]
-INFO: [Synth 8-3491] module 'DEMO_axi_gpio_1_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/synth/DEMO_axi_gpio_1_0.vhd:59' bound to instance 'axi_gpio_1' of component 'DEMO_axi_gpio_1_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4063]
+INFO: [Synth 8-3491] module 'DEMO_axi_gpio_1_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/synth/DEMO_axi_gpio_1_0.vhd:59' bound to instance 'axi_gpio_1' of component 'DEMO_axi_gpio_1_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4344]
 INFO: [Synth 8-638] synthesizing module 'DEMO_axi_gpio_1_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/synth/DEMO_axi_gpio_1_0.vhd:85]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -381,7 +381,7 @@ INFO: [Synth 8-226] default block is never used [c:/Users/linnh/Sep-repository-2
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized0' (12#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/bb35/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized1' (12#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/bb35/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
 INFO: [Synth 8-256] done synthesizing module 'DEMO_axi_gpio_1_0' (13#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/synth/DEMO_axi_gpio_1_0.vhd:85]
-INFO: [Synth 8-3491] module 'DEMO_axi_iic_0_1' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_iic_0_1/synth/DEMO_axi_iic_0_1.vhd:59' bound to instance 'axi_iic_0' of component 'DEMO_axi_iic_0_1' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4087]
+INFO: [Synth 8-3491] module 'DEMO_axi_iic_0_1' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_iic_0_1/synth/DEMO_axi_iic_0_1.vhd:59' bound to instance 'axi_iic_0' of component 'DEMO_axi_iic_0_1' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4368]
 INFO: [Synth 8-638] synthesizing module 'DEMO_axi_iic_0_1' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_iic_0_1/synth/DEMO_axi_iic_0_1.vhd:91]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -766,7 +766,7 @@ INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO__parameterized0' (28#1) [
 INFO: [Synth 8-256] done synthesizing module 'iic' (29#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/d1e4/hdl/axi_iic_v2_0_vh_rfs.vhd:6210]
 INFO: [Synth 8-256] done synthesizing module 'axi_iic' (30#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/d1e4/hdl/axi_iic_v2_0_vh_rfs.vhd:6901]
 INFO: [Synth 8-256] done synthesizing module 'DEMO_axi_iic_0_1' (31#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_iic_0_1/synth/DEMO_axi_iic_0_1.vhd:91]
-INFO: [Synth 8-3491] module 'DEMO_axi_quad_spi_0_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/synth/DEMO_axi_quad_spi_0_0.vhd:59' bound to instance 'axi_quad_spi_0' of component 'DEMO_axi_quad_spi_0_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4117]
+INFO: [Synth 8-3491] module 'DEMO_axi_quad_spi_0_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/synth/DEMO_axi_quad_spi_0_0.vhd:59' bound to instance 'axi_quad_spi_0' of component 'DEMO_axi_quad_spi_0_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4398]
 INFO: [Synth 8-638] synthesizing module 'DEMO_axi_quad_spi_0_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/synth/DEMO_axi_quad_spi_0_0.vhd:97]
 	Parameter Async_Clk bound to: 0 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -1713,7 +1713,7 @@ INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (51#1) [c:/Us
 INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (52#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1735/hdl/axi_quad_spi_v3_2_rfs.vhd:34961]
 INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (53#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1735/hdl/axi_quad_spi_v3_2_rfs.vhd:36700]
 INFO: [Synth 8-256] done synthesizing module 'DEMO_axi_quad_spi_0_0' (54#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/synth/DEMO_axi_quad_spi_0_0.vhd:97]
-INFO: [Synth 8-3491] module 'DEMO_axi_quad_spi_1_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/synth/DEMO_axi_quad_spi_1_0.vhd:59' bound to instance 'axi_quad_spi_1' of component 'DEMO_axi_quad_spi_1_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4153]
+INFO: [Synth 8-3491] module 'DEMO_axi_quad_spi_1_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/synth/DEMO_axi_quad_spi_1_0.vhd:59' bound to instance 'axi_quad_spi_1' of component 'DEMO_axi_quad_spi_1_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4434]
 INFO: [Synth 8-638] synthesizing module 'DEMO_axi_quad_spi_1_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/synth/DEMO_axi_quad_spi_1_0.vhd:97]
 	Parameter Async_Clk bound to: 0 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -2254,7 +2254,7 @@ INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface__parameterized
 INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top__parameterized0' (54#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1735/hdl/axi_quad_spi_v3_2_rfs.vhd:34961]
 INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi__parameterized1' (54#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/1735/hdl/axi_quad_spi_v3_2_rfs.vhd:36700]
 INFO: [Synth 8-256] done synthesizing module 'DEMO_axi_quad_spi_1_0' (55#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/synth/DEMO_axi_quad_spi_1_0.vhd:97]
-INFO: [Synth 8-3491] module 'DEMO_axi_smc_4' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/synth/DEMO_axi_smc_4.v:57' bound to instance 'axi_smc' of component 'DEMO_axi_smc_4' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4189]
+INFO: [Synth 8-3491] module 'DEMO_axi_smc_4' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/synth/DEMO_axi_smc_4.v:57' bound to instance 'axi_smc' of component 'DEMO_axi_smc_4' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4470]
 INFO: [Synth 8-6157] synthesizing module 'DEMO_axi_smc_4' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/synth/DEMO_axi_smc_4.v:57]
 INFO: [Synth 8-6157] synthesizing module 'bd_2e8b' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/synth/bd_2e8b.v:10]
 INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_12R8RH0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/synth/bd_2e8b.v:693]
@@ -2659,7 +2659,7 @@ INFO: [Synth 8-6155] done synthesizing module 'bd_2e8b_swn_0' (106#1) [c:/Users/
 INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_1RP2THY' (107#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/synth/bd_2e8b.v:1649]
 INFO: [Synth 8-6155] done synthesizing module 'bd_2e8b' (108#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/bd_0/synth/bd_2e8b.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'DEMO_axi_smc_4' (109#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_4/synth/DEMO_axi_smc_4.v:57]
-INFO: [Synth 8-3491] module 'DEMO_axi_smc_1_3' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/synth/DEMO_axi_smc_1_3.v:57' bound to instance 'axi_smc_1' of component 'DEMO_axi_smc_1_3' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4246]
+INFO: [Synth 8-3491] module 'DEMO_axi_smc_1_3' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/synth/DEMO_axi_smc_1_3.v:57' bound to instance 'axi_smc_1' of component 'DEMO_axi_smc_1_3' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4527]
 INFO: [Synth 8-6157] synthesizing module 'DEMO_axi_smc_1_3' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/synth/DEMO_axi_smc_1_3.v:57]
 INFO: [Synth 8-6157] synthesizing module 'bd_088f' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/synth/bd_088f.v:10]
 INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_II1SO5' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/synth/bd_088f.v:803]
@@ -2787,7 +2787,7 @@ INFO: [Synth 8-6155] done synthesizing module 'bd_088f_swn_0' (127#1) [c:/Users/
 INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_CD6QAV' (128#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/synth/bd_088f.v:1881]
 INFO: [Synth 8-6155] done synthesizing module 'bd_088f' (129#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/synth/bd_088f.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'DEMO_axi_smc_1_3' (130#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/synth/DEMO_axi_smc_1_3.v:57]
-INFO: [Synth 8-3491] module 'DEMO_axi_timer_0_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/synth/DEMO_axi_timer_0_0.vhd:59' bound to instance 'axi_timer_0' of component 'DEMO_axi_timer_0_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4325]
+INFO: [Synth 8-3491] module 'DEMO_axi_timer_0_0' declared at 'c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/synth/DEMO_axi_timer_0_0.vhd:59' bound to instance 'axi_timer_0' of component 'DEMO_axi_timer_0_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4606]
 INFO: [Synth 8-638] synthesizing module 'DEMO_axi_timer_0_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/synth/DEMO_axi_timer_0_0.vhd:90]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_COUNT_WIDTH bound to: 32 - type: integer 
@@ -3218,6 +3218,17 @@ INFO: [Synth 8-638] synthesizing module 'DEMO_axi_timer_2_0' [c:/Users/linnh/Sep
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'DEMO_axi_timer_2_0' (140#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_2_0/synth/DEMO_axi_timer_2_0.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'DEMO_axi_timer_3_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_3_0/synth/DEMO_axi_timer_3_0.vhd:90]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_COUNT_WIDTH bound to: 32 - type: integer 
+	Parameter C_ONE_TIMER_ONLY bound to: 0 - type: integer 
+	Parameter C_TRIG0_ASSERT bound to: 1'b1 
+	Parameter C_TRIG1_ASSERT bound to: 1'b1 
+	Parameter C_GEN0_ASSERT bound to: 1'b1 
+	Parameter C_GEN1_ASSERT bound to: 1'b1 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DEMO_axi_timer_3_0' (141#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_3_0/synth/DEMO_axi_timer_3_0.vhd:90]
 INFO: [Synth 8-6157] synthesizing module 'DEMO_axi_traffic_gen_0_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_traffic_gen_0_0/synth/DEMO_axi_traffic_gen_0_0.v:62]
 INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_top' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:15238]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -3436,9 +3447,9 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized6' [C:/X
 	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-3876] $readmem data file 'DEMO_axi_traffic_gen_0_0_mask.mem' is read successfully [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1104]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized6' (140#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (141#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg' (142#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized6' (141#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (142#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg' (143#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
 INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg__parameterized0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_ATG_MIF_ADDR_BITS bound to: 6 - type: integer 
@@ -3543,9 +3554,9 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized7' [C:/X
 	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-3876] $readmem data file 'DEMO_axi_traffic_gen_0_0_ctrl.mem' is read successfully [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1104]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized7' (142#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized0' (142#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg__parameterized0' (142#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized7' (143#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized0' (143#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg__parameterized0' (143#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
 INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg__parameterized1' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_ATG_MIF_ADDR_BITS bound to: 6 - type: integer 
@@ -3650,9 +3661,9 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized8' [C:/X
 	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-3876] $readmem data file 'DEMO_axi_traffic_gen_0_0_addr.mem' is read successfully [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1104]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized8' (142#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized1' (142#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg__parameterized1' (142#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized8' (143#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized1' (143#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg__parameterized1' (143#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
 INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg__parameterized2' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_ATG_MIF_ADDR_BITS bound to: 6 - type: integer 
@@ -3757,9 +3768,9 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized9' [C:/X
 	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-3876] $readmem data file 'DEMO_axi_traffic_gen_0_0_data.mem' is read successfully [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1104]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized9' (142#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized2' (142#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg__parameterized2' (142#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized9' (143#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram__parameterized2' (143#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8571]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_dmg__parameterized2' (143#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13752]
 INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_static_cmdgen' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:9720]
 	Parameter C_ATG_STATIC_ADDRESS bound to: 312475648 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -3767,7 +3778,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_static_cmdgen' 
 	Parameter C_ATG_STATIC_LENGTH bound to: 3 - type: integer 
 	Parameter C_ATG_SYSTEM_INIT bound to: 0 - type: integer 
 	Parameter C_ATG_SYSTEM_TEST bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_static_cmdgen' (143#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:9720]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_static_cmdgen' (144#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:9720]
 INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_mrdwr' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13981]
 	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
@@ -3787,10 +3798,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_mrdw
 	Parameter C_ATG_SYSTEM_CH4_HIGH bound to: 1023 - type: integer 
 	Parameter C_ATG_SYSTEM_CH5_LOW bound to: 1024 - type: integer 
 	Parameter C_ATG_SYSTEM_CH5_HIGH bound to: 1279 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_mrdwr' (144#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13981]
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_top' (145#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:14810]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_mrdwr' (145#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13981]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_systeminit_top' (146#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:14810]
 INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_asynch_rst_ff' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:56]
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_asynch_rst_ff' (146#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_asynch_rst_ff' (147#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:56]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized3' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
@@ -3804,9 +3815,9 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized3' [c:/Users/lin
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized3' (146#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_top' (147#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:15238]
-INFO: [Synth 8-6155] done synthesizing module 'DEMO_axi_traffic_gen_0_0' (148#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_traffic_gen_0_0/synth/DEMO_axi_traffic_gen_0_0.v:62]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized3' (147#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_top' (148#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:15238]
+INFO: [Synth 8-6155] done synthesizing module 'DEMO_axi_traffic_gen_0_0' (149#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_traffic_gen_0_0/synth/DEMO_axi_traffic_gen_0_0.v:62]
 INFO: [Synth 8-6157] synthesizing module 'DEMO_axi_traffic_gen_1_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_traffic_gen_1_0/synth/DEMO_axi_traffic_gen_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_top__parameterized0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:15238]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -4193,17 +4204,17 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_wrapper' [c:/Users/linnh/Se
 	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized10' (148#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (149#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_wrapper' (150#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
-INFO: [Synth 8-256] done synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap' (151#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_inferram' (152#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:553]
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_slvram_v7' (153#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:130]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized10' (149#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (150#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_wrapper' (151#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
+INFO: [Synth 8-256] done synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap' (152#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_inferram' (153#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:553]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_slvram_v7' (154#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:130]
 	Parameter DWIDTH bound to: 32 - type: integer 
 	Parameter IDWIDTH bound to: 1 - type: integer 
 	Parameter DATADEPTH bound to: 1 - type: integer 
 	Parameter IDDEPTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_regslice' (154#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_regslice' (155#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
 INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter seed bound to: 23130 - type: integer 
 	Parameter seed bound to: 31899 - type: integer 
@@ -4626,8 +4637,8 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_wrapper__parameterized0' [c
 	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 128 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_wrapper__parameterized0' (163#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
-INFO: [Synth 8-256] done synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap__parameterized0' (163#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_wrapper__parameterized0' (164#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
+INFO: [Synth 8-256] done synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap__parameterized0' (164#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
 	Parameter DWIDTH bound to: 128 - type: integer 
 	Parameter IDWIDTH bound to: 10 - type: integer 
 	Parameter DATADEPTH bound to: 2 - type: integer 
@@ -4882,8 +4893,8 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_wrapper__parameterized1' [c
 	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 64 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_wrapper__parameterized1' (165#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
-INFO: [Synth 8-256] done synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap__parameterized1' (165#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_wrapper__parameterized1' (166#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
+INFO: [Synth 8-256] done synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap__parameterized1' (166#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
 	Parameter C_IS_COHERENT bound to: 0 - type: integer 
 	Parameter C_IS_AFI bound to: 0 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -4908,8 +4919,8 @@ INFO: [Synth 8-638] synthesizing module 'DEMO_debouncer_0_0' [c:/Users/linnh/Sep
 INFO: [Synth 8-638] synthesizing module 'debouncer' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/84ec/Debouncer.vhd:19]
 	Parameter DEBOUNCE_TIME_MS bound to: 20 - type: integer 
 	Parameter CLK_FREQ_HZ bound to: 125000000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'debouncer' (170#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/84ec/Debouncer.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'DEMO_debouncer_0_0' (171#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_debouncer_0_0/synth/DEMO_debouncer_0_0.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (171#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/84ec/Debouncer.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'DEMO_debouncer_0_0' (172#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_debouncer_0_0/synth/DEMO_debouncer_0_0.vhd:64]
 INFO: [Synth 8-638] synthesizing module 'DEMO_ila_0_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/synth/DEMO_ila_0_0.vhd:68]
 	Parameter C_XLNX_HW_PROBE_INFO bound to: DEFAULT - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
@@ -8013,7 +8024,7 @@ INFO: [Synth 8-638] synthesizing module 'DEMO_ila_0_0' [c:/Users/linnh/Sep-repos
 	Parameter C_PROBE1021_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE1022_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE1023_TYPE bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'DEMO_ila_0_0' (215#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/synth/DEMO_ila_0_0.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'DEMO_ila_0_0' (216#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/synth/DEMO_ila_0_0.vhd:68]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
 	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
@@ -8035,7 +8046,7 @@ INFO: [Synth 8-256] done synthesizing module 'DEMO_ila_0_0' (215#1) [c:/Users/li
 	Parameter C_S_AXI_HP2_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_S_AXI_HP3_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_INCLUDE_ACP_TRANS_CHECK bound to: 0 - type: integer 
-	Parameter C_NUM_F2P_INTR_INPUTS bound to: 4 - type: integer 
+	Parameter C_NUM_F2P_INTR_INPUTS bound to: 5 - type: integer 
 	Parameter C_FCLK_CLK0_BUF bound to: TRUE - type: string 
 	Parameter C_FCLK_CLK1_BUF bound to: FALSE - type: string 
 	Parameter C_FCLK_CLK2_BUF bound to: FALSE - type: string 
@@ -8084,26 +8095,28 @@ WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_proc
 WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_processing_system7_0_0/synth/DEMO_processing_system7_0_0.v:327]
 WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_processing_system7_0_0/synth/DEMO_processing_system7_0_0.v:327]
 WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_processing_system7_0_0/synth/DEMO_processing_system7_0_0.v:327]
-INFO: [Synth 8-638] synthesizing module 'DEMO_ps7_0_axi_periph_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:1469]
+INFO: [Synth 8-638] synthesizing module 'DEMO_ps7_0_axi_periph_0' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:1589]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_4H3SDL' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:57]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_4H3SDL' (221#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_4H3SDL' (222#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:57]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1368V8F' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:158]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1368V8F' (222#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:158]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1368V8F' (223#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:158]
 INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_1UYC0JO' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:259]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_1UYC0JO' (223#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_1UYC0JO' (224#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:259]
 INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_U1CMNM' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:360]
-INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_U1CMNM' (224#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:360]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_U1CMNM' (225#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:360]
 INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_2NDOJ6' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:465]
-INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_2NDOJ6' (225#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:465]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_2NDOJ6' (226#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:465]
 INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_157GS1W' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:572]
-INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_157GS1W' (226#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:572]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_157GS1W' (227#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:572]
 INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_1SM89NJ' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:673]
-INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_1SM89NJ' (227#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:673]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_1SM89NJ' (228#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:673]
 INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_WPXW2X' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:774]
-INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_WPXW2X' (228#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:774]
+INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_WPXW2X' (229#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:774]
 INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_9UD1ZZ' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:875]
-INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_9UD1ZZ' (229#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:875]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1NIS95O' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:999]
+INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_9UD1ZZ' (230#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:875]
+INFO: [Synth 8-638] synthesizing module 'm09_couplers_imp_1GUGO4P' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:976]
+INFO: [Synth 8-256] done synthesizing module 'm09_couplers_imp_1GUGO4P' (231#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:976]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1NIS95O' [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:1100]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_M_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_S_AXI_PROTOCOL bound to: 1 - type: integer 
@@ -8818,17 +8831,17 @@ WARNING: [Synth 8-7023] instance 'SI_REG' of module 'axi_register_slice_v2_1_21_
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
 WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_21_axi_register_slice' is unconnected for instance 'MI_REG' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
 WARNING: [Synth 8-7023] instance 'MI_REG' of module 'axi_register_slice_v2_1_21_axi_register_slice' has 93 connections declared, but only 92 given [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:999]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (249#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:1100]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
-	Parameter C_NUM_MASTER_SLOTS bound to: 9 - type: integer 
+	Parameter C_NUM_MASTER_SLOTS bound to: 10 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
-	Parameter C_M_AXI_BASE_ADDR bound to: 576'b000000000000000000000000000000000100001010000010000000000000000000000000000000000000000000000000010000101000000100000000000000000000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100000100100001000000000000000000000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000001111000010000000000000000000000000000000000000000000000000100000101100000000000000000000000000000000000000000000000000000010000010010000000000000000000000000000000000000000000000000000001000001111000000000000000000000 
-	Parameter C_M_AXI_ADDR_WIDTH bound to: 288'b000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000 
+	Parameter C_M_AXI_BASE_ADDR bound to: 640'b0000000000000000000000000000000001000010100000110000000000000000000000000000000000000000000000000100001010000010000000000000000000000000000000000000000000000000010000101000000100000000000000000000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100000100100001000000000000000000000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000001111000010000000000000000000000000000000000000000000000000100000101100000000000000000000000000000000000000000000000000000010000010010000000000000000000000000000000000000000000000000000001000001111000000000000000000000 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 320'b00000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000 
 	Parameter C_S_AXI_BASE_ID bound to: 0 - type: integer 
 	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 0 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -8837,16 +8850,16 @@ INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) 
 	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 288'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
-	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 288'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 320'b00000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 320'b00000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
 	Parameter C_R_REGISTER bound to: 1 - type: integer 
 	Parameter C_S_AXI_SINGLE_THREAD bound to: 1 - type: integer 
 	Parameter C_S_AXI_WRITE_ACCEPTANCE bound to: 1 - type: integer 
 	Parameter C_S_AXI_READ_ACCEPTANCE bound to: 1 - type: integer 
-	Parameter C_M_AXI_WRITE_ISSUING bound to: 288'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
-	Parameter C_M_AXI_READ_ISSUING bound to: 288'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_M_AXI_WRITE_ISSUING bound to: 320'b00000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_M_AXI_READ_ISSUING bound to: 320'b00000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
 	Parameter C_S_AXI_ARB_PRIORITY bound to: 0 - type: integer 
-	Parameter C_M_AXI_SECURE bound to: 288'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_SECURE bound to: 320'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_CONNECTIVITY_MODE bound to: 0 - type: integer 
 	Parameter P_ONES bound to: 65'b11111111111111111111111111111111111111111111111111111111111111111 
 	Parameter P_S_AXI_BASE_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
@@ -8856,27 +8869,27 @@ INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) 
 	Parameter P_AXILITE bound to: 2 - type: integer 
 	Parameter P_AXILITE_SIZE bound to: 3'b010 
 	Parameter P_INCR bound to: 2'b01 
-	Parameter P_M_AXI_SUPPORTS_WRITE bound to: 9'b111111111 
-	Parameter P_M_AXI_SUPPORTS_READ bound to: 9'b111111111 
+	Parameter P_M_AXI_SUPPORTS_WRITE bound to: 10'b1111111111 
+	Parameter P_M_AXI_SUPPORTS_READ bound to: 10'b1111111111 
 	Parameter P_S_AXI_SUPPORTS_WRITE bound to: 1'b1 
 	Parameter P_S_AXI_SUPPORTS_READ bound to: 1'b1 
 	Parameter C_DEBUG bound to: 1 - type: integer 
 	Parameter P_RANGE_CHECK bound to: 1 - type: integer 
 	Parameter P_ADDR_DECODE bound to: 1 - type: integer 
-	Parameter P_M_AXI_ERR_MODE bound to: 288'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter P_M_AXI_ERR_MODE bound to: 320'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter P_LEN bound to: 8 - type: integer 
 	Parameter P_LOCK bound to: 1 - type: integer 
 	Parameter P_FAMILY bound to: zynq - type: string 
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
-	Parameter C_NUM_MASTER_SLOTS bound to: 9 - type: integer 
+	Parameter C_NUM_MASTER_SLOTS bound to: 10 - type: integer 
 	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
-	Parameter C_M_AXI_BASE_ADDR bound to: 576'b000000000000000000000000000000000100001010000010000000000000000000000000000000000000000000000000010000101000000100000000000000000000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100000100100001000000000000000000000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000001111000010000000000000000000000000000000000000000000000000100000101100000000000000000000000000000000000000000000000000000010000010010000000000000000000000000000000000000000000000000000001000001111000000000000000000000 
-	Parameter C_M_AXI_HIGH_ADDR bound to: 576'b000000000000000000000000000000000100001010000010111111111111111100000000000000000000000000000000010000101000000111111111111111110000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100000100100001111111111111111100000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000001111000011111111111111111000000000000000000000000000000000100000101100000111111111111111100000000000000000000000000000000010000010010000011111111111111110000000000000000000000000000000001000001111000001111111111111111 
+	Parameter C_M_AXI_BASE_ADDR bound to: 640'b0000000000000000000000000000000001000010100000110000000000000000000000000000000000000000000000000100001010000010000000000000000000000000000000000000000000000000010000101000000100000000000000000000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100000100100001000000000000000000000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000001111000010000000000000000000000000000000000000000000000000100000101100000000000000000000000000000000000000000000000000000010000010010000000000000000000000000000000000000000000000000000001000001111000000000000000000000 
+	Parameter C_M_AXI_HIGH_ADDR bound to: 640'b0000000000000000000000000000000001000010100000111111111111111111000000000000000000000000000000000100001010000010111111111111111100000000000000000000000000000000010000101000000111111111111111110000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100000100100001111111111111111100000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000001111000011111111111111111000000000000000000000000000000000100000101100000111111111111111100000000000000000000000000000000010000010010000011111111111111110000000000000000000000000000000001000001111000001111111111111111 
 	Parameter C_S_AXI_BASE_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_S_AXI_HIGH_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -8887,11 +8900,11 @@ INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_S_AXI_SUPPORTS_WRITE bound to: 1'b1 
 	Parameter C_S_AXI_SUPPORTS_READ bound to: 1'b1 
-	Parameter C_M_AXI_SUPPORTS_WRITE bound to: 9'b111111111 
-	Parameter C_M_AXI_SUPPORTS_READ bound to: 9'b111111111 
+	Parameter C_M_AXI_SUPPORTS_WRITE bound to: 10'b1111111111 
+	Parameter C_M_AXI_SUPPORTS_READ bound to: 10'b1111111111 
 	Parameter C_S_AXI_ARB_PRIORITY bound to: 0 - type: integer 
-	Parameter C_M_AXI_SECURE bound to: 288'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter C_M_AXI_ERR_MODE bound to: 288'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_SECURE bound to: 320'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_ERR_MODE bound to: 320'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_R_REGISTER bound to: 1 - type: integer 
 	Parameter C_RANGE_CHECK bound to: 1 - type: integer 
 	Parameter C_ADDR_DECODE bound to: 1 - type: integer 
@@ -8899,7 +8912,7 @@ INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) 
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
-	Parameter P_NUM_MASTER_SLOTS_DE bound to: 10 - type: integer 
+	Parameter P_NUM_MASTER_SLOTS_DE bound to: 11 - type: integer 
 	Parameter P_NUM_MASTER_SLOTS_LOG bound to: 4 - type: integer 
 	Parameter P_NUM_MASTER_SLOTS_DE_LOG bound to: 4 - type: integer 
 	Parameter P_NUM_SLAVE_SLOTS_LOG bound to: 1 - type: integer 
@@ -8911,8 +8924,8 @@ INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) 
 	Parameter P_WMESG_WIDTH bound to: 39 - type: integer 
 	Parameter P_AXILITE_ERRMODE bound to: 1 - type: integer 
 	Parameter P_NONSECURE_BIT bound to: 1 - type: integer 
-	Parameter P_M_SECURE_MASK bound to: 9'b000000000 
-	Parameter P_M_AXILITE_MASK bound to: 9'b000000000 
+	Parameter P_M_SECURE_MASK bound to: 10'b0000000000 
+	Parameter P_M_AXILITE_MASK bound to: 10'b0000000000 
 	Parameter P_FIXED bound to: 2'b00 
 	Parameter P_BYPASS bound to: 0 - type: integer 
 	Parameter P_LIGHTWT bound to: 7 - type: integer 
@@ -8920,16 +8933,16 @@ INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) 
 	Parameter P_R_REG_CONFIG bound to: 1 - type: integer 
 	Parameter P_DECERR bound to: 2'b11 
 	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_NUM_TARGETS bound to: 9 - type: integer 
+	Parameter C_NUM_TARGETS bound to: 10 - type: integer 
 	Parameter C_NUM_TARGETS_LOG bound to: 4 - type: integer 
 	Parameter C_NUM_RANGES bound to: 1 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_TARGET_ENC bound to: 1 - type: integer 
 	Parameter C_TARGET_HOT bound to: 1 - type: integer 
 	Parameter C_REGION_ENC bound to: 1 - type: integer 
-	Parameter C_BASE_ADDR bound to: 576'b000000000000000000000000000000000100001010000010000000000000000000000000000000000000000000000000010000101000000100000000000000000000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100000100100001000000000000000000000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000001111000010000000000000000000000000000000000000000000000000100000101100000000000000000000000000000000000000000000000000000010000010010000000000000000000000000000000000000000000000000000001000001111000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 576'b000000000000000000000000000000000100001010000010111111111111111100000000000000000000000000000000010000101000000111111111111111110000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100000100100001111111111111111100000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000001111000011111111111111111000000000000000000000000000000000100000101100000111111111111111100000000000000000000000000000000010000010010000011111111111111110000000000000000000000000000000001000001111000001111111111111111 
-	Parameter C_TARGET_QUAL bound to: 10'b0111111111 
+	Parameter C_BASE_ADDR bound to: 640'b0000000000000000000000000000000001000010100000110000000000000000000000000000000000000000000000000100001010000010000000000000000000000000000000000000000000000000010000101000000100000000000000000000000000000000000000000000000001000010100000000000000000000000000000000000000000000000000000000100000100100001000000000000000000000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000001111000010000000000000000000000000000000000000000000000000100000101100000000000000000000000000000000000000000000000000000010000010010000000000000000000000000000000000000000000000000000001000001111000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 640'b0000000000000000000000000000000001000010100000111111111111111111000000000000000000000000000000000100001010000010111111111111111100000000000000000000000000000000010000101000000111111111111111110000000000000000000000000000000001000010100000001111111111111111000000000000000000000000000000000100000100100001111111111111111100000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000001111000011111111111111111000000000000000000000000000000000100000101100000111111111111111100000000000000000000000000000000010000010010000011111111111111110000000000000000000000000000000001000001111000001111111111111111 
+	Parameter C_TARGET_QUAL bound to: 11'b01111111111 
 	Parameter C_RESOLUTION bound to: 2 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
 	Parameter C_FAMILY bound to: rtl - type: string 
@@ -8987,6 +9000,12 @@ INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_VALUE bound to: 30'b010000101000001100000000000000 
+	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
+	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
+	Parameter C_NUM_LUT bound to: 5 - type: integer 
+	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
@@ -9011,7 +9030,7 @@ INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) 
 	Parameter C_NUM_M bound to: 3 - type: integer 
 	Parameter C_NUM_M bound to: 2 - type: integer 
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_RATIO bound to: 10 - type: integer 
+	Parameter C_RATIO bound to: 11 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 4 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: rtl - type: string 
@@ -9019,21 +9038,21 @@ INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1NIS95O' (247#1) 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_RATIO bound to: 10 - type: integer 
+	Parameter C_RATIO bound to: 11 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 4 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_RATIO bound to: 10 - type: integer 
+	Parameter C_RATIO bound to: 11 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 4 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'DEMO_ps7_0_axi_periph_0' (258#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:1469]
+INFO: [Synth 8-256] done synthesizing module 'DEMO_ps7_0_axi_periph_0' (260#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:1589]
 INFO: [Synth 8-638] synthesizing module 'DEMO_rgb_controller_0_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rgb_controller_0_0/synth/DEMO_rgb_controller_0_0.vhd:69]
 INFO: [Synth 8-638] synthesizing module 'rgb_controller' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4056/src/rgb_controller.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'rgb_controller' (259#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4056/src/rgb_controller.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'DEMO_rgb_controller_0_0' (260#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rgb_controller_0_0/synth/DEMO_rgb_controller_0_0.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'rgb_controller' (261#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/4056/src/rgb_controller.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'DEMO_rgb_controller_0_0' (262#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rgb_controller_0_0/synth/DEMO_rgb_controller_0_0.vhd:69]
 INFO: [Synth 8-638] synthesizing module 'DEMO_rgb_rainbow_0_3' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rgb_rainbow_0_3/synth/DEMO_rgb_rainbow_0_3.vhd:104]
 	Parameter C_S00_AXI_ID_WIDTH bound to: 0 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -9094,7 +9113,7 @@ WARNING: [Synth 8-506] null port 'S_AXI_RID' ignored [c:/Users/linnh/Sep-reposit
 WARNING: [Synth 8-506] null port 'S_AXI_RUSER' ignored [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0_S00_AXI.vhd:164]
 WARNING: [Synth 8-6774] Null subtype or type declaration found [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0_S00_AXI.vhd:181]
 WARNING: [Synth 8-6774] Null subtype or type declaration found [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0_S00_AXI.vhd:188]
-INFO: [Synth 8-256] done synthesizing module 'rgb_rainbow_v1_0_S00_AXI' (261#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0_S00_AXI.vhd:174]
+INFO: [Synth 8-256] done synthesizing module 'rgb_rainbow_v1_0_S00_AXI' (263#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0_S00_AXI.vhd:174]
 WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0.vhd:173]
 WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0.vhd:189]
 WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0.vhd:192]
@@ -9102,8 +9121,8 @@ WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [c
 WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0.vhd:197]
 WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0.vhd:210]
 WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0.vhd:214]
-INFO: [Synth 8-256] done synthesizing module 'rgb_rainbow_v1_0' (262#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0.vhd:83]
-INFO: [Synth 8-256] done synthesizing module 'DEMO_rgb_rainbow_0_3' (263#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rgb_rainbow_0_3/synth/DEMO_rgb_rainbow_0_3.vhd:104]
+INFO: [Synth 8-256] done synthesizing module 'rgb_rainbow_v1_0' (264#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/25d7/hdl/rgb_rainbow_v1_0.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'DEMO_rgb_rainbow_0_3' (265#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rgb_rainbow_0_3/synth/DEMO_rgb_rainbow_0_3.vhd:104]
 INFO: [Synth 8-638] synthesizing module 'DEMO_rst_clk_125M_2' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_clk_125M_2/synth/DEMO_rst_clk_125M_2.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -9149,9 +9168,9 @@ INFO: [Synth 8-638] synthesizing module 'lpf__parameterized0' [c:/Users/linnh/Se
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (263#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized2' (263#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'DEMO_rst_clk_125M_2' (264#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_clk_125M_2/synth/DEMO_rst_clk_125M_2.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (265#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized2' (265#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'DEMO_rst_clk_125M_2' (266#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_clk_125M_2/synth/DEMO_rst_clk_125M_2.vhd:74]
 INFO: [Synth 8-638] synthesizing module 'DEMO_rst_ps7_0_50M_0' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_ps7_0_50M_0/synth/DEMO_rst_ps7_0_50M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -9162,12 +9181,12 @@ INFO: [Synth 8-638] synthesizing module 'DEMO_rst_ps7_0_50M_0' [c:/Users/linnh/S
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'DEMO_rst_ps7_0_50M_0' (265#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_ps7_0_50M_0/synth/DEMO_rst_ps7_0_50M_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'DEMO_rst_ps7_0_50M_0' (267#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_rst_ps7_0_50M_0/synth/DEMO_rst_ps7_0_50M_0.vhd:74]
 INFO: [Synth 8-638] synthesizing module 'DEMO_state_machine_0_2' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_state_machine_0_2/synth/DEMO_state_machine_0_2.vhd:65]
 INFO: [Synth 8-638] synthesizing module 'state_machine' [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/afa6/src/state_machine.vhd:14]
 WARNING: [Synth 8-614] signal 'current_state' is read in the process but is not in the sensitivity list [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/afa6/src/state_machine.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'state_machine' (266#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/afa6/src/state_machine.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'DEMO_state_machine_0_2' (267#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_state_machine_0_2/synth/DEMO_state_machine_0_2.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'state_machine' (268#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ipshared/afa6/src/state_machine.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'DEMO_state_machine_0_2' (269#1) [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_state_machine_0_2/synth/DEMO_state_machine_0_2.vhd:65]
 	Parameter C_OPERATION bound to: or - type: string 
 	Parameter C_SIZE bound to: 2 - type: integer 
 	Parameter C_OPERATION bound to: xor - type: string 
@@ -9204,36 +9223,36 @@ INFO: [Synth 8-256] done synthesizing module 'DEMO_state_machine_0_2' (267#1) [c
 	Parameter IN29_WIDTH bound to: 1 - type: integer 
 	Parameter IN30_WIDTH bound to: 1 - type: integer 
 	Parameter IN31_WIDTH bound to: 1 - type: integer 
-	Parameter dout_width bound to: 4 - type: integer 
-	Parameter NUM_PORTS bound to: 4 - type: integer 
+	Parameter dout_width bound to: 5 - type: integer 
+	Parameter NUM_PORTS bound to: 5 - type: integer 
 	Parameter CONST_VAL bound to: 2 - type: integer 
 	Parameter CONST_WIDTH bound to: 2 - type: integer 
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'debouncer_0'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4517]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4523]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'state_machine_0'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4904]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rgb_controller_0'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4821]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'util_vector_logic_1'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4916]
-INFO: [Synth 8-256] done synthesizing module 'DEMO' (282#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:2766]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'debouncer_0'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4827]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:4833]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'state_machine_0'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:5233]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rgb_controller_0'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:5150]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'util_vector_logic_1'. This will prevent further optimization [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:5245]
+INFO: [Synth 8-256] done synthesizing module 'DEMO' (284#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/synth/DEMO.vhd:2995]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-256] done synthesizing module 'DEMO_wrapper' (284#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'DEMO_wrapper' (286#1) [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/hdl/DEMO_wrapper.vhd:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:59 ; elapsed = 00:02:21 . Memory (MB): peak = 1833.859 ; gain = 771.723
+Finished RTL Elaboration : Time (s): cpu = 00:01:47 ; elapsed = 00:02:04 . Memory (MB): peak = 1836.145 ; gain = 773.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:07 ; elapsed = 00:02:29 . Memory (MB): peak = 1837.414 ; gain = 775.277
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:53 ; elapsed = 00:02:11 . Memory (MB): peak = 1836.145 ; gain = 773.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:07 ; elapsed = 00:02:29 . Memory (MB): peak = 1837.414 ; gain = 775.277
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:53 ; elapsed = 00:02:11 . Memory (MB): peak = 1836.145 ; gain = 773.891
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1837.414 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 775 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1836.145 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 883 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -9301,6 +9320,8 @@ Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/s
 Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_1_0/DEMO_axi_gpio_1_0.xdc] for cell 'DEMO_i/axi_gpio_1/U0'
 Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_2_0/DEMO_axi_timer_2_0.xdc] for cell 'DEMO_i/axi_timer_2/U0'
 Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_2_0/DEMO_axi_timer_2_0.xdc] for cell 'DEMO_i/axi_timer_2/U0'
+Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_3_0/DEMO_axi_timer_3_0.xdc] for cell 'DEMO_i/axi_timer_3/U0'
+Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_3_0/DEMO_axi_timer_3_0.xdc] for cell 'DEMO_i/axi_timer_3/U0'
 Parsing XDC File [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc]
 WARNING: [Vivado 12-584] No ports matched 'BTN0_tri_i'. [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc:138]
 WARNING: [Vivado 12-584] No ports matched 'BTN1_tri_i'. [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc:139]
@@ -9533,46 +9554,47 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/DEMO_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 2175.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2180.656 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 545 instances were transformed.
+  A total of 589 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 56 instances
   CFGLUT5 => SRLC32E: 11 instances
   FD => FDRE: 22 instances
-  FDR => FDRE: 317 instances
-  FDRS => FDRS (FDRE, LUT2, VCC): 3 instances
-  FDRSE => FDRSE (FDRE, LUT4, VCC): 114 instances
+  FDR => FDRE: 335 instances
+  FDRS => FDRS (FDRE, LUT2, VCC): 4 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 139 instances
   IOBUF => IOBUF (IBUF, OBUFT): 6 instances
   MUXCY_L => MUXCY: 12 instances
   SRL16 => SRL16E: 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2175.680 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2180.656 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:26 ; elapsed = 00:03:51 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Constraint Validation : Time (s): cpu = 00:03:09 ; elapsed = 00:03:28 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:26 ; elapsed = 00:03:51 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:09 ; elapsed = 00:03:28 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for DEMO_i/axi_quad_spi_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 187).
-Applied set_property DONT_TOUCH = true for DEMO_i/processing_system7_0/inst. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 198).
-Applied set_property DONT_TOUCH = true for DEMO_i/axi_gpio_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 201).
-Applied set_property DONT_TOUCH = true for DEMO_i/rst_ps7_0_50M/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 209).
-Applied set_property DONT_TOUCH = true for DEMO_i/axi_quad_spi_1/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 215).
-Applied set_property DONT_TOUCH = true for DEMO_i/axi_iic_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 226).
-Applied set_property DONT_TOUCH = true for DEMO_i/axi_traffic_gen_1/inst. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 231).
-Applied set_property DONT_TOUCH = true for DEMO_i/rst_clk_125M/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 259).
-Applied set_property DONT_TOUCH = true for DEMO_i/ila_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 293).
-Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 301).
-Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_1/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 306).
-Applied set_property DONT_TOUCH = true for DEMO_i/axi_gpio_1/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 311).
-Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_2/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 319).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_quad_spi_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 190).
+Applied set_property DONT_TOUCH = true for DEMO_i/processing_system7_0/inst. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 201).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_gpio_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 204).
+Applied set_property DONT_TOUCH = true for DEMO_i/rst_ps7_0_50M/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 212).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_quad_spi_1/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 218).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_iic_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 229).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_traffic_gen_1/inst. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 234).
+Applied set_property DONT_TOUCH = true for DEMO_i/rst_clk_125M/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 262).
+Applied set_property DONT_TOUCH = true for DEMO_i/ila_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 296).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_0/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 304).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_1/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 309).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_gpio_1/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 314).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_2/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 322).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_3/U0. (constraint file  C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/dont_touch.xdc, line 329).
 Applied set_property DONT_TOUCH = true for DEMO_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/axi_quad_spi_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/processing_system7_0. (constraint file  auto generated constraint, line ).
@@ -9600,11 +9622,12 @@ Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_1. (constraint file 
 Applied set_property DONT_TOUCH = true for DEMO_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/BuzzerBooster_Driver_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DEMO_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/state_machine_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/util_vector_logic_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/util_reduced_logic_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for DEMO_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for DEMO_i/axi_timer_3. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/axi_quad_spi_0/U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/axi_quad_spi_0/U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/axi_quad_spi_1/U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint, line ).
@@ -9647,7 +9670,7 @@ Applied set_property DONT_TOUCH = true for DEMO_i/axi_traffic_gen_1/inst/\ATG_MO
 Applied set_property DONT_TOUCH = true for DEMO_i/axi_traffic_gen_1/inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top /cmd_blk/Cmdram/cmd_ram0_3/\MEM_INFER_BLK_MEM.inst /proc_bmg/\xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DEMO_i/axi_traffic_gen_1/inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top /sharedram_blk/sharedram/ram0/\MEM_INFER_BLK_MEM.inst /proc_bmg/\xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:28 ; elapsed = 00:03:53 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:11 ; elapsed = 00:03:30 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment__parameterized0'
@@ -10038,7 +10061,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'state_machine'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:04 ; elapsed = 00:04:32 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:41 ; elapsed = 00:04:02 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -10059,19 +10082,19 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:35 ; elapsed = 00:07:10 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:47 ; elapsed = 00:06:13 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:07:09 ; elapsed = 00:07:44 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:16 ; elapsed = 00:06:41 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:07:28 ; elapsed = 00:08:04 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Timing Optimization : Time (s): cpu = 00:06:33 ; elapsed = 00:06:59 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -10095,7 +10118,7 @@ INFO: [Synth 8-7052] The timing for the instance DEMO_i/rgb_rainbow_0/U0/rgb_rai
 INFO: [Synth 8-7052] The timing for the instance DEMO_i/rgb_rainbow_0/U0/rgb_rainbow_v1_0_S00_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[2].byte_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance DEMO_i/rgb_rainbow_0/U0/rgb_rainbow_v1_0_S00_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[3].byte_ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:08:01 ; elapsed = 00:08:39 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Technology Mapping : Time (s): cpu = 00:07:03 ; elapsed = 00:07:33 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -10214,37 +10237,37 @@ WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[13] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[12] to constant 0
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:08:10 ; elapsed = 00:08:48 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished IO Insertion : Time (s): cpu = 00:07:12 ; elapsed = 00:07:41 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:08:10 ; elapsed = 00:08:49 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:12 ; elapsed = 00:07:41 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:08:18 ; elapsed = 00:08:57 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:19 ; elapsed = 00:07:49 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:08:18 ; elapsed = 00:08:57 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:20 ; elapsed = 00:07:49 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:08:20 ; elapsed = 00:08:59 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:21 ; elapsed = 00:07:50 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:08:20 ; elapsed = 00:08:59 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Renaming Generated Nets : Time (s): cpu = 00:07:22 ; elapsed = 00:07:51 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -10262,16 +10285,16 @@ Report Cell Usage:
 +------+---------+------+
 |1     |BIBUF    |   130|
 |2     |BUFG     |     2|
-|3     |CARRY4   |   910|
+|3     |CARRY4   |   926|
 |4     |CFGLUT5  |    67|
 |5     |DSP48E1  |     3|
-|8     |LUT1     |   741|
-|9     |LUT2     |  2346|
-|10    |LUT3     |  2353|
-|11    |LUT4     |  2390|
-|12    |LUT5     |  3169|
-|13    |LUT6     |  5375|
-|14    |MUXCY    |   192|
+|8     |LUT1     |   747|
+|9     |LUT2     |  2432|
+|10    |LUT3     |  2438|
+|11    |LUT4     |  2473|
+|12    |LUT5     |  3214|
+|13    |LUT6     |  5438|
+|14    |MUXCY    |   256|
 |15    |MUXCY_L  |     9|
 |16    |MUXF7    |   193|
 |17    |MUXF8    |    32|
@@ -10287,22 +10310,22 @@ Report Cell Usage:
 |28    |XORCY    |    12|
 |29    |FD       |    16|
 |30    |FDPE     |     8|
-|31    |FDR      |   189|
-|32    |FDRE     | 14365|
-|33    |FDSE     |   417|
+|31    |FDR      |   201|
+|32    |FDRE     | 14597|
+|33    |FDSE     |   418|
 |34    |IBUF     |     3|
 |35    |IOBUF    |     6|
 |36    |OBUF     |     9|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:08:20 ; elapsed = 00:08:59 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:22 ; elapsed = 00:07:51 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 149 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:05:06 ; elapsed = 00:07:50 . Memory (MB): peak = 2175.680 ; gain = 775.277
-Synthesis Optimization Complete : Time (s): cpu = 00:08:21 ; elapsed = 00:09:00 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:23 ; elapsed = 00:06:46 . Memory (MB): peak = 2180.656 ; gain = 773.891
+Synthesis Optimization Complete : Time (s): cpu = 00:07:22 ; elapsed = 00:07:51 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2175.680 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2076 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2180.656 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2168 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: DEMO_i/ila_0 UUID: f26d0da4-f314-54ef-88e6-2da069af983e 
@@ -10310,26 +10333,26 @@ INFO: [Chipscope 16-324] Core: DEMO_i/vio_0 UUID: f997119d-f08f-5bb8-9b89-a7dfa0
 INFO: [Chipscope 16-324] Core: DEMO_i/vio_1 UUID: 92f29ad8-6089-5834-8d6f-8ffd58acbaa1 
 INFO: [Chipscope 16-324] Core: DEMO_i/vio_2 UUID: c930a57d-ced2-5a4b-972a-b75c51a94e87 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2175.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2180.656 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 812 instances were transformed.
-  (MUXCY,XORCY) => CARRY4: 99 instances
+  A total of 856 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 131 instances
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 56 instances
   CFGLUT5 => SRLC32E: 11 instances
   FD => FDRE: 16 instances
-  FDR => FDRE: 189 instances
+  FDR => FDRE: 201 instances
   IOBUF => IOBUF (IBUF, OBUFT): 6 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 315 instances
   RAM64X1S => RAM64X1S (RAMS64E): 116 instances
   SRL16 => SRL16E: 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-937 Infos, 208 Warnings, 0 Critical Warnings and 0 Errors encountered.
+941 Infos, 208 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:08:52 ; elapsed = 00:09:36 . Memory (MB): peak = 2175.680 ; gain = 1113.543
+synth_design: Time (s): cpu = 00:07:51 ; elapsed = 00:08:25 . Memory (MB): peak = 2180.656 ; gain = 1118.402
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/DEMO_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 2175.680 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2180.656 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file DEMO_wrapper_utilization_synth.rpt -pb DEMO_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 22 08:23:53 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 22 20:57:23 2025...

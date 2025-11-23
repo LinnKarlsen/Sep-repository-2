@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sat Nov 22 08:13:36 2025
-# Process ID: 17644
+# Start of session at: Sat Nov 22 20:48:22 2025
+# Process ID: 3696
 # Current directory: C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1
 # Command line: vivado.exe -log DEMO_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DEMO_wrapper.tcl
 # Log file: C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/synth_1/DEMO_wrapper.vds

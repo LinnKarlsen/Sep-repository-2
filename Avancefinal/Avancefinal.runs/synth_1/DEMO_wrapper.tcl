@@ -156,6 +156,8 @@ set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-rep
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_2_0/DEMO_axi_timer_2_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_2_0/DEMO_axi_timer_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_3_0/DEMO_axi_timer_3_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_3_0/DEMO_axi_timer_3_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/DEMO_ooc.xdc]
 
 OPTRACE "Adding files" END { }

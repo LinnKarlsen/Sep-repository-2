@@ -583,3 +583,1634 @@ con
 
 17:04:02 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_10.tcl'
 17:07:36 INFO  : Disconnected from the channel tcfchan#12.
+17:32:52 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\linnh\Sep-repository-2\Avancefinal\temp_xsdb_launch_script.tcl
+17:32:56 INFO  : XSCT server has started successfully.
+17:32:56 INFO  : Successfully done setting XSCT server connection channel  
+17:32:56 INFO  : plnx-install-location is set to ''
+17:32:56 INFO  : Successfully done setting workspace for the tool. 
+17:33:07 INFO  : Platform repository initialization has completed.
+17:33:09 INFO  : Registering command handlers for Vitis TCF services
+17:33:20 INFO  : Successfully done query RDI_DATADIR 
+18:31:14 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+18:31:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:32:03 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+18:32:03 INFO  : 'jtag frequency' command is executed.
+18:32:03 INFO  : Context for 'APU' is selected.
+18:32:03 INFO  : System reset is completed.
+18:32:06 INFO  : 'after 3000' command is executed.
+18:32:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+18:32:08 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+18:32:08 INFO  : Context for 'APU' is selected.
+18:32:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+18:32:09 INFO  : 'configparams force-mem-access 1' command is executed.
+18:32:09 INFO  : Context for 'APU' is selected.
+18:32:09 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+18:32:10 INFO  : 'ps7_init' command is executed.
+18:32:10 INFO  : 'ps7_post_config' command is executed.
+18:32:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:32:11 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:32:11 INFO  : 'configparams force-mem-access 0' command is executed.
+18:32:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:32:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:32:11 INFO  : 'con' command is executed.
+18:32:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:32:11 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_11.tcl'
+19:11:26 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:11:38 INFO  : Disconnected from the channel tcfchan#1.
+19:11:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:11:39 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:11:39 INFO  : 'jtag frequency' command is executed.
+19:11:39 INFO  : Context for 'APU' is selected.
+19:11:40 INFO  : System reset is completed.
+19:11:43 INFO  : 'after 3000' command is executed.
+19:11:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:11:44 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:11:44 INFO  : Context for 'APU' is selected.
+19:11:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:11:49 INFO  : 'configparams force-mem-access 1' command is executed.
+19:11:49 INFO  : Context for 'APU' is selected.
+19:11:49 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:11:49 INFO  : 'ps7_init' command is executed.
+19:11:49 INFO  : 'ps7_post_config' command is executed.
+19:11:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:11:50 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:11:50 INFO  : 'configparams force-mem-access 0' command is executed.
+19:11:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:11:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:11:50 INFO  : 'con' command is executed.
+19:11:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:11:50 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_12.tcl'
+19:14:43 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:14:57 INFO  : Disconnected from the channel tcfchan#2.
+19:14:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:14:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:14:58 INFO  : 'jtag frequency' command is executed.
+19:14:58 INFO  : Context for 'APU' is selected.
+19:14:58 INFO  : System reset is completed.
+19:15:01 INFO  : 'after 3000' command is executed.
+19:15:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:15:03 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:15:03 INFO  : Context for 'APU' is selected.
+19:15:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:15:07 INFO  : 'configparams force-mem-access 1' command is executed.
+19:15:07 INFO  : Context for 'APU' is selected.
+19:15:07 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:15:07 INFO  : 'ps7_init' command is executed.
+19:15:07 INFO  : 'ps7_post_config' command is executed.
+19:15:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:15:08 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:15:08 INFO  : 'configparams force-mem-access 0' command is executed.
+19:15:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:15:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:15:08 INFO  : 'con' command is executed.
+19:15:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:15:08 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_13.tcl'
+19:21:44 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:21:57 INFO  : Disconnected from the channel tcfchan#3.
+19:21:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:21:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:21:58 INFO  : 'jtag frequency' command is executed.
+19:21:58 INFO  : Context for 'APU' is selected.
+19:21:58 INFO  : System reset is completed.
+19:22:01 INFO  : 'after 3000' command is executed.
+19:22:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:22:03 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:22:03 INFO  : Context for 'APU' is selected.
+19:22:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:22:06 INFO  : 'configparams force-mem-access 1' command is executed.
+19:22:06 INFO  : Context for 'APU' is selected.
+19:22:06 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:22:07 INFO  : 'ps7_init' command is executed.
+19:22:07 INFO  : 'ps7_post_config' command is executed.
+19:22:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:22:07 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:22:07 INFO  : 'configparams force-mem-access 0' command is executed.
+19:22:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:22:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:22:08 INFO  : 'con' command is executed.
+19:22:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:22:08 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_14.tcl'
+19:26:54 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:26:58 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:27:01 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:27:09 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa is already opened
+
+19:28:09 INFO  : Disconnected from the channel tcfchan#4.
+19:28:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:28:11 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:28:11 INFO  : 'jtag frequency' command is executed.
+19:28:11 INFO  : Context for 'APU' is selected.
+19:28:11 INFO  : System reset is completed.
+19:28:14 INFO  : 'after 3000' command is executed.
+19:28:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:28:15 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:28:15 INFO  : Context for 'APU' is selected.
+19:28:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:28:20 INFO  : 'configparams force-mem-access 1' command is executed.
+19:28:20 INFO  : Context for 'APU' is selected.
+19:28:20 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:28:21 INFO  : 'ps7_init' command is executed.
+19:28:21 INFO  : 'ps7_post_config' command is executed.
+19:28:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:28:22 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:28:22 INFO  : 'configparams force-mem-access 0' command is executed.
+19:28:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:28:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:28:22 INFO  : 'con' command is executed.
+19:28:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:28:22 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_15.tcl'
+19:32:14 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:32:24 INFO  : Disconnected from the channel tcfchan#6.
+19:32:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:32:25 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:32:26 INFO  : 'jtag frequency' command is executed.
+19:32:26 INFO  : Context for 'APU' is selected.
+19:32:26 INFO  : System reset is completed.
+19:32:29 INFO  : 'after 3000' command is executed.
+19:32:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:32:30 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:32:30 INFO  : Context for 'APU' is selected.
+19:32:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:32:34 INFO  : 'configparams force-mem-access 1' command is executed.
+19:32:34 INFO  : Context for 'APU' is selected.
+19:32:34 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:32:35 INFO  : 'ps7_init' command is executed.
+19:32:35 INFO  : 'ps7_post_config' command is executed.
+19:32:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:32:35 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:32:35 INFO  : 'configparams force-mem-access 0' command is executed.
+19:32:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:32:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:32:35 INFO  : 'con' command is executed.
+19:32:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:32:35 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_16.tcl'
+19:36:55 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:37:03 INFO  : Disconnected from the channel tcfchan#7.
+19:37:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:37:04 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:37:04 INFO  : 'jtag frequency' command is executed.
+19:37:04 INFO  : Context for 'APU' is selected.
+19:37:04 INFO  : System reset is completed.
+19:37:07 INFO  : 'after 3000' command is executed.
+19:37:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:37:09 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:37:09 INFO  : Context for 'APU' is selected.
+19:37:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:37:13 INFO  : 'configparams force-mem-access 1' command is executed.
+19:37:13 INFO  : Context for 'APU' is selected.
+19:37:13 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:37:14 INFO  : 'ps7_init' command is executed.
+19:37:14 INFO  : 'ps7_post_config' command is executed.
+19:37:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:37:14 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:37:14 INFO  : 'configparams force-mem-access 0' command is executed.
+19:37:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:37:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:37:14 INFO  : 'con' command is executed.
+19:37:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:37:14 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_17.tcl'
+19:39:53 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:40:02 INFO  : Disconnected from the channel tcfchan#8.
+19:40:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:40:03 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:40:03 INFO  : 'jtag frequency' command is executed.
+19:40:03 INFO  : Context for 'APU' is selected.
+19:40:03 INFO  : System reset is completed.
+19:40:06 INFO  : 'after 3000' command is executed.
+19:40:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:40:07 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:40:07 INFO  : Context for 'APU' is selected.
+19:40:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:40:12 INFO  : 'configparams force-mem-access 1' command is executed.
+19:40:12 INFO  : Context for 'APU' is selected.
+19:40:12 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:40:13 INFO  : 'ps7_init' command is executed.
+19:40:13 INFO  : 'ps7_post_config' command is executed.
+19:40:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:40:13 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:40:13 INFO  : 'configparams force-mem-access 0' command is executed.
+19:40:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:40:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:40:13 INFO  : 'con' command is executed.
+19:40:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:40:13 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_18.tcl'
+19:40:52 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:41:00 INFO  : Disconnected from the channel tcfchan#9.
+19:41:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:41:01 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:41:01 INFO  : 'jtag frequency' command is executed.
+19:41:01 INFO  : Context for 'APU' is selected.
+19:41:01 INFO  : System reset is completed.
+19:41:04 INFO  : 'after 3000' command is executed.
+19:41:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:41:06 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:41:06 INFO  : Context for 'APU' is selected.
+19:41:11 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:41:11 INFO  : 'configparams force-mem-access 1' command is executed.
+19:41:11 INFO  : Context for 'APU' is selected.
+19:41:11 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:41:11 INFO  : 'ps7_init' command is executed.
+19:41:11 INFO  : 'ps7_post_config' command is executed.
+19:41:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:41:12 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:41:12 INFO  : 'configparams force-mem-access 0' command is executed.
+19:41:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:41:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:41:12 INFO  : 'con' command is executed.
+19:41:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:41:12 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_19.tcl'
+19:43:18 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:43:32 INFO  : Disconnected from the channel tcfchan#10.
+19:43:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:43:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:43:34 INFO  : 'jtag frequency' command is executed.
+19:43:34 INFO  : Context for 'APU' is selected.
+19:43:34 INFO  : System reset is completed.
+19:43:37 INFO  : 'after 3000' command is executed.
+19:43:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:43:38 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:43:38 INFO  : Context for 'APU' is selected.
+19:43:44 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:43:44 INFO  : 'configparams force-mem-access 1' command is executed.
+19:43:44 INFO  : Context for 'APU' is selected.
+19:43:44 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:43:45 INFO  : 'ps7_init' command is executed.
+19:43:45 INFO  : 'ps7_post_config' command is executed.
+19:43:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:43:45 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:43:45 INFO  : 'configparams force-mem-access 0' command is executed.
+19:43:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:43:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:43:45 INFO  : 'con' command is executed.
+19:43:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:43:45 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_20.tcl'
+19:44:20 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:44:40 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:44:51 INFO  : Disconnected from the channel tcfchan#11.
+19:44:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:44:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:44:52 INFO  : 'jtag frequency' command is executed.
+19:44:52 INFO  : Context for 'APU' is selected.
+19:44:52 INFO  : System reset is completed.
+19:44:55 INFO  : 'after 3000' command is executed.
+19:44:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:44:57 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:44:57 INFO  : Context for 'APU' is selected.
+19:45:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:45:01 INFO  : 'configparams force-mem-access 1' command is executed.
+19:45:01 INFO  : Context for 'APU' is selected.
+19:45:01 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:45:01 INFO  : 'ps7_init' command is executed.
+19:45:01 INFO  : 'ps7_post_config' command is executed.
+19:45:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:45:02 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:45:02 INFO  : 'configparams force-mem-access 0' command is executed.
+19:45:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:45:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:45:02 INFO  : 'con' command is executed.
+19:45:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:45:02 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_21.tcl'
+19:45:17 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:45:26 INFO  : Disconnected from the channel tcfchan#12.
+19:45:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:45:27 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:45:27 INFO  : 'jtag frequency' command is executed.
+19:45:27 INFO  : Context for 'APU' is selected.
+19:45:27 INFO  : System reset is completed.
+19:45:30 INFO  : 'after 3000' command is executed.
+19:45:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:45:31 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:45:32 INFO  : Context for 'APU' is selected.
+19:45:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:45:37 INFO  : 'configparams force-mem-access 1' command is executed.
+19:45:37 INFO  : Context for 'APU' is selected.
+19:45:37 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:45:37 INFO  : 'ps7_init' command is executed.
+19:45:37 INFO  : 'ps7_post_config' command is executed.
+19:45:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:45:38 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:45:38 INFO  : 'configparams force-mem-access 0' command is executed.
+19:45:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:45:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:45:38 INFO  : 'con' command is executed.
+19:45:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:45:38 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_22.tcl'
+19:46:15 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:46:22 INFO  : Disconnected from the channel tcfchan#13.
+19:46:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:46:24 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:46:24 INFO  : 'jtag frequency' command is executed.
+19:46:24 INFO  : Context for 'APU' is selected.
+19:46:24 INFO  : System reset is completed.
+19:46:27 INFO  : 'after 3000' command is executed.
+19:46:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:46:28 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:46:28 INFO  : Context for 'APU' is selected.
+19:46:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:46:33 INFO  : 'configparams force-mem-access 1' command is executed.
+19:46:33 INFO  : Context for 'APU' is selected.
+19:46:33 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:46:34 INFO  : 'ps7_init' command is executed.
+19:46:34 INFO  : 'ps7_post_config' command is executed.
+19:46:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:46:34 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:46:34 INFO  : 'configparams force-mem-access 0' command is executed.
+19:46:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:46:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:46:34 INFO  : 'con' command is executed.
+19:46:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:46:34 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_23.tcl'
+19:47:05 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:47:45 INFO  : Disconnected from the channel tcfchan#14.
+19:47:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:47:47 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:47:47 INFO  : 'jtag frequency' command is executed.
+19:47:47 INFO  : Context for 'APU' is selected.
+19:47:47 INFO  : System reset is completed.
+19:47:50 INFO  : 'after 3000' command is executed.
+19:47:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:47:51 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:47:51 INFO  : Context for 'APU' is selected.
+19:47:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:47:55 INFO  : 'configparams force-mem-access 1' command is executed.
+19:47:55 INFO  : Context for 'APU' is selected.
+19:47:55 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:47:56 INFO  : 'ps7_init' command is executed.
+19:47:56 INFO  : 'ps7_post_config' command is executed.
+19:47:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:47:57 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:47:57 INFO  : 'configparams force-mem-access 0' command is executed.
+19:47:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:47:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:47:57 INFO  : 'con' command is executed.
+19:47:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:47:57 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_24.tcl'
+19:48:25 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:49:07 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+19:49:15 INFO  : Disconnected from the channel tcfchan#15.
+19:49:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:49:16 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+19:49:16 INFO  : 'jtag frequency' command is executed.
+19:49:17 INFO  : Context for 'APU' is selected.
+19:49:17 INFO  : System reset is completed.
+19:49:20 INFO  : 'after 3000' command is executed.
+19:49:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+19:49:21 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+19:49:21 INFO  : Context for 'APU' is selected.
+19:49:25 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+19:49:25 INFO  : 'configparams force-mem-access 1' command is executed.
+19:49:25 INFO  : Context for 'APU' is selected.
+19:49:25 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+19:49:26 INFO  : 'ps7_init' command is executed.
+19:49:26 INFO  : 'ps7_post_config' command is executed.
+19:49:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:49:26 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:49:26 INFO  : 'configparams force-mem-access 0' command is executed.
+19:49:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:49:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:49:27 INFO  : 'con' command is executed.
+19:49:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:49:27 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_25.tcl'
+20:16:37 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:19:18 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:19:32 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:31:36 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:31:47 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:31:56 INFO  : Disconnected from the channel tcfchan#16.
+20:31:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:31:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+20:31:58 INFO  : 'jtag frequency' command is executed.
+20:31:58 INFO  : Context for 'APU' is selected.
+20:31:58 INFO  : System reset is completed.
+20:32:01 INFO  : 'after 3000' command is executed.
+20:32:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+20:32:02 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+20:32:02 INFO  : Context for 'APU' is selected.
+20:32:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+20:32:09 INFO  : 'configparams force-mem-access 1' command is executed.
+20:32:10 INFO  : Context for 'APU' is selected.
+20:32:10 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+20:32:10 INFO  : 'ps7_init' command is executed.
+20:32:10 INFO  : 'ps7_post_config' command is executed.
+20:32:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:11 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:32:11 INFO  : 'configparams force-mem-access 0' command is executed.
+20:32:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:32:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:11 INFO  : 'con' command is executed.
+20:32:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:32:11 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_26.tcl'
+20:34:34 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:34:50 INFO  : Disconnected from the channel tcfchan#17.
+20:34:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:34:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+20:34:52 INFO  : 'jtag frequency' command is executed.
+20:34:52 INFO  : Context for 'APU' is selected.
+20:34:52 INFO  : System reset is completed.
+20:34:55 INFO  : 'after 3000' command is executed.
+20:34:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+20:34:56 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+20:34:56 INFO  : Context for 'APU' is selected.
+20:35:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+20:35:01 INFO  : 'configparams force-mem-access 1' command is executed.
+20:35:01 INFO  : Context for 'APU' is selected.
+20:35:01 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+20:35:02 INFO  : 'ps7_init' command is executed.
+20:35:02 INFO  : 'ps7_post_config' command is executed.
+20:35:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:35:02 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:35:02 INFO  : 'configparams force-mem-access 0' command is executed.
+20:35:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:35:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:35:03 INFO  : 'con' command is executed.
+20:35:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:35:03 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_27.tcl'
+20:35:24 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:35:33 INFO  : Disconnected from the channel tcfchan#18.
+20:35:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:35:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+20:35:34 INFO  : 'jtag frequency' command is executed.
+20:35:34 INFO  : Context for 'APU' is selected.
+20:35:34 INFO  : System reset is completed.
+20:35:37 INFO  : 'after 3000' command is executed.
+20:35:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+20:35:39 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+20:35:39 INFO  : Context for 'APU' is selected.
+20:35:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+20:35:43 INFO  : 'configparams force-mem-access 1' command is executed.
+20:35:43 INFO  : Context for 'APU' is selected.
+20:35:43 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+20:35:44 INFO  : 'ps7_init' command is executed.
+20:35:44 INFO  : 'ps7_post_config' command is executed.
+20:35:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:35:45 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:35:45 INFO  : 'configparams force-mem-access 0' command is executed.
+20:35:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:35:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:35:45 INFO  : 'con' command is executed.
+20:35:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:35:45 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_28.tcl'
+20:36:40 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:36:56 INFO  : Disconnected from the channel tcfchan#19.
+20:36:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:36:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+20:36:58 INFO  : 'jtag frequency' command is executed.
+20:36:58 INFO  : Context for 'APU' is selected.
+20:36:58 INFO  : System reset is completed.
+20:37:01 INFO  : 'after 3000' command is executed.
+20:37:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+20:37:02 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+20:37:02 INFO  : Context for 'APU' is selected.
+20:37:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+20:37:06 INFO  : 'configparams force-mem-access 1' command is executed.
+20:37:06 INFO  : Context for 'APU' is selected.
+20:37:06 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+20:37:07 INFO  : 'ps7_init' command is executed.
+20:37:07 INFO  : 'ps7_post_config' command is executed.
+20:37:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:37:08 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:37:08 INFO  : 'configparams force-mem-access 0' command is executed.
+20:37:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:37:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:37:08 INFO  : 'con' command is executed.
+20:37:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:37:08 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_29.tcl'
+20:37:26 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:37:34 INFO  : Disconnected from the channel tcfchan#20.
+20:37:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:37:35 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+20:37:35 INFO  : 'jtag frequency' command is executed.
+20:37:35 INFO  : Context for 'APU' is selected.
+20:37:35 INFO  : System reset is completed.
+20:37:38 INFO  : 'after 3000' command is executed.
+20:37:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+20:37:39 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+20:37:39 INFO  : Context for 'APU' is selected.
+20:37:44 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+20:37:44 INFO  : 'configparams force-mem-access 1' command is executed.
+20:37:44 INFO  : Context for 'APU' is selected.
+20:37:44 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+20:37:45 INFO  : 'ps7_init' command is executed.
+20:37:45 INFO  : 'ps7_post_config' command is executed.
+20:37:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:37:46 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:37:46 INFO  : 'configparams force-mem-access 0' command is executed.
+20:37:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:37:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:37:46 INFO  : 'con' command is executed.
+20:37:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:37:46 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_30.tcl'
+20:38:34 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+20:38:59 INFO  : Disconnected from the channel tcfchan#21.
+20:39:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:39:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+20:39:00 INFO  : 'jtag frequency' command is executed.
+20:39:00 INFO  : Context for 'APU' is selected.
+20:39:01 INFO  : System reset is completed.
+20:39:04 INFO  : 'after 3000' command is executed.
+20:39:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+20:39:05 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit"
+20:39:05 INFO  : Context for 'APU' is selected.
+20:39:11 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa'.
+20:39:11 INFO  : 'configparams force-mem-access 1' command is executed.
+20:39:11 INFO  : Context for 'APU' is selected.
+20:39:11 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+20:39:11 INFO  : 'ps7_init' command is executed.
+20:39:11 INFO  : 'ps7_post_config' command is executed.
+20:39:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:39:12 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:39:12 INFO  : 'configparams force-mem-access 0' command is executed.
+20:39:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:39:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:39:12 INFO  : 'con' command is executed.
+20:39:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:39:12 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_31.tcl'
+21:13:33 INFO  : Result from executing command 'getProjects': HW_Base_Booster
+21:13:33 INFO  : Result from executing command 'getPlatforms': HW_Base_Booster|C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm
+21:13:34 INFO  : Hardware specification for platform project 'HW_Base_Booster' is updated.
+21:14:42 INFO  : The hardware specfication used by project 'SW_Base_Booster' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+21:14:47 INFO  : The file 'C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\_ide\bitstream\DEMO_wrapper_new.bit' stored in project is removed.
+21:14:47 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\_ide\bitstream' in project 'SW_Base_Booster'.
+21:14:47 INFO  : The file 'C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\_ide\psinit\ps7_init.tcl' stored in project is removed.
+21:14:55 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\_ide\psinit' in project 'SW_Base_Booster'.
+21:15:23 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:15:23 INFO  : Updating application flags with new BSP settings...
+21:15:24 INFO  : Successfully updated application flags for project SW_Base_Booster.
+21:15:36 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:15:52 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:16:13 INFO  : Disconnected from the channel tcfchan#22.
+21:16:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:16:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:16:15 INFO  : 'jtag frequency' command is executed.
+21:16:15 INFO  : Context for 'APU' is selected.
+21:16:15 INFO  : System reset is completed.
+21:16:18 INFO  : 'after 3000' command is executed.
+21:16:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:16:19 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:16:19 INFO  : Context for 'APU' is selected.
+21:16:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:16:20 INFO  : 'configparams force-mem-access 1' command is executed.
+21:16:20 INFO  : Context for 'APU' is selected.
+21:16:20 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:16:20 INFO  : 'ps7_init' command is executed.
+21:16:20 INFO  : 'ps7_post_config' command is executed.
+21:16:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:16:21 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:16:21 INFO  : 'configparams force-mem-access 0' command is executed.
+21:16:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:16:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:16:21 INFO  : 'con' command is executed.
+21:16:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:16:21 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_32.tcl'
+21:17:42 INFO  : Disconnected from the channel tcfchan#25.
+21:17:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:17:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:17:43 INFO  : 'jtag frequency' command is executed.
+21:17:43 INFO  : Context for 'APU' is selected.
+21:17:44 INFO  : System reset is completed.
+21:17:47 INFO  : 'after 3000' command is executed.
+21:17:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:17:48 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:17:48 INFO  : Context for 'APU' is selected.
+21:17:48 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:17:48 INFO  : 'configparams force-mem-access 1' command is executed.
+21:17:48 INFO  : Context for 'APU' is selected.
+21:17:48 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:17:49 INFO  : 'ps7_init' command is executed.
+21:17:49 INFO  : 'ps7_post_config' command is executed.
+21:17:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:49 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:17:49 INFO  : 'configparams force-mem-access 0' command is executed.
+21:17:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:17:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:49 INFO  : 'con' command is executed.
+21:17:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:17:49 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_33.tcl'
+21:18:55 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:19:04 INFO  : Disconnected from the channel tcfchan#26.
+21:19:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:19:05 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:19:05 INFO  : 'jtag frequency' command is executed.
+21:19:05 INFO  : Context for 'APU' is selected.
+21:19:05 INFO  : System reset is completed.
+21:19:08 INFO  : 'after 3000' command is executed.
+21:19:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:19:10 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:19:10 INFO  : Context for 'APU' is selected.
+21:19:10 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:19:10 INFO  : 'configparams force-mem-access 1' command is executed.
+21:19:10 INFO  : Context for 'APU' is selected.
+21:19:10 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:19:11 INFO  : 'ps7_init' command is executed.
+21:19:11 INFO  : 'ps7_post_config' command is executed.
+21:19:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:19:11 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:19:11 INFO  : 'configparams force-mem-access 0' command is executed.
+21:19:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:19:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:19:11 INFO  : 'con' command is executed.
+21:19:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:19:11 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_34.tcl'
+21:20:47 INFO  : Disconnected from the channel tcfchan#27.
+21:20:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:20:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:20:49 INFO  : 'jtag frequency' command is executed.
+21:20:49 INFO  : Context for 'APU' is selected.
+21:20:49 INFO  : System reset is completed.
+21:20:52 INFO  : 'after 3000' command is executed.
+21:20:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:20:53 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:20:53 INFO  : Context for 'APU' is selected.
+21:20:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:20:53 INFO  : 'configparams force-mem-access 1' command is executed.
+21:20:53 INFO  : Context for 'APU' is selected.
+21:20:53 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:20:54 INFO  : 'ps7_init' command is executed.
+21:20:54 INFO  : 'ps7_post_config' command is executed.
+21:20:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:20:54 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:20:54 INFO  : 'configparams force-mem-access 0' command is executed.
+21:20:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:20:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:20:55 INFO  : 'con' command is executed.
+21:20:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:20:55 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_35.tcl'
+21:21:20 INFO  : Disconnected from the channel tcfchan#28.
+21:21:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:21:21 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:21:21 INFO  : 'jtag frequency' command is executed.
+21:21:21 INFO  : Context for 'APU' is selected.
+21:21:21 INFO  : System reset is completed.
+21:21:24 INFO  : 'after 3000' command is executed.
+21:21:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:21:26 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:21:26 INFO  : Context for 'APU' is selected.
+21:21:26 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:21:26 INFO  : 'configparams force-mem-access 1' command is executed.
+21:21:26 INFO  : Context for 'APU' is selected.
+21:21:26 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:21:27 INFO  : 'ps7_init' command is executed.
+21:21:27 INFO  : 'ps7_post_config' command is executed.
+21:21:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:21:27 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:21:27 INFO  : 'configparams force-mem-access 0' command is executed.
+21:21:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:21:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:21:28 INFO  : 'con' command is executed.
+21:21:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:21:28 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_36.tcl'
+21:21:46 INFO  : Disconnected from the channel tcfchan#29.
+21:21:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:21:47 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:21:47 INFO  : 'jtag frequency' command is executed.
+21:21:47 INFO  : Context for 'APU' is selected.
+21:21:47 INFO  : System reset is completed.
+21:21:50 INFO  : 'after 3000' command is executed.
+21:21:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:21:52 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:21:52 INFO  : Context for 'APU' is selected.
+21:21:52 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:21:52 INFO  : 'configparams force-mem-access 1' command is executed.
+21:21:52 INFO  : Context for 'APU' is selected.
+21:21:52 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:21:53 INFO  : 'ps7_init' command is executed.
+21:21:53 INFO  : 'ps7_post_config' command is executed.
+21:21:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:21:53 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:21:53 INFO  : 'configparams force-mem-access 0' command is executed.
+21:21:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:21:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:21:53 INFO  : 'con' command is executed.
+21:21:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:21:53 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_37.tcl'
+21:22:16 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:22:22 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:22:25 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:22:43 INFO  : Disconnected from the channel tcfchan#30.
+21:22:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:22:45 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:22:45 INFO  : 'jtag frequency' command is executed.
+21:22:45 INFO  : Context for 'APU' is selected.
+21:22:45 INFO  : System reset is completed.
+21:22:48 INFO  : 'after 3000' command is executed.
+21:22:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:22:49 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:22:50 INFO  : Context for 'APU' is selected.
+21:22:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:22:50 INFO  : 'configparams force-mem-access 1' command is executed.
+21:22:50 INFO  : Context for 'APU' is selected.
+21:22:50 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:22:50 INFO  : 'ps7_init' command is executed.
+21:22:50 INFO  : 'ps7_post_config' command is executed.
+21:22:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:51 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:22:51 INFO  : 'configparams force-mem-access 0' command is executed.
+21:22:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:22:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:51 INFO  : 'con' command is executed.
+21:22:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:22:51 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_38.tcl'
+21:23:34 INFO  : Disconnected from the channel tcfchan#32.
+21:23:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:23:35 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:23:35 INFO  : 'jtag frequency' command is executed.
+21:23:35 INFO  : Context for 'APU' is selected.
+21:23:35 INFO  : System reset is completed.
+21:23:38 INFO  : 'after 3000' command is executed.
+21:23:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:23:40 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:23:40 INFO  : Context for 'APU' is selected.
+21:23:40 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:23:40 INFO  : 'configparams force-mem-access 1' command is executed.
+21:23:40 INFO  : Context for 'APU' is selected.
+21:23:40 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:23:40 INFO  : 'ps7_init' command is executed.
+21:23:40 INFO  : 'ps7_post_config' command is executed.
+21:23:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:23:41 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:23:41 INFO  : 'configparams force-mem-access 0' command is executed.
+21:23:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:23:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:23:41 INFO  : 'con' command is executed.
+21:23:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:23:41 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_39.tcl'
+21:24:31 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:24:59 INFO  : Hardware specification for platform project 'HW_Base_Booster' is updated.
+21:25:09 INFO  : Result from executing command 'getProjects': HW_Base_Booster
+21:25:09 INFO  : Result from executing command 'getPlatforms': HW_Base_Booster|C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm
+21:26:14 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:26:22 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:26:26 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:26:40 INFO  : Disconnected from the channel tcfchan#33.
+21:26:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:26:41 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:26:41 INFO  : 'jtag frequency' command is executed.
+21:26:41 INFO  : Context for 'APU' is selected.
+21:26:41 INFO  : System reset is completed.
+21:26:44 INFO  : 'after 3000' command is executed.
+21:26:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:26:46 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:26:46 INFO  : Context for 'APU' is selected.
+21:26:46 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:26:46 INFO  : 'configparams force-mem-access 1' command is executed.
+21:26:46 INFO  : Context for 'APU' is selected.
+21:26:46 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:26:46 INFO  : 'ps7_init' command is executed.
+21:26:46 INFO  : 'ps7_post_config' command is executed.
+21:26:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:26:47 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:26:47 INFO  : 'configparams force-mem-access 0' command is executed.
+21:26:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:26:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:26:47 INFO  : 'con' command is executed.
+21:26:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:26:47 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_40.tcl'
+21:29:26 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:29:36 INFO  : Disconnected from the channel tcfchan#36.
+21:29:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:29:37 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:29:37 INFO  : 'jtag frequency' command is executed.
+21:29:37 INFO  : Context for 'APU' is selected.
+21:29:38 INFO  : System reset is completed.
+21:29:41 INFO  : 'after 3000' command is executed.
+21:29:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:29:42 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:29:42 INFO  : Context for 'APU' is selected.
+21:29:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:29:42 INFO  : 'configparams force-mem-access 1' command is executed.
+21:29:42 INFO  : Context for 'APU' is selected.
+21:29:42 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:29:43 INFO  : 'ps7_init' command is executed.
+21:29:43 INFO  : 'ps7_post_config' command is executed.
+21:29:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:29:43 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:29:43 INFO  : 'configparams force-mem-access 0' command is executed.
+21:29:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:29:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:29:43 INFO  : 'con' command is executed.
+21:29:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:29:43 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_41.tcl'
+21:30:19 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:30:29 INFO  : Disconnected from the channel tcfchan#37.
+21:30:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:30:30 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:30:30 INFO  : 'jtag frequency' command is executed.
+21:30:30 INFO  : Context for 'APU' is selected.
+21:30:30 INFO  : System reset is completed.
+21:30:34 INFO  : 'after 3000' command is executed.
+21:30:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:30:35 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:30:35 INFO  : Context for 'APU' is selected.
+21:30:35 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:30:35 INFO  : 'configparams force-mem-access 1' command is executed.
+21:30:35 INFO  : Context for 'APU' is selected.
+21:30:35 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:30:36 INFO  : 'ps7_init' command is executed.
+21:30:36 INFO  : 'ps7_post_config' command is executed.
+21:30:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:30:37 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:30:37 INFO  : 'configparams force-mem-access 0' command is executed.
+21:30:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:30:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:30:37 INFO  : 'con' command is executed.
+21:30:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:30:37 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_42.tcl'
+21:37:05 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:37:18 INFO  : Disconnected from the channel tcfchan#38.
+21:37:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:37:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:37:19 INFO  : 'jtag frequency' command is executed.
+21:37:19 INFO  : Context for 'APU' is selected.
+21:37:19 INFO  : System reset is completed.
+21:37:22 INFO  : 'after 3000' command is executed.
+21:37:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:37:24 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:37:24 INFO  : Context for 'APU' is selected.
+21:37:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:37:24 INFO  : 'configparams force-mem-access 1' command is executed.
+21:37:24 INFO  : Context for 'APU' is selected.
+21:37:24 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:37:24 INFO  : 'ps7_init' command is executed.
+21:37:24 INFO  : 'ps7_post_config' command is executed.
+21:37:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:37:25 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:37:25 INFO  : 'configparams force-mem-access 0' command is executed.
+21:37:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:37:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:37:25 INFO  : 'con' command is executed.
+21:37:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:37:25 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_43.tcl'
+21:39:13 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+21:39:24 INFO  : Disconnected from the channel tcfchan#39.
+21:39:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:39:25 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+21:39:25 INFO  : 'jtag frequency' command is executed.
+21:39:25 INFO  : Context for 'APU' is selected.
+21:39:25 INFO  : System reset is completed.
+21:39:28 INFO  : 'after 3000' command is executed.
+21:39:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+21:39:30 INFO  : FPGA configured successfully with bitstream "C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit"
+21:39:30 INFO  : Context for 'APU' is selected.
+21:39:30 INFO  : Hardware design and registers information is loaded from 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa'.
+21:39:30 INFO  : 'configparams force-mem-access 1' command is executed.
+21:39:30 INFO  : Context for 'APU' is selected.
+21:39:30 INFO  : Sourcing of 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+21:39:30 INFO  : 'ps7_init' command is executed.
+21:39:30 INFO  : 'ps7_post_config' command is executed.
+21:39:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:39:31 INFO  : The application 'C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:39:31 INFO  : 'configparams force-mem-access 0' command is executed.
+21:39:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper_new2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:39:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:39:31 INFO  : 'con' command is executed.
+21:39:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:39:31 INFO  : Launch script is exported to file 'C:\Users\linnh\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\debugger_sw_base_booster-default_44.tcl'
+21:40:26 INFO  : Disconnected from the channel tcfchan#40.

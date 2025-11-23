@@ -45,7 +45,7 @@ int read_tmp(){
 	return temp;
 }
 int read_opt(){
-	u8 config[3] = {0x01, 0xc4, 0x10};
+	u8 config[3] = {0x01, 0xc2, 0x10};
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&config, 3, XIIC_STOP);
 
 	SendBuffer[0] = 0x00;
