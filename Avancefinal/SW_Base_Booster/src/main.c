@@ -22,7 +22,8 @@
 #include "melody.h"
 
 // ==================== External Definitions ====================
-extern XGpio gpio0;
+extern XGpio gpio0;  // GPIO original
+extern XGpio gpio1;  // GPIO para el light sensor
 extern XSpi  SpiInstance;
 extern XSpi  SpiInstance1;
 extern const unsigned char font[];
@@ -36,7 +37,13 @@ extern const unsigned char font[];
 #define TIMER_INTR_ID_MEASURE    XPAR_FABRIC_AXI_TIMER_2_INTERRUPT_INTR
 #define TIMER_DEVICE_ID_LTMEASURE  XPAR_AXI_TIMER_3_DEVICE_ID
 #define TIMER_INTR_ID_LTMEASURE    XPAR_FABRIC_AXI_TIMER_3_INTERRUPT_INTR
+//#define IIC_DEVICE_ID  			  XPAR_AXI_IIC_0_DEVICE_ID
+//#define IIC_INTR_ID    			  XPAR_FABRIC_AXI_IIC_0_IIC2INTC_IRPT_INTR
 #define INTC_DEVICE_ID           XPAR_SCUGIC_SINGLE_DEVICE_ID
+
+// For GPIO Interrupts
+#define GPIO_DEVICE_ID_1 XPAR_AXI_GPIO_1_DEVICE_ID
+#define GPIO_INTR_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
 
 // Timer instances
 XTmrCtr TimerInstanceGraphics;  // Para los gráficos
@@ -55,26 +62,50 @@ void Measure_Timer_Interrupt_Handler(void *CallBackRef);
 extern volatile int measure_update_needed;
 void LTMeasure_Timer_Interrupt_Handler(void *CallBackRef);
 extern volatile int LTmeasure_update_needed;
+void Light_Interrupt_Handler(void *CallbackRef);
 
 // ==================== LCD and Sensor Config ====================
 #define BACKGROUND  WHITE
 #define FOREGROUND  BLUE
 #define DELAY       1000
 
+// ==================== Light threshold ====================
+#define LOW_LIGHT_INTENSITY_THRESHOLD  400
+#define HIGH_LIGHT_INTENSITY_THRESHOLD  35000
+extern volatile int game_sleep;
+//extern volatile int start;
+
+XGpio gpio1;
+
 // ==================== MAIN ====================
 int main() {
+
     int Status;
 
     // Initialize UART/platform
     init_platform();
     xil_printf("System initialization started...\r\n");
 
-    // -------------------- GPIO --------------------
+    // -------------------- GPIO 0 --------------------
     Status = XGpio_Initialize(&gpio0, XPAR_AXI_GPIO_0_DEVICE_ID);
     if (Status != XST_SUCCESS) {
         xil_printf("Gpio 0 Initialization Failed\r\n");
         return XST_FAILURE;
     }
+
+    // -------------------- GPIO 1 --------------------
+	Status = XGpio_Initialize(&gpio1, XPAR_AXI_GPIO_1_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio 1 Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	// Set channel 1 as input
+	XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF);
+
+	// Enable GPIO Interrupts
+	//XGpio_InterruptEnable(&gpio1, XGPIO_IR_CH1_MASK);
+	//XGpio_InterruptGlobalEnable(&gpio1);
 
     // -------------------- SPI (LCD) --------------------
     Status = XSpi_Init(&SpiInstance, SPI_DEVICE_ID);
@@ -131,7 +162,6 @@ int main() {
 								(Xil_ExceptionHandler)XScuGic_InterruptHandler,
 								&InterruptController);
 	Xil_ExceptionEnable();
-
 
     // -------------------- AUDIO INITIALIZATION --------------------
 
@@ -196,12 +226,8 @@ int main() {
     XTmrCtr_SetOptions(&TimerInstanceMeasure, 0,
                        XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
 
-    // Set measure timer period (e.g., 50ms for 20Hz refresh)
+    // Set measure timer period
     XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0, 1000000);
-    //u32 period = 50000000;
-    //XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0,
-	//					  0xFFFFFFFF - period);
-
 
     // Set up measure timer interrupt
     Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_MEASURE,
@@ -245,6 +271,44 @@ int main() {
 	// Enable measure timer interrupt in the controller
 	XScuGic_Enable(&InterruptController, TIMER_INTR_ID_LTMEASURE);
 
+
+	// -------------------- GPIO1 INTERRUPT INITIALIZATION --------------------
+
+	// Configure the light sensor
+	configure_light_sensor();
+
+	// Connect the GPIO interrupt handler
+	Status = XScuGic_Connect(&InterruptController, GPIO_INTR_ID,
+							 (Xil_ExceptionHandler)Light_Interrupt_Handler,
+							 (void *)&gpio1);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("Failed to connect Light Sensor Interrupt Handler\r\n");
+		return XST_FAILURE;
+	}
+
+	XGpio_InterruptEnable(&gpio1, XGPIO_IR_CH1_MASK);
+	XGpio_InterruptGlobalEnable(&gpio1);
+
+	// Enable GPIO interrupt in the interrupt controller
+	XScuGic_Enable(&InterruptController, GPIO_INTR_ID);
+
+
+	// -------------------- GIC PRIORITY SETUP --------------------
+
+	// Highest priority: LTMEASURE
+	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_LTMEASURE, 0x10, 0x3);
+
+	// Medium: GPIO1
+	XScuGic_SetPriorityTriggerType(&InterruptController, GPIO_INTR_ID, 0x50, 0x3);
+
+	// Medium: MEASURE
+	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_MEASURE, 0x40, 0x3);
+
+	// Low: GRAPHICS
+	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
+
+
 	// -------------------- CLEAR EN PANTALLA --------------------
 
 	LCD_Clear(GUI_BACKGROUND);
@@ -261,24 +325,13 @@ int main() {
     // -------------------- START MELODY --------------------
 
     // Initialize the melody
-    initialize_melody(available_melodies[1], melody, &melody_length);
+    //initialize_melody(available_melodies[1], melody, &melody_length);
 
     // Start playing the melody
     current_note = 0;
     Play_Next_Note();
 
     xil_printf("Melody playback started...\r\n");
-
-    // -------------------- GIC PRIORITY SETUP --------------------
-
-    // Highest priority: LTMEASURE
-    XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_LTMEASURE, 0x10, 0x3);
-
-    // Medium: MEASURE
-    XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_MEASURE, 0x40, 0x3);
-
-    // Low: GRAPHICS
-    XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
 
     // -------------------- MAIN CODE BLOCK --------------------
 
@@ -348,15 +401,31 @@ int main() {
     		}
 
     	if(LTmeasure_update_needed)
-    	{
-    		tmp_val = read_tmp();
-    		opt_val = read_opt();
+		{
+			tmp_val = read_tmp();
+			opt_val = read_opt();
 
-    		xil_printf("TEMPERATURA: %d\n", tmp_val);
+			xil_printf("TEMPERATURA: %d\n", tmp_val);
 			xil_printf("LUZ: %d\n\n", opt_val);
 
 			LTmeasure_update_needed = 0;
-    	}
+
+			//int val = XGpio_DiscreteRead(&gpio1, 1);
+			//xil_printf("GPIO1 value: %08x\r\n", val);
+
+			//int gpio_data = XGpio_DiscreteRead(&gpio1, 1);         // lectura de canal
+			//int irq_status = XGpio_InterruptGetStatus(&gpio1);    // estado de interrupciones del IP
+
+			//xil_printf("DEBUG: GPIO data = 0x%08x, IRQ_status = 0x%08x\n", gpio_data, irq_status);
+		}
+
+    	if(game_sleep)
+		{
+    		xil_printf("Modo reposo                                  ");
+		} else
+		{
+			xil_printf("Salimos de modo reposo                       ");
+		}
 
     }
 
@@ -410,4 +479,38 @@ void LTMeasure_Timer_Interrupt_Handler(void *CallBackRef)
 
     // Set the flag to indicate that graphics update is needed
     LTmeasure_update_needed = 1;
+}
+
+volatile int game_sleep = 1;
+
+//volatile int start = 1;
+
+void Light_Interrupt_Handler(void *CallbackRef)
+{
+	XGpio_InterruptDisable(&gpio1, XGPIO_IR_CH1_MASK);
+
+	//xil_printf("Light Interrupt running\n");
+
+    //XGpio *GpioPtr = (XGpio *)CallbackRef;
+
+    // Clear the interrupt
+	//XGpio_InterruptClear(GpioPtr, XGPIO_IR_CH1_MASK);
+	//(void)XGpio_InterruptClear(&gpio1, XGPIO_IR_CH1_MASK);
+
+    // Read
+    int opt_val_intr = read_opt();
+
+    if (opt_val_intr < LOW_LIGHT_INTENSITY_THRESHOLD)
+    {
+        game_sleep = 1; // Entrar en estado de reposo
+        //xil_printf("Sleep activado\n");
+    }
+    else if (opt_val_intr > HIGH_LIGHT_INTENSITY_THRESHOLD)
+    {
+        game_sleep = 0; // Salir de estado de reposo
+        //xil_printf("Sleep desactivado\n");
+    }
+
+    (void)XGpio_InterruptClear(&gpio1, XGPIO_IR_CH1_MASK);
+    XGpio_InterruptEnable(&gpio1, XGPIO_IR_CH1_MASK);
 }

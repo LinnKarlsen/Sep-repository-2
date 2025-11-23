@@ -1159,7 +1159,7 @@ proc create_root_design { parentCell } {
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
   set_property -dict [ list \
-   CONFIG.NUM_PORTS {5} \
+   CONFIG.NUM_PORTS {6} \
  ] $xlconcat_0
 
   # Create instance: xlconstant_0, and set properties
@@ -1196,6 +1196,7 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net BuzzerBooster_Driver_0_PWM [get_bd_ports PWM] [get_bd_pins BuzzerBooster_Driver_0/PWM]
   connect_bd_net -net axi_gpio_1_ip2intc_irpt [get_bd_pins axi_gpio_1/ip2intc_irpt] [get_bd_pins xlconcat_0/In2]
+  connect_bd_net -net axi_iic_0_iic2intc_irpt [get_bd_pins axi_iic_0/iic2intc_irpt] [get_bd_pins xlconcat_0/In5]
   connect_bd_net -net axi_quad_spi_0_io1_o [get_bd_ports MOSI] [get_bd_pins axi_quad_spi_0/io1_o]
   connect_bd_net -net axi_quad_spi_0_sck_o [get_bd_ports SCLK] [get_bd_pins axi_quad_spi_0/sck_o]
   connect_bd_net -net axi_quad_spi_0_ss_o [get_bd_ports CS] [get_bd_pins axi_quad_spi_0/ss_o]

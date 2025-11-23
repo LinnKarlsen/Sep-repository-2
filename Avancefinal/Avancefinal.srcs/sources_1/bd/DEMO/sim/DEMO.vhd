@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sat Nov 22 20:47:14 2025
+--Date        : Sat Nov 22 23:27:19 2025
 --Host        : TROND-ENVYX360 running 64-bit major release  (build 9200)
 --Command     : generate_target DEMO.bd
 --Design      : DEMO
@@ -3167,7 +3167,7 @@ architecture STRUCTURE of DEMO is
     M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    IRQ_F2P : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 5 downto 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -3599,7 +3599,8 @@ architecture STRUCTURE of DEMO is
     In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 4 downto 0 )
+    In5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   end component DEMO_xlconcat_0_0;
   component DEMO_axi_timer_1_0 is
@@ -3781,6 +3782,7 @@ architecture STRUCTURE of DEMO is
   signal axi_iic_0_IIC_SDA_I : STD_LOGIC;
   signal axi_iic_0_IIC_SDA_O : STD_LOGIC;
   signal axi_iic_0_IIC_SDA_T : STD_LOGIC;
+  signal axi_iic_0_iic2intc_irpt : STD_LOGIC;
   signal axi_quad_spi_0_io1_o : STD_LOGIC;
   signal axi_quad_spi_0_sck_o : STD_LOGIC;
   signal axi_quad_spi_0_ss_o : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4175,9 +4177,8 @@ architecture STRUCTURE of DEMO is
   signal vio_0_probe_out0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal vio_1_probe_out0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal vio_2_probe_out0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_axi_iic_0_iic2intc_irpt_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_iic_0_gpo_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_quad_spi_0_io0_o_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_quad_spi_0_io0_t_UNCONNECTED : STD_LOGIC;
@@ -4368,7 +4369,7 @@ axi_gpio_1: component DEMO_axi_gpio_1_0
 axi_iic_0: component DEMO_axi_iic_0_1
      port map (
       gpo(0) => NLW_axi_iic_0_gpo_UNCONNECTED(0),
-      iic2intc_irpt => NLW_axi_iic_0_iic2intc_irpt_UNCONNECTED,
+      iic2intc_irpt => axi_iic_0_iic2intc_irpt,
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M02_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_ps7_0_50M_peripheral_aresetn(0),
@@ -4862,7 +4863,7 @@ processing_system7_0: component DEMO_processing_system7_0_0
       DDR_WEB => DDR_we_n,
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
-      IRQ_F2P(4 downto 0) => xlconcat_0_dout(4 downto 0),
+      IRQ_F2P(5 downto 0) => xlconcat_0_dout(5 downto 0),
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
       M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK0,
       M_AXI_GP0_ARADDR(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
@@ -5270,7 +5271,8 @@ xlconcat_0: component DEMO_xlconcat_0_0
       In2(0) => axi_gpio_1_ip2intc_irpt,
       In3(0) => axi_timer_2_interrupt,
       In4(0) => axi_timer_3_interrupt,
-      dout(4 downto 0) => xlconcat_0_dout(4 downto 0)
+      In5(0) => axi_iic_0_iic2intc_irpt,
+      dout(5 downto 0) => xlconcat_0_dout(5 downto 0)
     );
 xlconstant_0: component DEMO_xlconstant_0_0
      port map (

@@ -1,0 +1,100 @@
+#include "I2C.h"
+XIic  iic;
+u8 SendBuffer[2];
+u8 RecvBuffer[2];
+u8 config[3];
+int Lux;
+int16_t val;
+int temp;
+int Start;
+
+int init_IIC() {
+
+		XIic_Config *iic_conf;
+
+	    init_platform();
+
+	    iic_conf = XIic_LookupConfig(IIC_dev);
+	    XIic_CfgInitialize(&iic, iic_conf, iic_conf->BaseAddress);
+	    XIic_Start(&iic);
+
+
+		SendBuffer[0] = 0xfe;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_REPEATED_START);
+		XIic_Recv(iic.BaseAddress,TMP_ADDR,(u8 *)&RecvBuffer, 2,XIIC_STOP);
+
+
+		SendBuffer[0] = 0x02;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_STOP);
+
+		SendBuffer[0] = 0x80;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_REPEATED_START);
+		SendBuffer[0] = 0x82;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_REPEATED_START);
+
+
+
+    return XST_SUCCESS;
+}
+
+int read_tmp(){
+	SendBuffer[0] = 0x01; // envia para leer temp
+	XIic_Send(iic.BaseAddress, TMP_ADDR, (u8 *)&SendBuffer, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress, TMP_ADDR, (u8 *)&RecvBuffer, 2, XIIC_STOP);
+	val = (RecvBuffer[0] << 8) | (RecvBuffer[1]);
+	temp = val / 128;
+	return temp;
+}
+
+void configure_light_sensor()
+{
+
+	u8 cfg[3] = { 0x01, 0xC4, 0x10 };
+	XIic_Send(iic.BaseAddress, OPT_ADDR, cfg, 3, XIIC_STOP);
+
+    xil_printf("Light Sensor is being configured...\n");
+
+	/* ---------------------------
+       1. Configure CONFIG register
+       ---------------------------
+
+       CONFIG = 0xC410
+
+       C4 10 = 1100 0100 0001 0000b
+       Bits:
+       - 15:12 = 1100  Continuous conversions, automatic full-scale
+       - 11:9  = 010   Conversion time = 800ms (stable)
+       - 8      = 0    INT active low (default, works with pull-up)
+       - 7      = 1    Latch enabled (interrupt stays active until RESULT read)
+       - 6:5    = 00   Fault count = 1
+       - 4      = 1    Enable interrupt mode
+       - 3:0    = 0000 No special modes
+    */
+
+    u8 cfg[3] = { 0x01, 0xC6, 0x00 };
+    XIic_Send(iic.BaseAddress, OPT_ADDR, cfg, 3, XIIC_STOP);
+
+    /* ---------------------------
+       2. Set LOW limit threshold
+       --------------------------- */
+    // Example: trigger sleep mode if lux < 0x190
+    u8 low_thresh[3] = { 0x02, 0x49, 0xC4 };
+    XIic_Send(iic.BaseAddress, OPT_ADDR, low_thresh, 3, XIIC_STOP);
+
+    /* ---------------------------
+       3. Set HIGH limit threshold
+       --------------------------- */
+    // Example: trigger awake mode if lux > 0x3E8
+    u8 high_thresh[3] = { 0x03, 0x5C, 0x35 };
+    XIic_Send(iic.BaseAddress, OPT_ADDR, high_thresh, 3, XIIC_STOP);
+}
+
+int read_opt(){
+
+	SendBuffer[0] = 0x00;
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&SendBuffer, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress,OPT_ADDR,(u8 *)&RecvBuffer, 2, XIIC_STOP);
+	Lux = (int)((RecvBuffer[0])*256 + (RecvBuffer[1]));
+	xil_printf("MEDICION COMPLETADA\n");
+	return Lux;
+}
