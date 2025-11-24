@@ -68,6 +68,7 @@ void Light_Interrupt_Handler(void *CallbackRef);
 #define BACKGROUND  WHITE
 #define FOREGROUND  BLUE
 #define DELAY       1000
+volatile int pose;
 
 // ==================== Light threshold ====================
 #define LOW_LIGHT_INTENSITY_THRESHOLD  400
@@ -294,21 +295,21 @@ int main() {
 	// -------------------- GIC PRIORITY SETUP --------------------
 
 	// Highest priority: LTMEASURE
-	//XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_LTMEASURE, 0x10, 0x3);
-
-	// Medium: GPIO1
-	//XScuGic_SetPriorityTriggerType(&InterruptController, GPIO_INTR_ID, 0x50, 0x3);
+	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_LTMEASURE, 0x10, 0x3);
 
 	// Medium: MEASURE
-	//XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_MEASURE, 0x40, 0x3);
+	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_MEASURE, 0x40, 0x3);
+
+	// Medium: GPIO1
+	XScuGic_SetPriorityTriggerType(&InterruptController, GPIO_INTR_ID, 0x50, 0x3);
 
 	// Low: GRAPHICS
-	//XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
+	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
 
 
 	// -------------------- CLEAR EN PANTALLA --------------------
 
-	LCD_Clear(GUI_BACKGROUND);
+	//LCD_Clear(GUI_BACKGROUND);
 
     // -------------------- START TIMERS --------------------
 
@@ -322,7 +323,7 @@ int main() {
     // -------------------- START MELODY --------------------
 
     // Initialize the melody
-    //initialize_melody(available_melodies[1], melody, &melody_length);
+    initialize_melody(available_melodies[1], melody, &melody_length);
 
     // Start playing the melody
     current_note = 0;
@@ -340,21 +341,35 @@ int main() {
     int tmp_val = 0;
 	int opt_val = 0;
 
+	GUI_DANCE_FLOOR();
+	int pose = -15;
+	GUI_DRAW_ARROW(pose);
+
     while (1) {
 
     	if(measure_update_needed)
     		{
 
+    			if(pose<110){
+    				GUI_ERASE_ARROW(pose);
+    				pose++;
+					GUI_DRAW_ARROW(pose);
+    			} else{
+    				GUI_ERASE_ARROW(pose);
+    				pose=-15;
+    				GUI_DRAW_ARROW(pose);
+    			}
+
     			// Clear old values
-				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				GUI_DisString_EN(95,65,pot2,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				GUI_DisString_EN(5,100,acx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				GUI_DisString_EN(50,100,acy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				GUI_DisString_EN(95,100,mic,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(95,65,pot2,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(5,100,acx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(50,100,acy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(95,100,mic,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 
 				// Read sensors
 				joyx_val = read_joyx();
@@ -368,26 +383,26 @@ int main() {
 				mic_val = read_MIC();
 
 				// Store as char
-				sprintf(joyx, "%d", joyx_val);
-				sprintf(joyy, "%d", joyy_val);
-				sprintf(tmp, "%d", tmp_val);
-				sprintf(opt, "%d", opt_val);
-				sprintf(pot1, "%d", pot1_val);
-				sprintf(pot2, "%d", pot2_val);
-				sprintf(acx, "%d", acx_val);
-				sprintf(acy, "%d", acy_val);
-				sprintf(mic, "%d", mic_val);
+				//sprintf(joyx, "%d", joyx_val);
+				//sprintf(joyy, "%d", joyy_val);
+				//sprintf(tmp, "%d", tmp_val);
+				//sprintf(opt, "%d", opt_val);
+				//sprintf(pot1, "%d", pot1_val);
+				//sprintf(pot2, "%d", pot2_val);
+				//sprintf(acx, "%d", acx_val);
+				//sprintf(acy, "%d", acy_val);
+				//sprintf(mic, "%d", mic_val);
 
 				// Display values
-				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
-				GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,YELLOW);
-				GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,YELLOW);
-				GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,YELLOW);
-				GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,YELLOW);
-				GUI_DisString_EN(95,65,pot2,&Font12,GUI_BACKGROUND,YELLOW);
-				GUI_DisString_EN(5,100,acx,&Font12,GUI_BACKGROUND,YELLOW);
-				GUI_DisString_EN(50,100,acy,&Font12,GUI_BACKGROUND,YELLOW);
-				GUI_DisString_EN(95,100,mic,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(95,65,pot2,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(5,100,acx,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(50,100,acy,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(95,100,mic,&Font12,GUI_BACKGROUND,YELLOW);
 
 				// Print via UART
 				//xil_printf("JX:%d JY:%d ACX:%d ACY:%d MIC:%d POT1:%d POT2:%d TMP:%d LUZ:%d\r\n",

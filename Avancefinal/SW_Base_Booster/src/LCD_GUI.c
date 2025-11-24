@@ -398,7 +398,33 @@ void GUI_INTRO(){
 	    }
 }
 
+void GUI_DANCE_FLOOR(){
+	for (int y = 0; y < 128; y++) {
+	        for (int x = 0; x < 128; x++) {
+	            GUI_DrawPoint(x, y, dancefloor[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        }
+	    }
+}
 
+void GUI_DRAW_ARROW(int pose){
+	for (int y = 0; y < 128; y++) {
+	        for (int x = 0; x < 128; x++) {
+	        	if(arrow[y][x]!=0x0000){
+					GUI_DrawPoint(x + 3, y - pose, arrow[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        	}
+	        }
+	    }
+}
+
+void GUI_ERASE_ARROW(int pose){
+	for (int y = 0; y < 128; y++) {
+	        for (int x = 0; x < 128; x++) {
+	        	if(arrow[y][x]!=0x0000){
+					GUI_DrawPoint(x + 3, y - pose, dancefloor[y-pose][x+3], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        	}
+	        }
+	    }
+}
 
 
 
