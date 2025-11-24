@@ -78,6 +78,8 @@ int Sound_Setup_Interrupt_System(XScuGic *IntcInstancePtr) {
 // Handler de la interrupcion de sonido
 void Sound_Timer_Interrupt_Handler(void *CallBackRef) {
 
+	xil_printf("Sound timer");
+
 	// CallBackRef (puntero generico) es casteado al tipo XTmrCtr (tipo especifico):
     XTmrCtr *InstancePtr = (XTmrCtr *)CallBackRef;
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\Debug" key="bootgen_files_selection"/>
 	<item value="C:\Users\linnh\Sep-repository-2\Avancefinal" key="scw_hwspec_file_selection"/>
 	<item value="C:\Users\linnh\Sep-repository-2\vitis_export_archive.ide.zip" key="sdx_import_archive_file_v2"/>
 </section>

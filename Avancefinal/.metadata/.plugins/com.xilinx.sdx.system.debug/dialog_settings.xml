@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="SW_Base_Booster_system" key="programflash.hwplatform"/>
+	<item value="qspi-x4-single" key="SW_Base_Booster-flashType"/>
+	<item value="Local" key="SW_Base_Booster-target"/>
+	<item value="false" key="SW_Base_Booster_system-blankCheck"/>
+	<item value="false" key="SW_Base_Booster_system-verifyFlash"/>
+	<item value="C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/boot/fsbl.elf" key="SW_Base_Booster-fsblFile"/>
+	<item value="C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bootimage/BOOT.bin" key="SW_Base_Booster-imgFile"/>
+	<item value="false" key="SW_Base_Booster-verifyFlash"/>
+	<item value="Local" key="SW_Base_Booster_system-target"/>
+	<item value="Auto Detect" key="SW_Base_Booster-device"/>
+	<item value="qspi-x4-single" key="SW_Base_Booster_system-flashType"/>
+	<item value="C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf" key="SW_Base_Booster_system-fsblFile"/>
+	<item value="Auto Detect" key="SW_Base_Booster_system-device"/>
+	<item value="C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster_system/Debug/sd_card/BOOT.BIN" key="SW_Base_Booster_system-imgFile"/>
+	<item value="" key="SW_Base_Booster-offSet"/>
+	<item value="" key="SW_Base_Booster_system-offSet"/>
+	<item value="false" key="SW_Base_Booster-blankCheck"/>
+</section>

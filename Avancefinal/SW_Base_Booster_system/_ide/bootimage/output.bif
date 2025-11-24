@@ -1,0 +1,6 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\Debug\SW_Base_Booster.elf
+	[udf_bh]C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\Debug\SW_Base_Booster.elf
+}
