@@ -1,79 +1,10 @@
-12:23:49 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
+16:25:19 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/LCD_GUI.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LCD_GUI.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/LCD_GUI.d" -MT"src/LCD_GUI.o" -o "src/LCD_GUI.o" "../src/LCD_GUI.c"
-'Finished building: ../src/LCD_GUI.c'
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:340:29: warning: variable 'mic_val' set but not used [-Wunused-but-set-variable]
-  340 |     int pot1_val, pot2_val, mic_val;
-      |                             ^~~~~~~
-../src/main.c:340:19: warning: variable 'pot2_val' set but not used [-Wunused-but-set-variable]
-  340 |     int pot1_val, pot2_val, mic_val;
-      |                   ^~~~~~~~
-../src/main.c:340:9: warning: variable 'pot1_val' set but not used [-Wunused-but-set-variable]
-  340 |     int pot1_val, pot2_val, mic_val;
-      |         ^~~~~~~~
-../src/main.c:339:38: warning: variable 'acy_val' set but not used [-Wunused-but-set-variable]
-  339 |     int joyx_val, joyy_val, acx_val, acy_val;
-      |                                      ^~~~~~~
-../src/main.c:339:29: warning: variable 'acx_val' set but not used [-Wunused-but-set-variable]
-  339 |     int joyx_val, joyy_val, acx_val, acy_val;
-      |                             ^~~~~~~
-../src/main.c:339:19: warning: variable 'joyy_val' set but not used [-Wunused-but-set-variable]
-  339 |     int joyx_val, joyy_val, acx_val, acy_val;
-      |                   ^~~~~~~~
-../src/main.c:339:9: warning: variable 'joyx_val' set but not used [-Wunused-but-set-variable]
-  339 |     int joyx_val, joyy_val, acx_val, acy_val;
-      |         ^~~~~~~~
-../src/main.c:337:68: warning: unused variable 'mic' [-Wunused-variable]
-  337 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |                                                                    ^~~
-../src/main.c:337:53: warning: unused variable 'pot2' [-Wunused-variable]
-  337 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |                                                     ^~~~
-../src/main.c:337:38: warning: unused variable 'pot1' [-Wunused-variable]
-  337 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |                                      ^~~~
-../src/main.c:337:24: warning: unused variable 'opt' [-Wunused-variable]
-  337 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |                        ^~~
-../src/main.c:337:10: warning: unused variable 'tmp' [-Wunused-variable]
-  337 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |          ^~~
-../src/main.c:336:54: warning: unused variable 'acy' [-Wunused-variable]
-  336 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
-      |                                                      ^~~
-../src/main.c:336:40: warning: unused variable 'acx' [-Wunused-variable]
-  336 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
-      |                                        ^~~
-../src/main.c:336:25: warning: unused variable 'joyy' [-Wunused-variable]
-  336 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
-      |                         ^~~~
-../src/main.c:336:10: warning: unused variable 'joyx' [-Wunused-variable]
-  336 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
-      |          ^~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: SW_Base_Booster.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bsplib/lib -o "SW_Base_Booster.elf"  ./src/ADC.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/main.o ./src/melody.o ./src/platform.o ./src/sound.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: SW_Base_Booster.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size SW_Base_Booster.elf  |tee "SW_Base_Booster.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 286186	   3184	  25272	 314642	  4cd12	SW_Base_Booster.elf
-'Finished building: SW_Base_Booster.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.
 
-12:23:52 Build Finished (took 2s.749ms)
+16:25:20 Build Finished (took 1s.191ms)
 

@@ -20,6 +20,8 @@
 #include "xtmrctr.h"
 #include "sound.h"
 #include "melody.h"
+#include "dance.h"
+#include "careography.h"
 
 // ==================== External Definitions ====================
 extern XGpio gpio0;  // GPIO original
@@ -31,8 +33,10 @@ extern const unsigned char font[];
 // Audio device IDs and interrupt IDs
 #define TIMER_DEVICE_ID_SOUND    XPAR_AXI_TIMER_0_DEVICE_ID
 #define TIMER_INTR_ID_SOUND      XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
-#define TIMER_DEVICE_ID_GRAPHICS XPAR_AXI_TIMER_1_DEVICE_ID
-#define TIMER_INTR_ID_GRAPHICS   XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
+#define TIMER_DEVICE_ID_DANCE    XPAR_AXI_TIMER_1_DEVICE_ID
+#define TIMER_INTR_ID_DANCE      XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
+//#define TIMER_DEVICE_ID_GRAPHICS XPAR_AXI_TIMER_1_DEVICE_ID
+//#define TIMER_INTR_ID_GRAPHICS   XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
 #define TIMER_DEVICE_ID_MEASURE  XPAR_AXI_TIMER_2_DEVICE_ID
 #define TIMER_INTR_ID_MEASURE    XPAR_FABRIC_AXI_TIMER_2_INTERRUPT_INTR
 #define TIMER_DEVICE_ID_LTMEASURE  XPAR_AXI_TIMER_3_DEVICE_ID
@@ -46,7 +50,7 @@ extern const unsigned char font[];
 #define GPIO_INTR_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
 
 // Timer instances
-XTmrCtr TimerInstanceGraphics;  // Para los gráficos
+//XTmrCtr TimerInstanceGraphics;  // Para los gráficos
 XTmrCtr TimerInstanceMeasure;   // Para las mediciones
 XTmrCtr TimerInstanceLTMeasure;   // Para las mediciones
 XScuGic InterruptController;
@@ -54,10 +58,13 @@ XScuGic InterruptController;
 // External melody variables (from sound.c)
 extern Note melody[];
 extern int melody_length;
+// External dance variables (from dance.c)
+extern Step dance[];
+extern int dance_length;
 
 // Function prototypes
-void Graphics_Timer_Interrupt_Handler(void *CallBackRef);
-extern volatile int graphics_update_needed;
+//void Graphics_Timer_Interrupt_Handler(void *CallBackRef);
+//extern volatile int graphics_update_needed;
 void Measure_Timer_Interrupt_Handler(void *CallBackRef);
 extern volatile int measure_update_needed;
 void LTMeasure_Timer_Interrupt_Handler(void *CallBackRef);
@@ -182,35 +189,53 @@ int main() {
 		return XST_FAILURE;
 	}
 
+	// -------------------- DANCE INITIALIZATION --------------------
+
+	xil_printf("Initiating Dance Timer...\r\n");
+
+	    // Initialize the sound timer
+	    Status = Dance_Initialize_Timer(TIMER_DEVICE_ID_DANCE);
+	    if (Status != XST_SUCCESS) {
+	        xil_printf("Failed to initialize dance timer\r\n");
+	        return XST_FAILURE;
+	    }
+
+	    // Set up the interrupt system for sound
+		Status = Dance_Setup_Interrupt_System(&InterruptController);
+		if (Status != XST_SUCCESS) {
+			xil_printf("Failed to set up dance interrupts\r\n");
+			return XST_FAILURE;
+		}
+
     // -------------------- GRAPHICS INITIALIZATION --------------------
 
-	xil_printf("Initiating Graphics Timer...\r\n");
+	//xil_printf("Initiating Graphics Timer...\r\n");
 
     // Initialize the graphics timer
-    Status = XTmrCtr_Initialize(&TimerInstanceGraphics, TIMER_DEVICE_ID_GRAPHICS);
-    if (Status != XST_SUCCESS) {
-        xil_printf("Failed to initialize graphics timer\r\n");
-        return XST_FAILURE;
-    }
+    //Status = XTmrCtr_Initialize(&TimerInstanceGraphics, TIMER_DEVICE_ID_GRAPHICS);
+    //if (Status != XST_SUCCESS) {
+    //    xil_printf("Failed to initialize graphics timer\r\n");
+    //    return XST_FAILURE;
+    //}
 
     // Configure graphics timer options
-    XTmrCtr_SetOptions(&TimerInstanceGraphics, 0,
-                       XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+    //XTmrCtr_SetOptions(&TimerInstanceGraphics, 0,
+    //                   XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
 
     // Set graphics timer period (e.g., 50ms for 20Hz refresh)
-    XTmrCtr_SetResetValue(&TimerInstanceGraphics, 0, 5000000);
+    //XTmrCtr_SetResetValue(&TimerInstanceGraphics, 0, 5000000);
 
     // Set up graphics timer interrupt
-    Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_GRAPHICS,
-                            (Xil_InterruptHandler)Graphics_Timer_Interrupt_Handler,
-                            (void *)&TimerInstanceGraphics);
-    if (Status != XST_SUCCESS) {
-        xil_printf("Failed to connect graphics timer interrupt\r\n");
-        return XST_FAILURE;
-    }
+    //Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_GRAPHICS,
+    //                        (Xil_InterruptHandler)Graphics_Timer_Interrupt_Handler,
+	//                        (void *)&TimerInstanceGraphics);
+	//if (Status != XST_SUCCESS) {
+	//    xil_printf("Failed to connect graphics timer interrupt\r\n");
+	//    return XST_FAILURE;
+	//}
 
     // Enable graphics timer interrupt in the controller
-    XScuGic_Enable(&InterruptController, TIMER_INTR_ID_GRAPHICS);
+	//XScuGic_Enable(&InterruptController, TIMER_INTR_ID_GRAPHICS);
 
     // -------------------- MEASURE INITIALIZATION --------------------
 
@@ -304,7 +329,7 @@ int main() {
 	XScuGic_SetPriorityTriggerType(&InterruptController, GPIO_INTR_ID, 0x50, 0x3);
 
 	// Low: GRAPHICS
-	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
+	//XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
 
 
 	// -------------------- CLEAR EN PANTALLA --------------------
@@ -314,20 +339,26 @@ int main() {
     // -------------------- START TIMERS --------------------
 
     // Start both timers
-    XTmrCtr_Start(&TimerInstanceGraphics, 0);
+    //XTmrCtr_Start(&TimerInstanceGraphics, 0);
     XTmrCtr_Start(&TimerInstanceMeasure, 0);
     XTmrCtr_Start(&TimerInstanceLTMeasure, 0);
 
     xil_printf("Graphics and Measurement Systems Initialized. Preparing to play melody...\r\n");
 
-    // -------------------- START MELODY --------------------
+    // -------------------- START MELODY & DANCE --------------------
+
+    //XTmrCtr_Start(&TimerInstance, 0);
+    //XTmrCtr_Start(&TimerInstanceDance, 0);
 
     // Initialize the melody
     initialize_melody(available_melodies[1], melody, &melody_length);
+    initialize_dance(available_dances[0], dance, &dance_length);
 
     // Start playing the melody
     current_note = 0;
+    current_step = 0;
     Play_Next_Note();
+    Next_Dance_Step();
 
     xil_printf("Melody playback started...\r\n");
 
@@ -438,20 +469,20 @@ int main() {
 }
 
 // Variable global para control de actualización de gráficos
-volatile int graphics_update_needed = 0;
+//volatile int graphics_update_needed = 0;
 
 // Graphics Timer Interrupt Handler
-void Graphics_Timer_Interrupt_Handler(void *CallBackRef)
-{
-    XTmrCtr *InstancePtr = (XTmrCtr *)CallBackRef;
+//void Graphics_Timer_Interrupt_Handler(void *CallBackRef)
+//{
+//XTmrCtr *InstancePtr = (XTmrCtr *)CallBackRef;
 
     // Clear the interrupt
-    u32 ControlStatusReg = XTmrCtr_GetControlStatusReg(InstancePtr->BaseAddress, 0);
-    XTmrCtr_SetControlStatusReg(InstancePtr->BaseAddress, 0, ControlStatusReg);
+//u32 ControlStatusReg = XTmrCtr_GetControlStatusReg(InstancePtr->BaseAddress, 0);
+//XTmrCtr_SetControlStatusReg(InstancePtr->BaseAddress, 0, ControlStatusReg);
 
     // Set the flag to indicate that graphics update is needed
-    graphics_update_needed = 1;
-}
+//graphics_update_needed = 1;
+//}
 
 // Variable global para control de actualización de mediciones
 volatile int measure_update_needed = 0;

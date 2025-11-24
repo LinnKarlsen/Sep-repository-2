@@ -1,0 +1,6 @@
+#include <stdint.h>
+#include "xil_types.h"
+#include "xscugic.h"
+#include "xtmrctr.h"
+
+void Next_Dance_Step();

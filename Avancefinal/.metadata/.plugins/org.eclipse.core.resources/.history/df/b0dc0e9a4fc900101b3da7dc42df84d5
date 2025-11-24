@@ -1,0 +1,65 @@
+#include "dance.h" // Header que define la estructura de una nota
+#include "xscugic.h" // "General Interrupt Controller"
+#include "xtmrctr.h" // "Axi Timer
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+#include "xil_io.h"
+#include "Delay.h"
+
+
+static const int just_dance_steps[] = {
+
+		NONE, 1,
+
+		UP, 1,
+		UP, 1,
+		UP, 1,
+		UP, 1,
+		UP, 1,
+
+		UP, 1,
+		UP, 1,
+		NOTE_E4,8, NOTE_D4,8, REST, 8, NOTE_G4,8, REST, 8, NOTE_FS4, 8, REST,8, NOTE_D4, 8,
+
+		NOTE_E4,4, NOTE_D5,4, REST,4, NOTE_C5,4,
+		REST,4, NOTE_B4, 4, NOTE_G4, 8, NOTE_A4, 8, NOTE_B4, 8, NOTE_C5, 8,
+		NOTE_B4, 8, NOTE_G4, 8, NOTE_G4, 8, NOTE_G4, 8, NOTE_B4, 8, NOTE_B4, 8, NOTE_A4, 8, NOTE_A4, 8,
+		NOTE_B4, 8, NOTE_B4, 8, NOTE_A4, 8, NOTE_A4, 8, NOTE_G4, 8, NOTE_A4, 8, NOTE_G4, 8, NOTE_D5, 8,
+
+		NOTE_B4, 4, NOTE_D5, 4, REST, 4, NOTE_C5, 4,
+		NOTE_B4, 4, NOTE_B4, 8, NOTE_B4, 8, NOTE_G4, 8, NOTE_A4, 8, NOTE_B4, 8, NOTE_C5, 8,
+		NOTE_B4, 8, NOTE_G4, 8, NOTE_G4, 8, NOTE_G4, 8, NOTE_B4, 8, NOTE_B4, 8, NOTE_A4, 8, NOTE_A4, 8,
+		NOTE_B4, 8, NOTE_B4, 8, NOTE_G4, 8, NOTE_B4, 8, NOTE_B4, 4, NOTE_A4, 4,
+		NOTE_G4, 8, NOTE_E4, 8, REST, 8, NOTE_G4, 16, NOTE_G4, 16, NOTE_G4, 8, NOTE_G4, 8, NOTE_G4, 4,
+
+		// 18
+		REST, 8, NOTE_FS4, 8, NOTE_FS4, 8, NOTE_B4, 8, NOTE_B4, 4, NOTE_A4, 4,
+		NOTE_G4, 8, NOTE_E4, 8, REST, 8, NOTE_G4, 8, NOTE_B4, 8, NOTE_B4, 8, NOTE_G4, 4,
+		REST, 8, NOTE_D5, 8, NOTE_D5, 8, NOTE_C5, 8, NOTE_B4, 4, NOTE_B4, 4,
+		NOTE_G4, 8, NOTE_E4, 8, REST, 8, NOTE_G4, 16, NOTE_G4, 16,NOTE_G4, 8, NOTE_G4, 8, NOTE_G4, 4,
+
+		REST, 8, NOTE_FS4, 8, REST, 8, NOTE_FS4, 8, REST, 8, NOTE_FS4, 8, REST, 8, NOTE_G4, 8,
+		NOTE_E4, 4, REST, 8, NOTE_G4, 8, NOTE_E4, 4, REST, 8, NOTE_G4, 8,
+		//24
+		NOTE_E4, 4, NOTE_A4, 4, NOTE_A4, 8, NOTE_A4, 8, NOTE_A4, 4,
+		NOTE_G4, 8, NOTE_E4, 8, REST, 4, REST, 2,
+		NOTE_G4, 8, NOTE_E4, 8, REST, 8, NOTE_G4, 16, NOTE_G4, 16,NOTE_G4, 8, NOTE_G4, 8, NOTE_G4, 4,
+		REST, 8, NOTE_FS4, 8, NOTE_FS4, 8, NOTE_B4, 8, NOTE_B4, 4, NOTE_A4, 4,
+		NOTE_G4, 8, NOTE_E4, 8, REST, 8, NOTE_G4, 8, NOTE_B4, 8, NOTE_B4, 8, NOTE_G4, 4,
+		REST, 8, NOTE_D5, 8, NOTE_D5, 8, NOTE_C5, 8, NOTE_B4, 4, NOTE_B4, 4,
+		NOTE_G4, 8, NOTE_E4, 8, REST, 8, NOTE_G4, 16, NOTE_G4, 16,NOTE_G4, 8, NOTE_G4, 8, NOTE_G4, 4,
+
+		REST, 8, NOTE_FS4, 8, REST, 8, NOTE_FS4, 8, REST, 8, NOTE_FS4, 8, REST, 8, NOTE_G4, 8,
+		NOTE_E4, 4, REST, 8, NOTE_G4, 8, NOTE_E4, 4, REST, 8, NOTE_G4, 8,
+
+};
+
+#define JUST_DANCE_LENGTH (sizeof(just_dance_notes) / sizeof(just_dance_notes[0]) / 2)
+
+const DanceData just_dance_dance = {
+    .notes = just_dance_step,
+    .length = JUST_DANCE_LENGTH,
+    .tempo = 108,
+    .name = "Just Dance"
+};

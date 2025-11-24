@@ -1,0 +1,44 @@
+// dance.h
+#ifndef DANCE_H
+#define DANCE_H
+
+#include <stdint.h>
+#include "xil_types.h"
+#include "xscugic.h"
+#include "xtmrctr.h"
+
+// Definimos en Hz las frecuencias de cada nota:
+#define NONE    0
+#define LEFT    1
+#define DOWN    2
+#define UP      3
+#define RIGHT   4
+
+// Declaracion de variables globales
+extern volatile int current_step;
+
+#include <stdint.h>
+
+#define MAX_NOTES 256 // Tamano maximo de la melodia (puede ampliarse)
+
+// Definicion de struct tipo "Dance Data" (informacion asociada a la melodia completa)
+typedef struct {
+    const int *steps;   // Pointer que dirige al array de la melodia
+    int length;         // Cantidad de notas que tiene el arry
+    int tempo;          // Tempo de la melodia
+    const char *name;   // Nombre de la melodia
+} MelodyData;
+
+// Definicion de struct tipo "Note" (informacion asociada a cada nota)
+typedef struct {
+    uint32_t step; // Frecuencia de la nota
+    uint32_t duration;  // Duracion de la nota
+} Note;
+
+// Funcion base utilizada para la inicializacion de la melodia:
+void initialize_dance(const DanceData *danceData, Note *danceArray, int *danceLength);
+
+// Funcion base para reproducir siguiente paso de baile
+void Next_Dance_Step();
+
+#endif
