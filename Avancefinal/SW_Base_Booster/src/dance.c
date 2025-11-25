@@ -59,6 +59,52 @@ extern int down_pose3;
 extern int down_pose4;
 extern int down_pose5;
 
+// For scoring
+extern int score;
+extern int joyx_val, joyy_val;
+extern int mic_val;
+// Ventanas en las cuales accionar el joystick es punteable
+extern int left_window1;
+extern int left_window2;
+extern int left_window3;
+extern int left_window4;
+extern int left_window5;
+extern int right_window1;
+extern int right_window2;
+extern int right_window3;
+extern int right_window4;
+extern int right_window5;
+extern int up_window1;
+extern int up_window2;
+extern int up_window3;
+extern int up_window4;
+extern int up_window5;
+extern int down_window1;
+extern int down_window2;
+extern int down_window3;
+extern int down_window4;
+extern int down_window5;
+// Se bloquea la ventana si ya se consiguió el punto
+extern int blocked_left_window1;
+extern int blocked_left_window2;
+extern int blocked_left_window3;
+extern int blocked_left_window4;
+extern int blocked_left_window5;
+extern int blocked_right_window1;
+extern int blocked_right_window2;
+extern int blocked_right_window3;
+extern int blocked_right_window4;
+extern int blocked_right_window5;
+extern int blocked_up_window1;
+extern int blocked_up_window2;
+extern int blocked_up_window3;
+extern int blocked_up_window4;
+extern int blocked_up_window5;
+extern int blocked_down_window1;
+extern int blocked_down_window2;
+extern int blocked_down_window3;
+extern int blocked_down_window4;
+extern int blocked_down_window5;
 
 // Definimos una variable modificada dentro de la interrupcion:
 volatile int current_step = 0; // Indice de la nota actual
@@ -255,74 +301,74 @@ void Run_Arrow_Animations()	{
 
 	// Left
 	if(left_flag1){
-		Animate_Arrow(LEFT_ref, &left_pose1, &left_flag1, n);
+		Animate_Arrow(LEFT_ref, &left_pose1, &left_flag1, n, &blocked_left_window1);
 	}
 	if(left_flag2){
-		Animate_Arrow(LEFT_ref, &left_pose2, &left_flag2, n);
+		Animate_Arrow(LEFT_ref, &left_pose2, &left_flag2, n, &blocked_left_window2);
 	}
 	if(left_flag3){
-		Animate_Arrow(LEFT_ref, &left_pose3, &left_flag3, n);
+		Animate_Arrow(LEFT_ref, &left_pose3, &left_flag3, n, &blocked_left_window3);
 	}
 	if(left_flag4){
-		Animate_Arrow(LEFT_ref, &left_pose4, &left_flag4, n);
+		Animate_Arrow(LEFT_ref, &left_pose4, &left_flag4, n, &blocked_left_window4);
 	}
 	if(left_flag5){
-		Animate_Arrow(LEFT_ref, &left_pose5, &left_flag5, n);
+		Animate_Arrow(LEFT_ref, &left_pose5, &left_flag5, n, &blocked_left_window5);
 	}
 
 	// Right
 	if(right_flag1){
-		Animate_Arrow(RIGHT_ref, &right_pose1, &right_flag1, n);
+		Animate_Arrow(RIGHT_ref, &right_pose1, &right_flag1, n, &blocked_right_window1);
 	}
 	if(right_flag2){
-		Animate_Arrow(RIGHT_ref, &right_pose2, &right_flag2, n);
+		Animate_Arrow(RIGHT_ref, &right_pose2, &right_flag2, n, &blocked_right_window2);
 	}
 	if(right_flag3){
-		Animate_Arrow(RIGHT_ref, &right_pose3, &right_flag3, n);
+		Animate_Arrow(RIGHT_ref, &right_pose3, &right_flag3, n, &blocked_right_window3);
 	}
 	if(right_flag4){
-		Animate_Arrow(RIGHT_ref, &right_pose4, &right_flag4, n);
+		Animate_Arrow(RIGHT_ref, &right_pose4, &right_flag4, n, &blocked_right_window4);
 	}
 	if(right_flag5){
-		Animate_Arrow(RIGHT_ref, &right_pose5, &right_flag5, n);
+		Animate_Arrow(RIGHT_ref, &right_pose5, &right_flag5, n, &blocked_right_window5);
 	}
 
 	// Up
 	if(up_flag1){
-		Animate_Arrow(UP_ref, &up_pose1, &up_flag1, n);
+		Animate_Arrow(UP_ref, &up_pose1, &up_flag1, n, &blocked_up_window1);
 	}
 	if(up_flag2){
-		Animate_Arrow(UP_ref, &up_pose2, &up_flag2, n);
+		Animate_Arrow(UP_ref, &up_pose2, &up_flag2, n, &blocked_up_window2);
 	}
 	if(up_flag3){
-		Animate_Arrow(UP_ref, &up_pose3, &up_flag3, n);
+		Animate_Arrow(UP_ref, &up_pose3, &up_flag3, n, &blocked_up_window3);
 	}
 	if(up_flag4){
-		Animate_Arrow(UP_ref, &up_pose4, &up_flag4, n);
+		Animate_Arrow(UP_ref, &up_pose4, &up_flag4, n, &blocked_up_window4);
 	}
 	if(up_flag5){
-		Animate_Arrow(UP_ref, &up_pose5, &up_flag5, n);
+		Animate_Arrow(UP_ref, &up_pose5, &up_flag5, n, &blocked_up_window5);
 	}
 
 	// Down
 	if(down_flag1){
-		Animate_Arrow(DOWN_ref, &down_pose1, &down_flag1, n);
+		Animate_Arrow(DOWN_ref, &down_pose1, &down_flag1, n, &blocked_down_window1);
 	}
 	if(down_flag2){
-		Animate_Arrow(DOWN_ref, &down_pose2, &down_flag2, n);
+		Animate_Arrow(DOWN_ref, &down_pose2, &down_flag2, n, &blocked_down_window2);
 	}
 	if(down_flag3){
-		Animate_Arrow(DOWN_ref, &down_pose3, &down_flag3, n);
+		Animate_Arrow(DOWN_ref, &down_pose3, &down_flag3, n, &blocked_down_window3);
 	}
 	if(down_flag4){
-		Animate_Arrow(DOWN_ref, &down_pose4, &down_flag4, n);
+		Animate_Arrow(DOWN_ref, &down_pose4, &down_flag4, n, &blocked_down_window4);
 	}
 	if(down_flag5){
-		Animate_Arrow(DOWN_ref, &down_pose5, &down_flag5, n);
+		Animate_Arrow(DOWN_ref, &down_pose5, &down_flag5, n, &blocked_down_window5);
 	}
 }
 
-void Animate_Arrow(int current_step, int *pose, int *flag, int n){
+void Animate_Arrow(int current_step, int *pose, int *flag, int n, int *windowblocked){
 
 	uint32_t LEFT_ref  = 1;
 	uint32_t DOWN_ref  = 2;
@@ -359,25 +405,42 @@ void Animate_Arrow(int current_step, int *pose, int *flag, int n){
 			GUI_ERASE_LEFT_ARROW(*pose);
 			*pose = -15;
 			*flag = 0;
-			GUI_DRAW_LEFT_ARROW(*pose);
+			//GUI_DRAW_LEFT_ARROW(*pose);
 		}else if(current_step==DOWN_ref){
 			// Down
 			GUI_ERASE_DOWN_ARROW(*pose);
 			*pose = -15;
 			*flag = 0;
-			GUI_DRAW_DOWN_ARROW(*pose);
+			//GUI_DRAW_DOWN_ARROW(*pose);
 		}else if(current_step==UP_ref){
 			// Up
 			GUI_ERASE_UP_ARROW(*pose);
 			*pose = -15;
 			*flag = 0;
-			GUI_DRAW_UP_ARROW(*pose);
+			//GUI_DRAW_UP_ARROW(*pose);
 		}else if(current_step==RIGHT_ref){
 			// Right
 			GUI_ERASE_RIGHT_ARROW(*pose);
 			*pose = -15;
 			*flag = 0;
-			GUI_DRAW_RIGHT_ARROW(*pose);
+			//GUI_DRAW_RIGHT_ARROW(*pose);
 		}
+	}
+
+	if(*pose>98){
+		// Activamos el window a partir de este valor
+		Check_score(&score, &windowblocked);
+	}
+
+	if(*pose==-15){
+		// Reseteamos el window y blocked
+		*windowblocked = 0;
+	}
+}
+
+void Check_score(int *score, int *windowblocked){
+	if(*windowblocked!=1){
+		*score = *score + 100;
+		*windowblocked=1;
 	}
 }

@@ -406,6 +406,16 @@ void GUI_DANCE_FLOOR(){
 	    }
 }
 
+void GUI_SCORE_BOARD(){
+	for (int y = 0; y < 50; y++) {
+	        for (int x = 50; x < 128; x++) {
+	        	if(scoreboard[y][x]!=0x0000){
+	        		GUI_DrawPoint(x, y, scoreboard[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        	}
+	        }
+	    }
+}
+
 // Left
 
 void GUI_DRAW_LEFT_ARROW(int pose){

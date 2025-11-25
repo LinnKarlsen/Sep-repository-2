@@ -135,6 +135,54 @@ int right_pose3 = -15;
 int right_pose4 = -15;
 int right_pose5 = -15;
 
+// For gameplay and scoring
+volatile int score = 0;
+int joyx_val = 0;
+int joyy_val = 0;
+int mic_val = 0;
+// Ventanas en las cuales accionar el joystick es punteable
+int left_window1 = 0;
+int left_window2 = 0;
+int left_window3 = 0;
+int left_window4 = 0;
+int left_window5 = 0;
+int right_window1 = 0;
+int right_window2 = 0;
+int right_window3 = 0;
+int right_window4 = 0;
+int right_window5 = 0;
+int up_window1 = 0;
+int up_window2 = 0;
+int up_window3 = 0;
+int up_window4 = 0;
+int up_window5 = 0;
+int down_window1 = 0;
+int down_window2 = 0;
+int down_window3 = 0;
+int down_window4 = 0;
+int down_window5 = 0;
+// Se bloquea la ventana si ya se consiguió el punto
+int blocked_left_window1 = 0;
+int blocked_left_window2 = 0;
+int blocked_left_window3 = 0;
+int blocked_left_window4 = 0;
+int blocked_left_window5 = 0;
+int blocked_right_window1 = 0;
+int blocked_right_window2 = 0;
+int blocked_right_window3 = 0;
+int blocked_right_window4 = 0;
+int blocked_right_window5 = 0;
+int blocked_up_window1 = 0;
+int blocked_up_window2 = 0;
+int blocked_up_window3 = 0;
+int blocked_up_window4 = 0;
+int blocked_up_window5 = 0;
+int blocked_down_window1 = 0;
+int blocked_down_window2 = 0;
+int blocked_down_window3 = 0;
+int blocked_down_window4 = 0;
+int blocked_down_window5 = 0;
+
 // ==================== MAIN ====================
 int main() {
 
@@ -417,12 +465,15 @@ int main() {
     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
 
-    int joyx_val, joyy_val, acx_val, acy_val;
-    int pot1_val, pot2_val, mic_val;
+    int acx_val, acy_val;
+    int pot1_val, pot2_val;
     int tmp_val = 0;
 	int opt_val = 0;
 
+	char score_display[16]={};
+
 	GUI_DANCE_FLOOR();
+	GUI_SCORE_BOARD();
 
 
     while (1) {
@@ -433,8 +484,8 @@ int main() {
     			Run_Arrow_Animations();
 
     			// Clear old values
-				//GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				//GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				//GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				//GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				//GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
@@ -444,8 +495,8 @@ int main() {
 				//GUI_DisString_EN(95,100,mic,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 
 				// Read sensors
-				//joyx_val = read_joyx();
-				//joyy_val = read_joyy();
+				joyx_val = read_joyx();
+				joyy_val = read_joyy();
 				//tmp_val = read_tmp();
 				//opt_val = read_opt();
 				//pot1_val = read_POT1();
@@ -455,8 +506,8 @@ int main() {
 				//mic_val = read_MIC();
 
 				// Store as char
-				//sprintf(joyx, "%d", joyx_val);
-				//sprintf(joyy, "%d", joyy_val);
+				sprintf(joyx, "%d", joyx_val);
+				sprintf(joyy, "%d", joyy_val);
 				//sprintf(tmp, "%d", tmp_val);
 				//sprintf(opt, "%d", opt_val);
 				//sprintf(pot1, "%d", pot1_val);
@@ -465,9 +516,13 @@ int main() {
 				//sprintf(acy, "%d", acy_val);
 				//sprintf(mic, "%d", mic_val);
 
+				GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,GUI_BACKGROUND);
+				sprintf(score_display, "%d", score);
+				GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
+
 				// Display values
-				//GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
-				//GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,YELLOW);
+				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
+				GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,YELLOW);
 				//GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,YELLOW);
 				//GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,YELLOW);
 				//GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,YELLOW);

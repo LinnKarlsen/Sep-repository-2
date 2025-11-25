@@ -20,5 +20,6 @@ void Dance_Timer_Interrupt_Handler(void *CallBackRef);
 void Next_Dance_Step();
 void Run_Arrow_Animations();
 void Animate_Arrow();
+void Check_score();
 
 #endif
