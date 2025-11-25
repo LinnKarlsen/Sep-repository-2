@@ -1,0 +1,34 @@
+// Header de dance:
+#ifndef DANCE_H
+#define DANCE_H
+
+#include <stdint.h>
+#include "xil_types.h"
+#include "xscugic.h"
+#include "xtmrctr.h"
+
+#include <stdint.h>
+
+// Declaracion de variables globales
+extern volatile int current_step;
+extern XTmrCtr TimerInstanceDance;
+
+// Left arrow variables
+extern int left_flag1;
+extern int left_flag2;
+extern int left_flag3;
+extern int left_flag4;
+extern int left_flag5;
+extern int left_pose1;
+extern int left_pose2;
+extern int left_pose3;
+extern int left_pose4;
+extern int left_pose5;
+
+// Funciones que se utilizaran en sound.c
+int Dance_Initialize_Timer(u16 DeviceId);
+int Dance_Setup_Interrupt_System(XScuGic *IntcInstancePtr);
+void Dance_Timer_Interrupt_Handler(void *CallBackRef);
+void Next_Dance_Step();
+
+#endif

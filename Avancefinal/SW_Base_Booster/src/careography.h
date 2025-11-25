@@ -26,7 +26,7 @@ typedef struct {
 
 // Definicion de struct tipo "Step" (informacion asociada a cada nota)
 typedef struct {
-    uint32_t dancemove; // frequency -> dancemove
+	uint32_t dancemove; // frequency -> dancemove
     uint32_t duration;  // Duracion del paso de baile
 } Step;   // Note -> Step
 

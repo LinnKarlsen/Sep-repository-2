@@ -1,0 +1,168 @@
+#include "dance.h" // Header que contiene las funciones utilizadas
+#include "careography.h" // Header que define la estructura de una nota
+#include "xscugic.h" // "General Interrupt Controller"
+#include "xtmrctr.h" // "Axi Timer
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+#include "xil_io.h"
+#include "Delay.h"
+#include "LCD_GUI.h"
+
+#include <stdint.h>
+
+volatile uint32_t NONE_ref  = 0;
+volatile uint32_t LEFT_ref  = 1;
+volatile uint32_t DOWN_ref  = 2;
+volatile uint32_t UP_ref    = 3;
+volatile uint32_t RIGHT_ref = 4;
+
+// Left arrow variables
+extern int left_flag[5];
+extern int left_pose[5];
+
+// Definimos una variable modificada dentro de la interrupcion:
+volatile int current_step = 0; // Indice de la nota actual
+
+// Melody data
+Step dance[MAX_STEPS]; // Adjust MAX_NOTES if needed
+int dance_length = 0;  // Length of the current melody
+
+// Instancia del AXI Timer:
+XTmrCtr TimerInstanceDance;
+
+// Asignamos nombre al AXI TIMER 0 y a su linea de interrupcion GIC.
+#define TIMER_DEVICE_ID_DANCE      XPAR_AXI_TIMER_1_DEVICE_ID
+#define TIMER_INTR_ID_DANCE        XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
+
+// Funcion que inicializa el TIMER asociado al audio:
+int Dance_Initialize_Timer(u16 DeviceId) {
+    int Status; // Status recibe el macro (numero entero) de XTmrCtr_Initialize
+
+    // Inicializacion del timer: Recibe puntero al timer y su id.
+    Status = XTmrCtr_Initialize(&TimerInstanceDance, DeviceId);
+
+    // Retorna mensaje de error si falla inicializacion:
+    if (Status != XST_SUCCESS) {
+        xil_printf("Falla inicializacion del timer de baile\r\n");
+        return XST_FAILURE;
+    }
+
+    // Pointer del timer, canal 0 realiza conteo, lo hace de manera descendente.
+    XTmrCtr_SetOptions(&TimerInstanceDance, 0, XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION);
+
+    // Retorna "exito en inicializacion si no hay error".
+    return XST_SUCCESS;
+}
+
+// Funcion para configurar el sistema de interrupcion del baile (recibe un pointer al controlador
+// del GIC tal que recibe un tipo de dato XScuGic y retorna Status)
+int Dance_Setup_Interrupt_System(XScuGic *IntcInstancePtr) {
+    int Status;
+
+    // Conexion de la interrupcion: Recibe el controlador GIC que gestiona la interrupcion,
+    // El id del temporizador, la funcion que sera ejecutada durante la interrupcion, direccion
+    // de instancia al temporizador.
+    Status = XScuGic_Connect(IntcInstancePtr, TIMER_INTR_ID_DANCE,
+                             (Xil_ExceptionHandler)Dance_Timer_Interrupt_Handler,
+                             (void *)&TimerInstanceDance);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Fallo en conectarse el Dance Timer Interrupt Handler\r\n");
+        return XST_FAILURE;
+    }
+
+    // Habilita la interrupcion: Cada vez que hay una interrupcion, se ejecuta la funcion declarada
+    XScuGic_Enable(IntcInstancePtr, TIMER_INTR_ID_DANCE);
+    return XST_SUCCESS;
+}
+
+// Handler de la interrupcion de sonido
+void Dance_Timer_Interrupt_Handler(void *CallBackRef) {
+
+	// CallBackRef (puntero generico) es casteado al tipo XTmrCtr (tipo especifico):
+    XTmrCtr *InstancePtr = (XTmrCtr *)CallBackRef;
+
+    // Limpieza de la interrupcion (lectura y escritura como  mecanismo de acknowledge):
+
+    // Lectura del registro del temporizador 0 desde el hardware:
+    u32 ControlStatusReg = XTmrCtr_GetControlStatusReg(InstancePtr->BaseAddress, 0);
+    // Escritura del registro del temporizador 0 para limpiar el flag de interrupcion:
+    XTmrCtr_SetControlStatusReg(InstancePtr->BaseAddress, 0, ControlStatusReg);
+
+    // Se detiene el timer 0:
+    XTmrCtr_Stop(InstancePtr, 0);
+
+
+    // Se toca la siguiente nota
+    Next_Dance_Step();
+    //Next_Dance_Step();
+}
+
+void Next_Dance_Step() {
+	//xil_printf("Dance interrupt para step:%d\r\n", current_step);
+
+
+    // Si no se ha terminado la melodia:
+    if (current_step < dance_length) {
+    	// Lectura de la informacion de melody.c
+        uint32_t dance_move = dance[current_step].dancemove;  // Lectura de la dance_move
+        uint32_t duration_ms = dance[current_step].duration;   // Lectura de duracion de step
+        //uint32_t duration_counts = duration_ms * 100000;       // Ajustamos la duracion a ciclos de clk (100 MHz)
+
+
+        //xil_printf("bookmark1\n");
+        // Left
+		if(dance_move == UP_ref){
+			if (left_flag[0] == 0) {
+				left_flag[0] = 1;
+			}
+			//for (int i = 0; i < 5; i++) {
+			//	if (left_flag[i] == 0) {
+			//		left_flag[i] = 1;
+			//		break;
+			//	}
+			//}
+		}
+        //xil_printf("bookmark2\n");
+
+        // Buffer para la duracion del timer (mismo valor que duration_counts)
+        uint32_t timer_counts = duration_ms * 100000;
+
+        // Configura el valor de reseteo del timer 0 para hacer la interrupcion:
+        XTmrCtr_SetResetValue(&TimerInstanceDance, 0, timer_counts);
+
+        // Inicia el timer 0
+        XTmrCtr_Start(&TimerInstanceDance, 0);
+
+        // Avance al siguiente step:
+        current_step++;
+
+}
+
+void Run_Arrow_Animations()	{
+
+	// Modifica la velocidad en que se mueven las flechas
+	int n = 2;
+
+	//xil_printf("bookmark3\n");
+	for (int i = 0; i < 5; i++) {
+	    if (left_flag[i]) {
+	        Animate_Arrow(&left_pose[i], &left_flag[i], n);
+	    }
+	}
+	//xil_printf("bookmark4\n");
+
+}
+
+void Animate_Arrow(int *pose, int *flag, int n){
+	if(*pose<110){
+		GUI_ERASE_ARROW(*pose);
+		*pose = *pose + n;
+		GUI_DRAW_ARROW(*pose);
+	} else{
+		GUI_ERASE_ARROW(*pose);
+		*pose = -15;
+		*flag = 0;
+		GUI_DRAW_ARROW(*pose);
+	}
+}

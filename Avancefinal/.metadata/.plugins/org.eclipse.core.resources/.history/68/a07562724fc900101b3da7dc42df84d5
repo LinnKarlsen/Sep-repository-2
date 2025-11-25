@@ -1,8 +1,0 @@
-#include "dance.h" // Header que define la estructura de una nota
-#include "xscugic.h" // "General Interrupt Controller"
-#include "xtmrctr.h" // "Axi Timer
-#include "xil_printf.h"
-#include "xparameters.h"
-#include "xil_exception.h"
-#include "xil_io.h"
-#include "Delay.h"

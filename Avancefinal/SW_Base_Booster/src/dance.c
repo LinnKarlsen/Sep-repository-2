@@ -7,7 +7,21 @@
 #include "xil_exception.h"
 #include "xil_io.h"
 #include "Delay.h"
+#include "LCD_GUI.h"
 
+#include <stdint.h>
+
+// Left arrow variables
+extern int left_flag1;
+extern int left_flag2;
+extern int left_flag3;
+extern int left_flag4;
+extern int left_flag5;
+extern int left_pose1;
+extern int left_pose2;
+extern int left_pose3;
+extern int left_pose4;
+extern int left_pose5;
 
 // Definimos una variable modificada dentro de la interrupcion:
 volatile int current_step = 0; // Indice de la nota actual
@@ -87,13 +101,44 @@ void Dance_Timer_Interrupt_Handler(void *CallBackRef) {
 }
 
 void Next_Dance_Step() {
-	xil_printf("Dance step:%d\r\n", current_step);
+	xil_printf("Dance interrupt para step:%d\r\n", current_step);
+
+	uint32_t NONE_ref  = 0;
+	uint32_t LEFT_ref  = 1;
+	uint32_t DOWN_ref  = 2;
+	uint32_t UP_ref    = 3;
+	uint32_t RIGHT_ref = 4;
+
+
     // Si no se ha terminado la melodia:
     if (current_step < dance_length) {
     	// Lectura de la informacion de melody.c
         uint32_t dance_move = dance[current_step].dancemove;  // Lectura de la dance_move
         uint32_t duration_ms = dance[current_step].duration;   // Lectura de duracion de step
         uint32_t duration_counts = duration_ms * 100000;       // Ajustamos la duracion a ciclos de clk (100 MHz)
+
+
+
+        // Left
+		if(dance_move == UP_ref){
+			xil_printf("Dance move es 1");
+			if(left_flag1 == 0){
+				//xil_printf("flag1");
+				left_flag1 = 1;
+			}else if(left_flag2 == 0){
+				//xil_printf("flag2");
+				left_flag2 = 1;
+			}else if(left_flag3 == 0){
+				left_flag3 = 1;
+				//xil_printf("flag3");
+			}else if(left_flag4 == 0){
+				left_flag4 = 1;
+				//xil_printf("flag3");
+			}else if(left_flag5 == 0){
+				left_flag5 = 1;
+				//xil_printf("flag3");
+			}
+		}
 
         //uint32_t frequency = melody[current_note].frequency; // Lectura de la frecuencia
 		//uint32_t duration_ms = melody[current_note].duration; // Lectura de duracion de nota
@@ -118,4 +163,45 @@ void Next_Dance_Step() {
         //Play_Next_Note();
     }
 
+}
+
+void Run_Arrow_Animations()	{
+
+	// Modifica la velocidad en que se mueven las flechas
+	int n = 2;
+
+
+	if(left_flag1){
+		Animate_Arrow(&left_pose1, &left_flag1, n);
+	}
+
+	if(left_flag2){
+		Animate_Arrow(&left_pose2, &left_flag2, n);
+	}
+
+	if(left_flag3){
+		Animate_Arrow(&left_pose3, &left_flag3, n);
+	}
+
+	if(left_flag4){
+		Animate_Arrow(&left_pose4, &left_flag4, n);
+	}
+
+	if(left_flag5){
+			Animate_Arrow(&left_pose5, &left_flag5, n);
+		}
+
+}
+
+void Animate_Arrow(int *pose, int *flag, int n){
+	if(*pose<110){
+		GUI_ERASE_ARROW(*pose);
+		*pose = *pose + n;
+		GUI_DRAW_ARROW(*pose);
+	} else{
+		GUI_ERASE_ARROW(*pose);
+		*pose = -15;
+		*flag = 0;
+		GUI_DRAW_ARROW(*pose);
+	}
 }
