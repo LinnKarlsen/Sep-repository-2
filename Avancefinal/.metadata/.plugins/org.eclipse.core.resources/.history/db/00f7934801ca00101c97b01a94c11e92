@@ -429,7 +429,7 @@ void Animate_Arrow(int current_step, int *pose, int *flag, int n, int *windowblo
 
 	if(*pose>98){
 		// Activamos el window a partir de este valor
-		Check_score(&score, windowblocked, current_step);
+		Check_score(&score, windowblocked);
 	}
 
 	if(*pose==-15){

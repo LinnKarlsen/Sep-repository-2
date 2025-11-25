@@ -20,6 +20,8 @@
 #include "xtmrctr.h"
 #include "sound.h"
 #include "melody.h"
+#include "dance.h"
+#include "careography.h"
 
 // ==================== External Definitions ====================
 extern XGpio gpio0;  // GPIO original
@@ -56,6 +58,9 @@ XScuGic InterruptController;
 // External melody variables (from sound.c)
 extern Note melody[];
 extern int melody_length;
+// External dance variables (from dance.c)
+extern Step dance[];
+extern int dance_length;
 
 // Function prototypes
 //void Graphics_Timer_Interrupt_Handler(void *CallBackRef);
@@ -79,6 +84,104 @@ extern volatile int game_sleep;
 //extern volatile int start;
 
 XGpio gpio1;
+
+// ==================== Variables para gráficas de las flechas ====================
+
+// Left arrow variables
+int left_flag1 = 0;
+int left_flag2 = 0;
+int left_flag3 = 0;
+int left_flag4 = 0;
+int left_flag5 = 0;
+int left_pose1 = -15;
+int left_pose2 = -15;
+int left_pose3 = -15;
+int left_pose4 = -15;
+int left_pose5 = -15;
+
+// Down arrow variables
+int down_flag1 = 0;
+int down_flag2 = 0;
+int down_flag3 = 0;
+int down_flag4 = 0;
+int down_flag5 = 0;
+int down_pose1 = -15;
+int down_pose2 = -15;
+int down_pose3 = -15;
+int down_pose4 = -15;
+int down_pose5 = -15;
+
+// Up arrow variables
+int up_flag1 = 0;
+int up_flag2 = 0;
+int up_flag3 = 0;
+int up_flag4 = 0;
+int up_flag5 = 0;
+int up_pose1 = -15;
+int up_pose2 = -15;
+int up_pose3 = -15;
+int up_pose4 = -15;
+int up_pose5 = -15;
+
+// Right arrow variables
+int right_flag1 = 0;
+int right_flag2 = 0;
+int right_flag3 = 0;
+int right_flag4 = 0;
+int right_flag5 = 0;
+int right_pose1 = -15;
+int right_pose2 = -15;
+int right_pose3 = -15;
+int right_pose4 = -15;
+int right_pose5 = -15;
+
+// For gameplay and scoring
+volatile int score = 0;
+volatile int joyx_val = 0;
+volatile int joyy_val = 0;
+int mic_val = 0;
+// Ventanas en las cuales accionar el joystick es punteable
+int left_window1 = 0;
+int left_window2 = 0;
+int left_window3 = 0;
+int left_window4 = 0;
+int left_window5 = 0;
+int right_window1 = 0;
+int right_window2 = 0;
+int right_window3 = 0;
+int right_window4 = 0;
+int right_window5 = 0;
+int up_window1 = 0;
+int up_window2 = 0;
+int up_window3 = 0;
+int up_window4 = 0;
+int up_window5 = 0;
+int down_window1 = 0;
+int down_window2 = 0;
+int down_window3 = 0;
+int down_window4 = 0;
+int down_window5 = 0;
+// Se bloquea la ventana si ya se consiguió el punto
+int blocked_left_window1 = 0;
+int blocked_left_window2 = 0;
+int blocked_left_window3 = 0;
+int blocked_left_window4 = 0;
+int blocked_left_window5 = 0;
+int blocked_right_window1 = 0;
+int blocked_right_window2 = 0;
+int blocked_right_window3 = 0;
+int blocked_right_window4 = 0;
+int blocked_right_window5 = 0;
+int blocked_up_window1 = 0;
+int blocked_up_window2 = 0;
+int blocked_up_window3 = 0;
+int blocked_up_window4 = 0;
+int blocked_up_window5 = 0;
+int blocked_down_window1 = 0;
+int blocked_down_window2 = 0;
+int blocked_down_window3 = 0;
+int blocked_down_window4 = 0;
+int blocked_down_window5 = 0;
 
 // ==================== MAIN ====================
 int main() {
@@ -189,16 +292,16 @@ int main() {
 	xil_printf("Initiating Dance Timer...\r\n");
 
 	    // Initialize the sound timer
-	    Status = Sound_Initialize_Timer(TIMER_DEVICE_ID_DANCE);
+	    Status = Dance_Initialize_Timer(TIMER_DEVICE_ID_DANCE);
 	    if (Status != XST_SUCCESS) {
 	        xil_printf("Failed to initialize dance timer\r\n");
 	        return XST_FAILURE;
 	    }
 
 	    // Set up the interrupt system for sound
-		Status = Sound_Setup_Interrupt_System(&InterruptController);
+		Status = Dance_Setup_Interrupt_System(&InterruptController);
 		if (Status != XST_SUCCESS) {
-			xil_printf("Failed to set up sound interrupts\r\n");
+			xil_printf("Failed to set up dance interrupts\r\n");
 			return XST_FAILURE;
 		}
 
@@ -248,7 +351,7 @@ int main() {
                        XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
 
     // Set measure timer period
-    XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0, 1000000);
+    XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0, 8000000);  // originalmente 1000000
 
     // Set up measure timer interrupt
     Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_MEASURE,
@@ -324,7 +427,7 @@ int main() {
 	XScuGic_SetPriorityTriggerType(&InterruptController, GPIO_INTR_ID, 0x50, 0x3);
 
 	// Low: GRAPHICS
-	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
+	//XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
 
 
 	// -------------------- CLEAR EN PANTALLA --------------------
@@ -334,20 +437,26 @@ int main() {
     // -------------------- START TIMERS --------------------
 
     // Start both timers
-    XTmrCtr_Start(&TimerInstanceGraphics, 0);
+    //XTmrCtr_Start(&TimerInstanceGraphics, 0);
     XTmrCtr_Start(&TimerInstanceMeasure, 0);
     XTmrCtr_Start(&TimerInstanceLTMeasure, 0);
 
     xil_printf("Graphics and Measurement Systems Initialized. Preparing to play melody...\r\n");
 
-    // -------------------- START MELODY --------------------
+    // -------------------- START MELODY & DANCE --------------------
+
+    //XTmrCtr_Start(&TimerInstance, 0);
+    //XTmrCtr_Start(&TimerInstanceDance, 0);
 
     // Initialize the melody
     initialize_melody(available_melodies[1], melody, &melody_length);
+    initialize_dance(available_dances[0], dance, &dance_length);
 
     // Start playing the melody
     current_note = 0;
+    current_step = 0;
     Play_Next_Note();
+    Next_Dance_Step();
 
     xil_printf("Melody playback started...\r\n");
 
@@ -356,33 +465,27 @@ int main() {
     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
 
-    int joyx_val, joyy_val, acx_val, acy_val;
-    int pot1_val, pot2_val, mic_val;
+    int acx_val, acy_val;
+    int pot1_val, pot2_val;
     int tmp_val = 0;
 	int opt_val = 0;
 
+	char score_display[16]={};
+
 	GUI_DANCE_FLOOR();
-	int pose = -15;
-	GUI_DRAW_ARROW(pose);
+	GUI_SCORE_BOARD();
+
 
     while (1) {
 
     	if(measure_update_needed)
     		{
 
-    			if(pose<110){
-    				GUI_ERASE_ARROW(pose);
-    				pose++;
-					GUI_DRAW_ARROW(pose);
-    			} else{
-    				GUI_ERASE_ARROW(pose);
-    				pose=-15;
-    				GUI_DRAW_ARROW(pose);
-    			}
+    			Run_Arrow_Animations();
 
     			// Clear old values
-				//GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				//GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				//GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				//GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				//GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
@@ -396,15 +499,15 @@ int main() {
 				joyy_val = read_joyy();
 				//tmp_val = read_tmp();
 				//opt_val = read_opt();
-				pot1_val = read_POT1();
-				pot2_val = read_POT2();
-				acx_val = read_acx();
-				acy_val = read_acy();
-				mic_val = read_MIC();
+				//pot1_val = read_POT1();
+				//pot2_val = read_POT2();
+				//acx_val = read_acx();
+				//acy_val = read_acy();
+				//mic_val = read_MIC();
 
 				// Store as char
-				//sprintf(joyx, "%d", joyx_val);
-				//sprintf(joyy, "%d", joyy_val);
+				sprintf(joyx, "%d", joyx_val);
+				sprintf(joyy, "%d", joyy_val);
 				//sprintf(tmp, "%d", tmp_val);
 				//sprintf(opt, "%d", opt_val);
 				//sprintf(pot1, "%d", pot1_val);
@@ -413,9 +516,13 @@ int main() {
 				//sprintf(acy, "%d", acy_val);
 				//sprintf(mic, "%d", mic_val);
 
+				GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,GUI_BACKGROUND);
+				sprintf(score_display, "%d", score);
+				GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
+
 				// Display values
-				//GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
-				//GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,YELLOW);
+				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
+				GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,YELLOW);
 				//GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,YELLOW);
 				//GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,YELLOW);
 				//GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,YELLOW);
@@ -434,11 +541,11 @@ int main() {
 
     	if(LTmeasure_update_needed)
 		{
-			tmp_val = read_tmp();
-			opt_val = read_opt();
+			//tmp_val = read_tmp();
+			//opt_val = read_opt();
 
-			xil_printf("TEMPERATURA: %d\n", tmp_val);
-			xil_printf("LUZ: %d\n\n", opt_val);
+			//xil_printf("TEMPERATURA: %d\n", tmp_val);
+			//xil_printf("LUZ: %d\n\n", opt_val);
 
 			LTmeasure_update_needed = 0;
 

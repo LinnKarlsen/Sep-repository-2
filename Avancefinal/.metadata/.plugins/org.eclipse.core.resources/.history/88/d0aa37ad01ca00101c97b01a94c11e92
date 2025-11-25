@@ -470,6 +470,9 @@ void Check_score(int *score, int *windowblocked, int current_step){
 		if(*windowblocked!=1){
 			*score = *score + 100;
 			*windowblocked=1;
+			GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,GUI_BACKGROUND);
+			sprintf(score_display, "%d", score);
+			GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
 		}
 	}
 

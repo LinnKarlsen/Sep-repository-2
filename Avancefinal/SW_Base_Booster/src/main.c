@@ -137,8 +137,8 @@ int right_pose5 = -15;
 
 // For gameplay and scoring
 volatile int score = 0;
-int joyx_val = 0;
-int joyy_val = 0;
+volatile int joyx_val = 0;
+volatile int joyy_val = 0;
 int mic_val = 0;
 // Ventanas en las cuales accionar el joystick es punteable
 int left_window1 = 0;
@@ -484,8 +484,8 @@ int main() {
     			Run_Arrow_Animations();
 
     			// Clear old values
-				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
-				GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
+				//GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				//GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				//GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 				//GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
@@ -521,8 +521,8 @@ int main() {
 				GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
 
 				// Display values
-				GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
-				GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(5,65,joyy,&Font12,GUI_BACKGROUND,YELLOW);
 				//GUI_DisString_EN(50,30,tmp,&Font12,GUI_BACKGROUND,YELLOW);
 				//GUI_DisString_EN(50,65,opt,&Font12,GUI_BACKGROUND,YELLOW);
 				//GUI_DisString_EN(95,30,pot1,&Font12,GUI_BACKGROUND,YELLOW);

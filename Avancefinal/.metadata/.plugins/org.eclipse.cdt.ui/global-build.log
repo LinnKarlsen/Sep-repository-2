@@ -1,23 +1,11 @@
 Nothing to build in platform 'HW_Base_Booster'
 
-09:37:44 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
+10:21:56 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/dance.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dance.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/dance.d" -MT"src/dance.o" -o "src/dance.o" "../src/dance.c"
-../src/dance.c: In function 'Next_Dance_Step':
-../src/dance.c:201:18: warning: unused variable 'duration_counts' [-Wunused-variable]
-  201 |         uint32_t duration_counts = duration_ms * 100000;       // Ajustamos la duracion a ciclos de clk (100 MHz)
-      |                  ^~~~~~~~~~~~~~~
-../src/dance.c:189:11: warning: unused variable 'NONE_ref' [-Wunused-variable]
-  189 |  uint32_t NONE_ref  = 0;
-      |           ^~~~~~~~
-'Finished building: ../src/dance.c'
-' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
@@ -71,6 +59,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size SW_Base_Booster.elf  |tee "SW_Base_Booster.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 799169	   3628	  27584	 830381	  cabad	SW_Base_Booster.elf
+ 799249	   3628	  27584	 830461	  cabfd	SW_Base_Booster.elf
 'Finished building: SW_Base_Booster.elf.size'
 ' '
