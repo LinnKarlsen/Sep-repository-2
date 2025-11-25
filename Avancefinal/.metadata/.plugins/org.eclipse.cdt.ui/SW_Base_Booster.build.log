@@ -1,53 +1,38 @@
-21:39:43 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
+00:23:51 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/dance.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dance.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/dance.d" -MT"src/dance.o" -o "src/dance.o" "../src/dance.c"
-../src/dance.c: In function 'Next_Dance_Step':
-../src/dance.c:118:18: warning: unused variable 'duration_counts' [-Wunused-variable]
-  118 |         uint32_t duration_counts = duration_ms * 100000;       // Ajustamos la duracion a ciclos de clk (100 MHz)
-      |                  ^~~~~~~~~~~~~~~
-../src/dance.c:110:11: warning: unused variable 'RIGHT_ref' [-Wunused-variable]
-  110 |  uint32_t RIGHT_ref = 4;
-      |           ^~~~~~~~~
-../src/dance.c:108:11: warning: unused variable 'DOWN_ref' [-Wunused-variable]
-  108 |  uint32_t DOWN_ref  = 2;
-      |           ^~~~~~~~
-../src/dance.c:107:11: warning: unused variable 'LEFT_ref' [-Wunused-variable]
-  107 |  uint32_t LEFT_ref  = 1;
-      |           ^~~~~~~~
-../src/dance.c:106:11: warning: unused variable 'NONE_ref' [-Wunused-variable]
-  106 |  uint32_t NONE_ref  = 0;
-      |           ^~~~~~~~
-'Finished building: ../src/dance.c'
-' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main':
-../src/main.c:421:29: warning: variable 'mic_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:423:6: warning: unused variable 'opt_val' [-Wunused-variable]
+  423 |  int opt_val = 0;
+      |      ^~~~~~~
+../src/main.c:422:9: warning: unused variable 'tmp_val' [-Wunused-variable]
+  422 |     int tmp_val = 0;
+      |         ^~~~~~~
+../src/main.c:421:29: warning: unused variable 'mic_val' [-Wunused-variable]
   421 |     int pot1_val, pot2_val, mic_val;
       |                             ^~~~~~~
-../src/main.c:421:19: warning: variable 'pot2_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:421:19: warning: unused variable 'pot2_val' [-Wunused-variable]
   421 |     int pot1_val, pot2_val, mic_val;
       |                   ^~~~~~~~
-../src/main.c:421:9: warning: variable 'pot1_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:421:9: warning: unused variable 'pot1_val' [-Wunused-variable]
   421 |     int pot1_val, pot2_val, mic_val;
       |         ^~~~~~~~
-../src/main.c:420:38: warning: variable 'acy_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:420:38: warning: unused variable 'acy_val' [-Wunused-variable]
   420 |     int joyx_val, joyy_val, acx_val, acy_val;
       |                                      ^~~~~~~
-../src/main.c:420:29: warning: variable 'acx_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:420:29: warning: unused variable 'acx_val' [-Wunused-variable]
   420 |     int joyx_val, joyy_val, acx_val, acy_val;
       |                             ^~~~~~~
-../src/main.c:420:19: warning: variable 'joyy_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:420:19: warning: unused variable 'joyy_val' [-Wunused-variable]
   420 |     int joyx_val, joyy_val, acx_val, acy_val;
       |                   ^~~~~~~~
-../src/main.c:420:9: warning: variable 'joyx_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:420:9: warning: unused variable 'joyx_val' [-Wunused-variable]
   420 |     int joyx_val, joyy_val, acx_val, acy_val;
       |         ^~~~~~~~
 ../src/main.c:418:68: warning: unused variable 'mic' [-Wunused-variable]
@@ -79,11 +64,6 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cort
       |          ^~~~
 'Finished building: ../src/main.c'
 ' '
-'Building file: ../src/sound.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sound.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/sound.d" -MT"src/sound.o" -o "src/sound.o" "../src/sound.c"
-'Finished building: ../src/sound.c'
-' '
 'Building target: SW_Base_Booster.elf'
 'Invoking: ARM v7 gcc linker'
 arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bsplib/lib -o "SW_Base_Booster.elf"  ./src/ADC.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/careography.o ./src/dance.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/main.o ./src/melody.o ./src/platform.o ./src/sound.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -92,9 +72,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size SW_Base_Booster.elf  |tee "SW_Base_Booster.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 387694	   3264	  27400	 418358	  66236	SW_Base_Booster.elf
+ 686030	   3264	  27400	 716694	  aef96	SW_Base_Booster.elf
 'Finished building: SW_Base_Booster.elf.size'
 ' '
 
-21:39:49 Build Finished (took 5s.882ms)
+00:23:53 Build Finished (took 2s.304ms)
 

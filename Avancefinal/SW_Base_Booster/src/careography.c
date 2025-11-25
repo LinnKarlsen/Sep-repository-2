@@ -12,30 +12,30 @@ static const int just_dance_steps[] = {
 		NONE, 1,
 
 		UP, 1,
-		UP, 1,
-		UP, 1,
-		UP, 1,
+		DOWN, 1,
+		LEFT, 1,
+		RIGHT, 1,
+		LEFT, 1,
+
+		DOWN, 1,
+		DOWN, 1,
 		UP, 1,
 
 		UP, 1,
-		UP, 1,
-		UP, 1,
-
-		UP, 1,
-		UP, 1,
-		UP, 1,
+		RIGHT, 1,
+		RIGHT, 1,
 		UP, 1,
 
-		UP, 1,
-		UP, 1,
-		UP, 1,
+		DOWN, 1,
+		DOWN, 2, DOWN, 2,
+		RIGHT, 4, RIGHT, 4, DOWN, 2,
 		UP, 1,
 		UP, 1,
 
 		// 18
 		UP, 1,
-		UP, 1,
-		UP, 1,
+		UP, 8, RIGHT, 8, DOWN, 4, LEFT, 2,
+		UP, 4, DOWN, 4, LEFT, 2,
 		UP, 1,
 
 		UP, 1,
@@ -51,7 +51,6 @@ static const int just_dance_steps[] = {
 
 		UP, 1,
 		UP, 1,
-
 };
 
 #define JUST_DANCE_LENGTH (sizeof(just_dance_steps) / sizeof(just_dance_steps[0]) / 2)

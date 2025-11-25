@@ -23,6 +23,43 @@ extern int left_pose3;
 extern int left_pose4;
 extern int left_pose5;
 
+// Right arrow variables
+extern int right_flag1;
+extern int right_flag2;
+extern int right_flag3;
+extern int right_flag4;
+extern int right_flag5;
+extern int right_pose1;
+extern int right_pose2;
+extern int right_pose3;
+extern int right_pose4;
+extern int right_pose5;
+
+// Up arrow variables
+extern int up_flag1;
+extern int up_flag2;
+extern int up_flag3;
+extern int up_flag4;
+extern int up_flag5;
+extern int up_pose1;
+extern int up_pose2;
+extern int up_pose3;
+extern int up_pose4;
+extern int up_pose5;
+
+// Down arrow variables
+extern int down_flag1;
+extern int down_flag2;
+extern int down_flag3;
+extern int down_flag4;
+extern int down_flag5;
+extern int down_pose1;
+extern int down_pose2;
+extern int down_pose3;
+extern int down_pose4;
+extern int down_pose5;
+
+
 // Definimos una variable modificada dentro de la interrupcion:
 volatile int current_step = 0; // Indice de la nota actual
 
@@ -120,25 +157,66 @@ void Next_Dance_Step() {
 
 
         // Left
-		if(dance_move == UP_ref){
-			xil_printf("Dance move es 1");
+		if(dance_move == LEFT_ref){
 			if(left_flag1 == 0){
-				//xil_printf("flag1");
 				left_flag1 = 1;
 			}else if(left_flag2 == 0){
-				//xil_printf("flag2");
 				left_flag2 = 1;
 			}else if(left_flag3 == 0){
 				left_flag3 = 1;
-				//xil_printf("flag3");
 			}else if(left_flag4 == 0){
 				left_flag4 = 1;
-				//xil_printf("flag3");
 			}else if(left_flag5 == 0){
 				left_flag5 = 1;
-				//xil_printf("flag3");
 			}
 		}
+
+		// Right
+		if(dance_move == RIGHT_ref){
+			if(right_flag1 == 0){
+				right_flag1 = 1;
+			}else if(right_flag2 == 0){
+				right_flag2 = 1;
+			}else if(right_flag3 == 0){
+				right_flag3 = 1;
+			}else if(right_flag4 == 0){
+				right_flag4 = 1;
+			}else if(right_flag5 == 0){
+				right_flag5 = 1;
+			}
+		}
+
+		// UP
+		if(dance_move == UP_ref){
+			//xil_printf("up");
+			if(up_flag1 == 0){
+				up_flag1 = 1;
+			}else if(up_flag2 == 0){
+				up_flag2 = 1;
+			}else if(up_flag3 == 0){
+				up_flag3 = 1;
+			}else if(up_flag4 == 0){
+				up_flag4 = 1;
+			}else if(up_flag5 == 0){
+				up_flag5 = 1;
+			}
+		}
+
+		// Left
+		if(dance_move == DOWN_ref){
+			if(down_flag1 == 0){
+				down_flag1 = 1;
+			}else if(down_flag2 == 0){
+				down_flag2 = 1;
+			}else if(down_flag3 == 0){
+				down_flag3 = 1;
+			}else if(down_flag4 == 0){
+				down_flag4 = 1;
+			}else if(down_flag5 == 0){
+				down_flag5 = 1;
+			}
+		}
+
 
         //uint32_t frequency = melody[current_note].frequency; // Lectura de la frecuencia
 		//uint32_t duration_ms = melody[current_note].duration; // Lectura de duracion de nota
@@ -167,41 +245,139 @@ void Next_Dance_Step() {
 
 void Run_Arrow_Animations()	{
 
+	uint32_t LEFT_ref  = 1;
+	uint32_t DOWN_ref  = 2;
+	uint32_t UP_ref    = 3;
+	uint32_t RIGHT_ref = 4;
+
 	// Modifica la velocidad en que se mueven las flechas
-	int n = 2;
+	int n = 7;
 
-
+	// Left
 	if(left_flag1){
-		Animate_Arrow(&left_pose1, &left_flag1, n);
+		Animate_Arrow(LEFT_ref, &left_pose1, &left_flag1, n);
 	}
-
 	if(left_flag2){
-		Animate_Arrow(&left_pose2, &left_flag2, n);
+		Animate_Arrow(LEFT_ref, &left_pose2, &left_flag2, n);
 	}
-
 	if(left_flag3){
-		Animate_Arrow(&left_pose3, &left_flag3, n);
+		Animate_Arrow(LEFT_ref, &left_pose3, &left_flag3, n);
 	}
-
 	if(left_flag4){
-		Animate_Arrow(&left_pose4, &left_flag4, n);
+		Animate_Arrow(LEFT_ref, &left_pose4, &left_flag4, n);
+	}
+	if(left_flag5){
+		Animate_Arrow(LEFT_ref, &left_pose5, &left_flag5, n);
 	}
 
-	if(left_flag5){
-			Animate_Arrow(&left_pose5, &left_flag5, n);
-		}
+	// Right
+	if(right_flag1){
+		Animate_Arrow(RIGHT_ref, &right_pose1, &right_flag1, n);
+	}
+	if(right_flag2){
+		Animate_Arrow(RIGHT_ref, &right_pose2, &right_flag2, n);
+	}
+	if(right_flag3){
+		Animate_Arrow(RIGHT_ref, &right_pose3, &right_flag3, n);
+	}
+	if(right_flag4){
+		Animate_Arrow(RIGHT_ref, &right_pose4, &right_flag4, n);
+	}
+	if(right_flag5){
+		Animate_Arrow(RIGHT_ref, &right_pose5, &right_flag5, n);
+	}
 
+	// Up
+	if(up_flag1){
+		Animate_Arrow(UP_ref, &up_pose1, &up_flag1, n);
+	}
+	if(up_flag2){
+		Animate_Arrow(UP_ref, &up_pose2, &up_flag2, n);
+	}
+	if(up_flag3){
+		Animate_Arrow(UP_ref, &up_pose3, &up_flag3, n);
+	}
+	if(up_flag4){
+		Animate_Arrow(UP_ref, &up_pose4, &up_flag4, n);
+	}
+	if(up_flag5){
+		Animate_Arrow(UP_ref, &up_pose5, &up_flag5, n);
+	}
+
+	// Down
+	if(down_flag1){
+		Animate_Arrow(DOWN_ref, &down_pose1, &down_flag1, n);
+	}
+	if(down_flag2){
+		Animate_Arrow(DOWN_ref, &down_pose2, &down_flag2, n);
+	}
+	if(down_flag3){
+		Animate_Arrow(DOWN_ref, &down_pose3, &down_flag3, n);
+	}
+	if(down_flag4){
+		Animate_Arrow(DOWN_ref, &down_pose4, &down_flag4, n);
+	}
+	if(down_flag5){
+		Animate_Arrow(DOWN_ref, &down_pose5, &down_flag5, n);
+	}
 }
 
-void Animate_Arrow(int *pose, int *flag, int n){
+void Animate_Arrow(int current_step, int *pose, int *flag, int n){
+
+	uint32_t LEFT_ref  = 1;
+	uint32_t DOWN_ref  = 2;
+	uint32_t UP_ref    = 3;
+	uint32_t RIGHT_ref = 4;
+
 	if(*pose<110){
-		GUI_ERASE_ARROW(*pose);
-		*pose = *pose + n;
-		GUI_DRAW_ARROW(*pose);
+
+		if(current_step==LEFT_ref){
+			// Left
+			GUI_ERASE_LEFT_ARROW(*pose);
+			*pose = *pose + n;
+			GUI_DRAW_LEFT_ARROW(*pose);
+		}else if(current_step==DOWN_ref){
+			// Down
+			GUI_ERASE_DOWN_ARROW(*pose);
+			*pose = *pose + n;
+			GUI_DRAW_DOWN_ARROW(*pose);
+		}else if(current_step==UP_ref){
+			// Up
+			GUI_ERASE_UP_ARROW(*pose);
+			*pose = *pose + n;
+			GUI_DRAW_UP_ARROW(*pose);
+		}else if(current_step==RIGHT_ref){
+			// Right
+			GUI_ERASE_RIGHT_ARROW(*pose);
+			*pose = *pose + n;
+			GUI_DRAW_RIGHT_ARROW(*pose);
+		}
+
 	} else{
-		GUI_ERASE_ARROW(*pose);
-		*pose = -15;
-		*flag = 0;
-		GUI_DRAW_ARROW(*pose);
+		if(current_step==LEFT_ref){
+			// Left
+			GUI_ERASE_LEFT_ARROW(*pose);
+			*pose = -15;
+			*flag = 0;
+			GUI_DRAW_LEFT_ARROW(*pose);
+		}else if(current_step==DOWN_ref){
+			// Down
+			GUI_ERASE_DOWN_ARROW(*pose);
+			*pose = -15;
+			*flag = 0;
+			GUI_DRAW_DOWN_ARROW(*pose);
+		}else if(current_step==UP_ref){
+			// Up
+			GUI_ERASE_UP_ARROW(*pose);
+			*pose = -15;
+			*flag = 0;
+			GUI_DRAW_UP_ARROW(*pose);
+		}else if(current_step==RIGHT_ref){
+			// Right
+			GUI_ERASE_RIGHT_ARROW(*pose);
+			*pose = -15;
+			*flag = 0;
+			GUI_DRAW_RIGHT_ARROW(*pose);
+		}
 	}
 }

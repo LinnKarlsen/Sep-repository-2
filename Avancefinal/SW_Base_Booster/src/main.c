@@ -303,7 +303,7 @@ int main() {
                        XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
 
     // Set measure timer period
-    XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0, 1000000);
+    XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0, 8000000);  // originalmente 1000000
 
     // Set up measure timer interrupt
     Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_MEASURE,
@@ -423,9 +423,6 @@ int main() {
 	int opt_val = 0;
 
 	GUI_DANCE_FLOOR();
-	int pose = -15;
-	GUI_DRAW_ARROW(pose);
-
 
 
     while (1) {
@@ -447,15 +444,15 @@ int main() {
 				//GUI_DisString_EN(95,100,mic,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 
 				// Read sensors
-				joyx_val = read_joyx();
-				joyy_val = read_joyy();
+				//joyx_val = read_joyx();
+				//joyy_val = read_joyy();
 				//tmp_val = read_tmp();
 				//opt_val = read_opt();
-				pot1_val = read_POT1();
-				pot2_val = read_POT2();
-				acx_val = read_acx();
-				acy_val = read_acy();
-				mic_val = read_MIC();
+				//pot1_val = read_POT1();
+				//pot2_val = read_POT2();
+				//acx_val = read_acx();
+				//acy_val = read_acy();
+				//mic_val = read_MIC();
 
 				// Store as char
 				//sprintf(joyx, "%d", joyx_val);
@@ -489,11 +486,11 @@ int main() {
 
     	if(LTmeasure_update_needed)
 		{
-			tmp_val = read_tmp();
-			opt_val = read_opt();
+			//tmp_val = read_tmp();
+			//opt_val = read_opt();
 
-			xil_printf("TEMPERATURA: %d\n", tmp_val);
-			xil_printf("LUZ: %d\n\n", opt_val);
+			//xil_printf("TEMPERATURA: %d\n", tmp_val);
+			//xil_printf("LUZ: %d\n\n", opt_val);
 
 			LTmeasure_update_needed = 0;
 
