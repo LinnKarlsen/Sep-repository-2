@@ -442,6 +442,7 @@ void Animate_Arrow(int current_step, int *pose, int *flag, int n, int *windowblo
 	if(*pose==-15){
 		// Reseteamos el blocked y el arrow_disappeared
 		*windowblocked = 0;
+		arrow_disappeared = 1;
 	}
 }
 

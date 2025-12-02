@@ -400,3 +400,15 @@ timestamp=[2025-11-25 10:19:00], mode=BUILD, duration=0:00:03.199, duration_ms=3
 timestamp=[2025-11-25 10:21:17], mode=BUILD, duration=0:00:03.725, duration_ms=3725, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
 timestamp=[2025-11-25 10:21:43], mode=BUILD, duration=0:00:03.929, duration_ms=3929, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
 timestamp=[2025-11-25 10:21:59], mode=BUILD, duration=0:00:02.987, duration_ms=2987, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-02 12:10:12], mode=WORKBENCH_START, duration=0:00:34.204, duration_ms=34204, data={}
+timestamp=[2025-12-02 12:10:14], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.165, duration_ms=165, data={}
+timestamp=[2025-12-02 12:10:14], mode=WORKBENCH_UI_INIT, duration=0:00:02.207, duration_ms=2207, data={editors_count=17, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=HW_Base_Booster,RemoteSystemsTempFiles,SW_Base_Booster,SW_Base_Booster_system}
+timestamp=[2025-12-02 14:10:15], mode=WORKBENCH_START, duration=0:00:32.952, duration_ms=32952, data={}
+timestamp=[2025-12-02 14:10:17], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.180, duration_ms=180, data={}
+timestamp=[2025-12-02 14:10:18], mode=WORKBENCH_UI_INIT, duration=0:00:02.868, duration_ms=2868, data={editors_count=17, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=HW_Base_Booster,RemoteSystemsTempFiles,SW_Base_Booster,SW_Base_Booster_system}
+timestamp=[2025-12-02 14:18:15], mode=PLATFORM_GENERATION, duration=0:01:14.030, duration_ms=74030, data={name=HW_Base_Booster}
+timestamp=[2025-12-02 14:18:30], mode=BUILD, duration=0:00:09.858, duration_ms=9858, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-02 14:18:34], mode=BUILD, duration=0:00:02.278, duration_ms=2278, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-02 14:20:19], mode=BUILD, duration=0:00:07.112, duration_ms=7112, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-02 14:26:05], mode=BUILD, duration=0:00:03.118, duration_ms=3118, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-02 14:36:36], mode=BUILD, duration=0:00:03.167, duration_ms=3167, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}

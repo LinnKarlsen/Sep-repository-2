@@ -37,8 +37,8 @@ extern const unsigned char font[];
 #define TIMER_INTR_ID_DANCE      XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
 //#define TIMER_DEVICE_ID_GRAPHICS XPAR_AXI_TIMER_1_DEVICE_ID
 //#define TIMER_INTR_ID_GRAPHICS   XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
-#define TIMER_DEVICE_ID_GRAPHICS  XPAR_AXI_TIMER_2_DEVICE_ID
-#define TIMER_INTR_ID_GRAPHICS    XPAR_FABRIC_AXI_TIMER_2_INTERRUPT_INTR
+#define TIMER_DEVICE_ID_MEASURE  XPAR_AXI_TIMER_2_DEVICE_ID
+#define TIMER_INTR_ID_MEASURE    XPAR_FABRIC_AXI_TIMER_2_INTERRUPT_INTR
 #define TIMER_DEVICE_ID_LTMEASURE  XPAR_AXI_TIMER_3_DEVICE_ID
 #define TIMER_INTR_ID_LTMEASURE    XPAR_FABRIC_AXI_TIMER_3_INTERRUPT_INTR
 //#define IIC_DEVICE_ID  			  XPAR_AXI_IIC_0_DEVICE_ID
@@ -51,7 +51,7 @@ extern const unsigned char font[];
 
 // Timer instances
 //XTmrCtr TimerInstanceGraphics;  // Para los gráficos
-XTmrCtr TimerInstanceGraphics;   // Para las mediciones
+XTmrCtr TimerInstanceMeasure;   // Para las mediciones
 XTmrCtr TimerInstanceLTMeasure;   // Para las mediciones
 XScuGic InterruptController;
 
@@ -65,8 +65,8 @@ extern int dance_length;
 // Function prototypes
 //void Graphics_Timer_Interrupt_Handler(void *CallBackRef);
 //extern volatile int graphics_update_needed;
-void Graphics_Timer_Interrupt_Handler(void *CallBackRef);
-extern volatile int graphics_update_needed;
+void Measure_Timer_Interrupt_Handler(void *CallBackRef);
+extern volatile int measure_update_needed;
 void LTMeasure_Timer_Interrupt_Handler(void *CallBackRef);
 extern volatile int LTmeasure_update_needed;
 void Light_Interrupt_Handler(void *CallbackRef);
@@ -335,35 +335,35 @@ int main() {
     // Enable graphics timer interrupt in the controller
 	//XScuGic_Enable(&InterruptController, TIMER_INTR_ID_GRAPHICS);
 
-    // -------------------- GRAPHICS INITIALIZATION --------------------
+    // -------------------- MEASURE INITIALIZATION --------------------
 
     xil_printf("Initiating Measure Timer...\r\n");
 
     // Initialize the measure timer
-	Status = XTmrCtr_Initialize(&TimerInstanceGraphics, TIMER_DEVICE_ID_GRAPHICS);
+	Status = XTmrCtr_Initialize(&TimerInstanceMeasure, TIMER_DEVICE_ID_MEASURE);
 	if (Status != XST_SUCCESS) {
 		xil_printf("Failed to initialize measure timer\r\n");
 		return XST_FAILURE;
 	}
 
     // Configure measure timer options
-    XTmrCtr_SetOptions(&TimerInstanceGraphics, 0,
+    XTmrCtr_SetOptions(&TimerInstanceMeasure, 0,
                        XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
 
     // Set measure timer period
-    XTmrCtr_SetResetValue(&TimerInstanceGraphics, 0, 8000000);  // originalmente 1000000
+    XTmrCtr_SetResetValue(&TimerInstanceMeasure, 0, 8000000);  // originalmente 1000000
 
     // Set up measure timer interrupt
-    Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_GRAPHICS,
-                            (Xil_InterruptHandler)Graphics_Timer_Interrupt_Handler,
-                            (void *)&TimerInstanceGraphics);
+    Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_MEASURE,
+                            (Xil_InterruptHandler)Measure_Timer_Interrupt_Handler,
+                            (void *)&TimerInstanceMeasure);
     if (Status != XST_SUCCESS) {
         xil_printf("Failed to connect measure timer interrupt\r\n");
         return XST_FAILURE;
     }
 
     // Enable measure timer interrupt in the controller
-    XScuGic_Enable(&InterruptController, TIMER_INTR_ID_GRAPHICS);
+    XScuGic_Enable(&InterruptController, TIMER_INTR_ID_MEASURE);
 
     // -------------------- LIGHT-TEMPERATURE MEASURE INITIALIZATION --------------------
 
@@ -421,7 +421,7 @@ int main() {
 	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_LTMEASURE, 0x10, 0x3);
 
 	// Medium: MEASURE
-	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x40, 0x3);
+	XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_MEASURE, 0x40, 0x3);
 
 	// Medium: GPIO1
 	XScuGic_SetPriorityTriggerType(&InterruptController, GPIO_INTR_ID, 0x50, 0x3);
@@ -438,7 +438,7 @@ int main() {
 
     // Start both timers
     //XTmrCtr_Start(&TimerInstanceGraphics, 0);
-    XTmrCtr_Start(&TimerInstanceGraphics, 0);
+    XTmrCtr_Start(&TimerInstanceMeasure, 0);
     XTmrCtr_Start(&TimerInstanceLTMeasure, 0);
 
     xil_printf("Graphics and Measurement Systems Initialized. Preparing to play melody...\r\n");
@@ -478,7 +478,7 @@ int main() {
 
     while (1) {
 
-    	if(graphics_update_needed)
+    	if(measure_update_needed)
     		{
 
     			Run_Arrow_Animations();
@@ -537,7 +537,7 @@ int main() {
 				//           read_joyx(), read_joyy(), read_acx(), read_acy(),
 				//           read_MIC(), read_POT1(), read_POT2(), read_tmp(), read_opt());
 
-				graphics_update_needed = 0;
+				measure_update_needed = 0;
     		}
 
     	if(LTmeasure_update_needed)
@@ -582,10 +582,10 @@ int main() {
 //}
 
 // Variable global para control de actualización de mediciones
-volatile int graphics_update_needed = 0;
+volatile int measure_update_needed = 0;
 
 // Graphics Timer Interrupt Handler
-void Graphics_Timer_Interrupt_Handler(void *CallBackRef)
+void Measure_Timer_Interrupt_Handler(void *CallBackRef)
 {
     XTmrCtr *InstancePtr = (XTmrCtr *)CallBackRef;
 
@@ -594,7 +594,7 @@ void Graphics_Timer_Interrupt_Handler(void *CallBackRef)
     XTmrCtr_SetControlStatusReg(InstancePtr->BaseAddress, 0, ControlStatusReg);
 
     // Set the flag to indicate that graphics update is needed
-    graphics_update_needed = 1;
+    measure_update_needed = 1;
 }
 
 // Variable global para control de actualización de mediciones

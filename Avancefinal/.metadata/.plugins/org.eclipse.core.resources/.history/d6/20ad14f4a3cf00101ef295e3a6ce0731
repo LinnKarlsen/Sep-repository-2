@@ -340,7 +340,7 @@ int main() {
     xil_printf("Initiating Measure Timer...\r\n");
 
     // Initialize the measure timer
-	Status = XTmrCtr_Initialize(&TimerInstanceGraphics, TIMER_DEVICE_ID_GRAPHICS);
+	Status = XTmrCtr_Initialize(&TimerInstanceGrapgics, TIMER_DEVICE_ID_GRAPHICS);
 	if (Status != XST_SUCCESS) {
 		xil_printf("Failed to initialize measure timer\r\n");
 		return XST_FAILURE;
