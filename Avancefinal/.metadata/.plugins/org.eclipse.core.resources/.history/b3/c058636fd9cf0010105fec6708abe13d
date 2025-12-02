@@ -473,7 +473,6 @@ int main() {
 	char score_display[16]={};
 
 	GUI_DANCE_FLOOR();
-	GUI_DANCE_FLOOR_LIGHT();
 	GUI_SCORE_BOARD();
 
 

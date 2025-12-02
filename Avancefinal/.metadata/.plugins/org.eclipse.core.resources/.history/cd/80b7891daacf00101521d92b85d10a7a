@@ -406,14 +406,6 @@ void GUI_DANCE_FLOOR(){
 	    }
 }
 
-void GUI_DANCE_FLOOR_LIGHT(){
-	for (int y = 0; y < 128; y++) {
-	        for (int x = 0; x < 128; x++) {
-	            GUI_DrawPoint(x, y, dancefloorlight[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
-	        }
-	    }
-}
-
 void GUI_SCORE_BOARD(){
 	for (int y = 0; y < 50; y++) {
 	        for (int x = 50; x < 128; x++) {
