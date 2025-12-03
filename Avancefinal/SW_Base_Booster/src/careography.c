@@ -14,6 +14,8 @@ static const int just_dance_steps[] = {
 		UP, 1,
 		DOWN, 1,
 		LEFT, 1,
+		TURN_RIGHT, 1,
+		TURN_LEFT, 1,
 		RIGHT, 1,
 		LEFT, 1,
 
@@ -24,6 +26,8 @@ static const int just_dance_steps[] = {
 		UP, 1,
 		RIGHT, 1,
 		RIGHT, 1,
+		TURN_RIGHT, 1,
+		TURN_LEFT, 1,
 		UP, 1,
 
 		DOWN, 1,
@@ -46,6 +50,8 @@ static const int just_dance_steps[] = {
 		UP, 1,
 		UP, 1,
 		UP, 1,
+		TURN_RIGHT, 1,
+		TURN_LEFT, 1,
 		UP, 1,
 		UP, 1,
 

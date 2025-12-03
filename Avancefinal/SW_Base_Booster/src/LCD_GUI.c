@@ -427,7 +427,7 @@ void GUI_SCORE_BOARD(){
 // Left
 
 void GUI_DRAW_LEFT_ARROW(int pose){
-	for (int y = 100; y < 128; y++) {
+	for (int y = 110; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(left[y][x]!=0x0000){
 	        		GUI_DrawPoint(x + 3, y - pose, left[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
@@ -437,7 +437,7 @@ void GUI_DRAW_LEFT_ARROW(int pose){
 }
 
 void GUI_ERASE_LEFT_ARROW(int pose, int light_mode){
-	for (int y = 100; y < 128; y++) {
+	for (int y = 110; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(left[y][x]!=0x0000){
 	        		if(light_mode){
@@ -456,7 +456,7 @@ void GUI_ERASE_LEFT_ARROW(int pose, int light_mode){
 
 void GUI_DRAW_RIGHT_ARROW(int pose){
 	int r = 50;
-	for (int y = 100; y < 128; y++) {
+	for (int y = 110; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(right[y][x]!=0x0000){
 					GUI_DrawPoint(x + r, y - pose, right[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
@@ -467,7 +467,7 @@ void GUI_DRAW_RIGHT_ARROW(int pose){
 
 void GUI_ERASE_RIGHT_ARROW(int pose, int light_mode){
 	int r = 50;
-	for (int y = 100; y < 128; y++) {
+	for (int y = 110; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(right[y][x]!=0x0000){
 	        		if(light_mode){
@@ -485,7 +485,7 @@ void GUI_ERASE_RIGHT_ARROW(int pose, int light_mode){
 
 void GUI_DRAW_UP_ARROW(int pose){
 	int l = 34;
-	for (int y = 100; y < 128; y++) {
+	for (int y = 110; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(up[y][x]!=0x0000){
 					GUI_DrawPoint(x + l, y - pose, up[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
@@ -496,7 +496,7 @@ void GUI_DRAW_UP_ARROW(int pose){
 
 void GUI_ERASE_UP_ARROW(int pose, int light_mode){
 	int l = 34;
-	for (int y = 100; y < 128; y++) {
+	for (int y = 110; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(up[y][x]!=0x0000){
 					if(light_mode){
@@ -515,7 +515,7 @@ void GUI_ERASE_UP_ARROW(int pose, int light_mode){
 
 void GUI_DRAW_DOWN_ARROW(int pose){
 	int d = 18;
-	for (int y = 100; y < 128; y++) {
+	for (int y = 110; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(down[y][x]!=0x0000){
 					GUI_DrawPoint(x + d, y - pose, down[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
@@ -526,9 +526,35 @@ void GUI_DRAW_DOWN_ARROW(int pose){
 
 void GUI_ERASE_DOWN_ARROW(int pose, int light_mode){
 	int d = 18;
-	for (int y = 100; y < 128; y++) {
+	for (int y = 110; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(down[y][x]!=0x0000){
+	        		if(light_mode){
+	        			GUI_DrawPoint(x + d, y - pose , dancefloorlight[y-pose][x+d], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		} else{
+	        			GUI_DrawPoint(x + d, y - pose , dancefloor[y-pose][x+d], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		}
+	        	}
+	        }
+	    }
+}
+
+void GUI_DRAW_TURN_LEFT(int pose){
+	int d = 0;
+	for (int y = 108; y < 127; y++) {
+	        for (int x = 0; x < 80; x++) {
+	        	if(turnleft[y][x]!=0x0000){
+					GUI_DrawPoint(x + d, y - pose, turnleft[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        	}
+	        }
+	    }
+}
+
+void GUI_ERASE_TURN_LEFT(int pose, int light_mode){
+	int d = 0;
+	for (int y = 108; y < 127; y++) {
+	        for (int x = 0; x < 80; x++) {
+	        	if(turnleft[y][x]!=0x0000){
 	        		if(light_mode){
 	        			GUI_DrawPoint(x + d, y - pose, dancefloorlight[y-pose][x+d], DOT_PIXEL_1X1, DOT_FILL_AROUND);
 	        		} else{
@@ -539,6 +565,30 @@ void GUI_ERASE_DOWN_ARROW(int pose, int light_mode){
 	    }
 }
 
+void GUI_DRAW_TURN_RIGHT(int pose){
+	int d = 0;
+	for (int y = 110; y < 126; y++) {
+	        for (int x = 0; x < 80; x++) {
+	        	if(turnright[y][x]!=0x0000){
+					GUI_DrawPoint(x + d, y - pose, turnright[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        	}
+	        }
+	    }
+}
 
+void GUI_ERASE_TURN_RIGHT(int pose, int light_mode){
+	int d = 0;
+	for (int y = 110; y < 127; y++) {
+	        for (int x = 0; x < 80; x++) {
+	        	if(turnright[y][x]!=0x0000){
+	        		if(light_mode){
+	        			GUI_DrawPoint(x + d, y - pose, dancefloorlight[y-pose][x+d], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		} else{
+	        			GUI_DrawPoint(x + d, y - pose, dancefloor[y-pose][x+d], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		}
+	        	}
+	        }
+	    }
+}
 
 

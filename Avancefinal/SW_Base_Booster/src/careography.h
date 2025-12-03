@@ -4,12 +4,14 @@
 
 #include <stdint.h>
 
-// Definimos en Hz las frecuencias de cada nota:
+// Definimos como int cada paso de baile:
 #define NONE    0
 #define LEFT    1
 #define DOWN    2
 #define UP      3
 #define RIGHT   4
+#define TURN_LEFT  5
+#define TURN_RIGHT 6
 
 
 #include <stdint.h>
