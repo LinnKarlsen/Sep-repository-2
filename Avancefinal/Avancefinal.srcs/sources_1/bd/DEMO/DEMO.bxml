@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="DEMO" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1763864882"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1763864882"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1763864882"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1763864882"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1764723685"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1764723685"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1764723685"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1764723685"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\DEMO_axi_quad_spi_0_0\DEMO_axi_quad_spi_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_quad_spi_0"/>
@@ -151,14 +151,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\DEMO_ila_0_0\DEMO_ila_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ila_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1762024709" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\DEMO_debouncer_0_0\DEMO_debouncer_0_0.xci" Type="IP">
         <Instance HierarchyPath="debouncer_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="1762088807" IsTrackable="true" IsStatusTracked="true"/>
@@ -259,6 +251,14 @@
       </File>
       <File Name="ip\DEMO_axi_timer_3_0\DEMO_axi_timer_3_0.xci" Type="IP">
         <Instance HierarchyPath="axi_timer_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\DEMO_axi_gpio_2_0\DEMO_axi_gpio_2_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_2"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

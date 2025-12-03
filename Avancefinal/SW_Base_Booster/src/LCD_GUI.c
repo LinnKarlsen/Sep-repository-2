@@ -430,17 +430,23 @@ void GUI_DRAW_LEFT_ARROW(int pose){
 	for (int y = 100; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(left[y][x]!=0x0000){
-					GUI_DrawPoint(x + 3, y - pose, left[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		GUI_DrawPoint(x + 3, y - pose, left[y][x], DOT_PIXEL_1X1, DOT_FILL_AROUND);
 	        	}
 	        }
 	    }
 }
 
-void GUI_ERASE_LEFT_ARROW(int pose){
+void GUI_ERASE_LEFT_ARROW(int pose, int light_mode){
 	for (int y = 100; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(left[y][x]!=0x0000){
-					GUI_DrawPoint(x + 3, y - pose, dancefloor[y-pose][x+3], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		if(light_mode){
+	        			GUI_DrawPoint(x + 3, y - pose, dancefloorlight[y-pose][x+3], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		}
+	        		else{
+	        			GUI_DrawPoint(x + 3, y - pose, dancefloor[y-pose][x+3], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+
+	        		}
 	        	}
 	        }
 	    }
@@ -459,12 +465,17 @@ void GUI_DRAW_RIGHT_ARROW(int pose){
 	    }
 }
 
-void GUI_ERASE_RIGHT_ARROW(int pose){
+void GUI_ERASE_RIGHT_ARROW(int pose, int light_mode){
 	int r = 50;
 	for (int y = 100; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(right[y][x]!=0x0000){
-					GUI_DrawPoint(x + r, y - pose, dancefloor[y-pose][x+r], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		if(light_mode){
+	        			GUI_DrawPoint(x + r, y - pose, dancefloorlight[y-pose][x+r], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		}
+	        		else{
+	        			GUI_DrawPoint(x + r, y - pose, dancefloor[y-pose][x+r], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		}
 	        	}
 	        }
 	    }
@@ -483,12 +494,18 @@ void GUI_DRAW_UP_ARROW(int pose){
 	    }
 }
 
-void GUI_ERASE_UP_ARROW(int pose){
+void GUI_ERASE_UP_ARROW(int pose, int light_mode){
 	int l = 34;
 	for (int y = 100; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(up[y][x]!=0x0000){
-					GUI_DrawPoint(x + l, y - pose, dancefloor[y-pose][x+l], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+					if(light_mode){
+						GUI_DrawPoint(x + l, y - pose, dancefloorlight[y-pose][x+l], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+					}
+					else{
+						GUI_DrawPoint(x + l, y - pose, dancefloor[y-pose][x+l], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+					}
+
 	        	}
 	        }
 	    }
@@ -507,12 +524,16 @@ void GUI_DRAW_DOWN_ARROW(int pose){
 	    }
 }
 
-void GUI_ERASE_DOWN_ARROW(int pose){
+void GUI_ERASE_DOWN_ARROW(int pose, int light_mode){
 	int d = 18;
 	for (int y = 100; y < 128; y++) {
 	        for (int x = 0; x < 30; x++) {
 	        	if(down[y][x]!=0x0000){
-					GUI_DrawPoint(x + d, y - pose, dancefloor[y-pose][x+d], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		if(light_mode){
+	        			GUI_DrawPoint(x + d, y - pose, dancefloorlight[y-pose][x+d], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		} else{
+	        			GUI_DrawPoint(x + d, y - pose, dancefloor[y-pose][x+d], DOT_PIXEL_1X1, DOT_FILL_AROUND);
+	        		}
 	        	}
 	        }
 	    }

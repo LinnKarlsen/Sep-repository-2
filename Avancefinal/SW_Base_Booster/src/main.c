@@ -26,6 +26,7 @@
 // ==================== External Definitions ====================
 extern XGpio gpio0;  // GPIO original
 extern XGpio gpio1;  // GPIO para el light sensor
+extern XGpio gpio2;  // GPIO para BTN0 y BTN1
 extern XSpi  SpiInstance;
 extern XSpi  SpiInstance1;
 extern const unsigned char font[];
@@ -48,6 +49,9 @@ extern const unsigned char font[];
 // For GPIO Interrupts
 #define GPIO_DEVICE_ID_1 XPAR_AXI_GPIO_1_DEVICE_ID
 #define GPIO_INTR_ID XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR
+
+// For GPIO Buttons
+#define GPIO_DEVICE_ID_2 XPAR_AXI_GPIO_1_DEVICE_ID
 
 // Timer instances
 //XTmrCtr TimerInstanceGraphics;  // Para los gráficos
@@ -84,6 +88,7 @@ extern volatile int game_sleep;
 //extern volatile int start;
 
 XGpio gpio1;
+XGpio gpio2;
 
 // ==================== Variables para gráficas de las flechas ====================
 
@@ -209,9 +214,16 @@ int main() {
 	// Set channel 1 as input
 	XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF);
 
-	// Enable GPIO Interrupts
-	//XGpio_InterruptEnable(&gpio1, XGPIO_IR_CH1_MASK);
-	//XGpio_InterruptGlobalEnable(&gpio1);
+	// -------------------- GPIO 2 --------------------
+	Status = XGpio_Initialize(&gpio2, XPAR_AXI_GPIO_2_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio 2 Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	// Set channel 1 and 2 as input
+	XGpio_SetDataDirection(&gpio2, 1, 0xFFFFFFFF);
+	XGpio_SetDataDirection(&gpio2, 2, 0xFFFFFFFF);
 
     // -------------------- SPI (LCD) --------------------
     Status = XSpi_Init(&SpiInstance, SPI_DEVICE_ID);
@@ -476,13 +488,18 @@ int main() {
 	GUI_DANCE_FLOOR_LIGHT();
 	GUI_SCORE_BOARD();
 
+	int btn0;
+	int btn1;
+
+	int light_mode = 1;
+
 
     while (1) {
 
     	if(graphics_update_needed)
     		{
 
-    			Run_Arrow_Animations();
+    			Run_Arrow_Animations(light_mode);
 
 
     			// Clear old values
@@ -543,6 +560,13 @@ int main() {
 
     	if(LTmeasure_update_needed)
 		{
+
+    		btn0 = XGpio_DiscreteRead(&gpio2,1);
+    		btn1 = XGpio_DiscreteRead(&gpio2,2);
+
+    		xil_printf("BTN0: %d\n", btn0);
+    		xil_printf("BTN1: %d\n", btn1);
+
 			//tmp_val = read_tmp();
 			//opt_val = read_opt();
 
@@ -551,13 +575,13 @@ int main() {
 
 			LTmeasure_update_needed = 0;
 
-			if(game_sleep)
-			{
-				xil_printf("Modo reposo\n");
-			} else
-			{
-				xil_printf("Salimos de modo reposo\n");
-			}
+			//if(game_sleep)
+			//{
+			//	xil_printf("Modo reposo\n");
+			//} else
+			//{
+			//	xil_printf("Salimos de modo reposo\n");
+			//}
 		}
 
     }

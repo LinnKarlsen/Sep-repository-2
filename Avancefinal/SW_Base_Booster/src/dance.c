@@ -289,7 +289,7 @@ void Next_Dance_Step() {
 
 }
 
-void Run_Arrow_Animations()	{
+void Run_Arrow_Animations(int light_mode)	{
 
 	uint32_t LEFT_ref  = 1;
 	uint32_t DOWN_ref  = 2;
@@ -301,74 +301,74 @@ void Run_Arrow_Animations()	{
 
 	// Left
 	if(left_flag1){
-		Animate_Arrow(LEFT_ref, &left_pose1, &left_flag1, n, &blocked_left_window1);
+		Animate_Arrow(LEFT_ref, &left_pose1, &left_flag1, n, &blocked_left_window1, light_mode);
 	}
 	if(left_flag2){
-		Animate_Arrow(LEFT_ref, &left_pose2, &left_flag2, n, &blocked_left_window2);
+		Animate_Arrow(LEFT_ref, &left_pose2, &left_flag2, n, &blocked_left_window2, light_mode);
 	}
 	if(left_flag3){
-		Animate_Arrow(LEFT_ref, &left_pose3, &left_flag3, n, &blocked_left_window3);
+		Animate_Arrow(LEFT_ref, &left_pose3, &left_flag3, n, &blocked_left_window3, light_mode);
 	}
 	if(left_flag4){
-		Animate_Arrow(LEFT_ref, &left_pose4, &left_flag4, n, &blocked_left_window4);
+		Animate_Arrow(LEFT_ref, &left_pose4, &left_flag4, n, &blocked_left_window4, light_mode);
 	}
 	if(left_flag5){
-		Animate_Arrow(LEFT_ref, &left_pose5, &left_flag5, n, &blocked_left_window5);
+		Animate_Arrow(LEFT_ref, &left_pose5, &left_flag5, n, &blocked_left_window5, light_mode);
 	}
 
 	// Right
 	if(right_flag1){
-		Animate_Arrow(RIGHT_ref, &right_pose1, &right_flag1, n, &blocked_right_window1);
+		Animate_Arrow(RIGHT_ref, &right_pose1, &right_flag1, n, &blocked_right_window1, light_mode);
 	}
 	if(right_flag2){
-		Animate_Arrow(RIGHT_ref, &right_pose2, &right_flag2, n, &blocked_right_window2);
+		Animate_Arrow(RIGHT_ref, &right_pose2, &right_flag2, n, &blocked_right_window2, light_mode);
 	}
 	if(right_flag3){
-		Animate_Arrow(RIGHT_ref, &right_pose3, &right_flag3, n, &blocked_right_window3);
+		Animate_Arrow(RIGHT_ref, &right_pose3, &right_flag3, n, &blocked_right_window3, light_mode);
 	}
 	if(right_flag4){
-		Animate_Arrow(RIGHT_ref, &right_pose4, &right_flag4, n, &blocked_right_window4);
+		Animate_Arrow(RIGHT_ref, &right_pose4, &right_flag4, n, &blocked_right_window4, light_mode);
 	}
 	if(right_flag5){
-		Animate_Arrow(RIGHT_ref, &right_pose5, &right_flag5, n, &blocked_right_window5);
+		Animate_Arrow(RIGHT_ref, &right_pose5, &right_flag5, n, &blocked_right_window5, light_mode);
 	}
 
 	// Up
 	if(up_flag1){
-		Animate_Arrow(UP_ref, &up_pose1, &up_flag1, n, &blocked_up_window1);
+		Animate_Arrow(UP_ref, &up_pose1, &up_flag1, n, &blocked_up_window1, light_mode);
 	}
 	if(up_flag2){
-		Animate_Arrow(UP_ref, &up_pose2, &up_flag2, n, &blocked_up_window2);
+		Animate_Arrow(UP_ref, &up_pose2, &up_flag2, n, &blocked_up_window2, light_mode);
 	}
 	if(up_flag3){
-		Animate_Arrow(UP_ref, &up_pose3, &up_flag3, n, &blocked_up_window3);
+		Animate_Arrow(UP_ref, &up_pose3, &up_flag3, n, &blocked_up_window3, light_mode);
 	}
 	if(up_flag4){
-		Animate_Arrow(UP_ref, &up_pose4, &up_flag4, n, &blocked_up_window4);
+		Animate_Arrow(UP_ref, &up_pose4, &up_flag4, n, &blocked_up_window4, light_mode);
 	}
 	if(up_flag5){
-		Animate_Arrow(UP_ref, &up_pose5, &up_flag5, n, &blocked_up_window5);
+		Animate_Arrow(UP_ref, &up_pose5, &up_flag5, n, &blocked_up_window5, light_mode);
 	}
 
 	// Down
 	if(down_flag1){
-		Animate_Arrow(DOWN_ref, &down_pose1, &down_flag1, n, &blocked_down_window1);
+		Animate_Arrow(DOWN_ref, &down_pose1, &down_flag1, n, &blocked_down_window1, light_mode);
 	}
 	if(down_flag2){
-		Animate_Arrow(DOWN_ref, &down_pose2, &down_flag2, n, &blocked_down_window2);
+		Animate_Arrow(DOWN_ref, &down_pose2, &down_flag2, n, &blocked_down_window2, light_mode);
 	}
 	if(down_flag3){
-		Animate_Arrow(DOWN_ref, &down_pose3, &down_flag3, n, &blocked_down_window3);
+		Animate_Arrow(DOWN_ref, &down_pose3, &down_flag3, n, &blocked_down_window3, light_mode);
 	}
 	if(down_flag4){
-		Animate_Arrow(DOWN_ref, &down_pose4, &down_flag4, n, &blocked_down_window4);
+		Animate_Arrow(DOWN_ref, &down_pose4, &down_flag4, n, &blocked_down_window4, light_mode);
 	}
 	if(down_flag5){
-		Animate_Arrow(DOWN_ref, &down_pose5, &down_flag5, n, &blocked_down_window5);
+		Animate_Arrow(DOWN_ref, &down_pose5, &down_flag5, n, &blocked_down_window5, light_mode);
 	}
 }
 
-void Animate_Arrow(int current_step, int *pose, int *flag, int n, int *windowblocked){
+void Animate_Arrow(int current_step, int *pose, int *flag, int n, int *windowblocked, int light_mode){
 
 	uint32_t LEFT_ref  = 1;
 	uint32_t DOWN_ref  = 2;
@@ -379,22 +379,22 @@ void Animate_Arrow(int current_step, int *pose, int *flag, int n, int *windowblo
 
 		if(current_step==LEFT_ref){
 			// Left
-			GUI_ERASE_LEFT_ARROW(*pose);
+			GUI_ERASE_LEFT_ARROW(*pose, light_mode);
 			*pose = *pose + n;
 			GUI_DRAW_LEFT_ARROW(*pose);
 		}else if(current_step==DOWN_ref){
 			// Down
-			GUI_ERASE_DOWN_ARROW(*pose);
+			GUI_ERASE_DOWN_ARROW(*pose, light_mode);
 			*pose = *pose + n;
 			GUI_DRAW_DOWN_ARROW(*pose);
 		}else if(current_step==UP_ref){
 			// Up
-			GUI_ERASE_UP_ARROW(*pose);
+			GUI_ERASE_UP_ARROW(*pose, light_mode);
 			*pose = *pose + n;
 			GUI_DRAW_UP_ARROW(*pose);
 		}else if(current_step==RIGHT_ref){
 			// Right
-			GUI_ERASE_RIGHT_ARROW(*pose);
+			GUI_ERASE_RIGHT_ARROW(*pose, light_mode);
 			*pose = *pose + n;
 			GUI_DRAW_RIGHT_ARROW(*pose);
 		}
@@ -402,16 +402,16 @@ void Animate_Arrow(int current_step, int *pose, int *flag, int n, int *windowblo
 	} else if(*pose <120){
 		if(current_step==LEFT_ref){
 			// Left
-			GUI_ERASE_LEFT_ARROW(*pose);
+			GUI_ERASE_LEFT_ARROW(*pose, light_mode);
 		}else if(current_step==DOWN_ref){
 			// Down
-			GUI_ERASE_DOWN_ARROW(*pose);
+			GUI_ERASE_DOWN_ARROW(*pose, light_mode);
 		}else if(current_step==UP_ref){
 			// Up
-			GUI_ERASE_UP_ARROW(*pose);
+			GUI_ERASE_UP_ARROW(*pose, light_mode);
 		}else if(current_step==RIGHT_ref){
 			// Right
-			GUI_ERASE_RIGHT_ARROW(*pose);
+			GUI_ERASE_RIGHT_ARROW(*pose, light_mode);
 		}
 	}
 	else {

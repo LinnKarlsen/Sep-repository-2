@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Nov 23 07:36:59 2025
-# Process ID: 52400
+# Start of session at: Tue Dec  2 22:09:52 2025
+# Process ID: 26724
 # Current directory: C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/impl_1
 # Command line: vivado.exe -log DEMO_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DEMO_wrapper.tcl -notrace
 # Log file: C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/impl_1/DEMO_wrapper.vdi
@@ -19,14 +19,14 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/linnh/Sep-repository
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/linnh/Sep-repository-2-main/Sep-repository-2-main/ip_repo'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
-add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.578 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1061.816 ; gain = 0.000
 Command: link_design -top DEMO_wrapper -part xc7z010clg400-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7z010clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1062.578 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1790 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1061.816 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1704 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_board.xdc] for cell 'DEMO_i/axi_quad_spi_0/U0'
@@ -69,10 +69,6 @@ Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/s
 Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_1_0/DEMO_vio_1_0.xdc] for cell 'DEMO_i/vio_1'
 Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_2_0/DEMO_vio_2_0.xdc] for cell 'DEMO_i/vio_2'
 Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_2_0/DEMO_vio_2_0.xdc] for cell 'DEMO_i/vio_2'
-Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'DEMO_i/ila_0/U0'
-Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'DEMO_i/ila_0/U0'
-Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'DEMO_i/ila_0/U0'
-Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'DEMO_i/ila_0/U0'
 Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0.xdc] for cell 'DEMO_i/axi_timer_0/U0'
 Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0.xdc] for cell 'DEMO_i/axi_timer_0/U0'
 Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_1_0/DEMO_axi_timer_1_0.xdc] for cell 'DEMO_i/axi_timer_1/U0'
@@ -85,17 +81,15 @@ Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/s
 Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_2_0/DEMO_axi_timer_2_0.xdc] for cell 'DEMO_i/axi_timer_2/U0'
 Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_3_0/DEMO_axi_timer_3_0.xdc] for cell 'DEMO_i/axi_timer_3/U0'
 Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_3_0/DEMO_axi_timer_3_0.xdc] for cell 'DEMO_i/axi_timer_3/U0'
+Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0_board.xdc] for cell 'DEMO_i/axi_gpio_2/U0'
+Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0_board.xdc] for cell 'DEMO_i/axi_gpio_2/U0'
+Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0.xdc] for cell 'DEMO_i/axi_gpio_2/U0'
+Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0.xdc] for cell 'DEMO_i/axi_gpio_2/U0'
 Parsing XDC File [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'BTN0_tri_i'. [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc:138]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc:138]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'BTN1_tri_i'. [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc:139]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc:139]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/constrs_1/imports/Downloads/Zybo-Z7-Master.xdc]
 Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_clocks.xdc] for cell 'DEMO_i/axi_quad_spi_0/U0'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_clocks.xdc:50]
-get_clocks: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1671.734 ; gain = 573.977
+get_clocks: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1625.859 ; gain = 564.043
 Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_0_0/DEMO_axi_quad_spi_0_0_clocks.xdc] for cell 'DEMO_i/axi_quad_spi_0/U0'
 Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0_clocks.xdc] for cell 'DEMO_i/axi_quad_spi_1/U0'
 Finished Parsing XDC File [c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_quad_spi_1_0/DEMO_axi_quad_spi_1_0_clocks.xdc] for cell 'DEMO_i/axi_quad_spi_1/U0'
@@ -296,17 +290,16 @@ Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/x
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 WARNING: [Constraints 18-5572] Instance DEMO_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
 WARNING: [Constraints 18-5572] Instance DEMO_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO1_I_REG has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1671.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1625.859 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 493 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 56 instances
+  A total of 437 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 6 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 315 instances
   RAM64X1S => RAM64X1S (RAMS64E): 116 instances
 
-29 Infos, 22 Warnings, 2 Critical Warnings and 0 Errors encountered.
+29 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 1671.734 ; gain = 609.156
+link_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 1625.859 ; gain = 564.043
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
@@ -317,68 +310,67 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1671.734 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1625.859 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 13c570ca4
+Ending Cache Timing Information Task | Checksum: 183662c0d
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1671.734 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1625.859 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
-INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = 9341377313a55c87.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1887.266 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 15a87803f
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1842.629 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 21dd5223c
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:29 . Memory (MB): peak = 1887.266 ; gain = 44.082
+Time (s): cpu = 00:00:07 ; elapsed = 00:02:31 . Memory (MB): peak = 1842.629 ; gain = 46.844
 
 Phase 2 Retarget
 INFO: [Opt 31-138] Pushed 22 inverter(s) to 145 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 14c03c0ca
+Phase 2 Retarget | Checksum: 29c80af83
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:33 . Memory (MB): peak = 1887.266 ; gain = 44.082
-INFO: [Opt 31-389] Phase Retarget created 396 cells and removed 810 cells
-INFO: [Opt 31-1021] In phase Retarget, 94 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:12 ; elapsed = 00:02:35 . Memory (MB): peak = 1842.629 ; gain = 46.844
+INFO: [Opt 31-389] Phase Retarget created 398 cells and removed 815 cells
+INFO: [Opt 31-1021] In phase Retarget, 77 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Constant propagation
-INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
-Phase 3 Constant propagation | Checksum: 194b36ba5
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Phase 3 Constant propagation | Checksum: 24b93ac41
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:34 . Memory (MB): peak = 1887.266 ; gain = 44.082
-INFO: [Opt 31-389] Phase Constant propagation created 51 cells and removed 282 cells
-INFO: [Opt 31-1021] In phase Constant propagation, 89 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:12 ; elapsed = 00:02:36 . Memory (MB): peak = 1842.629 ; gain = 46.844
+INFO: [Opt 31-389] Phase Constant propagation created 52 cells and removed 266 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 86 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: 11e070ed7
+Phase 4 Sweep | Checksum: 2201d3c7a
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:39 . Memory (MB): peak = 1887.266 ; gain = 44.082
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2331 cells
-INFO: [Opt 31-1021] In phase Sweep, 1865 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:19 ; elapsed = 00:02:42 . Memory (MB): peak = 1842.629 ; gain = 46.844
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2274 cells
+INFO: [Opt 31-1021] In phase Sweep, 1502 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 BUFG optimization
-Phase 5 BUFG optimization | Checksum: 11e070ed7
+Phase 5 BUFG optimization | Checksum: 2201d3c7a
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:40 . Memory (MB): peak = 1887.266 ; gain = 44.082
+Time (s): cpu = 00:00:20 ; elapsed = 00:02:44 . Memory (MB): peak = 1842.629 ; gain = 46.844
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 6 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 6 Shift Register Optimization | Checksum: 11e070ed7
+Phase 6 Shift Register Optimization | Checksum: 2201d3c7a
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:41 . Memory (MB): peak = 1887.266 ; gain = 44.082
+Time (s): cpu = 00:00:21 ; elapsed = 00:02:45 . Memory (MB): peak = 1842.629 ; gain = 46.844
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 7 Post Processing Netlist
-Phase 7 Post Processing Netlist | Checksum: 11e070ed7
+Phase 7 Post Processing Netlist | Checksum: 1f3a3258e
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:42 . Memory (MB): peak = 1887.266 ; gain = 44.082
-INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Post Processing Netlist, 88 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:22 ; elapsed = 00:02:46 . Memory (MB): peak = 1842.629 ; gain = 46.844
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 85 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
 
@@ -386,22 +378,22 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             396  |             810  |                                             94  |
-|  Constant propagation         |              51  |             282  |                                             89  |
-|  Sweep                        |               0  |            2331  |                                           1865  |
+|  Retarget                     |             398  |             815  |                                             77  |
+|  Constant propagation         |              52  |             266  |                                             86  |
+|  Sweep                        |               0  |            2274  |                                           1502  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                             88  |
+|  Post Processing Netlist      |               0  |               1  |                                             85  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 1887.266 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 107f63c0b
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.188 . Memory (MB): peak = 1842.629 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1b0ba9955
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:43 . Memory (MB): peak = 1887.266 ; gain = 44.082
+Time (s): cpu = 00:00:24 ; elapsed = 00:02:48 . Memory (MB): peak = 1842.629 ; gain = 46.844
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -414,52 +406,52 @@ Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 12 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 11 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 1 newly gated: 6 Total Ports: 24
-Ending PowerOpt Patch Enables Task | Checksum: 10c3618bc
+Number of BRAM Ports augmented: 0 newly gated: 6 Total Ports: 22
+Ending PowerOpt Patch Enables Task | Checksum: 2739c4b66
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.276 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 10c3618bc
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.292 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 2739c4b66
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 2122.582 ; gain = 235.316
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2063.031 ; gain = 220.402
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: fdd4b4cb
+Ending Logic Optimization Task | Checksum: 21c4266d0
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: fdd4b4cb
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 21c4266d0
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: fdd4b4cb
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 21c4266d0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-62 Infos, 22 Warnings, 2 Critical Warnings and 0 Errors encountered.
+61 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:13 . Memory (MB): peak = 2122.582 ; gain = 450.848
+opt_design: Time (s): cpu = 00:01:08 ; elapsed = 00:03:20 . Memory (MB): peak = 2063.031 ; gain = 437.172
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.151 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.118 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/impl_1/DEMO_wrapper_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 2122.582 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file DEMO_wrapper_drc_opted.rpt -pb DEMO_wrapper_drc_opted.pb -rpx DEMO_wrapper_drc_opted.rpx
 Command: report_drc -file DEMO_wrapper_drc_opted.rpt -pb DEMO_wrapper_drc_opted.pb -rpx DEMO_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/impl_1/DEMO_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2122.582 ; gain = 0.000
+report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Chipscope 16-240] Debug cores have already been implemented
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
@@ -478,52 +470,52 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 9a078592
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1e3d9e29c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1065c23ec
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 140fcdbc6
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 19f08c162
+Phase 1.3 Build Placer Netlist Model | Checksum: 18aec03b3
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 19f08c162
+Phase 1.4 Constrain Clocks/Macros | Checksum: 18aec03b3
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 19f08c162
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 18aec03b3
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1941f6484
+Phase 2.1 Floorplanning | Checksum: b6f13be5
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:24 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 14 LUTNM shape to break, 815 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 8, two critical 6, total 14, new lutff created 1
-INFO: [Physopt 32-775] End 1 Pass. Optimized 330 nets or cells. Created 14 new cells, deleted 316 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1035] Found 15 LUTNM shape to break, 822 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 8, two critical 7, total 15, new lutff created 1
+INFO: [Physopt 32-775] End 1 Pass. Optimized 330 nets or cells. Created 15 new cells, deleted 315 existing cells and moved 0 existing cell
 INFO: [Physopt 32-76] Pass 1. Identified 1 candidate net for fanout optimization.
-INFO: [Physopt 32-81] Processed net DEMO_i/rgb_rainbow_0/U0/rgb_rainbow_v1_0_S00_AXI_inst/counter_rgb_reg_n_0_[0]. Replicated 6 times.
-INFO: [Physopt 32-232] Optimized 1 net. Created 6 new instances.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 6 new cells, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 2122.582 ; gain = 0.000
+INFO: [Physopt 32-81] Processed net DEMO_i/rgb_rainbow_0/U0/rgb_rainbow_v1_0_S00_AXI_inst/counter_rgb_reg_n_0_[0]. Replicated 7 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 7 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 7 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Physopt 32-457] Pass 1. Identified 1 candidate cell for DSP register optimization.
 INFO: [Physopt 32-665] Processed cell DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1. 11 registers were pushed out.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 1 net or cell. Created 11 new cells, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
@@ -534,7 +526,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -543,77 +535,77 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |           14  |            316  |                   330  |           0  |           1  |  00:00:02  |
-|  Very High Fanout                                 |            6  |              0  |                     1  |           0  |           1  |  00:00:01  |
+|  LUT Combining                                    |           15  |            315  |                   330  |           0  |           1  |  00:00:02  |
+|  Very High Fanout                                 |            7  |              0  |                     1  |           0  |           1  |  00:00:01  |
 |  DSP Register                                     |           11  |              0  |                     1  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |           31  |            316  |                   332  |           0  |           8  |  00:00:03  |
+|  Total                                            |           33  |            315  |                   332  |           0  |           8  |  00:00:03  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1c8c66ad1
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1a13d15d1
 
-Time (s): cpu = 00:01:42 ; elapsed = 00:01:10 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Phase 2.2 Global Placement Core | Checksum: d2261927
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:03 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 17521ea5c
 
-Time (s): cpu = 00:01:44 ; elapsed = 00:01:11 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Phase 2 Global Placement | Checksum: d2261927
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 17521ea5c
 
-Time (s): cpu = 00:01:44 ; elapsed = 00:01:11 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:05 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1187ceaee
+Phase 3.1 Commit Multi Column Macros | Checksum: 1c2848cf8
 
-Time (s): cpu = 00:01:49 ; elapsed = 00:01:14 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:08 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 5690c55b
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1460f207a
 
-Time (s): cpu = 00:01:59 ; elapsed = 00:01:21 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:15 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 121572527
+Phase 3.3 Area Swap Optimization | Checksum: c288c8a1
 
-Time (s): cpu = 00:01:59 ; elapsed = 00:01:22 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:15 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 104c4db81
+Phase 3.4 Pipeline Register Optimization | Checksum: b08459c3
 
-Time (s): cpu = 00:01:59 ; elapsed = 00:01:22 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:15 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 5094cbcb
+Phase 3.5 Fast Optimization | Checksum: 730c6ec4
 
-Time (s): cpu = 00:02:09 ; elapsed = 00:01:30 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:02:01 ; elapsed = 00:01:25 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 14b20aa94
+Phase 3.6 Small Shape Detail Placement | Checksum: fcf8d0d4
 
-Time (s): cpu = 00:02:38 ; elapsed = 00:02:05 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:02:21 ; elapsed = 00:01:48 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 17a882548
+Phase 3.7 Re-assign LUT pins | Checksum: 1188be308
 
-Time (s): cpu = 00:02:41 ; elapsed = 00:02:10 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:53 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 1c4dd0f68
+Phase 3.8 Pipeline Register Optimization | Checksum: 10e6bc95c
 
-Time (s): cpu = 00:02:42 ; elapsed = 00:02:10 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:02:25 ; elapsed = 00:01:54 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 1c2a6ee33
+Phase 3.9 Fast Optimization | Checksum: 1ccfd8796
 
-Time (s): cpu = 00:02:58 ; elapsed = 00:02:23 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1c2a6ee33
+Time (s): cpu = 00:02:43 ; elapsed = 00:02:09 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1ccfd8796
 
-Time (s): cpu = 00:02:58 ; elapsed = 00:02:23 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:09 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -621,7 +613,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 245945c01
+Post Placement Optimization Initialization | Checksum: 15975bf44
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -629,99 +621,96 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-73.918 | TNS=-2905.126 |
-Phase 1 Physical Synthesis Initialization | Checksum: 19b412578
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-74.132 | TNS=-2912.515 |
+Phase 1 Physical Synthesis Initialization | Checksum: c9e7b0ee
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 1e5009f72
+Ending Physical Synthesis Task | Checksum: 16f5deec7
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 245945c01
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 15975bf44
 
-Time (s): cpu = 00:03:21 ; elapsed = 00:02:39 . Memory (MB): peak = 2122.582 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-73.195. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 239f855aa
+Time (s): cpu = 00:03:06 ; elapsed = 00:02:25 . Memory (MB): peak = 2063.031 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-72.899. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 149f581fd
 
-Time (s): cpu = 00:03:58 ; elapsed = 00:03:16 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 239f855aa
+Time (s): cpu = 00:04:17 ; elapsed = 00:03:30 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 149f581fd
 
-Time (s): cpu = 00:03:58 ; elapsed = 00:03:17 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:04:17 ; elapsed = 00:03:30 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 239f855aa
+Phase 4.2 Post Placement Cleanup | Checksum: 149f581fd
 
-Time (s): cpu = 00:03:59 ; elapsed = 00:03:17 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:04:18 ; elapsed = 00:03:31 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 239f855aa
+Phase 4.3 Placer Reporting | Checksum: 149f581fd
 
-Time (s): cpu = 00:03:59 ; elapsed = 00:03:18 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:04:18 ; elapsed = 00:03:31 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 2868bb990
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 1aee36d36
 
-Time (s): cpu = 00:04:00 ; elapsed = 00:03:18 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2868bb990
+Time (s): cpu = 00:04:19 ; elapsed = 00:03:31 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1aee36d36
 
-Time (s): cpu = 00:04:00 ; elapsed = 00:03:18 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Ending Placer Task | Checksum: 1926ad7b5
+Time (s): cpu = 00:04:19 ; elapsed = 00:03:32 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Ending Placer Task | Checksum: ee5502a7
 
-Time (s): cpu = 00:04:00 ; elapsed = 00:03:18 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:04:19 ; elapsed = 00:03:32 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-104 Infos, 22 Warnings, 2 Critical Warnings and 0 Errors encountered.
+103 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:04:05 ; elapsed = 00:03:22 . Memory (MB): peak = 2122.582 ; gain = 0.000
+place_design: Time (s): cpu = 00:04:26 ; elapsed = 00:03:36 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:13 ; elapsed = 00:00:04 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/impl_1/DEMO_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 2122.582 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file DEMO_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 2122.582 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.154 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file DEMO_wrapper_utilization_placed.rpt -pb DEMO_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file DEMO_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.219 . Memory (MB): peak = 2122.582 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 2063.031 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-73.195 | TNS=-2890.739 |
-Phase 1 Physical Synthesis Initialization | Checksum: 17b6687b2
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.899 | TNS=-2874.257 |
+Phase 1 Physical Synthesis Initialization | Checksum: 14e7d4a45
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 2122.582 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-73.195 | TNS=-2890.739 |
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 2063.031 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.899 | TNS=-2874.257 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 17b6687b2
+Phase 2 DSP Register Optimization | Checksum: 14e7d4a45
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-73.195 | TNS=-2890.739 |
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp_n.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp_n. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.899 | TNS=-2874.257 |
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_1_psdsp_n. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles1[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__5_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__4_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__2_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__0_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1_n_0.  Re-placed instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1
-INFO: [Physopt 32-735] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-73.019 | TNS=-2884.051 |
 INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[0]. Optimizations did not improve timing on the net.
@@ -752,7 +741,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[2]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[2]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[2]_i_35_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[2]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[3]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[3]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -872,7 +860,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[14]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[14]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[14]_i_35_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[14]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[15]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -882,7 +869,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_35_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[15]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[16]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -892,7 +878,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_35_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[16]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[17]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[17]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[17]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -941,7 +926,7 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[21]_i_20_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[21]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[21]_i_30_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[21]_i_36_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[21]_i_38_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[22]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[22]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[22]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -961,6 +946,7 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[23]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[23]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[23]_i_35_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[23]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[24]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[24]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[24]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -982,10 +968,10 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[25]_i_35_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[25]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[26]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_8_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles3[29]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_20_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_30_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles3[21]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_46_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_60_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_74_n_0. Optimizations did not improve timing on the net.
@@ -993,25 +979,107 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_101_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-81] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]. Replicated 3 times.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]. Replicated 5 times.
 INFO: [Physopt 32-735] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.990 | TNS=-2882.920 |
-INFO: [Physopt 32-572] Net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0] was not replicated.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.832 | TNS=-2871.644 |
+INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]_replica
+INFO: [Physopt 32-81] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.816 | TNS=-2871.019 |
+INFO: [Physopt 32-663] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5.  Re-placed instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]_replica_5
+INFO: [Physopt 32-735] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2870.942 |
+INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]_replica_5
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/maw_fifow_push_1ff. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mrd_complete_ptr_ff[0].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mrd_complete_ptr_ff_reg[0]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mrd_complete_ptr_ff[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2870.834 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mar_complete_vec_ff[6].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mar_complete_vec_ff_reg[6]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mar_complete_vec_ff[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2870.780 |
+INFO: [Physopt 32-662] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mrd_complete_ptr_ff[1].  Did not re-place instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mrd_complete_ptr_ff_reg[1]
+INFO: [Physopt 32-572] Net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mrd_complete_ptr_ff[1] was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0].  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]
-INFO: [Physopt 32-81] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.982 | TNS=-2882.608 |
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0].  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]
-INFO: [Physopt 32-572] Net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0] was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp_n.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp_n. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mrd_complete_ptr_ff[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/datapath[3][0]_i_2_n_0.  Did not re-place instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/datapath[3][0]_i_2
+INFO: [Physopt 32-710] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/maw_fifow_push_block_ff_reg. Critical path length was reduced through logic transformation on cell DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/maw_fifow_push_1ff_i_1_comp.
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/datapath[3][0]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2870.182 |
+INFO: [Physopt 32-702] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mawfifopush_regslice/datapath_reg[3]_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/datapath[3][0]_i_2_n_0.  Did not re-place instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/datapath[3][0]_i_2
+INFO: [Physopt 32-710] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/maw_fifo_push_1ff_reg. Critical path length was reduced through logic transformation on cell DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/datapath[3][0]_i_1_comp.
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/datapath[3][0]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2869.679 |
+INFO: [Physopt 32-662] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mar_fifo_push_ff.  Did not re-place instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mar_fifo_push_ff_reg
+INFO: [Physopt 32-702] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mar_fifo_push_ff. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff[2].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff_reg[2]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2869.471 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff[3].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff_reg[3]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2869.331 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/D[5].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mar_ptr_new_ff_reg[5]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/D[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2869.296 |
+INFO: [Physopt 32-702] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/AXI4_AW_BASIC2_NO.Maw_fifo/notfull_ff_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_smc_1/inst/s00_entry_pipeline/s00_si_converter/inst/converter.wrap_narrow_inst/aw_reg_slice/conv_awready.  Re-placed instance DEMO_i/axi_smc_1/inst/s00_entry_pipeline/s00_si_converter/inst/converter.wrap_narrow_inst/aw_reg_slice/state_reg[s_ready_i]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_smc_1/inst/s00_entry_pipeline/s00_si_converter/inst/converter.wrap_narrow_inst/aw_reg_slice/conv_awready. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2869.173 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff[1].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff_reg[1]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2869.056 |
+INFO: [Physopt 32-662] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/D[5].  Did not re-place instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/mar_ptr_new_ff_reg[5]
+INFO: [Physopt 32-702] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/D[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.param_cmdr_submitcnt_ff_reg_n_0_[5].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.param_cmdr_submitcnt_ff_reg[5]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.param_cmdr_submitcnt_ff_reg_n_0_[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2869.054 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.param_cmdr_submitcnt_ff_reg_n_0_[23].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.param_cmdr_submitcnt_ff_reg[23]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.param_cmdr_submitcnt_ff_reg_n_0_[23]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.973 |
+INFO: [Physopt 32-662] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/reg_blk/Q[5].  Did not re-place instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/reg_blk/reg0_mw_ptr_ff_reg[5]
+INFO: [Physopt 32-702] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/reg_blk/Q[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_2.param_cmdw_submitcnt_ff_reg_n_0_[15].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_2.param_cmdw_submitcnt_ff_reg[15]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_2.param_cmdw_submitcnt_ff_reg_n_0_[15]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.818 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff[44].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff_reg[44]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff[44]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.767 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff[45].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff_reg[45]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff[45]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.715 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff[46].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff_reg[46]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff[46]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.664 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff[88].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff_reg[88]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd/AXI4_AR_BASIC2_NO.Mar_fifo/headreg_ff[88]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.612 |
+INFO: [Physopt 32-662] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/reg0_loop_en_ff_reg.  Did not re-place instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/maw_cnt_do_dec_ff_i_1
+INFO: [Physopt 32-710] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/maw_fifo_push_1ff_reg. Critical path length was reduced through logic transformation on cell DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/datapath[3][0]_i_1_comp_1.
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/Maw_fifo0/reg0_loop_en_ff_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.562 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/maw_cnt_do_dec_ff.  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/maw_cnt_do_dec_ff_reg
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/maw_cnt_do_dec_ff. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.523 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.param_cmdr_submitcnt_ff_reg_n_0_[20].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.param_cmdr_submitcnt_ff_reg[20]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.param_cmdr_submitcnt_ff_reg_n_0_[20]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.493 |
+INFO: [Physopt 32-662] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff[3].  Did not re-place instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff_reg[3]
+INFO: [Physopt 32-81] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff[3]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr/mwr_complete_ptr_ff[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.479 |
+INFO: [Physopt 32-662] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/reg_blk/reg3_err_en_ff[8].  Did not re-place instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/reg_blk/reg3_err_en_ff_reg[8]
+INFO: [Physopt 32-702] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/reg_blk/reg3_err_en_ff[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr/Aw_agen/ATG_FF_0.valid_ff_reg_0.  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr/Aw_agen/ATG_FF_0.valid_ff_reg
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr/Aw_agen/ATG_FF_0.valid_ff_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.460 |
+INFO: [Physopt 32-663] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_2.param_cmdw_submitcnt_ff_reg_n_0_[11].  Re-placed instance DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_2.param_cmdw_submitcnt_ff_reg[11]
+INFO: [Physopt 32-735] Processed net DEMO_i/axi_traffic_gen_1/inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_2.param_cmdw_submitcnt_ff_reg_n_0_[11]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.455 |
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_1_psdsp_n. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles1[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__5_n_1. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[0]. Optimizations did not improve timing on the net.
@@ -1019,7 +1087,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[1]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[1]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[2]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[2]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[3]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[4]. Optimizations did not improve timing on the net.
@@ -1043,11 +1110,8 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[13]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[13]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[14]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[14]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[15]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[15]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[16]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[16]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[17]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[17]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[18]. Optimizations did not improve timing on the net.
@@ -1057,34 +1121,34 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[20]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[20]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[21]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[21]_i_36_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[21]_i_38_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[22]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[22]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[23]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[23]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[24]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[24]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[25]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[25]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[26]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_8_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles3[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles3[21]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0].  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.982 | TNS=-2882.608 |
-Phase 3 Critical Path Optimization | Checksum: 17b6687b2
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]_replica_5
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.455 |
+Phase 3 Critical Path Optimization | Checksum: 14e7d4a45
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 2063.031 ; gain = 0.000
 
 Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.982 | TNS=-2882.608 |
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp_n.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp_n. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.455 |
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_1_psdsp_n. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles1[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__5_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__4_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__2_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__1_n_0. Optimizations did not improve timing on the net.
@@ -1120,7 +1184,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[2]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[2]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[2]_i_35_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[2]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[3]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[3]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -1240,7 +1303,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[14]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[14]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[14]_i_35_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[14]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[15]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -1250,7 +1312,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[15]_i_35_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[15]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[16]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -1260,7 +1321,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[16]_i_35_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[16]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[17]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[17]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[17]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -1309,7 +1369,7 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[21]_i_20_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[21]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[21]_i_30_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[21]_i_36_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[21]_i_38_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[22]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[22]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[22]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -1329,6 +1389,7 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[23]_i_25_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[23]_i_30_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[23]_i_35_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[23]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[24]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[24]_i_3_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[24]_i_5_n_0. Optimizations did not improve timing on the net.
@@ -1350,10 +1411,10 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[25]_i_35_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[25]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[26]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_8_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles3[29]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_20_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_30_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles3[21]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_46_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_60_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_74_n_0. Optimizations did not improve timing on the net.
@@ -1361,16 +1422,12 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles_reg[26]_i_101_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0].  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]
-INFO: [Physopt 32-572] Net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0] was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp_n.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_psdsp_n. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]_replica_5
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_1_psdsp_n. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles1[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry__5_n_1. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles00_carry_i_1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[0]. Optimizations did not improve timing on the net.
@@ -1378,7 +1435,6 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[1]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[1]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[2]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[2]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[3]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[3]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[4]. Optimizations did not improve timing on the net.
@@ -1402,11 +1458,8 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[13]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[13]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[14]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[14]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[15]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[15]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[16]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[16]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[17]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[17]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[18]. Optimizations did not improve timing on the net.
@@ -1416,29 +1469,29 @@ INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBoos
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[20]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[20]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[21]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[21]_i_36_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[21]_i_38_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[22]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[22]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[23]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[23]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[24]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[24]_i_42_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[25]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[25]_i_43_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles10_in[26]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_8_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles3[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles3[21]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106
 INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/pwm_cycles[26]_i_106_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_n_0.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_7_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0].  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]
-INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.982 | TNS=-2882.608 |
-Phase 4 Critical Path Optimization | Checksum: 17b6687b2
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5.  Did not re-place instance DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency_reg[0]_replica_5
+INFO: [Physopt 32-702] Processed net DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/frequency[0]_repN_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-72.814 | TNS=-2868.455 |
+Phase 4 Critical Path Optimization | Checksum: 14e7d4a45
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 2122.582 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-72.982 | TNS=-2882.608 |
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 2063.031 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-72.814 | TNS=-2868.455 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -1447,28 +1500,28 @@ Summary of Physical Synthesis Optimizations
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.213  |          8.131  |            4  |              0  |                     3  |           0  |           2  |  00:00:15  |
-|  Total          |          0.213  |          8.131  |            4  |              0  |                     3  |           0  |           3  |  00:00:15  |
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  Critical Path  |          0.085  |          5.802  |            7  |              0  |                    25  |           0  |           2  |  00:00:09  |
+|  Total          |          0.085  |          5.802  |            7  |              0  |                    25  |           0  |           3  |  00:00:09  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2122.582 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: f545b6e2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2063.031 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 18d9553c8
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-834 Infos, 22 Warnings, 2 Critical Warnings and 0 Errors encountered.
+896 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:31 . Memory (MB): peak = 2122.582 ; gain = 0.000
+phys_opt_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:29 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 2122.582 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2063.031 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/impl_1/DEMO_wrapper_physopt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 2122.582 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2063.031 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
@@ -1483,53 +1536,53 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 1e51bd73 ConstDB: 0 ShapeSum: 8bf74e84 RouteDB: 0
+Checksum: PlaceDB: 8ef80ab1 ConstDB: 0 ShapeSum: b21575fb RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 279b8173
+Phase 1 Build RT Design | Checksum: 158976e44
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:42 . Memory (MB): peak = 2142.660 ; gain = 20.078
-Post Restoration Checksum: NetGraph: 1a639700 NumContArr: d37ea73 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:46 . Memory (MB): peak = 2101.164 ; gain = 33.430
+Post Restoration Checksum: NetGraph: f3c52ed6 NumContArr: 64d23f6e Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 279b8173
+Phase 2.1 Create Timer | Checksum: 158976e44
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:42 . Memory (MB): peak = 2142.660 ; gain = 20.078
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:46 . Memory (MB): peak = 2101.164 ; gain = 33.430
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 279b8173
+Phase 2.2 Fix Topology Constraints | Checksum: 158976e44
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:42 . Memory (MB): peak = 2145.797 ; gain = 23.215
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:47 . Memory (MB): peak = 2105.293 ; gain = 37.559
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 279b8173
+Phase 2.3 Pre Route Cleanup | Checksum: 158976e44
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:43 . Memory (MB): peak = 2145.797 ; gain = 23.215
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:47 . Memory (MB): peak = 2105.293 ; gain = 37.559
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 16629b7c1
+Phase 2.4 Update Timing | Checksum: 1ffb5ba58
 
-Time (s): cpu = 00:01:16 ; elapsed = 00:00:57 . Memory (MB): peak = 2176.891 ; gain = 54.309
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-70.896| TNS=-2801.779| WHS=-0.165 | THS=-403.646|
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:04 . Memory (MB): peak = 2143.441 ; gain = 75.707
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-70.771| TNS=-2789.574| WHS=-0.210 | THS=-335.078|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 1b17f6b35
+Phase 2.5.1 Update Timing | Checksum: 16e11b814
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:08 . Memory (MB): peak = 2212.668 ; gain = 90.086
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-70.896| TNS=-2798.498| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:38 ; elapsed = 00:01:16 . Memory (MB): peak = 2188.516 ; gain = 120.781
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-70.771| TNS=-2786.170| WHS=N/A    | THS=N/A    |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 134c0bb43
+Phase 2.5 Update Timing for Bus Skew | Checksum: 20a5cc00b
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:08 . Memory (MB): peak = 2217.402 ; gain = 94.820
-Phase 2 Router Initialization | Checksum: 1953bf48c
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:16 . Memory (MB): peak = 2193.215 ; gain = 125.480
+Phase 2 Router Initialization | Checksum: 1ede4400f
 
-Time (s): cpu = 00:01:35 ; elapsed = 00:01:08 . Memory (MB): peak = 2217.402 ; gain = 94.820
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:16 . Memory (MB): peak = 2193.215 ; gain = 125.480
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -1537,95 +1590,97 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 26024
+  Number of Failed Nets               = 24267
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 26024
+  Number of Unrouted Nets             = 24267
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 2082c0754
+Phase 3 Initial Routing | Checksum: 168d79810
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:01:14 . Memory (MB): peak = 2217.402 ; gain = 94.820
+Time (s): cpu = 00:01:51 ; elapsed = 00:01:23 . Memory (MB): peak = 2193.215 ; gain = 125.480
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 5386
- Number of Nodes with overlaps = 1078
- Number of Nodes with overlaps = 289
- Number of Nodes with overlaps = 50
- Number of Nodes with overlaps = 14
- Number of Nodes with overlaps = 5
- Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 4925
+ Number of Nodes with overlaps = 902
+ Number of Nodes with overlaps = 205
+ Number of Nodes with overlaps = 41
+ Number of Nodes with overlaps = 9
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-75.641| TNS=-3077.996| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-75.340| TNS=-3258.600| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 23d92ccc9
+Phase 4.1 Global Iteration 0 | Checksum: 1ac7dcbd7
 
-Time (s): cpu = 00:03:05 ; elapsed = 00:02:04 . Memory (MB): peak = 2217.402 ; gain = 94.820
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:05 . Memory (MB): peak = 2193.215 ; gain = 125.480
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 672
- Number of Nodes with overlaps = 203
- Number of Nodes with overlaps = 33
- Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 193
+ Number of Nodes with overlaps = 64
+ Number of Nodes with overlaps = 30
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 6
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-76.854| TNS=-3128.057| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-75.181| TNS=-3260.672| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 2235cf753
+Phase 4.2 Global Iteration 1 | Checksum: 32bc5b80
 
-Time (s): cpu = 00:03:21 ; elapsed = 00:02:18 . Memory (MB): peak = 2217.402 ; gain = 94.820
-Phase 4 Rip-up And Reroute | Checksum: 2235cf753
+Time (s): cpu = 00:03:15 ; elapsed = 00:02:21 . Memory (MB): peak = 2193.215 ; gain = 125.480
+Phase 4 Rip-up And Reroute | Checksum: 32bc5b80
 
-Time (s): cpu = 00:03:22 ; elapsed = 00:02:18 . Memory (MB): peak = 2217.402 ; gain = 94.820
+Time (s): cpu = 00:03:15 ; elapsed = 00:02:21 . Memory (MB): peak = 2193.215 ; gain = 125.480
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1a4343aff
+Phase 5.1.1 Update Timing | Checksum: 1004704ab
 
-Time (s): cpu = 00:03:28 ; elapsed = 00:02:22 . Memory (MB): peak = 2217.402 ; gain = 94.820
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-75.641| TNS=-3068.820| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:03:20 ; elapsed = 00:02:24 . Memory (MB): peak = 2193.215 ; gain = 125.480
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-75.181| TNS=-3245.814| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 869d37a3
+Phase 5.1 Delay CleanUp | Checksum: 13a3898de
 
-Time (s): cpu = 00:03:38 ; elapsed = 00:02:27 . Memory (MB): peak = 2218.531 ; gain = 95.949
+Time (s): cpu = 00:03:28 ; elapsed = 00:02:29 . Memory (MB): peak = 2195.609 ; gain = 127.875
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 869d37a3
+Phase 5.2 Clock Skew Optimization | Checksum: 13a3898de
 
-Time (s): cpu = 00:03:38 ; elapsed = 00:02:28 . Memory (MB): peak = 2218.531 ; gain = 95.949
-Phase 5 Delay and Skew Optimization | Checksum: 869d37a3
+Time (s): cpu = 00:03:29 ; elapsed = 00:02:29 . Memory (MB): peak = 2195.609 ; gain = 127.875
+Phase 5 Delay and Skew Optimization | Checksum: 13a3898de
 
-Time (s): cpu = 00:03:38 ; elapsed = 00:02:28 . Memory (MB): peak = 2218.531 ; gain = 95.949
+Time (s): cpu = 00:03:29 ; elapsed = 00:02:29 . Memory (MB): peak = 2195.609 ; gain = 127.875
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: a3d80341
+Phase 6.1.1 Update Timing | Checksum: 19489d8ef
 
-Time (s): cpu = 00:03:45 ; elapsed = 00:02:33 . Memory (MB): peak = 2218.531 ; gain = 95.949
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-75.641| TNS=-3012.497| WHS=0.014  | THS=0.000  |
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:33 . Memory (MB): peak = 2195.609 ; gain = 127.875
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-75.040| TNS=-3081.744| WHS=0.013  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 8da14389
+Phase 6.1 Hold Fix Iter | Checksum: 151ed0d89
 
-Time (s): cpu = 00:03:45 ; elapsed = 00:02:33 . Memory (MB): peak = 2218.531 ; gain = 95.949
-Phase 6 Post Hold Fix | Checksum: 8da14389
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:33 . Memory (MB): peak = 2195.609 ; gain = 127.875
+Phase 6 Post Hold Fix | Checksum: 151ed0d89
 
-Time (s): cpu = 00:03:45 ; elapsed = 00:02:33 . Memory (MB): peak = 2218.531 ; gain = 95.949
+Time (s): cpu = 00:03:35 ; elapsed = 00:02:33 . Memory (MB): peak = 2195.609 ; gain = 127.875
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 18.1772 %
-  Global Horizontal Routing Utilization  = 23.975 %
+  Global Vertical Routing Utilization    = 17.1727 %
+  Global Horizontal Routing Utilization  = 23.1687 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1636,10 +1691,11 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 80.1802%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 69.3694%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 80.8824%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 79.4118%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 56.7568%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 63.964%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 92.6471%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_R_X13Y88 -> INT_R_X13Y88
+West Dir 1x1 Area, Max Cong = 80.8824%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -1655,76 +1711,76 @@ Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 Direction: East
 ----------------
 Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
 Direction: West
 ----------------
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: a456e489
+Phase 7 Route finalize | Checksum: 19896da46
 
-Time (s): cpu = 00:03:46 ; elapsed = 00:02:34 . Memory (MB): peak = 2218.531 ; gain = 95.949
+Time (s): cpu = 00:03:36 ; elapsed = 00:02:34 . Memory (MB): peak = 2195.609 ; gain = 127.875
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: a456e489
+Phase 8 Verifying routed nets | Checksum: 19896da46
 
-Time (s): cpu = 00:03:46 ; elapsed = 00:02:34 . Memory (MB): peak = 2218.531 ; gain = 95.949
+Time (s): cpu = 00:03:36 ; elapsed = 00:02:34 . Memory (MB): peak = 2195.609 ; gain = 127.875
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: e55e2052
+Phase 9 Depositing Routes | Checksum: 15966fa88
 
-Time (s): cpu = 00:03:52 ; elapsed = 00:02:41 . Memory (MB): peak = 2218.531 ; gain = 95.949
+Time (s): cpu = 00:03:40 ; elapsed = 00:02:39 . Memory (MB): peak = 2195.609 ; gain = 127.875
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-75.641| TNS=-3012.497| WHS=0.014  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-75.040| TNS=-3081.744| WHS=0.013  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: e55e2052
+Phase 10 Post Router Timing | Checksum: 15966fa88
 
-Time (s): cpu = 00:03:53 ; elapsed = 00:02:42 . Memory (MB): peak = 2218.531 ; gain = 95.949
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:40 . Memory (MB): peak = 2195.609 ; gain = 127.875
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:03:53 ; elapsed = 00:02:42 . Memory (MB): peak = 2218.531 ; gain = 95.949
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:40 . Memory (MB): peak = 2195.609 ; gain = 127.875
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-853 Infos, 23 Warnings, 2 Critical Warnings and 0 Errors encountered.
+915 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:04:02 ; elapsed = 00:02:47 . Memory (MB): peak = 2218.531 ; gain = 95.949
+route_design: Time (s): cpu = 00:03:50 ; elapsed = 00:02:45 . Memory (MB): peak = 2195.609 ; gain = 132.578
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 2218.531 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 2195.609 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/impl_1/DEMO_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:14 . Memory (MB): peak = 2218.531 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 2195.609 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file DEMO_wrapper_drc_routed.rpt -pb DEMO_wrapper_drc_routed.pb -rpx DEMO_wrapper_drc_routed.rpx
 Command: report_drc -file DEMO_wrapper_drc_routed.rpt -pb DEMO_wrapper_drc_routed.pb -rpx DEMO_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/impl_1/DEMO_wrapper_drc_routed.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 2227.059 ; gain = 8.527
+report_drc: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 2197.797 ; gain = 2.188
 INFO: [runtcl-4] Executing : report_methodology -file DEMO_wrapper_methodology_drc_routed.rpt -pb DEMO_wrapper_methodology_drc_routed.pb -rpx DEMO_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file DEMO_wrapper_methodology_drc_routed.rpt -pb DEMO_wrapper_methodology_drc_routed.pb -rpx DEMO_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.runs/impl_1/DEMO_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:46 ; elapsed = 00:00:28 . Memory (MB): peak = 2336.086 ; gain = 109.027
+report_methodology: Time (s): cpu = 00:00:39 ; elapsed = 00:00:24 . Memory (MB): peak = 2308.207 ; gain = 110.410
 INFO: [runtcl-4] Executing : report_power -file DEMO_wrapper_power_routed.rpt -pb DEMO_wrapper_power_summary_routed.pb -rpx DEMO_wrapper_power_routed.rpx
 Command: report_power -file DEMO_wrapper_power_routed.rpt -pb DEMO_wrapper_power_summary_routed.pb -rpx DEMO_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-865 Infos, 23 Warnings, 2 Critical Warnings and 0 Errors encountered.
+927 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 2342.320 ; gain = 6.234
+report_power: Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2312.383 ; gain = 4.176
 INFO: [runtcl-4] Executing : report_route_status -file DEMO_wrapper_route_status.rpt -pb DEMO_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file DEMO_wrapper_timing_summary_routed.rpt -pb DEMO_wrapper_timing_summary_routed.pb -rpx DEMO_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -1775,7 +1831,7 @@ WARNING: [DRC DPOP-1] PREG Output pipelining: DSP DEMO_i/BuzzerBooster_Driver_0/
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3 multiplier stage DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__0 multiplier stage DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1 multiplier stage DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC RTSTAT-10] No routable loads: 27 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, DEMO_i/axi_traffic_gen_0/inst/ext_sync_flop_1/q, DEMO_i/axi_traffic_gen_0/inst/ext_st_sync_flop_1/q, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms... and (the first 15 of 25 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 21 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, DEMO_i/axi_traffic_gen_0/inst/ext_sync_flop_1/q, DEMO_i/axi_traffic_gen_0/inst/ext_st_sync_flop_1/q, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms... and (the first 15 of 19 listed).
 INFO: [DRC REQP-24] enum_BREG_0_connects_CEB1_GND_connects_CEB2_GND: DEMO_i/BuzzerBooster_Driver_0/U0/BuzzerBooster_Driver_v1_0_S00_AXI_inst/duty_cycle3__1: When DSP48E1 attribute BREG is set to 0, the CEB1 and CEB2 pins should be tied to GND to save power.
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 12 Warnings, 1 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
@@ -1790,7 +1846,7 @@ Writing bitstream ./DEMO_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-906 Infos, 36 Warnings, 3 Critical Warnings and 0 Errors encountered.
+968 Infos, 34 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:01:13 ; elapsed = 00:01:03 . Memory (MB): peak = 2750.672 ; gain = 408.352
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 23 07:49:11 2025...
+write_bitstream: Time (s): cpu = 00:00:58 ; elapsed = 00:00:46 . Memory (MB): peak = 2716.363 ; gain = 403.980
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  2 22:23:51 2025...

@@ -18,7 +18,7 @@ int Dance_Initialize_Timer(u16 DeviceId);
 int Dance_Setup_Interrupt_System(XScuGic *IntcInstancePtr);
 void Dance_Timer_Interrupt_Handler(void *CallBackRef);
 void Next_Dance_Step();
-void Run_Arrow_Animations();
+void Run_Arrow_Animations(int light_mode);
 void Animate_Arrow();
 void Check_score();
 

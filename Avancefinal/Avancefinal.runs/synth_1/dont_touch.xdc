@@ -144,9 +144,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_vio_1_0 ||
 # IP: bd/DEMO/ip/DEMO_vio_2_0/DEMO_vio_2_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_vio_2_0 || ORIG_REF_NAME==DEMO_vio_2_0} -quiet] -quiet
 
-# IP: bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_ila_0_0 || ORIG_REF_NAME==DEMO_ila_0_0} -quiet] -quiet
-
 # IP: bd/DEMO/ip/DEMO_debouncer_0_0/DEMO_debouncer_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_debouncer_0_0 || ORIG_REF_NAME==DEMO_debouncer_0_0} -quiet] -quiet
 
@@ -182,6 +179,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_xlconstant
 
 # IP: bd/DEMO/ip/DEMO_axi_timer_3_0/DEMO_axi_timer_3_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_axi_timer_3_0 || ORIG_REF_NAME==DEMO_axi_timer_3_0} -quiet] -quiet
+
+# IP: bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_axi_gpio_2_0 || ORIG_REF_NAME==DEMO_axi_gpio_2_0} -quiet] -quiet
 
 # IP: bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_auto_pc_0 || ORIG_REF_NAME==DEMO_auto_pc_0} -quiet] -quiet
@@ -292,14 +292,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/DEMO/ip/DEMO_vio_2_0/DEMO_vio_2_0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DEMO_vio_2_0 || ORIG_REF_NAME==DEMO_vio_2_0} -quiet] -quiet
 
-# XDC: bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==DEMO_ila_0_0 || ORIG_REF_NAME==DEMO_ila_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==DEMO_ila_0_0 || ORIG_REF_NAME==DEMO_ila_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0_ooc.xdc
-
 # XDC: bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==DEMO_axi_timer_0_0 || ORIG_REF_NAME==DEMO_axi_timer_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
@@ -327,6 +319,14 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==DEMO_axi_timer_3_0 || ORIG_REF_NAME==DEMO_axi_timer_3_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: bd/DEMO/ip/DEMO_axi_timer_3_0/DEMO_axi_timer_3_0_ooc.xdc
+
+# XDC: bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0_board.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==DEMO_axi_gpio_2_0 || ORIG_REF_NAME==DEMO_axi_gpio_2_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0_ooc.xdc
+
+# XDC: bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==DEMO_axi_gpio_2_0 || ORIG_REF_NAME==DEMO_axi_gpio_2_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc
 

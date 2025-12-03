@@ -91,13 +91,13 @@ void GUI_DANCE_FLOOR(void);
 void GUI_DANCE_FLOOR_LIGHT(void);
 void GUI_SCORE_BOARD();
 void GUI_DRAW_LEFT_ARROW(int pose);
-void GUI_ERASE_LEFT_ARROW(int pose);
+void GUI_ERASE_LEFT_ARROW(int pose, int light_mode);
 void GUI_DRAW_RIGHT_ARROW(int pose);
-void GUI_ERASE_RIGHT_ARROW(int pose);
+void GUI_ERASE_RIGHT_ARROW(int pose, int light_mode);
 void GUI_DRAW_UP_ARROW(int pose);
-void GUI_ERASE_UP_ARROW(int pose);
+void GUI_ERASE_UP_ARROW(int pose, int light_mode);
 void GUI_DRAW_DOWN_ARROW(int pose);
-void GUI_ERASE_DOWN_ARROW(int pose);
+void GUI_ERASE_DOWN_ARROW(int pose, int light_mode);
 
 
 static const unsigned char waveshare[1024]=
