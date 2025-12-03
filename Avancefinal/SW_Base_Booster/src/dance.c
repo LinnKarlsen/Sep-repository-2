@@ -183,8 +183,59 @@ void Dance_Timer_Interrupt_Handler(void *CallBackRef) {
     //Next_Dance_Step();
 }
 
+void Reset_Dance_Step_Flags_and_Pose() {
+
+	// Left arrow variables
+	left_flag1 = 0;
+	left_flag2 = 0;
+	left_flag3 = 0;
+	left_flag4 = 0;
+	left_flag5 = 0;
+	left_pose1 = -15;
+	left_pose2 = -15;
+	left_pose3 = -15;
+	left_pose4 = -15;
+	left_pose5 = -15;
+
+	// Down arrow variables
+	down_flag1 = 0;
+	down_flag2 = 0;
+	down_flag3 = 0;
+	down_flag4 = 0;
+	down_flag5 = 0;
+	down_pose1 = -15;
+	down_pose2 = -15;
+	down_pose3 = -15;
+	down_pose4 = -15;
+	down_pose5 = -15;
+
+	// Up arrow variables
+	up_flag1 = 0;
+	up_flag2 = 0;
+	up_flag3 = 0;
+	up_flag4 = 0;
+	up_flag5 = 0;
+	up_pose1 = -15;
+	up_pose2 = -15;
+	up_pose3 = -15;
+	up_pose4 = -15;
+	up_pose5 = -15;
+
+	// Right arrow variables
+	right_flag1 = 0;
+	right_flag2 = 0;
+	right_flag3 = 0;
+	right_flag4 = 0;
+	right_flag5 = 0;
+	right_pose1 = -15;
+	right_pose2 = -15;
+	right_pose3 = -15;
+	right_pose4 = -15;
+	right_pose5 = -15;
+}
+
 void Next_Dance_Step() {
-	xil_printf("Dance interrupt para step:%d\r\n", current_step);
+	//xil_printf("Dance interrupt para step:%d\r\n", current_step);
 
 	uint32_t NONE_ref  = 0;
 	uint32_t LEFT_ref  = 1;

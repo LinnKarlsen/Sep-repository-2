@@ -1,6 +1,6 @@
 Nothing to build in platform 'HW_Base_Booster'
 
-22:47:50 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
+10:03:33 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -10,45 +10,54 @@ make --no-print-directory main-build
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main':
-../src/main.c:483:6: warning: unused variable 'opt_val' [-Wunused-variable]
-  483 |  int opt_val = 0;
+../src/main.c:496:6: warning: variable 'btn1_prev' set but not used [-Wunused-but-set-variable]
+  496 |  int btn1_prev = 1;
+      |      ^~~~~~~~~
+../src/main.c:484:6: warning: unused variable 'opt_val' [-Wunused-variable]
+  484 |  int opt_val = 0;
       |      ^~~~~~~
-../src/main.c:482:9: warning: unused variable 'tmp_val' [-Wunused-variable]
-  482 |     int tmp_val = 0;
+../src/main.c:483:9: warning: unused variable 'tmp_val' [-Wunused-variable]
+  483 |     int tmp_val = 0;
       |         ^~~~~~~
-../src/main.c:481:19: warning: unused variable 'pot2_val' [-Wunused-variable]
-  481 |     int pot1_val, pot2_val;
+../src/main.c:482:19: warning: unused variable 'pot2_val' [-Wunused-variable]
+  482 |     int pot1_val, pot2_val;
       |                   ^~~~~~~~
-../src/main.c:481:9: warning: unused variable 'pot1_val' [-Wunused-variable]
-  481 |     int pot1_val, pot2_val;
+../src/main.c:482:9: warning: unused variable 'pot1_val' [-Wunused-variable]
+  482 |     int pot1_val, pot2_val;
       |         ^~~~~~~~
-../src/main.c:480:18: warning: unused variable 'acy_val' [-Wunused-variable]
-  480 |     int acx_val, acy_val;
+../src/main.c:481:18: warning: unused variable 'acy_val' [-Wunused-variable]
+  481 |     int acx_val, acy_val;
       |                  ^~~~~~~
-../src/main.c:480:9: warning: unused variable 'acx_val' [-Wunused-variable]
-  480 |     int acx_val, acy_val;
+../src/main.c:481:9: warning: unused variable 'acx_val' [-Wunused-variable]
+  481 |     int acx_val, acy_val;
       |         ^~~~~~~
-../src/main.c:478:68: warning: unused variable 'mic' [-Wunused-variable]
-  478 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
+../src/main.c:479:68: warning: unused variable 'mic' [-Wunused-variable]
+  479 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
       |                                                                    ^~~
-../src/main.c:478:53: warning: unused variable 'pot2' [-Wunused-variable]
-  478 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
+../src/main.c:479:53: warning: unused variable 'pot2' [-Wunused-variable]
+  479 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
       |                                                     ^~~~
-../src/main.c:478:38: warning: unused variable 'pot1' [-Wunused-variable]
-  478 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
+../src/main.c:479:38: warning: unused variable 'pot1' [-Wunused-variable]
+  479 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
       |                                      ^~~~
-../src/main.c:478:24: warning: unused variable 'opt' [-Wunused-variable]
-  478 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
+../src/main.c:479:24: warning: unused variable 'opt' [-Wunused-variable]
+  479 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
       |                        ^~~
-../src/main.c:478:10: warning: unused variable 'tmp' [-Wunused-variable]
-  478 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
+../src/main.c:479:10: warning: unused variable 'tmp' [-Wunused-variable]
+  479 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
       |          ^~~
-../src/main.c:477:54: warning: unused variable 'acy' [-Wunused-variable]
-  477 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
+../src/main.c:478:54: warning: unused variable 'acy' [-Wunused-variable]
+  478 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
       |                                                      ^~~
-../src/main.c:477:40: warning: unused variable 'acx' [-Wunused-variable]
-  477 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
+../src/main.c:478:40: warning: unused variable 'acx' [-Wunused-variable]
+  478 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
       |                                        ^~~
+../src/main.c:478:25: warning: unused variable 'joyy' [-Wunused-variable]
+  478 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
+      |                         ^~~~
+../src/main.c:478:10: warning: unused variable 'joyx' [-Wunused-variable]
+  478 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
+      |          ^~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: SW_Base_Booster.elf'
@@ -59,6 +68,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size SW_Base_Booster.elf  |tee "SW_Base_Booster.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 898769	   3644	  27600	 930013	  e30dd	SW_Base_Booster.elf
+ 899785	   3644	  27600	 931029	  e34d5	SW_Base_Booster.elf
 'Finished building: SW_Base_Booster.elf.size'
 ' '

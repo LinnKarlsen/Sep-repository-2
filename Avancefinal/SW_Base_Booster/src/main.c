@@ -23,6 +23,7 @@
 #include "dance.h"
 #include "careography.h"
 
+
 // ==================== External Definitions ====================
 extern XGpio gpio0;  // GPIO original
 extern XGpio gpio1;  // GPIO para el light sensor
@@ -484,14 +485,29 @@ int main() {
 
 	char score_display[16]={};
 
-	GUI_DANCE_FLOOR();
-	GUI_DANCE_FLOOR_LIGHT();
-	GUI_SCORE_BOARD();
+	//GUI_DANCE_FLOOR();
+	//GUI_DANCE_FLOOR_LIGHT();
+	//GUI_SCORE_BOARD();
 
 	int btn0;
 	int btn1;
 
+	int btn0_prev = 1;
+	int btn1_prev = 1;
+
 	int light_mode = 1;
+
+	int game_init_complete = 0;
+
+	// Definir los estados
+	enum state_t {START, GAME_INIT, GAME, PODIUM};
+	static enum state_t state = START;
+
+	// Indicadores
+	int start_ready = 0;
+
+	// Messages
+	char bienvenida[64] = "BTN0 para partir";
 
 
     while (1) {
@@ -499,7 +515,30 @@ int main() {
     	if(graphics_update_needed)
     		{
 
-    			Run_Arrow_Animations(light_mode);
+    		switch (state) {
+				case START:
+					if(start_ready==0){
+						GUI_INTRO();
+						GUI_DisString_EN(20,110,bienvenida,&Font8,GUI_BACKGROUND,WHITE);
+						start_ready = 1;
+					}
+					break;
+				case GAME_INIT:
+					GUI_DANCE_FLOOR();
+					GUI_DANCE_FLOOR_LIGHT();
+					GUI_SCORE_BOARD();
+					Reset_Dance_Step_Flags_and_Pose();
+					game_init_complete = 1;
+					break;
+				case GAME:
+					game_init_complete = 0;
+					Run_Arrow_Animations(light_mode);
+					break;
+				case PODIUM:
+					LCD_Clear(GUI_BACKGROUND);
+					break;
+			}
+
 
 
     			// Clear old values
@@ -514,8 +553,8 @@ int main() {
 				//GUI_DisString_EN(95,100,mic,&Font12,GUI_BACKGROUND,GUI_BACKGROUND);
 
 				// Read sensors
-				joyx_val = read_joyx();
-				joyy_val = read_joyy();
+				//joyx_val = read_joyx();
+				//joyy_val = read_joyy();
 				//tmp_val = read_tmp();
 				//opt_val = read_opt();
 				//pot1_val = read_POT1();
@@ -525,8 +564,8 @@ int main() {
 				//mic_val = read_MIC();
 
 				// Store as char
-				sprintf(joyx, "%d", joyx_val);
-				sprintf(joyy, "%d", joyy_val);
+				//sprintf(joyx, "%d", joyx_val);
+				//sprintf(joyy, "%d", joyy_val);
 				//sprintf(tmp, "%d", tmp_val);
 				//sprintf(opt, "%d", opt_val);
 				//sprintf(pot1, "%d", pot1_val);
@@ -535,9 +574,9 @@ int main() {
 				//sprintf(acy, "%d", acy_val);
 				//sprintf(mic, "%d", mic_val);
 
-				GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,GUI_BACKGROUND);
-				sprintf(score_display, "%d", score);
-				GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
+				//GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,GUI_BACKGROUND);
+				//sprintf(score_display, "%d", score);
+				//GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
 
 				// Display values
 				//GUI_DisString_EN(5,30,joyx,&Font12,GUI_BACKGROUND,YELLOW);
@@ -564,8 +603,44 @@ int main() {
     		btn0 = XGpio_DiscreteRead(&gpio2,1);
     		btn1 = XGpio_DiscreteRead(&gpio2,2);
 
-    		xil_printf("BTN0: %d\n", btn0);
-    		xil_printf("BTN1: %d\n", btn1);
+    		//xil_printf("BTN0: %d\n", btn0);
+    		//xil_printf("BTN1: %d\n", btn1);
+
+    		switch (state) {
+				case START:
+					if ((btn0!=1)&&btn0_prev){
+							state = GAME_INIT;
+							//xil_printf("start a game\n");
+						}
+					break;
+				case GAME_INIT:
+					if (game_init_complete){
+						state = GAME;
+					}
+					break;
+				case GAME:
+					if ((btn0!=1)&&btn0_prev){
+							state = PODIUM;
+							//xil_printf("game a podium\n");
+					   }
+					joyx_val = read_joyx();
+					joyy_val = read_joyy();
+					GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,GUI_BACKGROUND);
+					sprintf(score_display, "%d", score);
+					GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
+					break;
+				case PODIUM:
+					if ((btn0!=1)&&btn0_prev){
+							state = START;
+							//xil_printf("podium a start\n");
+						}
+					break;
+			}
+
+    		btn0_prev = btn0;
+    		btn1_prev = btn1;
+
+
 
 			//tmp_val = read_tmp();
 			//opt_val = read_opt();

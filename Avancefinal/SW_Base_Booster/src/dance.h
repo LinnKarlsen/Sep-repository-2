@@ -17,6 +17,7 @@ extern XTmrCtr TimerInstanceDance;
 int Dance_Initialize_Timer(u16 DeviceId);
 int Dance_Setup_Interrupt_System(XScuGic *IntcInstancePtr);
 void Dance_Timer_Interrupt_Handler(void *CallBackRef);
+void Reset_Dance_Step_Flags_and_Pose();
 void Next_Dance_Step();
 void Run_Arrow_Animations(int light_mode);
 void Animate_Arrow();
