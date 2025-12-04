@@ -13,6 +13,7 @@
 
 // Definimos una variable modificada dentro de la interrupcion:
 volatile int current_note = 0; // Indice de la nota actual
+extern int song_end;
 
 // Melody data
 Note melody[MAX_NOTES]; // Adjust MAX_NOTES if needed
@@ -137,6 +138,7 @@ void Play_Next_Note() {
         // Si ya se termino la melodia, se loopea:
     } else if (current_note >= melody_length &&  melody_length > 0) {
         xil_printf("Melodia termino de reproducirse.\r\n");
+        song_end = 1;
         //current_note = 0;
         //Play_Next_Note();
     }

@@ -1,0 +1,110 @@
+// careography.c
+#include "careography.h"
+
+// El presente codigo es una adaptacion de melody.h
+
+// La estructura de los arreglos son: (step, duracion). La duracion sigue la convencion:
+// 1: redonda (whole), 2: blanca (half), 4: negra (quarter), 8: corchea (eighth), 16: semicorchea (sixteenth)
+// Si el valor de duración es negativo (ej. -4) se interpreta como nota puntuada (dotted): es decir, la duración real = duración_base * 1.5.
+
+static const int just_dance_steps[] = {
+
+		NONE, 1,
+		TURN_RIGHT, 1,
+
+		UP, 1,
+		DOWN, 1,
+		LEFT, 2, UP, 2,
+		RIGHT, 4, RIGHT, 4, DOWN, 4, LEFT, 4,
+		LEFT, 1,
+		TURN_RIGHT, 1,
+		RIGHT, 1,
+		LEFT, 1,
+
+		DOWN, 1,
+		DOWN, 1,
+		UP, 1,
+
+		UP, 1,
+		RIGHT, 1,
+		RIGHT, 1,
+		TURN_LEFT, 1,
+		UP, 1,
+
+		DOWN, 1,
+		DOWN, 2, DOWN, 2,
+		RIGHT, 4, RIGHT, 4, DOWN, 2,
+		UP, 1,
+		UP, 1,
+
+		// 18
+		UP, 1,
+		UP, 8, RIGHT, 8, DOWN, 4, LEFT, 2,
+		UP, 4, DOWN, 4, LEFT, 2,
+		UP, 1,
+
+		UP, 1,
+		UP, 1,
+		//24
+		UP, 1,
+		UP, 8, RIGHT, 8, DOWN, 4, LEFT, 2,
+		UP, 4, DOWN, 4, LEFT, 2,
+		UP, 1,
+		UP, 1,
+		UP, 1,
+		UP, 8, RIGHT, 8, LEFT, 8, DOWN, 8,
+		UP, 8, RIGHT, 8, LEFT, 8, DOWN, 8,
+		NONE, 1,
+		UP, 16, UP, 16, UP, 16, UP, 16, NONE, 2,
+		DOWN, 16, UP, 16, DOWN, 16, UP, 16, NONE, 2,
+		RIGHT, 1,
+};
+
+#define JUST_DANCE_LENGTH (sizeof(just_dance_steps) / sizeof(just_dance_steps[0]) / 2)
+
+const DanceData just_dance_dance = {
+    .steps = just_dance_steps,
+    .length = JUST_DANCE_LENGTH,
+    .tempo = 108,
+    .name = "Just Dance"
+};
+
+// Array of available dances
+const DanceData *available_dances[] = {
+	&just_dance_dance,
+};
+
+const int NUM_DANCES = sizeof(available_dances) / sizeof(available_dances[0]);
+
+// Initialize the dance array
+
+void initialize_dance(const DanceData *danceData, Step *danceArray, int *danceLength) {
+    int tempo = danceData->tempo;
+    const int *steps = danceData->steps;
+    int length = danceData->length;
+
+    // Calculate whole note duration in milliseconds
+    uint32_t whole_note_duration = (60000 * 4) / tempo;
+
+    for(int i = 0; i < length * 2; i += 2) {
+        int step = steps[i];
+        int divider = steps[i + 1];
+        uint32_t duration_ms = 0;
+
+        if(divider > 0){
+            // Standard note
+            duration_ms = whole_note_duration / divider;
+        }
+        else if(divider < 0){
+            // Dotted note
+            duration_ms = (whole_note_duration / -divider) * 1.5;
+        }
+
+        danceArray[i / 2].dancemove = step;         //dancemove = frequency
+        danceArray[i / 2].duration = duration_ms;
+    }
+
+    *danceLength = length;
+}
+
+

@@ -129,7 +129,6 @@ static const int just_dance_notes[] = {
 		NOTE_E4, 4, REST, 8, NOTE_G4, 8, NOTE_E4, 4, REST, 8, NOTE_G4, 8,
 		//24
 		NOTE_E4, 4, NOTE_A4, 4, NOTE_A4, 8, NOTE_A4, 8, NOTE_A4, 4,
-		NOTE_G4, 8, NOTE_E4, 8, REST, 4, REST, 2,
 		NOTE_G4, 8, NOTE_E4, 8, REST, 8, NOTE_G4, 16, NOTE_G4, 16,NOTE_G4, 8, NOTE_G4, 8, NOTE_G4, 4,
 		REST, 8, NOTE_FS4, 8, NOTE_FS4, 8, NOTE_B4, 8, NOTE_B4, 4, NOTE_A4, 4,
 		NOTE_G4, 8, NOTE_E4, 8, REST, 8, NOTE_G4, 8, NOTE_B4, 8, NOTE_B4, 8, NOTE_G4, 4,
@@ -138,6 +137,10 @@ static const int just_dance_notes[] = {
 
 		REST, 8, NOTE_FS4, 8, REST, 8, NOTE_FS4, 8, REST, 8, NOTE_FS4, 8, REST, 8, NOTE_G4, 8,
 		NOTE_E4, 4, REST, 8, NOTE_G4, 8, NOTE_E4, 4, REST, 8, NOTE_G4, 8,
+
+		REST, 1,
+		REST, 1,
+		REST, 1,
 
 };
 

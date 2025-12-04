@@ -158,6 +158,7 @@ volatile int score = 0;
 volatile int joyx_val = 0;
 volatile int joyy_val = 0;
 int mic_val = 0;
+volatile int song_end = 0;
 // Ventanas en las cuales accionar el joystick es punteable
 int left_window1 = 0;
 int left_window2 = 0;
@@ -482,10 +483,10 @@ int main() {
     initialize_dance(available_dances[0], dance, &dance_length);
 
     // Start playing the melody
-    current_note = 0;
-    current_step = 0;
-    Play_Next_Note();
-    Next_Dance_Step();
+    //current_note = 0;
+    //current_step = 0;
+    //Play_Next_Note();
+    //Next_Dance_Step();
 
     xil_printf("Melody playback started...\r\n");
 
@@ -511,7 +512,7 @@ int main() {
 	int btn0_prev = 1;
 	int btn1_prev = 1;
 
-	int light_mode = 1;
+	int light_mode = 0;
 
 	int game_init_complete = 0;
 
@@ -521,9 +522,11 @@ int main() {
 
 	// Indicadores
 	int start_ready = 0;
+	int game_end = 0;
 
 	// Messages
 	char bienvenida[64] = "BTN0 para partir";
+	char loading[16] = "Loading...";
 
 
     while (1) {
@@ -534,20 +537,53 @@ int main() {
     		switch (state) {
 				case START:
 					if(start_ready==0){
+						// Pagina de bienvenida del juego
 						GUI_INTRO();
-						GUI_DisString_EN(20,110,bienvenida,&Font8,GUI_BACKGROUND,WHITE);
+						GUI_DisString_EN(20,105,bienvenida,&Font8,GUI_BACKGROUND,WHITE);
 						start_ready = 1;
 					}
 					break;
 				case GAME_INIT:
-					GUI_DANCE_FLOOR();
-					GUI_DANCE_FLOOR_LIGHT();
+					start_ready = 0;
+					GUI_DisString_EN(34,115,loading,&Font8,GUI_BACKGROUND,WHITE);
+
+					// Revisamos la luminosidad
+					opt_val = read_opt();
+
+					if(opt_val>20000){
+						light_mode = 1;
+					}else{
+						light_mode = 0;
+					}
+
+					// Seleccionamos el Dance Floor dependiendo de la luminosidad
+					if(light_mode==0){
+						GUI_DANCE_FLOOR();
+					}
+					else{
+						GUI_DANCE_FLOOR_LIGHT();
+					}
+
+					// Consiguraciones adicionales
 					GUI_SCORE_BOARD();
 					Reset_Dance_Step_Flags_and_Pose();
+					score = 0;
+
+					// Comienza a reproducir el baile y la música
+					song_end = 0;
+					current_note = 0;
+					current_step = 0;
+					Play_Next_Note();
+					Next_Dance_Step();
+
+					// Termina la inicialización del juego
 					game_init_complete = 1;
+
 					break;
 				case GAME:
 					game_init_complete = 0;
+
+					// Comienzan a correr las animaciones de las flechas
 					Run_Arrow_Animations(light_mode);
 					break;
 				case PODIUM:
@@ -635,7 +671,7 @@ int main() {
 					}
 					break;
 				case GAME:
-					if ((btn0!=1)&&btn0_prev){
+					if (((btn0!=1)&&btn0_prev)||(song_end)){
 							state = PODIUM;
 							//xil_printf("game a podium\n");
 					   }

@@ -1,87 +1,13 @@
-15:56:04 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
+21:26:33 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/dance.c'
+'Building file: ../src/careography.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dance.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/dance.d" -MT"src/dance.o" -o "src/dance.o" "../src/dance.c"
-../src/dance.c: In function 'Next_Dance_Step':
-../src/dance.c:282:18: warning: unused variable 'duration_counts' [-Wunused-variable]
-  282 |         uint32_t duration_counts = duration_ms * 100000;       // Ajustamos la duracion a ciclos de clk (100 MHz)
-      |                  ^~~~~~~~~~~~~~~
-../src/dance.c:268:11: warning: unused variable 'NONE_ref' [-Wunused-variable]
-  268 |  uint32_t NONE_ref  = 0;
-      |           ^~~~~~~~
-../src/dance.c: In function 'Check_score':
-../src/dance.c:588:13: warning: implicit declaration of function 'read_joyx' [-Wimplicit-function-declaration]
-  588 |  joyx_val = read_joyx();
-      |             ^~~~~~~~~
-../src/dance.c:589:13: warning: implicit declaration of function 'read_joyy' [-Wimplicit-function-declaration]
-  589 |  joyy_val = read_joyy();
-      |             ^~~~~~~~~
-../src/dance.c:584:11: warning: unused variable 'TURN_RIGHT_ref' [-Wunused-variable]
-  584 |  uint32_t TURN_RIGHT_ref = 6;
-      |           ^~~~~~~~~~~~~~
-../src/dance.c:583:11: warning: unused variable 'TURN_LEFT_ref' [-Wunused-variable]
-  583 |  uint32_t TURN_LEFT_ref  = 5;
-      |           ^~~~~~~~~~~~~
-'Finished building: ../src/dance.c'
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:512:6: warning: variable 'btn1_prev' set but not used [-Wunused-but-set-variable]
-  512 |  int btn1_prev = 1;
-      |      ^~~~~~~~~
-../src/main.c:500:6: warning: unused variable 'opt_val' [-Wunused-variable]
-  500 |  int opt_val = 0;
-      |      ^~~~~~~
-../src/main.c:499:9: warning: unused variable 'tmp_val' [-Wunused-variable]
-  499 |     int tmp_val = 0;
-      |         ^~~~~~~
-../src/main.c:498:19: warning: unused variable 'pot2_val' [-Wunused-variable]
-  498 |     int pot1_val, pot2_val;
-      |                   ^~~~~~~~
-../src/main.c:498:9: warning: unused variable 'pot1_val' [-Wunused-variable]
-  498 |     int pot1_val, pot2_val;
-      |         ^~~~~~~~
-../src/main.c:497:18: warning: unused variable 'acy_val' [-Wunused-variable]
-  497 |     int acx_val, acy_val;
-      |                  ^~~~~~~
-../src/main.c:497:9: warning: unused variable 'acx_val' [-Wunused-variable]
-  497 |     int acx_val, acy_val;
-      |         ^~~~~~~
-../src/main.c:495:68: warning: unused variable 'mic' [-Wunused-variable]
-  495 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |                                                                    ^~~
-../src/main.c:495:53: warning: unused variable 'pot2' [-Wunused-variable]
-  495 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |                                                     ^~~~
-../src/main.c:495:38: warning: unused variable 'pot1' [-Wunused-variable]
-  495 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |                                      ^~~~
-../src/main.c:495:24: warning: unused variable 'opt' [-Wunused-variable]
-  495 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |                        ^~~
-../src/main.c:495:10: warning: unused variable 'tmp' [-Wunused-variable]
-  495 |     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
-      |          ^~~
-../src/main.c:494:54: warning: unused variable 'acy' [-Wunused-variable]
-  494 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
-      |                                                      ^~~
-../src/main.c:494:40: warning: unused variable 'acx' [-Wunused-variable]
-  494 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
-      |                                        ^~~
-../src/main.c:494:25: warning: unused variable 'joyy' [-Wunused-variable]
-  494 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
-      |                         ^~~~
-../src/main.c:494:10: warning: unused variable 'joyx' [-Wunused-variable]
-  494 |     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
-      |          ^~~~
-'Finished building: ../src/main.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/careography.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/careography.d" -MT"src/careography.o" -o "src/careography.o" "../src/careography.c"
+'Finished building: ../src/careography.c'
 ' '
 'Building target: SW_Base_Booster.elf'
 'Invoking: ARM v7 gcc linker'
@@ -91,9 +17,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size SW_Base_Booster.elf  |tee "SW_Base_Booster.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1098745	   3660	  27632	1130037	 113e35	SW_Base_Booster.elf
+1099385	   3660	  27648	1130693	 1140c5	SW_Base_Booster.elf
 'Finished building: SW_Base_Booster.elf.size'
 ' '
 
-15:56:08 Build Finished (took 3s.503ms)
+21:26:36 Build Finished (took 2s.687ms)
 
