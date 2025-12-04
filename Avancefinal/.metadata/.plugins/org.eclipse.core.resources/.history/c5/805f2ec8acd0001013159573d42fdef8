@@ -589,7 +589,7 @@ void Check_score(int *score, int *windowblocked, int current_step){
 	joyx_val = read_joyx();
 	joyy_val = read_joyy();
 	acx_val = read_acx();
-	xil_printf("%d\n",acx_val);
+	xil_printf("%d",acx_val);
 
 	if(current_step == LEFT_ref){
 		if(joyx_val<300){
@@ -608,11 +608,11 @@ void Check_score(int *score, int *windowblocked, int current_step){
 			match = 1;
 		}
 	} else if(current_step == TURN_LEFT_ref){
-		if(acx_val<450){
+		if(acx_val<350){
 			match1 = 1;
 		}
 	} else if(current_step == TURN_RIGHT_ref){
-		if(acx_val>550){
+		if(acx_val>650){
 			match1 = 1;
 		}
 	}

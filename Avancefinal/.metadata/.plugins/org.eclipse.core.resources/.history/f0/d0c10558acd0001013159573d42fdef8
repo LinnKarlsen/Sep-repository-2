@@ -73,7 +73,7 @@ extern int turn_right_pose2;
 
 // For scoring
 extern volatile int score;
-extern volatile int joyx_val, joyy_val, acx_val;
+extern volatile int joyx_val, joyy_val;
 extern int mic_val;
 // Ventanas en las cuales accionar el joystick es punteable
 extern int left_window1;
@@ -584,12 +584,10 @@ void Check_score(int *score, int *windowblocked, int current_step){
 	uint32_t TURN_RIGHT_ref = 6;
 
 	int match = 0;
-	int match1 = 0;
 
 	joyx_val = read_joyx();
 	joyy_val = read_joyy();
 	acx_val = read_acx();
-	xil_printf("%d\n",acx_val);
 
 	if(current_step == LEFT_ref){
 		if(joyx_val<300){
@@ -607,25 +605,12 @@ void Check_score(int *score, int *windowblocked, int current_step){
 		if(joyx_val>700){
 			match = 1;
 		}
-	} else if(current_step == TURN_LEFT_ref){
-		if(acx_val<450){
-			match1 = 1;
-		}
-	} else if(current_step == TURN_RIGHT_ref){
-		if(acx_val>550){
-			match1 = 1;
-		}
 	}
 
 
 	if(match){
 		if(*windowblocked!=1){
 			*score = *score + 100;
-			*windowblocked=1;
-		}
-	} else if(match1){
-		if(*windowblocked!=1){
-			*score = *score + 500;
 			*windowblocked=1;
 		}
 	}

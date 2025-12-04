@@ -157,6 +157,7 @@ int turn_right_pose2 = -15;
 volatile int score = 0;
 volatile int joyx_val = 0;
 volatile int joyy_val = 0;
+volatile int acx_val = 0;
 int mic_val = 0;
 volatile int song_end = 0;
 // Ventanas en las cuales accionar el joystick es punteable
@@ -495,7 +496,7 @@ int main() {
     char joyx[16] = {}, joyy[16] = {}, acx[16] = {}, acy[16] = {};
     char tmp[16] = {}, opt[16] = {}, pot1[16] = {}, pot2[16] = {}, mic[16] = {};
 
-    int acx_val, acy_val;
+    int acy_val;
     int pot1_val, pot2_val;
     int tmp_val = 0;
 	int opt_val = 0;

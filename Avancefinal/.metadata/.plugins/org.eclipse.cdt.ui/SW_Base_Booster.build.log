@@ -1,13 +1,30 @@
-21:26:33 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
+22:06:11 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/careography.c'
+'Building file: ../src/dance.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/careography.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/careography.d" -MT"src/careography.o" -o "src/careography.o" "../src/careography.c"
-'Finished building: ../src/careography.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dance.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/dance.d" -MT"src/dance.o" -o "src/dance.o" "../src/dance.c"
+../src/dance.c: In function 'Next_Dance_Step':
+../src/dance.c:282:18: warning: unused variable 'duration_counts' [-Wunused-variable]
+  282 |         uint32_t duration_counts = duration_ms * 100000;       // Ajustamos la duracion a ciclos de clk (100 MHz)
+      |                  ^~~~~~~~~~~~~~~
+../src/dance.c:268:11: warning: unused variable 'NONE_ref' [-Wunused-variable]
+  268 |  uint32_t NONE_ref  = 0;
+      |           ^~~~~~~~
+../src/dance.c: In function 'Check_score':
+../src/dance.c:589:13: warning: implicit declaration of function 'read_joyx' [-Wimplicit-function-declaration]
+  589 |  joyx_val = read_joyx();
+      |             ^~~~~~~~~
+../src/dance.c:590:13: warning: implicit declaration of function 'read_joyy' [-Wimplicit-function-declaration]
+  590 |  joyy_val = read_joyy();
+      |             ^~~~~~~~~
+../src/dance.c:591:12: warning: implicit declaration of function 'read_acx' [-Wimplicit-function-declaration]
+  591 |  acx_val = read_acx();
+      |            ^~~~~~~~
+'Finished building: ../src/dance.c'
 ' '
 'Building target: SW_Base_Booster.elf'
 'Invoking: ARM v7 gcc linker'
@@ -17,9 +34,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size SW_Base_Booster.elf  |tee "SW_Base_Booster.elf.size"
    text	   data	    bss	    dec	    hex	filename
-1099385	   3660	  27648	1130693	 1140c5	SW_Base_Booster.elf
+1099609	   3660	  27648	1130917	 1141a5	SW_Base_Booster.elf
 'Finished building: SW_Base_Booster.elf.size'
 ' '
 
-21:26:36 Build Finished (took 2s.687ms)
+22:06:15 Build Finished (took 3s.700ms)
 
