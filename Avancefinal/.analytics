@@ -661,3 +661,19 @@ timestamp=[2025-12-05 04:26:46], mode=BUILD, duration=0:00:06.278, duration_ms=6
 timestamp=[2025-12-05 04:27:06], mode=BUILD, duration=0:00:05.728, duration_ms=5728, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
 timestamp=[2025-12-05 04:27:12], mode=BUILD, duration=0:00:05.979, duration_ms=5979, data={name=SW_Base_Booster_system, configuration=Debug, clean_build=false}
 timestamp=[2025-12-05 05:33:12], mode=BUILD, duration=0:00:02.005, duration_ms=2005, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 05:48:12], mode=WORKBENCH_START, duration=0:00:17.468, duration_ms=17468, data={}
+timestamp=[2025-12-05 05:48:13], mode=WORKBENCH_UI_INIT, duration=0:00:01.357, duration_ms=1357, data={editors_count=10, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=HW_Base_Booster,RemoteSystemsTempFiles,SW_Base_Booster,SW_Base_Booster_system}
+timestamp=[2025-12-05 05:48:14], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.152, duration_ms=152, data={}
+timestamp=[2025-12-05 05:49:53], mode=BUILD, duration=0:00:03.351, duration_ms=3351, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 05:50:06], mode=BUILD, duration=0:00:01.478, duration_ms=1478, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 05:50:19], mode=BUILD, duration=0:00:01.495, duration_ms=1495, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 05:53:19], mode=BUILD, duration=0:00:01.517, duration_ms=1517, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 10:14:13], mode=BUILD, duration=0:00:05.516, duration_ms=5516, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 10:17:13], mode=BUILD, duration=0:00:01.280, duration_ms=1280, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 10:19:04], mode=BUILD, duration=0:00:05.545, duration_ms=5545, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 10:19:39], mode=BUILD, duration=0:00:02.485, duration_ms=2485, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 10:19:56], mode=BUILD, duration=0:00:02.548, duration_ms=2548, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 10:20:06], mode=BUILD, duration=0:00:01.339, duration_ms=1339, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 10:20:15], mode=BUILD, duration=0:00:02.855, duration_ms=2855, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 10:20:28], mode=BUILD, duration=0:00:02.776, duration_ms=2776, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}
+timestamp=[2025-12-05 10:21:02], mode=BUILD, duration=0:00:04.187, duration_ms=4187, data={name=SW_Base_Booster, configuration=Debug, clean_build=false}

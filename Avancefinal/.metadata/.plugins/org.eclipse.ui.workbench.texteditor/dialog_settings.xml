@@ -2,23 +2,40 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="game" key="selection"/>
+		<item value="print_puntajes" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="PrintScores"/>
+			<item value="AddScore"/>
+			<item value="podium_drawn"/>
+			<item value="sd_write_scores"/>
+			<item value="gettop5scores"/>
+			<item value="score_count"/>
+			<item value="score_history"/>
+			<item value="max_score"/>
+			<item value="max_scores"/>
 			<item value="game"/>
 			<item value="score"/>
 		</list>
 		<list key="replacehistory">
+			<item value="print_puntajes"/>
+			<item value="sumar_puntajes"/>
+			<item value="podio_animado"/>
+			<item value="escritura_sd"/>
+			<item value="top5_puntajes"/>
+			<item value="contador_puntaje"/>
+			<item value="historial_puntaje"/>
+			<item value="puntaje_maximo"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="336" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="454" key="DIALOG_HEIGHT"/>
-		<item value="801" key="DIALOG_X_ORIGIN"/>
-		<item value="277" key="DIALOG_Y_ORIGIN"/>
+		<item value="1163" key="DIALOG_X_ORIGIN"/>
+		<item value="398" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

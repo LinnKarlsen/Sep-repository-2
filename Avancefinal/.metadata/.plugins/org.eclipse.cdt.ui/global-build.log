@@ -1,71 +1,9 @@
 Nothing to build in platform 'HW_Base_Booster'
 
-05:33:10 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
+10:20:58 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:55:23: error: 'puntaje_maximo' undeclared here (not in a function)
-   55 | int historial_puntaje[puntaje_maximo];
-      |                       ^~~~~~~~~~~~~~
-../src/main.c: In function 'main':
-../src/main.c:419:23: error: lvalue required as left operand of assignment
-  419 |               opt_val = read_opt();
-      |                       ^
-../src/main.c:390:9: warning: unused variable 'game_end' [-Wunused-variable]
-  390 |     int game_end = 0;
-      |         ^~~~~~~~
-../src/main.c:380:9: warning: variable 'btn1_prev' set but not used [-Wunused-but-set-variable]
-  380 |     int btn1_prev = 1;
-      |         ^~~~~~~~~
-../src/main.c:375:9: warning: unused variable 'tmp_val' [-Wunused-variable]
-  375 |     int tmp_val = 0;
-      |         ^~~~~~~
-../src/main.c:374:19: warning: unused variable 'pot2_val' [-Wunused-variable]
-  374 |     int pot1_val, pot2_val;
-      |                   ^~~~~~~~
-../src/main.c:374:9: warning: unused variable 'pot1_val' [-Wunused-variable]
-  374 |     int pot1_val, pot2_val;
-      |         ^~~~~~~~
-../src/main.c:373:9: warning: unused variable 'acy_val' [-Wunused-variable]
-  373 |     int acy_val;
-      |         ^~~~~~~
-../src/main.c:370:60: warning: unused variable 'mic' [-Wunused-variable]
-  370 |     char tmp[16]={}, opt[16]={}, pot1[16]={}, pot2[16]={}, mic[16]={};
-      |                                                            ^~~
-../src/main.c:370:47: warning: unused variable 'pot2' [-Wunused-variable]
-  370 |     char tmp[16]={}, opt[16]={}, pot1[16]={}, pot2[16]={}, mic[16]={};
-      |                                               ^~~~
-../src/main.c:370:34: warning: unused variable 'pot1' [-Wunused-variable]
-  370 |     char tmp[16]={}, opt[16]={}, pot1[16]={}, pot2[16]={}, mic[16]={};
-      |                                  ^~~~
-../src/main.c:370:22: warning: unused variable 'opt' [-Wunused-variable]
-  370 |     char tmp[16]={}, opt[16]={}, pot1[16]={}, pot2[16]={}, mic[16]={};
-      |                      ^~~
-../src/main.c:370:10: warning: unused variable 'tmp' [-Wunused-variable]
-  370 |     char tmp[16]={}, opt[16]={}, pot1[16]={}, pot2[16]={}, mic[16]={};
-      |          ^~~
-../src/main.c:369:48: warning: unused variable 'acy' [-Wunused-variable]
-  369 |     char joyx[16]={}, joyy[16]={}, acx[16]={}, acy[16]={};
-      |                                                ^~~
-../src/main.c:369:36: warning: unused variable 'acx' [-Wunused-variable]
-  369 |     char joyx[16]={}, joyy[16]={}, acx[16]={}, acy[16]={};
-      |                                    ^~~
-../src/main.c:369:23: warning: unused variable 'joyy' [-Wunused-variable]
-  369 |     char joyx[16]={}, joyy[16]={}, acx[16]={}, acy[16]={};
-      |                       ^~~~
-../src/main.c:369:10: warning: unused variable 'joyx' [-Wunused-variable]
-  369 |     char joyx[16]={}, joyy[16]={}, acx[16]={}, acy[16]={};
-      |          ^~~~
-../src/main.c: In function 'sumar_puntajes':
-../src/main.c:700:28: error: 'puntaje_maximoS' undeclared (first use in this function); did you mean 'puntaje_maximo'?
-  700 |     if (contador_puntaje < puntaje_maximoS) {
-      |                            ^~~~~~~~~~~~~~~
-      |                            puntaje_maximo
-../src/main.c:700:28: note: each undeclared identifier is reported only once for each function it appears in
-'Finished building: ../src/main.c'
-' '
+make[1]: Nothing to be done for 'main-build'.
