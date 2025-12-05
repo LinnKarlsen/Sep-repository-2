@@ -312,8 +312,6 @@ set_multicycle_path 1 -hold -end -to [get_cells -hier *maw_fifo_push_1ff* -filte
 current_instance
 set_property src_info {type:XDC file:3 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=sysclk
-set_property src_info {type:XDC file:3 line:20 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { btn_0 }]; #IO_L12N_T1_MRCC_35 Sch=btn[0]
 set_property src_info {type:XDC file:3 line:39 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { rgb_R }]; #IO_L18P_T2_34 Sch=led6_r
 set_property src_info {type:XDC file:3 line:40 export:INPUT save:INPUT read:READ} [current_design]

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Dec  2 22:01:11 2025
+--Date        : Thu Dec  4 22:19:20 2025
 --Host        : TROND-ENVYX360 running 64-bit major release  (build 9200)
 --Command     : generate_target DEMO.bd
 --Design      : DEMO
@@ -3193,7 +3193,6 @@ entity DEMO is
     RST_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     RS_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     SCLK : out STD_LOGIC;
-    btn_0 : in STD_LOGIC;
     clk : in STD_LOGIC;
     iic_rtl_scl_i : in STD_LOGIC;
     iic_rtl_scl_o : out STD_LOGIC;
@@ -3218,7 +3217,7 @@ entity DEMO is
     spi_rtl_ss_t : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of DEMO : entity is "DEMO,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=DEMO,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=44,numReposBlks=31,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=25,da_board_cnt=10,da_clkrst_cnt=4,da_ps7_cnt=1,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of DEMO : entity is "DEMO,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=DEMO,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=38,numReposBlks=25,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=25,da_board_cnt=10,da_clkrst_cnt=4,da_ps7_cnt=1,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of DEMO : entity is "DEMO.hwdef";
 end DEMO;
@@ -3750,37 +3749,6 @@ architecture STRUCTURE of DEMO is
     M00_AXI_rready : out STD_LOGIC
   );
   end component DEMO_axi_smc_1_3;
-  component DEMO_rgb_controller_0_0 is
-  port (
-    state : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    win : in STD_LOGIC;
-    rgb_R_rainbow : in STD_LOGIC;
-    rgb_G_rainbow : in STD_LOGIC;
-    rgb_B_rainbow : in STD_LOGIC;
-    rgb_R : out STD_LOGIC;
-    rgb_G : out STD_LOGIC;
-    rgb_B : out STD_LOGIC
-  );
-  end component DEMO_rgb_controller_0_0;
-  component DEMO_vio_1_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe_out0 : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component DEMO_vio_1_0;
-  component DEMO_vio_2_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe_out0 : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component DEMO_vio_2_0;
-  component DEMO_debouncer_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    button : in STD_LOGIC;
-    debounced_pulse : out STD_LOGIC
-  );
-  end component DEMO_debouncer_0_0;
   component DEMO_axi_timer_0_0 is
   port (
     capturetrig0 : in STD_LOGIC;
@@ -3934,30 +3902,9 @@ architecture STRUCTURE of DEMO is
     s_axi_rready : in STD_LOGIC
   );
   end component DEMO_axi_timer_2_0;
-  component DEMO_state_machine_0_2 is
-  port (
-    clk : in STD_LOGIC;
-    btn_0 : in STD_LOGIC;
-    finished : in STD_LOGIC;
-    state : out STD_LOGIC_VECTOR ( 1 downto 0 )
-  );
-  end component DEMO_state_machine_0_2;
-  component DEMO_util_vector_logic_1_0 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    Op2 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    Res : out STD_LOGIC_VECTOR ( 1 downto 0 )
-  );
-  end component DEMO_util_vector_logic_1_0;
-  component DEMO_util_reduced_logic_0_1 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    Res : out STD_LOGIC
-  );
-  end component DEMO_util_reduced_logic_0_1;
   component DEMO_xlconstant_0_0 is
   port (
-    dout : out STD_LOGIC_VECTOR ( 1 downto 0 )
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component DEMO_xlconstant_0_0;
   component DEMO_axi_timer_3_0 is
@@ -4015,6 +3962,30 @@ architecture STRUCTURE of DEMO is
     gpio2_io_i : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component DEMO_axi_gpio_2_0;
+  component DEMO_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe10 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe12 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe13 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe14 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe15 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe16 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe17 : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    probe18 : in STD_LOGIC_VECTOR ( 2 downto 0 )
+  );
+  end component DEMO_ila_0_0;
   signal BuzzerBooster_Driver_0_PWM : STD_LOGIC;
   signal axi_gpio_0_GPIO2_TRI_O : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_0_GPIO_TRI_O : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4173,9 +4144,7 @@ architecture STRUCTURE of DEMO is
   signal axi_traffic_gen_1_M_AXI_WREADY : STD_LOGIC;
   signal axi_traffic_gen_1_M_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_traffic_gen_1_M_AXI_WVALID : STD_LOGIC;
-  signal button_0_1 : STD_LOGIC;
   signal clk_0_1 : STD_LOGIC;
-  signal debouncer_0_debounced_pulse : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -4426,22 +4395,14 @@ architecture STRUCTURE of DEMO is
   signal ps7_0_axi_periph_M10_AXI_WREADY : STD_LOGIC;
   signal ps7_0_axi_periph_M10_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M10_AXI_WVALID : STD_LOGIC;
-  signal rgb_controller_0_rgb_B : STD_LOGIC;
-  signal rgb_controller_0_rgb_G : STD_LOGIC;
-  signal rgb_controller_0_rgb_R : STD_LOGIC;
   signal rgb_rainbow_0_rgb_B : STD_LOGIC;
   signal rgb_rainbow_0_rgb_G : STD_LOGIC;
   signal rgb_rainbow_0_rgb_R : STD_LOGIC;
   signal rst_clk_125M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_50M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal state_machine_0_state : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal util_reduced_logic_0_Res : STD_LOGIC;
-  signal util_vector_logic_1_Res : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal vio_0_probe_out0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal vio_1_probe_out0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal vio_2_probe_out0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_iic_0_gpo_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_quad_spi_0_io0_o_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_quad_spi_0_io0_t_UNCONNECTED : STD_LOGIC;
@@ -4511,8 +4472,8 @@ architecture STRUCTURE of DEMO is
   attribute X_INTERFACE_INFO of spi_rtl_sck_o : signal is "xilinx.com:interface:spi:1.0 spi_rtl SCK_O";
   attribute X_INTERFACE_INFO of spi_rtl_sck_t : signal is "xilinx.com:interface:spi:1.0 spi_rtl SCK_T";
   attribute X_INTERFACE_INFO of spi_rtl_ss_t : signal is "xilinx.com:interface:spi:1.0 spi_rtl SS_T";
-  attribute X_INTERFACE_INFO of BTN0_tri_i : signal is "xilinx.com:interface:gpio:1.0 BTN0 ";
-  attribute X_INTERFACE_INFO of BTN1_tri_i : signal is "xilinx.com:interface:gpio:1.0 BTN1 ";
+  attribute X_INTERFACE_INFO of BTN0_tri_i : signal is "xilinx.com:interface:gpio:1.0 BTN0 TRI_I";
+  attribute X_INTERFACE_INFO of BTN1_tri_i : signal is "xilinx.com:interface:gpio:1.0 BTN1 TRI_I";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -4542,15 +4503,14 @@ begin
   axi_quad_spi_1_SPI_0_IO1_I <= spi_rtl_io1_i;
   axi_quad_spi_1_SPI_0_SCK_I <= spi_rtl_sck_i;
   axi_quad_spi_1_SPI_0_SS_I(0) <= spi_rtl_ss_i(0);
-  button_0_1 <= btn_0;
   clk_0_1 <= clk;
   iic_rtl_scl_o <= axi_iic_0_IIC_SCL_O;
   iic_rtl_scl_t <= axi_iic_0_IIC_SCL_T;
   iic_rtl_sda_o <= axi_iic_0_IIC_SDA_O;
   iic_rtl_sda_t <= axi_iic_0_IIC_SDA_T;
-  rgb_B <= rgb_controller_0_rgb_B;
-  rgb_G <= rgb_controller_0_rgb_G;
-  rgb_R <= rgb_controller_0_rgb_R;
+  rgb_B <= rgb_rainbow_0_rgb_B;
+  rgb_G <= rgb_rainbow_0_rgb_G;
+  rgb_R <= rgb_rainbow_0_rgb_R;
   spi_rtl_io0_o <= axi_quad_spi_1_SPI_0_IO0_O;
   spi_rtl_io0_t <= axi_quad_spi_1_SPI_0_IO0_T;
   spi_rtl_io1_o <= axi_quad_spi_1_SPI_0_IO1_O;
@@ -4562,7 +4522,7 @@ begin
 BuzzerBooster_Driver_0: component DEMO_BuzzerBooster_Driver_0_1
      port map (
       PWM => BuzzerBooster_Driver_0_PWM,
-      mute => util_reduced_logic_0_Res,
+      mute => xlconstant_0_dout(0),
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
       s00_axi_araddr(3 downto 0) => ps7_0_axi_periph_M04_AXI_ARADDR(3 downto 0),
       s00_axi_aresetn => rst_ps7_0_50M_peripheral_aresetn(0),
@@ -5116,11 +5076,28 @@ axi_traffic_gen_1: component DEMO_axi_traffic_gen_1_0
       s_axi_wstrb(3 downto 0) => axi_smc_M00_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => axi_smc_M00_AXI_WVALID
     );
-debouncer_0: component DEMO_debouncer_0_0
+ila_0: component DEMO_ila_0_0
      port map (
-      button => button_0_1,
-      clk => clk_0_1,
-      debounced_pulse => debouncer_0_debounced_pulse
+      clk => processing_system7_0_FCLK_CLK0,
+      probe0(0) => ps7_0_axi_periph_M04_AXI_WREADY,
+      probe1(3 downto 0) => ps7_0_axi_periph_M04_AXI_AWADDR(3 downto 0),
+      probe10(31 downto 0) => ps7_0_axi_periph_M04_AXI_RDATA(31 downto 0),
+      probe11(0) => ps7_0_axi_periph_M04_AXI_AWVALID,
+      probe12(0) => ps7_0_axi_periph_M04_AXI_AWREADY,
+      probe13(1 downto 0) => ps7_0_axi_periph_M04_AXI_RRESP(1 downto 0),
+      probe14(31 downto 0) => ps7_0_axi_periph_M04_AXI_WDATA(31 downto 0),
+      probe15(3 downto 0) => ps7_0_axi_periph_M04_AXI_WSTRB(3 downto 0),
+      probe16(0) => ps7_0_axi_periph_M04_AXI_RVALID,
+      probe17(2 downto 0) => ps7_0_axi_periph_M04_AXI_ARPROT(2 downto 0),
+      probe18(2 downto 0) => ps7_0_axi_periph_M04_AXI_AWPROT(2 downto 0),
+      probe2(1 downto 0) => ps7_0_axi_periph_M04_AXI_BRESP(1 downto 0),
+      probe3(0) => ps7_0_axi_periph_M04_AXI_BVALID,
+      probe4(0) => ps7_0_axi_periph_M04_AXI_BREADY,
+      probe5(3 downto 0) => ps7_0_axi_periph_M04_AXI_ARADDR(3 downto 0),
+      probe6(0) => ps7_0_axi_periph_M04_AXI_RREADY,
+      probe7(0) => ps7_0_axi_periph_M04_AXI_WVALID,
+      probe8(0) => ps7_0_axi_periph_M04_AXI_ARVALID,
+      probe9(0) => ps7_0_axi_periph_M04_AXI_ARREADY
     );
 processing_system7_0: component DEMO_processing_system7_0_0
      port map (
@@ -5447,17 +5424,6 @@ ps7_0_axi_periph: entity work.DEMO_ps7_0_axi_periph_0
       S00_AXI_wstrb(3 downto 0) => processing_system7_0_M_AXI_GP0_WSTRB(3 downto 0),
       S00_AXI_wvalid => processing_system7_0_M_AXI_GP0_WVALID
     );
-rgb_controller_0: component DEMO_rgb_controller_0_0
-     port map (
-      rgb_B => rgb_controller_0_rgb_B,
-      rgb_B_rainbow => rgb_rainbow_0_rgb_B,
-      rgb_G => rgb_controller_0_rgb_G,
-      rgb_G_rainbow => rgb_rainbow_0_rgb_G,
-      rgb_R => rgb_controller_0_rgb_R,
-      rgb_R_rainbow => rgb_rainbow_0_rgb_R,
-      state(1 downto 0) => state_machine_0_state(1 downto 0),
-      win => vio_2_probe_out0(0)
-    );
 rgb_rainbow_0: component DEMO_rgb_rainbow_0_3
      port map (
       clk => clk_0_1,
@@ -5530,38 +5496,10 @@ rst_ps7_0_50M: component DEMO_rst_ps7_0_50M_0
       peripheral_reset(0) => NLW_rst_ps7_0_50M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
     );
-state_machine_0: component DEMO_state_machine_0_2
-     port map (
-      btn_0 => debouncer_0_debounced_pulse,
-      clk => clk_0_1,
-      finished => vio_1_probe_out0(0),
-      state(1 downto 0) => state_machine_0_state(1 downto 0)
-    );
-util_reduced_logic_0: component DEMO_util_reduced_logic_0_1
-     port map (
-      Op1(1 downto 0) => util_vector_logic_1_Res(1 downto 0),
-      Res => util_reduced_logic_0_Res
-    );
-util_vector_logic_1: component DEMO_util_vector_logic_1_0
-     port map (
-      Op1(1 downto 0) => xlconstant_0_dout(1 downto 0),
-      Op2(1 downto 0) => state_machine_0_state(1 downto 0),
-      Res(1 downto 0) => util_vector_logic_1_Res(1 downto 0)
-    );
 vio_0: component DEMO_vio_0_0
      port map (
       clk => clk_0_1,
       probe_out0(0) => vio_0_probe_out0(0)
-    );
-vio_1: component DEMO_vio_1_0
-     port map (
-      clk => clk_0_1,
-      probe_out0(0) => vio_1_probe_out0(0)
-    );
-vio_2: component DEMO_vio_2_0
-     port map (
-      clk => clk_0_1,
-      probe_out0(0) => vio_2_probe_out0(0)
     );
 xlconcat_0: component DEMO_xlconcat_0_0
      port map (
@@ -5575,6 +5513,6 @@ xlconcat_0: component DEMO_xlconcat_0_0
     );
 xlconstant_0: component DEMO_xlconstant_0_0
      port map (
-      dout(1 downto 0) => xlconstant_0_dout(1 downto 0)
+      dout(0) => xlconstant_0_dout(0)
     );
 end STRUCTURE;

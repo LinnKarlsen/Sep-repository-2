@@ -15570,3 +15570,30 @@ con
 21:41:51 INFO  : Platform repository initialization has completed.
 21:41:52 INFO  : Registering command handlers for Vitis TCF services
 21:42:05 INFO  : Successfully done query RDI_DATADIR 
+22:01:31 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\linnh\Sep-repository-2\Avancefinal\temp_xsdb_launch_script.tcl
+22:01:35 INFO  : XSCT server has started successfully.
+22:01:36 INFO  : plnx-install-location is set to ''
+22:01:36 INFO  : Successfully done setting XSCT server connection channel  
+22:01:36 INFO  : Successfully done setting workspace for the tool. 
+22:01:45 INFO  : Platform repository initialization has completed.
+22:01:46 INFO  : Successfully done query RDI_DATADIR 
+22:01:47 INFO  : Registering command handlers for Vitis TCF services
+23:12:08 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\linnh\Sep-repository-2\Avancefinal\temp_xsdb_launch_script.tcl
+23:12:14 INFO  : XSCT server has started successfully.
+23:12:14 INFO  : plnx-install-location is set to ''
+23:12:14 INFO  : Successfully done setting XSCT server connection channel  
+23:12:14 INFO  : Successfully done setting workspace for the tool. 
+23:12:25 INFO  : Platform repository initialization has completed.
+23:12:26 INFO  : Registering command handlers for Vitis TCF services
+23:12:32 INFO  : Successfully done query RDI_DATADIR 
+23:14:25 INFO  : Hardware specification for platform project 'HW_Base_Booster' is updated.
+23:16:46 INFO  : Result from executing command 'getProjects': HW_Base_Booster
+23:16:46 INFO  : Result from executing command 'getPlatforms': HW_Base_Booster|C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm
+23:17:08 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+23:17:33 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+23:17:38 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+23:17:40 INFO  : The hardware specfication used by project 'SW_Base_Booster' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+23:17:40 INFO  : The file 'C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\_ide\bitstream\DEMO_wrapper_new3.bit' stored in project is removed.
+23:17:40 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\_ide\bitstream' in project 'SW_Base_Booster'.
+23:17:40 INFO  : The file 'C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\_ide\psinit\ps7_init.tcl' stored in project is removed.
+23:17:51 INFO  : The updated ps init files are copied from platform to folder 'C:\Users\linnh\Sep-repository-2\Avancefinal\SW_Base_Booster\_ide\psinit' in project 'SW_Base_Booster'.

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Dec  2 22:01:11 2025
+--Date        : Thu Dec  4 22:19:21 2025
 --Host        : TROND-ENVYX360 running 64-bit major release  (build 9200)
 --Command     : generate_target DEMO_wrapper.bd
 --Design      : DEMO_wrapper
@@ -43,7 +43,6 @@ entity DEMO_wrapper is
     RST_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     RS_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     SCLK : out STD_LOGIC;
-    btn_0 : in STD_LOGIC;
     clk : in STD_LOGIC;
     iic_rtl_scl_io : inout STD_LOGIC;
     iic_rtl_sda_io : inout STD_LOGIC;
@@ -67,8 +66,12 @@ architecture STRUCTURE of DEMO_wrapper is
     rgb_R : out STD_LOGIC;
     rgb_G : out STD_LOGIC;
     rgb_B : out STD_LOGIC;
-    btn_0 : in STD_LOGIC;
     PWM : out STD_LOGIC;
+    BTN1_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    BTN0_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    RS_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    RST_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    LIGHT_IRQ_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -84,15 +87,6 @@ architecture STRUCTURE of DEMO_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    RS_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    LIGHT_IRQ_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    RST_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    FIXED_IO_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
     spi_rtl_io0_i : in STD_LOGIC;
     spi_rtl_io0_o : out STD_LOGIC;
     spi_rtl_io0_t : out STD_LOGIC;
@@ -111,8 +105,12 @@ architecture STRUCTURE of DEMO_wrapper is
     iic_rtl_sda_i : in STD_LOGIC;
     iic_rtl_sda_o : out STD_LOGIC;
     iic_rtl_sda_t : out STD_LOGIC;
-    BTN0_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    BTN1_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 )
+    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    FIXED_IO_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_ps_clk : inout STD_LOGIC;
+    FIXED_IO_ps_porb : inout STD_LOGIC
   );
   end component DEMO;
   component IOBUF is
@@ -175,7 +173,6 @@ DEMO_i: component DEMO
       RST_tri_o(0) => RST_tri_o(0),
       RS_tri_o(0) => RS_tri_o(0),
       SCLK => SCLK,
-      btn_0 => btn_0,
       clk => clk,
       iic_rtl_scl_i => iic_rtl_scl_i,
       iic_rtl_scl_o => iic_rtl_scl_o,

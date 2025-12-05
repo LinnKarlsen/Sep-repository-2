@@ -588,7 +588,7 @@ void Check_score(int *score, int *windowblocked, int current_step){
 	joyx_val = read_joyx();
 	joyy_val = read_joyy();
 	acx_val = read_acx();
-	xil_printf("%d\n",acx_val);
+	//xil_printf("%d\n",acx_val);
 
 	if(current_step == LEFT_ref){
 		if(joyx_val<300){

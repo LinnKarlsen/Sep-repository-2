@@ -19402,3 +19402,1565 @@ TRACE::2025-12-02.22:31:12::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-rep
 C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2025-12-02.22:31:12::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:13:52::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:13:52::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:13:52::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:13:56::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:13:56::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:13:56::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:13:56::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened new HwDB with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWReader::Active system found as  HW_Base_Booster
+TRACE::2025-12-04.23:14:01::SCWReader::Handling sysconfig HW_Base_Booster
+TRACE::2025-12-04.23:14:01::SCWDomain::checking for install qemu data   : 
+TRACE::2025-12-04.23:14:01::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-12-04.23:14:01::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-12-04.23:14:01::SCWMssOS::No sw design opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::mss exists loading the mss file  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::Opened the sw design from mss  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::Adding the swdes entry C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-12-04.23:14:01::SCWMssOS::updating the scw layer about changes
+TRACE::2025-12-04.23:14:01::SCWMssOS::Opened the sw design.  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:01::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:01::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2025-12-04.23:14:01::SCWMssOS::Saving the mss changes C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-04.23:14:01::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-04.23:14:01::SCWMssOS::Commit changes completed.
+TRACE::2025-12-04.23:14:01::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-12-04.23:14:01::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:01::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWReader::No isolation master present  
+TRACE::2025-12-04.23:14:01::SCWDomain::checking for install qemu data   : 
+TRACE::2025-12-04.23:14:01::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2025-12-04.23:14:01::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:01::SCWMssOS::No sw design opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::mss exists loading the mss file  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::Opened the sw design from mss  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::Adding the swdes entry C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-12-04.23:14:01::SCWMssOS::updating the scw layer about changes
+TRACE::2025-12-04.23:14:01::SCWMssOS::Opened the sw design.  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::Saving the mss changes C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-04.23:14:01::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-04.23:14:01::SCWMssOS::Commit changes completed.
+TRACE::2025-12-04.23:14:01::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2025-12-04.23:14:01::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:01::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:01::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:01::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:01::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:01::SCWReader::No isolation master present  
+TRACE::2025-12-04.23:14:14::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:14::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:14::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:14::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:14::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:14::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:14::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:14::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:14::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:14::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:14::SCWPlatform:: Platform location is C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa
+TRACE::2025-12-04.23:14:14::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:14::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:19::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:19::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:19::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:19::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:19::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:19::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:19::SCWPlatform::update - Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-12-04.23:14:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:19::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:19::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new3.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper
+TRACE::2025-12-04.23:14:19::SCWPlatform::Opened existing hwdb DEMO_wrapper
+TRACE::2025-12-04.23:14:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:19::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:19::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:19::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:19::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/tempdsa/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:19::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:19::SCWPlatform::update - Opened existing hwdb DEMO_wrapper_0
+TRACE::2025-12-04.23:14:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:19::SCWMssOS::Saving the mss changes C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:19::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-04.23:14:19::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-04.23:14:19::SCWMssOS::Commit changes completed.
+TRACE::2025-12-04.23:14:19::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2025-12-04.23:14:19::SCWMssOS::Removing the swdes entry for  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:19::SCWMssOS::Saving the mss changes C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:19::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-04.23:14:19::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-04.23:14:19::SCWMssOS::Commit changes completed.
+TRACE::2025-12-04.23:14:19::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2025-12-04.23:14:19::SCWMssOS::Removing the swdes entry for  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:20::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:20::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:20::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:20::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:20::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:20::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:20::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-12-04.23:14:25::SCWPlatform::Opened new HwDB with name DEMO_wrapper_1
+TRACE::2025-12-04.23:14:25::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:25::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:25::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_1
+TRACE::2025-12-04.23:14:25::SCWPlatform::Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-12-04.23:14:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:25::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-12-04.23:14:25::SCWMssOS::No sw design opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::mss exists loading the mss file  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::Opened the sw design from mss  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::Adding the swdes entry C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-12-04.23:14:25::SCWMssOS::updating the scw layer about changes
+TRACE::2025-12-04.23:14:25::SCWMssOS::Opened the sw design.  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::Saving the mss changes C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-04.23:14:25::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-04.23:14:25::SCWMssOS::Commit changes completed.
+TRACE::2025-12-04.23:14:25::SCWMssOS::Saving the mss changes C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2025-12-04.23:14:25::SCWMssOS::Writing the mss file completed C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::Commit changes completed.
+TRACE::2025-12-04.23:14:25::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:25::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:25::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_1
+TRACE::2025-12-04.23:14:25::SCWPlatform::Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-12-04.23:14:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:25::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:25::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:25::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:25::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:25::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_1
+TRACE::2025-12-04.23:14:25::SCWPlatform::Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-12-04.23:14:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:25::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:25::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:14:25::SCWWriter::formatted JSON is {
+	"platformName":	"HW_Base_Booster",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"HW_Base_Booster",
+	"platHandOff":	"C:/Users/linnh/Sep-repository-2/Avancefinal/DEMO_wrapper_new4.xsa",
+	"platIntHandOff":	"<platformDir>/hw/DEMO_wrapper_new4.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"HW_Base_Booster",
+	"systems":	[{
+			"systemName":	"HW_Base_Booster",
+			"systemDesc":	"HW_Base_Booster",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"HW_Base_Booster",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"92d1fe5e15020a7c826b28e804fa51c1",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d70e4274c191301f3a169862cf05b0c4",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2025-12-04.23:14:34::SCWPlatform::Started generating the artifacts platform HW_Base_Booster
+TRACE::2025-12-04.23:14:34::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-12-04.23:14:34::SCWPlatform::Started generating the artifacts for system configuration HW_Base_Booster
+LOG::2025-12-04.23:14:34::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-12-04.23:14:34::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-12-04.23:14:34::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-12-04.23:14:34::SCWDomain::Building the domain as part of full build :  zynq_fsbl
+TRACE::2025-12-04.23:14:34::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:34::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:34::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:34::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:34::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:34::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:34::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_1
+TRACE::2025-12-04.23:14:34::SCWPlatform::Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-12-04.23:14:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:34::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:34::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:14:34::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:34::SCWBDomain::Completed writing the mss file at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2025-12-04.23:14:35::SCWBDomain::bsp generated is stale removing and regenerating. 
+TRACE::2025-12-04.23:14:40::SCWBDomain::Updating the makefile used for building the Application zynq_fsbl
+TRACE::2025-12-04.23:14:40::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:40::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:40::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:40::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:14:40::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:14:40::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:14:40::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_1
+TRACE::2025-12-04.23:14:40::SCWPlatform::Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-12-04.23:14:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:14:40::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:40::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+KEYINFO::2025-12-04.23:14:40::SCWMssOS::Could not open the swdb for system
+KEYINFO::2025-12-04.23:14:40::SCWMssOS::Could not open the sw design at  system
+ERROR: [Hsi 55-1558] Software Design system is not found
+
+TRACE::2025-12-04.23:14:40::SCWMssOS::Cleared the swdb table entry
+TRACE::2025-12-04.23:14:40::SCWMssOS::No sw design opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:40::SCWMssOS::mss exists loading the mss file  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:40::SCWMssOS::Opened the sw design from mss  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:40::SCWMssOS::Adding the swdes entry C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-12-04.23:14:40::SCWMssOS::updating the scw layer about changes
+TRACE::2025-12-04.23:14:40::SCWMssOS::Opened the sw design.  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:14:53::SCWBDomain::removing the temporary location in _platform.
+TRACE::2025-12-04.23:14:53::SCWBDomain::Makefile is Updated.
+TRACE::2025-12-04.23:14:53::SCWBDomain::doing clean.
+TRACE::2025-12-04.23:14:53::SCWBDomain::System Command Ran  C:&  cd  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl & make clean
+TRACE::2025-12-04.23:14:54::SCWBDomain::rm -rf  sd.o  nand.o  image_mover.o  md5.o  fsbl_hooks.o  main.o  nor.o  qspi.o  rsa.o  ps7_init.o  pcap.o  fsbl_handoff.o zynq
+TRACE::2025-12-04.23:14:54::SCWBDomain::_fsbl_bsp/ps7_cortexa9_0/lib/libxil.a executable.elf *.o
+
+TRACE::2025-12-04.23:14:54::SCWBDomain::System Command Ran  C:&  cd  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl & make 
+TRACE::2025-12-04.23:14:54::SCWBDomain::make -C zynq_fsbl_bsp
+
+TRACE::2025-12-04.23:14:54::SCWBDomain::make[1]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp'
+
+TRACE::2025-12-04.23:14:54::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-12-04.23:14:54::SCWBDomain::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2025-12-04.23:14:54::SCWBDomain::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2025-12-04.23:14:54::SCWBDomain::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:54::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:54::SCWBDomain::/libsrc/coresightps_dcc_v1_7/src'
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:55::SCWBDomain::libsrc/coresightps_dcc_v1_7/src'
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-12-04.23:14:55::SCWBDomain::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-12-04.23:14:55::SCWBDomain:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:55::SCWBDomain::/libsrc/cpu_cortexa9_v2_9/src'
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:55::SCWBDomain::libsrc/cpu_cortexa9_v2_9/src'
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-12-04.23:14:55::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-12-04.23:14:55::SCWBDomain::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:55::SCWBDomain::/libsrc/ddrps_v1_1/src'
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:55::SCWBDomain::libsrc/ddrps_v1_1/src'
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:14:55::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:14:55::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:55::SCWBDomain::/libsrc/devcfg_v3_6/src'
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:55::SCWBDomain::libsrc/devcfg_v3_6/src'
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-12-04.23:14:55::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-12-04.23:14:55::SCWBDomain::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:55::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:55::SCWBDomain::/libsrc/dmaps_v2_6/src'
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:56::SCWBDomain::libsrc/dmaps_v2_6/src'
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-12-04.23:14:56::SCWBDomain::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-12-04.23:14:56::SCWBDomain::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:56::SCWBDomain::/libsrc/emacps_v3_11/src'
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:56::SCWBDomain::libsrc/emacps_v3_11/src'
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:14:56::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:14:56::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:56::SCWBDomain::/libsrc/gpiops_v3_7/src'
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:56::SCWBDomain::libsrc/gpiops_v3_7/src'
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-12-04.23:14:56::SCWBDomain::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-12-04.23:14:56::SCWBDomain::tfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:56::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:56::SCWBDomain::/libsrc/gpio_v4_6/src'
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:57::SCWBDomain::libsrc/gpio_v4_6/src'
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/iic_v3_6/src"
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make -C ps7_cortexa9_0/libsrc/iic_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:14:57::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:14:57::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:57::SCWBDomain::/libsrc/iic_v3_6/src'
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:57::SCWBDomain::libsrc/iic_v3_6/src'
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:14:57::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:14:57::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:57::SCWBDomain::/libsrc/qspips_v3_7/src'
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:57::SCWBDomain::libsrc/qspips_v3_7/src'
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:14:57::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:14:57::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:57::SCWBDomain::/libsrc/scugic_v4_2/src'
+
+TRACE::2025-12-04.23:14:57::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:57::SCWBDomain::libsrc/scugic_v4_2/src'
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2025-12-04.23:14:58::SCWBDomain::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2025-12-04.23:14:58::SCWBDomain::startfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:58::SCWBDomain::/libsrc/scutimer_v2_2/src'
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:58::SCWBDomain::libsrc/scutimer_v2_2/src'
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:14:58::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:14:58::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:58::SCWBDomain::/libsrc/scuwdt_v2_2/src'
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:58::SCWBDomain::libsrc/scuwdt_v2_2/src'
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-12-04.23:14:58::SCWBDomain::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-12-04.23:14:58::SCWBDomain::tfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:58::SCWBDomain::/libsrc/sdps_v3_9/src'
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:58::SCWBDomain::libsrc/sdps_v3_9/src'
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_6/src"
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make -C ps7_cortexa9_0/libsrc/spi_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:14:58::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:14:58::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:58::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:58::SCWBDomain::/libsrc/spi_v4_6/src'
+
+TRACE::2025-12-04.23:14:59::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:14:59::SCWBDomain::libsrc/spi_v4_6/src'
+
+TRACE::2025-12-04.23:14:59::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-12-04.23:14:59::SCWBDomain::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2025-12-04.23:14:59::SCWBDomain::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2025-12-04.23:14:59::SCWBDomain::nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:14:59::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:14:59::SCWBDomain::/libsrc/standalone_v7_2/src'
+
+TRACE::2025-12-04.23:15:00::SCWBDomain::make[3]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:00::SCWBDomain::/libsrc/standalone_v7_2/src/profile'
+
+TRACE::2025-12-04.23:15:00::SCWBDomain::make[3]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:00::SCWBDomain::libsrc/standalone_v7_2/src/profile'
+
+TRACE::2025-12-04.23:15:00::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:00::SCWBDomain::libsrc/standalone_v7_2/src'
+
+TRACE::2025-12-04.23:15:00::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_6/src"
+
+TRACE::2025-12-04.23:15:00::SCWBDomain::make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:00::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:00::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:00::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:00::SCWBDomain::/libsrc/tmrctr_v4_6/src'
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:01::SCWBDomain::libsrc/tmrctr_v4_6/src'
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:01::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:01::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:01::SCWBDomain::/libsrc/uartps_v3_9/src'
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:01::SCWBDomain::libsrc/uartps_v3_9/src'
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-12-04.23:15:01::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-12-04.23:15:01::SCWBDomain::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:01::SCWBDomain::/libsrc/usbps_v2_5/src'
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:01::SCWBDomain::libsrc/usbps_v2_5/src'
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:01::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:01::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:01::SCWBDomain::/libsrc/xadcps_v2_4/src'
+
+TRACE::2025-12-04.23:15:01::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:01::SCWBDomain::libsrc/xadcps_v2_4/src'
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:02::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:02::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:02::SCWBDomain::/libsrc/xilffs_v4_3/src'
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:02::SCWBDomain::libsrc/xilffs_v4_3/src'
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_6/src"
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:02::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:02::SCWBDomain::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:02::SCWBDomain::/libsrc/xilrsa_v1_6/src'
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:02::SCWBDomain::libsrc/xilrsa_v1_6/src'
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-12-04.23:15:02::SCWBDomain::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-12-04.23:15:02::SCWBDomain:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:02::SCWBDomain::/libsrc/coresightps_dcc_v1_7/src'
+
+TRACE::2025-12-04.23:15:02::SCWBDomain::"Compiling coresightps_dcc"
+
+TRACE::2025-12-04.23:15:05::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:05::SCWBDomain::libsrc/coresightps_dcc_v1_7/src'
+
+TRACE::2025-12-04.23:15:05::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-12-04.23:15:05::SCWBDomain::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2025-12-04.23:15:05::SCWBDomain::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2025-12-04.23:15:05::SCWBDomain::ostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:05::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:05::SCWBDomain::/libsrc/cpu_cortexa9_v2_9/src'
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::"Compiling cpu_cortexa9"
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:06::SCWBDomain::libsrc/cpu_cortexa9_v2_9/src'
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-12-04.23:15:06::SCWBDomain::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-12-04.23:15:06::SCWBDomain::iles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:06::SCWBDomain::/libsrc/ddrps_v1_1/src'
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::"Compiling ddrps"
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:06::SCWBDomain::libsrc/ddrps_v1_1/src'
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:06::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:06::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:06::SCWBDomain::/libsrc/devcfg_v3_6/src'
+
+TRACE::2025-12-04.23:15:06::SCWBDomain::"Compiling devcfg"
+
+TRACE::2025-12-04.23:15:08::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:08::SCWBDomain::libsrc/devcfg_v3_6/src'
+
+TRACE::2025-12-04.23:15:08::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-12-04.23:15:08::SCWBDomain::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-12-04.23:15:08::SCWBDomain::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-12-04.23:15:08::SCWBDomain::iles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:08::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:08::SCWBDomain::/libsrc/dmaps_v2_6/src'
+
+TRACE::2025-12-04.23:15:08::SCWBDomain::"Compiling dmaps"
+
+TRACE::2025-12-04.23:15:10::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:10::SCWBDomain::libsrc/dmaps_v2_6/src'
+
+TRACE::2025-12-04.23:15:10::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-12-04.23:15:10::SCWBDomain::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-12-04.23:15:10::SCWBDomain::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-12-04.23:15:10::SCWBDomain::tfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:10::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:10::SCWBDomain::/libsrc/emacps_v3_11/src'
+
+TRACE::2025-12-04.23:15:10::SCWBDomain::"Compiling emacps"
+
+TRACE::2025-12-04.23:15:12::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:12::SCWBDomain::libsrc/emacps_v3_11/src'
+
+TRACE::2025-12-04.23:15:12::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2025-12-04.23:15:12::SCWBDomain::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:12::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:12::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:12::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:12::SCWBDomain::/libsrc/gpiops_v3_7/src'
+
+TRACE::2025-12-04.23:15:12::SCWBDomain::"Compiling gpiops"
+
+TRACE::2025-12-04.23:15:14::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:14::SCWBDomain::libsrc/gpiops_v3_7/src'
+
+TRACE::2025-12-04.23:15:14::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2025-12-04.23:15:14::SCWBDomain::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2025-12-04.23:15:14::SCWBDomain::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2025-12-04.23:15:14::SCWBDomain::les -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:14::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:14::SCWBDomain::/libsrc/gpio_v4_6/src'
+
+TRACE::2025-12-04.23:15:14::SCWBDomain::"Compiling gpio"
+
+TRACE::2025-12-04.23:15:16::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:16::SCWBDomain::libsrc/gpio_v4_6/src'
+
+TRACE::2025-12-04.23:15:16::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/iic_v3_6/src"
+
+TRACE::2025-12-04.23:15:16::SCWBDomain::make -C ps7_cortexa9_0/libsrc/iic_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+TRACE::2025-12-04.23:15:16::SCWBDomain::IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+TRACE::2025-12-04.23:15:16::SCWBDomain::es -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:16::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:16::SCWBDomain::/libsrc/iic_v3_6/src'
+
+TRACE::2025-12-04.23:15:16::SCWBDomain::"Compiling iic"
+
+TRACE::2025-12-04.23:15:20::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:20::SCWBDomain::libsrc/iic_v3_6/src'
+
+TRACE::2025-12-04.23:15:20::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-12-04.23:15:20::SCWBDomain::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:20::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:20::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:20::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:20::SCWBDomain::/libsrc/qspips_v3_7/src'
+
+TRACE::2025-12-04.23:15:20::SCWBDomain::"Compiling qspips"
+
+TRACE::2025-12-04.23:15:22::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:22::SCWBDomain::libsrc/qspips_v3_7/src'
+
+TRACE::2025-12-04.23:15:22::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-12-04.23:15:22::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:22::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:22::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:22::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:22::SCWBDomain::/libsrc/scugic_v4_2/src'
+
+TRACE::2025-12-04.23:15:22::SCWBDomain::"Compiling scugic"
+
+TRACE::2025-12-04.23:15:24::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:24::SCWBDomain::libsrc/scugic_v4_2/src'
+
+TRACE::2025-12-04.23:15:24::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-12-04.23:15:24::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-12-04.23:15:24::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-12-04.23:15:24::SCWBDomain::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:24::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:24::SCWBDomain::/libsrc/scutimer_v2_2/src'
+
+TRACE::2025-12-04.23:15:24::SCWBDomain::"Compiling scutimer"
+
+TRACE::2025-12-04.23:15:25::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:25::SCWBDomain::libsrc/scutimer_v2_2/src'
+
+TRACE::2025-12-04.23:15:25::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-12-04.23:15:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:25::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:25::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:25::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:25::SCWBDomain::/libsrc/scuwdt_v2_2/src'
+
+TRACE::2025-12-04.23:15:25::SCWBDomain::"Compiling scuwdt"
+
+TRACE::2025-12-04.23:15:26::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:26::SCWBDomain::libsrc/scuwdt_v2_2/src'
+
+TRACE::2025-12-04.23:15:27::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2025-12-04.23:15:27::SCWBDomain::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2025-12-04.23:15:27::SCWBDomain::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2025-12-04.23:15:27::SCWBDomain::les -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:27::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:27::SCWBDomain::/libsrc/sdps_v3_9/src'
+
+TRACE::2025-12-04.23:15:27::SCWBDomain::"Compiling sdps"
+
+TRACE::2025-12-04.23:15:29::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:29::SCWBDomain::libsrc/sdps_v3_9/src'
+
+TRACE::2025-12-04.23:15:29::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_6/src"
+
+TRACE::2025-12-04.23:15:29::SCWBDomain::make -C ps7_cortexa9_0/libsrc/spi_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+TRACE::2025-12-04.23:15:29::SCWBDomain::IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+TRACE::2025-12-04.23:15:29::SCWBDomain::es -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:29::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:29::SCWBDomain::/libsrc/spi_v4_6/src'
+
+TRACE::2025-12-04.23:15:29::SCWBDomain::"Compiling spi"
+
+TRACE::2025-12-04.23:15:31::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:31::SCWBDomain::libsrc/spi_v4_6/src'
+
+TRACE::2025-12-04.23:15:31::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-12-04.23:15:31::SCWBDomain::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-12-04.23:15:31::SCWBDomain::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-12-04.23:15:31::SCWBDomain::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:31::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:31::SCWBDomain::/libsrc/standalone_v7_2/src'
+
+TRACE::2025-12-04.23:15:31::SCWBDomain::"Compiling standalone"
+
+TRACE::2025-12-04.23:15:39::SCWBDomain::make[3]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:39::SCWBDomain::/libsrc/standalone_v7_2/src/profile'
+
+TRACE::2025-12-04.23:15:39::SCWBDomain::make[3]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:39::SCWBDomain::libsrc/standalone_v7_2/src/profile'
+
+TRACE::2025-12-04.23:15:39::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:39::SCWBDomain::libsrc/standalone_v7_2/src'
+
+TRACE::2025-12-04.23:15:39::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_6/src"
+
+TRACE::2025-12-04.23:15:39::SCWBDomain::make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:39::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:39::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:39::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:39::SCWBDomain::/libsrc/tmrctr_v4_6/src'
+
+TRACE::2025-12-04.23:15:39::SCWBDomain::"Compiling tmrctr"
+
+TRACE::2025-12-04.23:15:41::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:41::SCWBDomain::libsrc/tmrctr_v4_6/src'
+
+TRACE::2025-12-04.23:15:41::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2025-12-04.23:15:41::SCWBDomain::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:41::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:41::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:41::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:41::SCWBDomain::/libsrc/uartps_v3_9/src'
+
+TRACE::2025-12-04.23:15:41::SCWBDomain::"Compiling uartps"
+
+TRACE::2025-12-04.23:15:44::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:44::SCWBDomain::libsrc/uartps_v3_9/src'
+
+TRACE::2025-12-04.23:15:44::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2025-12-04.23:15:44::SCWBDomain::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-12-04.23:15:44::SCWBDomain::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-12-04.23:15:44::SCWBDomain::iles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:44::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:44::SCWBDomain::/libsrc/usbps_v2_5/src'
+
+TRACE::2025-12-04.23:15:44::SCWBDomain::"Compiling usbps"
+
+TRACE::2025-12-04.23:15:46::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:46::SCWBDomain::libsrc/usbps_v2_5/src'
+
+TRACE::2025-12-04.23:15:46::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-12-04.23:15:46::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:46::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:46::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:46::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:46::SCWBDomain::/libsrc/xadcps_v2_4/src'
+
+TRACE::2025-12-04.23:15:46::SCWBDomain::"Compiling xadcps"
+
+TRACE::2025-12-04.23:15:48::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:48::SCWBDomain::libsrc/xadcps_v2_4/src'
+
+TRACE::2025-12-04.23:15:48::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2025-12-04.23:15:48::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:48::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:48::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:48::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:48::SCWBDomain::/libsrc/xilffs_v4_3/src'
+
+TRACE::2025-12-04.23:15:48::SCWBDomain::"Compiling XilFFs Library"
+
+TRACE::2025-12-04.23:15:50::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:50::SCWBDomain::libsrc/xilffs_v4_3/src'
+
+TRACE::2025-12-04.23:15:51::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_6/src"
+
+TRACE::2025-12-04.23:15:51::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:51::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:51::SCWBDomain::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:51::SCWBDomain::make[2]: Entering directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0
+TRACE::2025-12-04.23:15:51::SCWBDomain::/libsrc/xilrsa_v1_6/src'
+
+TRACE::2025-12-04.23:15:51::SCWBDomain::make[2]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/
+TRACE::2025-12-04.23:15:51::SCWBDomain::libsrc/xilrsa_v1_6/src'
+
+TRACE::2025-12-04.23:15:51::SCWBDomain::'Finished building libraries'
+
+TRACE::2025-12-04.23:15:51::SCWBDomain::make[1]: Leaving directory 'C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp'
+
+TRACE::2025-12-04.23:15:51::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c sd.c -o sd.o -Izynq_fsbl_bsp/ps7_cort
+TRACE::2025-12-04.23:15:51::SCWBDomain::exa9_0/include -I.
+
+TRACE::2025-12-04.23:15:51::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_
+TRACE::2025-12-04.23:15:51::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:51::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c image_mover.c -o image_mover.o -Izynq
+TRACE::2025-12-04.23:15:51::SCWBDomain::_fsbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:52::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c md5.c -o md5.o -Izynq_fsbl_bsp/ps7_co
+TRACE::2025-12-04.23:15:52::SCWBDomain::rtexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:52::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c fsbl_hooks.c -o fsbl_hooks.o -Izynq_f
+TRACE::2025-12-04.23:15:52::SCWBDomain::sbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:52::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c main.c -o main.o -Izynq_fsbl_bsp/ps7_
+TRACE::2025-12-04.23:15:52::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:53::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c rsa.c -o rsa.o -Izynq_fsbl_bsp/ps7_co
+TRACE::2025-12-04.23:15:53::SCWBDomain::rtexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:53::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_co
+TRACE::2025-12-04.23:15:53::SCWBDomain::rtexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:53::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_
+TRACE::2025-12-04.23:15:53::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:54::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c ps7_init.c -o ps7_init.o -Izynq_fsbl_
+TRACE::2025-12-04.23:15:54::SCWBDomain::bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:54::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c pcap.c -o pcap.o -Izynq_fsbl_bsp/ps7_
+TRACE::2025-12-04.23:15:54::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:54::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c fsbl_handoff.S -o fsbl_handoff.o -Izy
+TRACE::2025-12-04.23:15:54::SCWBDomain::nq_fsbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2025-12-04.23:15:54::SCWBDomain::arm-none-eabi-gcc -o executable.elf  sd.o  nand.o  image_mover.o  md5.o  fsbl_hooks.o  main.o  rsa.o  nor.o  qspi.o  ps7_init.o
+TRACE::2025-12-04.23:15:54::SCWBDomain::  pcap.o  fsbl_handoff.o -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=
+TRACE::2025-12-04.23:15:54::SCWBDomain::hard -Wl,-build-id=none -specs=Xilinx.spec  -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxi
+TRACE::2025-12-04.23:15:54::SCWBDomain::l,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group                                              -Wl,--
+TRACE::2025-12-04.23:15:54::SCWBDomain::gc-sections -Lzynq_fsbl_bsp/ps7_cortexa9_0/lib -L./ -Tlscript.ld
+
+LOG::2025-12-04.23:15:55::SCWSystem::Checking the domain standalone_domain
+LOG::2025-12-04.23:15:55::SCWSystem::Not a boot domain 
+LOG::2025-12-04.23:15:55::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2025-12-04.23:15:55::SCWDomain::Generating domain artifcats
+TRACE::2025-12-04.23:15:55::SCWMssOS::Generating standalone artifcats
+TRACE::2025-12-04.23:15:55::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/qemu/
+TRACE::2025-12-04.23:15:55::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/qemu/
+TRACE::2025-12-04.23:15:55::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-12-04.23:15:55::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:15:55::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:15:55::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:15:55::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:15:55::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:15:55::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:15:55::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_1
+TRACE::2025-12-04.23:15:55::SCWPlatform::Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-12-04.23:15:55::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:15:55::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:15:55::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:15:55::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:15:55::SCWMssOS::Completed writing the mss file at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2025-12-04.23:15:55::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:15:55::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-12-04.23:15:55::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-12-04.23:15:55::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2025-12-04.23:15:55::SCWMssOS::doing bsp build ... 
+TRACE::2025-12-04.23:15:55::SCWMssOS::System Command Ran  C: & cd  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2025-12-04.23:15:55::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-12-04.23:15:55::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2025-12-04.23:15:55::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2025-12-04.23:15:55::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:56::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-12-04.23:15:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-12-04.23:15:56::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-12-04.23:15:56::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:56::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-12-04.23:15:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-12-04.23:15:56::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-12-04.23:15:56::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:56::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-12-04.23:15:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:56::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:56::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:56::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-12-04.23:15:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-12-04.23:15:56::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-12-04.23:15:56::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:57::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-12-04.23:15:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-12-04.23:15:57::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-12-04.23:15:57::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:57::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2025-12-04.23:15:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:57::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:57::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:57::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2025-12-04.23:15:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-12-04.23:15:57::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-12-04.23:15:57::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:57::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/iic_v3_6/src"
+
+TRACE::2025-12-04.23:15:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/iic_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:57::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:57::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:58::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-12-04.23:15:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:58::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:58::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:58::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-12-04.23:15:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:58::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:58::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:58::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-12-04.23:15:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2025-12-04.23:15:58::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2025-12-04.23:15:58::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:58::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-12-04.23:15:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:15:59::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:15:59::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:59::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2025-12-04.23:15:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-12-04.23:15:59::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-12-04.23:15:59::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:59::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/spi_v4_6/src"
+
+TRACE::2025-12-04.23:15:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/spi_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:15:59::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:15:59::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:15:59::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-12-04.23:15:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2025-12-04.23:15:59::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2025-12-04.23:15:59::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:01::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_6/src"
+
+TRACE::2025-12-04.23:16:01::SCWMssOS::make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:16:01::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:16:01::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:01::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2025-12-04.23:16:01::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:16:01::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:16:01::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:01::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2025-12-04.23:16:01::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-12-04.23:16:01::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-12-04.23:16:01::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:02::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-12-04.23:16:02::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2025-12-04.23:16:02::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2025-12-04.23:16:02::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:02::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2025-12-04.23:16:02::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2025-12-04.23:16:02::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2025-12-04.23:16:02::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:02::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2025-12-04.23:16:03::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2025-12-04.23:16:03::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2025-12-04.23:16:03::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2025-12-04.23:16:03::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:03::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2025-12-04.23:16:03::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2025-12-04.23:16:03::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-12-04.23:16:03::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-12-04.23:16:03::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:03::SCWMssOS::"Compiling ddrps"
+
+TRACE::2025-12-04.23:16:03::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2025-12-04.23:16:03::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:16:03::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:16:03::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:03::SCWMssOS::"Compiling devcfg"
+
+TRACE::2025-12-04.23:16:05::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2025-12-04.23:16:05::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-12-04.23:16:05::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-12-04.23:16:05::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:05::SCWMssOS::"Compiling dmaps"
+
+TRACE::2025-12-04.23:16:07::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2025-12-04.23:16:07::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2025-12-04.23:16:07::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2025-12-04.23:16:07::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:07::SCWMssOS::"Compiling emacps"
+
+TRACE::2025-12-04.23:16:09::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2025-12-04.23:16:09::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:16:09::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:16:09::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:10::SCWMssOS::"Compiling gpiops"
+
+TRACE::2025-12-04.23:16:12::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2025-12-04.23:16:12::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2025-12-04.23:16:12::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2025-12-04.23:16:12::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:12::SCWMssOS::"Compiling gpio"
+
+TRACE::2025-12-04.23:16:14::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/iic_v3_6/src"
+
+TRACE::2025-12-04.23:16:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/iic_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+TRACE::2025-12-04.23:16:14::SCWMssOS::IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+TRACE::2025-12-04.23:16:14::SCWMssOS::es -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:14::SCWMssOS::"Compiling iic"
+
+TRACE::2025-12-04.23:16:17::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2025-12-04.23:16:17::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:16:17::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:16:17::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:17::SCWMssOS::"Compiling qspips"
+
+TRACE::2025-12-04.23:16:20::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2025-12-04.23:16:20::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:16:20::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:16:20::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:20::SCWMssOS::"Compiling scugic"
+
+TRACE::2025-12-04.23:16:22::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2025-12-04.23:16:22::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2025-12-04.23:16:22::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2025-12-04.23:16:22::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:22::SCWMssOS::"Compiling scutimer"
+
+TRACE::2025-12-04.23:16:23::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2025-12-04.23:16:23::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:16:23::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:16:23::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:23::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2025-12-04.23:16:24::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2025-12-04.23:16:24::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2025-12-04.23:16:24::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2025-12-04.23:16:24::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:24::SCWMssOS::"Compiling sdps"
+
+TRACE::2025-12-04.23:16:27::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/spi_v4_6/src"
+
+TRACE::2025-12-04.23:16:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/spi_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+TRACE::2025-12-04.23:16:27::SCWMssOS::IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+TRACE::2025-12-04.23:16:27::SCWMssOS::es -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:27::SCWMssOS::"Compiling spi"
+
+TRACE::2025-12-04.23:16:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2025-12-04.23:16:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2025-12-04.23:16:29::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2025-12-04.23:16:29::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:29::SCWMssOS::"Compiling standalone"
+
+TRACE::2025-12-04.23:16:36::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_6/src"
+
+TRACE::2025-12-04.23:16:36::SCWMssOS::make -C ps7_cortexa9_0/libsrc/tmrctr_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:16:36::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:16:36::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:36::SCWMssOS::"Compiling tmrctr"
+
+TRACE::2025-12-04.23:16:39::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2025-12-04.23:16:39::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:16:39::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:16:39::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:39::SCWMssOS::"Compiling uartps"
+
+TRACE::2025-12-04.23:16:41::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2025-12-04.23:16:41::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2025-12-04.23:16:41::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2025-12-04.23:16:41::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:41::SCWMssOS::"Compiling usbps"
+
+TRACE::2025-12-04.23:16:43::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2025-12-04.23:16:43::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2025-12-04.23:16:43::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2025-12-04.23:16:43::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2025-12-04.23:16:44::SCWMssOS::"Compiling xadcps"
+
+TRACE::2025-12-04.23:16:45::SCWMssOS::'Finished building libraries'
+
+TRACE::2025-12-04.23:16:46::SCWMssOS::Copying to export directory.
+TRACE::2025-12-04.23:16:46::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-12-04.23:16:46::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2025-12-04.23:16:46::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2025-12-04.23:16:46::SCWSystem::Completed Processing the sysconfig HW_Base_Booster
+LOG::2025-12-04.23:16:46::SCWPlatform::Completed generating the artifacts for system configuration HW_Base_Booster
+TRACE::2025-12-04.23:16:46::SCWPlatform::Started preparing the platform 
+TRACE::2025-12-04.23:16:46::SCWSystem::Writing the bif file for system config HW_Base_Booster
+TRACE::2025-12-04.23:16:46::SCWSystem::dir created 
+TRACE::2025-12-04.23:16:46::SCWSystem::Writing the bif 
+TRACE::2025-12-04.23:16:46::SCWPlatform::Started writing the spfm file 
+TRACE::2025-12-04.23:16:46::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-12-04.23:16:46::SCWPlatform::Completed generating the platform
+TRACE::2025-12-04.23:16:46::SCWMssOS::Saving the mss changes C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:16:46::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-04.23:16:46::SCWMssOS::Running validate of swdbs.
+KEYINFO::2025-12-04.23:16:46::SCWMssOS::Could not open the swdb for system
+KEYINFO::2025-12-04.23:16:46::SCWMssOS::Could not open the sw design at  system
+ERROR: [Hsi 55-1558] Software Design system is not found
+
+TRACE::2025-12-04.23:16:46::SCWMssOS::Cleared the swdb table entry
+TRACE::2025-12-04.23:16:46::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-12-04.23:16:46::SCWMssOS::Writing the mss file completed C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:16:46::SCWMssOS::Commit changes completed.
+TRACE::2025-12-04.23:16:46::SCWMssOS::Saving the mss changes C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:16:46::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-12-04.23:16:46::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-12-04.23:16:46::SCWMssOS::Commit changes completed.
+TRACE::2025-12-04.23:16:46::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:16:46::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:16:46::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_1
+TRACE::2025-12-04.23:16:46::SCWPlatform::Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-12-04.23:16:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:16:46::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:16:46::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:16:46::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-12-04.23:16:46::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:16:46::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:16:46::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_1
+TRACE::2025-12-04.23:16:46::SCWPlatform::Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-12-04.23:16:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:16:46::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:16:46::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:16:46::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:16:46::SCWWriter::formatted JSON is {
+	"platformName":	"HW_Base_Booster",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"HW_Base_Booster",
+	"platHandOff":	"C:/Users/linnh/Sep-repository-2/Avancefinal/DEMO_wrapper_new4.xsa",
+	"platIntHandOff":	"<platformDir>/hw/DEMO_wrapper_new4.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"HW_Base_Booster",
+	"systems":	[{
+			"systemName":	"HW_Base_Booster",
+			"systemDesc":	"HW_Base_Booster",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"HW_Base_Booster",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"bd8fae9fba20526cdeda0a9af16c4012",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"d70e4274c191301f3a169862cf05b0c4",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-12-04.23:16:46::SCWPlatform::updated the xpfm file.
+TRACE::2025-12-04.23:16:46::SCWPlatform::Trying to open the hw design at C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform::DSA given C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform::DSA absoulate path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform::DSA directory C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw
+TRACE::2025-12-04.23:16:46::SCWPlatform:: Platform Path C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/hw/DEMO_wrapper_new4.xsa
+TRACE::2025-12-04.23:16:46::SCWPlatform:: Unique name xilinx:zybo-z7-10::0.0
+TRACE::2025-12-04.23:16:46::SCWPlatform::Trying to set the existing hwdb with name DEMO_wrapper_1
+TRACE::2025-12-04.23:16:46::SCWPlatform::Opened existing hwdb DEMO_wrapper_1
+TRACE::2025-12-04.23:16:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-12-04.23:16:46::SCWMssOS::Checking the sw design at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2025-12-04.23:16:46::SCWMssOS::DEBUG:  swdes dump  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-12-04.23:16:46::SCWMssOS::Sw design exists and opened at  C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss

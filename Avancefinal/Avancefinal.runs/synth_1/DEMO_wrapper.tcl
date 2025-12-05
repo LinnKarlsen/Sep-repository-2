@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -141,8 +140,6 @@ set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-rep
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_10/bd_088f_sbn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/bd_0/ip/ip_11/bd_088f_m00s2a_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_smc_1_3/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_1_0/DEMO_vio_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_vio_2_0/DEMO_vio_2_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_0_0/DEMO_axi_timer_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_timer_1_0/DEMO_axi_timer_1_0.xdc]
@@ -158,6 +155,10 @@ set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-rep
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_axi_gpio_2_0/DEMO_axi_gpio_2_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_auto_pc_0/DEMO_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/ip/DEMO_ila_0_0/DEMO_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/linnh/Sep-repository-2/Avancefinal/Avancefinal.srcs/sources_1/bd/DEMO/DEMO_ooc.xdc]
 
 OPTRACE "Adding files" END { }
