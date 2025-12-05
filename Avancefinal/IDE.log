@@ -16825,3 +16825,54 @@ con
 10:20:12 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
 10:20:25 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
 10:20:58 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+10:21:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:21:08 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+10:21:08 INFO  : 'jtag frequency' command is executed.
+10:21:08 INFO  : Context for 'APU' is selected.
+10:21:08 INFO  : System reset is completed.
+10:21:11 INFO  : 'after 3000' command is executed.
+10:21:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+10:21:13 INFO  : FPGA configured successfully with bitstream "C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit"
+10:21:13 INFO  : Context for 'APU' is selected.
+10:21:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa'.
+10:21:13 INFO  : 'configparams force-mem-access 1' command is executed.
+10:21:13 INFO  : Context for 'APU' is selected.
+10:21:13 INFO  : Sourcing of 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+10:21:14 INFO  : 'ps7_init' command is executed.
+10:21:14 INFO  : 'ps7_post_config' command is executed.
+10:21:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:21:19 INFO  : The application 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:21:19 INFO  : 'configparams force-mem-access 0' command is executed.
+10:21:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:21:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:21:19 INFO  : 'con' command is executed.
+10:21:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:21:19 INFO  : Launch script is exported to file 'C:\Users\fuent\Desktop\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\systemdebugger_sw_base_booster_system_standalone.tcl'
+10:45:58 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+10:52:33 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+10:55:32 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+10:56:03 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+10:56:07 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+10:56:11 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...

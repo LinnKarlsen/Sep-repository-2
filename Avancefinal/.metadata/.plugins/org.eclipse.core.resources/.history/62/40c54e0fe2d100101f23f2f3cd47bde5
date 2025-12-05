@@ -46,7 +46,7 @@
 #define GPIO_DEVICE_ID_2               XPAR_AXI_GPIO_2_DEVICE_ID
 #define SD_DEVICE_ID                   XPAR_XSDPS_0_DEVICE_ID
 
-// ==================== Variables externas (definidas en otros archivos) ====================
+// ==================== Variables externas  ====================
 extern XGpio gpio0;
 extern XSpi  SpiInstance;
 extern XSpi  SpiInstance1;
@@ -55,14 +55,12 @@ extern Note melody[];
 extern int melody_length;
 extern Step dance[];
 extern int dance_length;
+extern volatile int state_machine_update_needed;
+extern volatile int graphics_update_needed;
+extern volatile int game_sleep;
 
-// ==================== Variables volátiles compartidas (DEFINIDAS AQUÍ) ====================
-// Estas variables son modificadas por los handlers de interrupción y leídas en main
-volatile int state_machine_update_needed = 0;
-volatile int graphics_update_needed = 0;
-volatile int game_sleep = 0;
-
-// ==================== Variables globales de control de juego ====================
+// ==================== Variables globales  ====================
+// Control de juego
 volatile int score = 0;
 volatile int joyx_val = 0;
 volatile int joyy_val = 0;

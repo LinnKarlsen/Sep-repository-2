@@ -1,0 +1,828 @@
+#include <stdio.h>
+#include <sleep.h>
+#include <time.h>
+#include <unistd.h>
+#include "ff.h"
+#include "xsdps.h"
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xstatus.h"
+#include "Delay.h"
+#include "LCD_SPI.h"
+#include "LCD_Driver.h"
+#include "LCD_GUI.h"
+#include "ADC.h"
+#include "I2C.h"
+#include "xuartps.h"
+#include "xscugic.h"
+#include "xtmrctr.h"
+#include "sound.h"
+#include "melody.h"
+#include "dance.h"
+#include "careography.h"
+
+// ==================== Definiciones de extern ====================
+extern XGpio gpio0;  // GPIO original (plantilla base)
+extern XGpio gpio1;  // GPIO para el light sensor
+extern XGpio gpio2;  // GPIO para BTN0 y BTN1 (booster pack)
+extern XSpi  SpiInstance;
+extern XSpi  SpiInstance1;
+extern const unsigned char font[];
+extern Note melody[];
+extern int melody_length;
+extern Step dance[];
+extern int dance_length;
+extern volatile int state_machine_update_needed;
+extern volatile int graphics_update_needed;
+extern volatile int game_sleep;
+volatile int score = 0;
+#define puntaje_maximo 20
+volatile int joyx_val = 0;
+volatile int joyy_val = 0;
+volatile int acx_val = 0;
+volatile int song_end = 0;
+volatile int pose;
+
+// Variables globales para la SD
+static FATFS fatfs;
+static FIL fil;
+static XSdPs sd_ctl;
+static XSdPs_Config *sd_cfg;
+
+
+int mic_val = 0;
+int historial_puntaje[puntaje_maximo];
+int contador_puntaje = 0;
+
+// IDs de los timers asociados a la música, baile, gráficos y máquina de estados
+#define TIMER_DEVICE_ID_SOUND          XPAR_AXI_TIMER_0_DEVICE_ID
+#define TIMER_INTR_ID_SOUND            XPAR_FABRIC_AXI_TIMER_0_INTERRUPT_INTR
+#define TIMER_DEVICE_ID_DANCE          XPAR_AXI_TIMER_1_DEVICE_ID
+#define TIMER_INTR_ID_DANCE            XPAR_FABRIC_AXI_TIMER_1_INTERRUPT_INTR
+#define TIMER_DEVICE_ID_GRAPHICS       XPAR_AXI_TIMER_2_DEVICE_ID
+#define TIMER_INTR_ID_GRAPHICS         XPAR_FABRIC_AXI_TIMER_2_INTERRUPT_INTR
+#define TIMER_DEVICE_ID_STATE_MACHINE  XPAR_AXI_TIMER_3_DEVICE_ID
+#define TIMER_INTR_ID_STATE_MACHINE    XPAR_FABRIC_AXI_TIMER_3_INTERRUPT_INTR
+#define INTC_DEVICE_ID                 XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define GPIO_DEVICE_ID_1 XPAR_AXI_GPIO_1_DEVICE_ID
+#define GPIO_INTR_ID     XPAR_FABRIC_AXI_GPIO_1_IP2INTC_IRPT_INTR // Interrupciones GPIO 1
+#define GPIO_DEVICE_ID_2 XPAR_AXI_GPIO_2_DEVICE_ID // Botones GPIO del booster pack GPIO
+#define SD_DEVICE_ID     XPAR_XSDPS_0_DEVICE_ID // Tarjeta SD
+#define LOW_LIGHT_INTENSITY_THRESHOLD   500
+#define HIGH_LIGHT_INTENSITY_THRESHOLD  35000
+#define BACKGROUND  WHITE
+#define FOREGROUND  BLUE
+#define DELAY       1000
+
+
+// ==================== Instancias de los timers ====================
+XTmrCtr TimerInstanceGraphics;
+XTmrCtr TimerInstanceStateMachine;
+XScuGic InterruptController;
+XGpio gpio1;
+XGpio gpio2;
+
+// ==================== Prototipos de funciones ====================
+void Graphics_Timer_Interrupt_Handler(void *CallBackRef);
+void State_Machine_Timer_Interrupt_Handler(void *CallBackRef);
+void Light_Interrupt_Handler(void *CallbackRef);
+void Buzzer_Mute_UART_Command(void);
+void print_puntajes(void);
+void sumar_puntajes(int);
+void top5_puntajes(int top5[5]);
+int escritura_sd(void);
+
+// ==================== Variables para gráficas de las flechas ====================
+
+// Left arrow variables
+int left_flag1 = 0, left_flag2 = 0, left_flag3 = 0, left_flag4 = 0, left_flag5 = 0;
+int left_pose1 = -15, left_pose2 = -15, left_pose3 = -15, left_pose4 = -15, left_pose5 = -15;
+
+// Down arrow variables
+int down_flag1 = 0, down_flag2 = 0, down_flag3 = 0, down_flag4 = 0, down_flag5 = 0;
+int down_pose1 = -15, down_pose2 = -15, down_pose3 = -15, down_pose4 = -15, down_pose5 = -15;
+
+// Up arrow variables
+int up_flag1 = 0, up_flag2 = 0, up_flag3 = 0, up_flag4 = 0, up_flag5 = 0;
+int up_pose1 = -15, up_pose2 = -15, up_pose3 = -15, up_pose4 = -15, up_pose5 = -15;
+
+// Right arrow variables
+int right_flag1 = 0, right_flag2 = 0, right_flag3 = 0, right_flag4 = 0, right_flag5 = 0;
+int right_pose1 = -15, right_pose2 = -15, right_pose3 = -15, right_pose4 = -15, right_pose5 = -15;
+
+// Turn left variables
+int turn_left_flag1 = 0, turn_left_flag2 = 0;
+int turn_left_pose1 = -15, turn_left_pose2 = -15;
+
+// Turn right variables
+int turn_right_flag1 = 0, turn_right_flag2 = 0;
+int turn_right_pose1 = -15, turn_right_pose2 = -15;
+
+
+// ==================== Gameplay y puntaje ====================
+
+// Ventanas punteables
+int left_window1 = 0, left_window2 = 0, left_window3 = 0, left_window4 = 0, left_window5 = 0;
+int right_window1 = 0, right_window2 = 0, right_window3 = 0, right_window4 = 0, right_window5 = 0;
+int up_window1 = 0, up_window2 = 0, up_window3 = 0, up_window4 = 0, up_window5 = 0;
+int down_window1 = 0, down_window2 = 0, down_window3 = 0, down_window4 = 0, down_window5 = 0;
+
+// Bloqueos de ventanas
+int blocked_left_window1 = 0, blocked_left_window2 = 0, blocked_left_window3 = 0, blocked_left_window4 = 0, blocked_left_window5 = 0;
+int blocked_right_window1 = 0, blocked_right_window2 = 0, blocked_right_window3 = 0, blocked_right_window4 = 0, blocked_right_window5 = 0;
+int blocked_up_window1 = 0, blocked_up_window2 = 0, blocked_up_window3 = 0, blocked_up_window4 = 0, blocked_up_window5 = 0;
+int blocked_down_window1 = 0, blocked_down_window2 = 0, blocked_down_window3 = 0, blocked_down_window4 = 0, blocked_down_window5 = 0;
+int blocked_turn_left_window1 = 0, blocked_turn_left_window2 = 0;
+int blocked_turn_right_window1 = 0, blocked_turn_right_window2 = 0;
+
+
+// ==================== MAIN ====================
+int main() {
+	int podio_animado = 0;
+    int Status;
+
+    init_platform();
+    xil_printf("Inicio de la inicializacion del sistema...\r\n");
+
+    // -------------------- GPIO 0 --------------------
+    Status = XGpio_Initialize(&gpio0, XPAR_AXI_GPIO_0_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Fallo en inicializacion de GPIO 0\r\n");
+        return XST_FAILURE;
+    }
+
+    // -------------------- GPIO 1 --------------------
+	Status = XGpio_Initialize(&gpio1, XPAR_AXI_GPIO_1_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Fallo en inicializacion de GPIO 1\r\n");
+		return XST_FAILURE;
+		XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF); // Configurar canal 1 como entrada
+	}
+	// -------------------- GPIO 2 --------------------
+	Status = XGpio_Initialize(&gpio2, XPAR_AXI_GPIO_2_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Fallo en inicializacion de GPIO 2\r\n");
+		return XST_FAILURE;
+	}
+	XGpio_SetDataDirection(&gpio2, 1, 0xFFFFFFFF); // Configurar canal 1 como entrada
+	XGpio_SetDataDirection(&gpio2, 2, 0xFFFFFFFF); // Configurar canal 2 como entrada
+
+    // -------------------- SPI (LCD) --------------------
+    Status = XSpi_Init(&SpiInstance, SPI_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Error al iniciar modo SPI (LCD)\r\n");
+        return XST_FAILURE;
+    }
+
+    // -------------------- SPI (ADC) --------------------
+    Status = init_adc(&SpiInstance1, SPI_DEVICE_ID_1);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Error al iniciar modo SPI (ADC)\r\n");
+        return XST_FAILURE;
+    }
+
+    // -------------------- I2C --------------------
+    Status = init_IIC();
+    if (Status != XST_SUCCESS) {
+        xil_printf("Error al iniciar modo I2C \r\n");
+        return XST_FAILURE;
+    }
+
+    // -------------------- LCD --------------------
+    xil_printf("Inicializando LCD...\r\n");
+    LCD_SCAN_DIR LCD_ScanDir = SCAN_DIR_DFT;
+    LCD_Init(LCD_ScanDir);
+    LCD_Clear(GUI_BACKGROUND);
+    GUI_INTRO();
+    xil_printf("LCD lista\r\n");
+
+
+    // -------------------- GIC INITIALIZATION --------------------
+    xil_printf("Initializing GIC...\r\n");
+
+    // Initialize the interrupt controller
+    XScuGic_Config *IntcConfig;
+    IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+    if (NULL == IntcConfig) {
+        xil_printf("Failed to get interrupt controller configuration\r\n");
+        return XST_FAILURE;
+    }
+
+    Status = XScuGic_CfgInitialize(&InterruptController, IntcConfig,
+                                   IntcConfig->CpuBaseAddress);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to initialize interrupt controller\r\n");
+        return XST_FAILURE;
+    }
+
+    // Initialize exception handling
+    Xil_ExceptionInit();
+    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+                                (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+                                &InterruptController);
+    Xil_ExceptionEnable();
+
+
+    // -------------------- AUDIO INITIALIZATION --------------------
+    xil_printf("Initiating Audio Timer...\r\n");
+
+    // Initialize the sound timer
+    Status = Sound_Initialize_Timer(TIMER_DEVICE_ID_SOUND);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to initialize sound timer\r\n");
+        return XST_FAILURE;
+    }
+
+    // Set up the interrupt system for sound
+    Status = Sound_Setup_Interrupt_System(&InterruptController);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to set up sound interrupts\r\n");
+        return XST_FAILURE;
+    }
+
+
+    // -------------------- DANCE INITIALIZATION --------------------
+    xil_printf("Initiating Dance Timer...\r\n");
+
+    // Initialize the dance timer
+    Status = Dance_Initialize_Timer(TIMER_DEVICE_ID_DANCE);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to initialize dance timer\r\n");
+        return XST_FAILURE;
+    }
+
+    // Set up the interrupt system for dance
+    Status = Dance_Setup_Interrupt_System(&InterruptController);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to set up dance interrupts\r\n");
+        return XST_FAILURE;
+    }
+
+
+    // -------------------- GRAPHICS INITIALIZATION (MEASURE TIMER) --------------------
+    xil_printf("Initiating Measure Timer...\r\n");
+
+    // Initialize the measure timer
+    Status = XTmrCtr_Initialize(&TimerInstanceGraphics, TIMER_DEVICE_ID_GRAPHICS);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to initialize measure timer\r\n");
+        return XST_FAILURE;
+    }
+
+    // Configure measure timer options
+    XTmrCtr_SetOptions(&TimerInstanceGraphics, 0,
+                       XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+
+    // Set measure timer period
+    XTmrCtr_SetResetValue(&TimerInstanceGraphics, 0, 10000000);  // originalmente 1000000
+
+    // Connect measure timer interrupt
+    Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_GRAPHICS,
+                            (Xil_InterruptHandler)Graphics_Timer_Interrupt_Handler,
+                            (void *)&TimerInstanceGraphics);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to connect measure timer interrupt\r\n");
+        return XST_FAILURE;
+    }
+
+    XScuGic_Enable(&InterruptController, TIMER_INTR_ID_GRAPHICS);
+
+
+    // -------------------- LIGHT-TEMPERATURE STATE MACHINE TIMER --------------------
+    xil_printf("Initiating State Machine Timer...\r\n");
+
+    // Initialize the state machine timer
+    Status = XTmrCtr_Initialize(&TimerInstanceStateMachine, TIMER_DEVICE_ID_STATE_MACHINE);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to initialize light-temperature measure timer\r\n");
+        return XST_FAILURE;
+    }
+
+    // Configure timer options
+    XTmrCtr_SetOptions(&TimerInstanceStateMachine, 0,
+                       XTC_DOWN_COUNT_OPTION | XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+
+    // Set period
+    XTmrCtr_SetResetValue(&TimerInstanceStateMachine, 0, 50000000);
+
+    // Connect interrupt
+    Status = XScuGic_Connect(&InterruptController, TIMER_INTR_ID_STATE_MACHINE,
+                            (Xil_InterruptHandler)State_Machine_Timer_Interrupt_Handler,
+                            (void *)&TimerInstanceStateMachine);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to connect measure light-temperature timer interrupt\r\n");
+        return XST_FAILURE;
+    }
+
+    XScuGic_Enable(&InterruptController, TIMER_INTR_ID_STATE_MACHINE);
+
+
+    // -------------------- GPIO1 INTERRUPT INITIALIZATION --------------------
+
+    // Connect GPIO1 interrupt handler
+    Status = XScuGic_Connect(&InterruptController, GPIO_INTR_ID,
+                             (Xil_ExceptionHandler)Light_Interrupt_Handler,
+                             (void *)&gpio1);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Failed to connect Light Sensor Interrupt Handler\r\n");
+        return XST_FAILURE;
+    }
+
+    XGpio_InterruptEnable(&gpio1, XGPIO_IR_CH1_MASK);
+    XGpio_InterruptGlobalEnable(&gpio1);
+    XScuGic_Enable(&InterruptController, GPIO_INTR_ID);
+
+
+    // -------------------- GIC PRIORITY SETUP --------------------
+
+    // Highest priority: LTMEASURE
+    XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_STATE_MACHINE, 0x20, 0x3);
+
+    // Medium: MEASURE
+    XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x40, 0x3);
+
+    // Medium: GPIO1
+    XScuGic_SetPriorityTriggerType(&InterruptController, GPIO_INTR_ID, 0x10, 0x3);
+
+    // Low: GRAPHICS
+    //XScuGic_SetPriorityTriggerType(&InterruptController, TIMER_INTR_ID_GRAPHICS, 0x80, 0x3);
+
+
+    // -------------------- START TIMERS --------------------
+    XTmrCtr_Start(&TimerInstanceGraphics, 0);
+    XTmrCtr_Start(&TimerInstanceStateMachine, 0);
+
+    xil_printf("Graphics and Measurement Systems Initialized. Preparing to play melody...\r\n");
+
+
+    // -------------------- START MELODY & DANCE --------------------
+    // Initialize the melody & dance
+    initialize_melody(available_melodies[1], melody, &melody_length);
+    initialize_dance(available_dances[0], dance, &dance_length);
+
+    xil_printf("Melody playback started...\r\n");
+
+
+    // -------------------- MAIN CODE BLOCK --------------------
+    char joyx[16]={}, joyy[16]={}, acx[16]={}, acy[16]={};
+    char tmp[16]={}, opt[16]={}, pot1[16]={}, pot2[16]={}, mic[16]={};
+    char score_display[16]={};
+
+    int acy_val;
+    int pot1_val, pot2_val;
+    int tmp_val = 0;
+    int opt_val = 0;
+
+    int btn0, btn1;
+    int btn0_prev = 1;
+    int btn1_prev = 1;
+    int light_mode = 0;
+    int game_init_complete = 0;
+
+    // Definicion de la maquina de estados
+    enum state_t {START, GAME_INIT, GAME, PODIUM};
+    static enum state_t state = START;
+
+    // Indicators
+    int start_ready = 0;
+    int game_end = 0;
+
+    // Mensajes en pantalla de carga
+    char bienvenida[64] = "BTN0 para partir";
+    char loading[16] = "Loading...";
+
+    xil_printf("\nComandos UART: '1'=mute, '0'=unmute, 's'=historial, 'w'=guardar SD\r\n");
+
+    while (1) {
+    	Buzzer_Mute_UART_Command();
+    	if(graphics_update_needed)
+    		{
+
+
+    		switch (state) {
+    		    case START:
+    		        if(start_ready==0){
+    		            // Pagina de bienvenida del juego
+    		            GUI_INTRO();
+    		            GUI_DisString_EN(20,105,bienvenida,&Font8,GUI_BACKGROUND,WHITE);
+    		            start_ready = 1;
+    		        }
+    		        break;
+
+    		    case GAME_INIT:
+    		        start_ready = 0;
+    		        GUI_DisString_EN(34,115,loading,&Font8,GUI_BACKGROUND,WHITE);
+    		        // Revisamos la luminosidad
+    		        opt_val = read_opt();
+
+    		        if(opt_val>20000){
+    		            light_mode = 1;
+    		        }else{
+    		            light_mode = 0;
+    		        }
+
+    		        // Seleccionamos el Dance Floor dependiendo de la luminosidad
+    		        if(light_mode==0){
+    		            GUI_DANCE_FLOOR();
+    		        }
+    		        else{
+    		            GUI_DANCE_FLOOR_LIGHT();
+    		        }
+
+    		        // Consiguraciones adicionales
+    		        GUI_SCORE_BOARD();
+    		        Reset_Dance_Step_Flags_and_Pose();
+    		        score = 0;  // Resetear puntaje de partida actual
+
+    		        // Comienza a reproducir el baile y la música
+    		        song_end = 0;
+    		        current_note = 0;
+    		        current_step = 0;
+    		        Play_Next_Note();
+    		        Next_Dance_Step();
+
+    		        // Termina la inicialización del juego
+    		        game_init_complete = 1;
+
+    		        break;
+
+    		    case GAME:
+    		        game_init_complete = 0;
+
+    		        // Comienzan a correr las animaciones de las flechas
+    		        Run_Arrow_Animations(light_mode);
+
+    		        break;
+
+    		    case PODIUM:
+    		        // Nueva implementacion
+    		        if (!podio_animado) {  // Flag para evitar escritura multiple del podio
+    		            LCD_Clear(GUI_BACKGROUND); // Fondo negro
+
+    		            // Título del podio
+    		            GUI_DisString_EN(28, 5, "TOP 5 SCORES", &Font12, GUI_BACKGROUND, YELLOW);
+
+    		            // Obtener los mejores 5 puntajes
+    		            int top5[5];
+    		            top5_puntajes(top5); // Funcion propia creada
+
+    		            // Mostramos el top 5 de puntajes
+    		            char rank_display[20];
+    		            int y_position = 25;  // Posición Y inicial
+    		            int y_spacing = 18;   // Espaciado entre líneas
+
+    		            for (int i = 0; i < 5; i++) {
+    		                if (top5[i] > 0) {  // Solo mostrar si hay puntaje
+    		                    // Formato: "1. 1500 pts"
+    		                    sprintf(rank_display, "%d. %d pts", i + 1, top5[i]);
+
+    		                    // Colores distintos segun el podio
+    		                    int text_color;
+    		                    if (i == 0) text_color = YELLOW;
+    		                    else if (i == 1) text_color = CYAN;
+    		                    else if (i == 2) text_color = MAGENTA;
+    		                    else text_color = WHITE;
+
+    		                    // Resaltado del puntaje actual
+    		                    if (top5[i] == score && i < 3) {
+    		                        // Dibujar un indicador para el puntaje recién obtenido ">"
+    		                        GUI_DisString_EN(8, y_position, ">", &Font12, GUI_BACKGROUND, text_color);
+    		                    }
+
+    		                    GUI_DisString_EN(18, y_position, rank_display, &Font12, GUI_BACKGROUND, text_color);
+    		                } else {
+    		                    // Se muestra la línea vacía
+    		                    sprintf(rank_display, "%d. ---", i + 1);
+    		                    GUI_DisString_EN(18, y_position, rank_display, &Font12, GUI_BACKGROUND, WHITE);
+    		                }
+
+    		                y_position += y_spacing;
+    		            }
+
+    		            // Mostrar puntaje de la última partida
+    		            char last_game[24];
+    		            sprintf(last_game, "Ultima: %d", score);
+    		            GUI_DisString_EN(18, 108, last_game, &Font8, GUI_BACKGROUND, GREEN);
+
+    		            // Mostrar mensaje de continuar
+    		            GUI_DisString_EN(10, 118, "BTN0=volver", &Font8, GUI_BACKGROUND, WHITE);
+
+    		            podio_animado = 1;  // Marcar como dibujado
+    		        }
+    		        break;
+    		}
+				graphics_update_needed = 0;
+    		}
+
+    	if(state_machine_update_needed)
+		{
+
+    		btn0 = XGpio_DiscreteRead(&gpio2,1);
+    		btn1 = XGpio_DiscreteRead(&gpio2,2);
+
+    		switch (state) {
+				case START:
+					if (game_sleep){
+						state = PODIUM;
+					}
+					else if ((btn0!=1)&&btn0_prev){
+						state = GAME_INIT;
+						//xil_printf("start a game\n");
+					}
+					break;
+				case GAME_INIT:
+					if (game_init_complete){
+						state = GAME;
+					}
+					break;
+
+				case GAME:
+				    if (game_sleep){
+				        state = PODIUM;
+				    }
+				    else if ((btn0!=1)&&btn0_prev){
+				        // Guardar puntaje antes de salir (forzado con boton 0)
+				        sumar_puntajes(score);
+				        xil_printf("Partida terminada. Puntaje guardado: %d\r\n", score);
+				        state = START;
+				    }
+				    else if (song_end){
+				        // Guardar puntaje al terminar la canción
+				        sumar_puntajes(score);
+				        xil_printf("Cancion terminada. Puntaje guardado: %d\r\n", score);
+				        state = PODIUM;
+				    }
+				    // Actualizar puntaje en pantalla
+				    GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,GUI_BACKGROUND);
+				    sprintf(score_display, "%d", score);
+				    GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
+				    break;
+
+
+				case PODIUM:
+				    if ((btn0!=1)&&btn0_prev){
+				        state = START;
+				        game_sleep = 0;
+				        podio_animado = 0;
+
+				        // Guardar puntajes en SD antes de volver al menú
+				        if (escritura_sd() == XST_SUCCESS) {
+				            xil_printf("Puntajes guardados exitosamente en SD\r\n");
+				        } else {
+				            xil_printf("Error al guardar puntajes en SD\r\n");
+				        }
+
+				        // Imprimir historial por UART
+				        print_puntajes();
+				    }
+				    break;
+			}
+
+    		btn0_prev = btn0;
+    		btn1_prev = btn1;
+			state_machine_update_needed = 0;
+
+
+		}
+
+    }
+
+    cleanup_platform();
+    return 0;
+}
+
+// Variable global para control de actualización de mediciones
+volatile int graphics_update_needed = 0;
+
+// Graphics Timer Interrupt Handler
+void Graphics_Timer_Interrupt_Handler(void *CallBackRef)
+{
+    XTmrCtr *InstancePtr = (XTmrCtr *)CallBackRef;
+
+    // Clear the interrupt
+    u32 ControlStatusReg = XTmrCtr_GetControlStatusReg(InstancePtr->BaseAddress, 0);
+    XTmrCtr_SetControlStatusReg(InstancePtr->BaseAddress, 0, ControlStatusReg);
+
+    // Set the flag to indicate that graphics update is needed
+    graphics_update_needed = 1;
+}
+
+// Variable global para control de actualización de mediciones
+volatile int state_machine_update_needed = 0;
+
+// Graphics Timer Interrupt Handler
+void State_Machine_Timer_Interrupt_Handler(void *CallBackRef)
+{
+    XTmrCtr *InstancePtr = (XTmrCtr *)CallBackRef;
+
+    // Clear the interrupt
+    u32 ControlStatusReg = XTmrCtr_GetControlStatusReg(InstancePtr->BaseAddress, 0);
+    XTmrCtr_SetControlStatusReg(InstancePtr->BaseAddress, 0, ControlStatusReg);
+
+    // Set the flag to indicate that graphics update is needed
+    state_machine_update_needed = 1;
+}
+
+volatile int game_sleep = 0;
+
+//volatile int start = 1;
+
+void Light_Interrupt_Handler(void *CallbackRef)
+{
+	xil_printf("Light Interrput\n");
+	XGpio_InterruptDisable(&gpio1, XGPIO_IR_CH1_MASK);
+
+    // Read
+    int opt_val_intr = read_opt();
+
+    if (opt_val_intr < LOW_LIGHT_INTENSITY_THRESHOLD)
+    {
+        game_sleep = 1; // Entrar en estado de reposo
+        xil_printf("Sleep activado\n");
+    }
+    else if (opt_val_intr > HIGH_LIGHT_INTENSITY_THRESHOLD)
+    {
+        game_sleep = 0; // Salir de estado de reposo
+        xil_printf("Sleep desactivado\n");
+    }
+
+    (void)XGpio_InterruptClear(&gpio1, XGPIO_IR_CH1_MASK);
+    XGpio_InterruptEnable(&gpio1, XGPIO_IR_CH1_MASK);
+}
+
+void Buzzer_Mute_UART_Command(void) {
+    if (!XUartPs_IsReceiveData(STDIN_BASEADDRESS)) {
+        return;
+    }
+
+    /* Si hay datos, leemos un byte desde el RX FIFO (XUartPs_RecvByte devuelve u8/unsigned) */
+    u8 raw = XUartPs_RecvByte(STDIN_BASEADDRESS);
+
+    /* casteo seguro a char para comparar e imprimir */
+    char input_char = (char) raw;
+
+    /* eco de lo recibido */
+    xil_printf("\r\nRecibido por UART: '%c' (0x%02X)\r\n", input_char, (unsigned)raw);
+
+    /* Validación y acción sobre el buzzer */
+    if (input_char == '1') {
+        /* activar mute: bit 12 = 1 */
+        Buzzer_Write_Bit12(1);
+        xil_printf("Mute activado.\r\n");
+    }
+    else if (input_char == '0') {
+        /* desactivar mute: bit 12 = 0 */
+        Buzzer_Write_Bit12(0);
+        xil_printf("Mute desactivado.\r\n");
+    }
+
+    else if (input_char == 'w' || input_char == 'W') {
+        /* Guardar puntajes en SD manualmente */
+        xil_printf("Guardando puntajes en SD...\r\n");
+        if (escritura_sd() == XST_SUCCESS) {
+            xil_printf("Guardado exitoso!\r\n");
+        }
+    }
+    else if (input_char == 's' || input_char == 'S') {
+        /* mostrar historial de puntajes */
+        print_puntajes();
+    }
+    else {
+        /* entrada inválida */
+        xil_printf("Error: '1'=mute, '0'=unmute, 's'=scores, 'w'=save SD\r\n");
+    }
+}
+
+void sumar_puntajes(int s) {
+    if (contador_puntaje < puntaje_maximo) {
+        historial_puntaje[contador_puntaje++] = s;
+    } else {
+        // Desplazar hacia arriba para mantener los últimos puntajes
+        for (int i = 1; i < puntaje_maximo; i++) {
+            historial_puntaje[i-1] = historial_puntaje[i];
+        }
+        historial_puntaje[puntaje_maximo - 1] = s;
+    }
+}
+
+// Función para obtener los top 5 puntajes ordenados
+void top5_puntajes(int top5[5]) {
+    // Inicializar array con ceros
+    for (int i = 0; i < 5; i++) {
+        top5[i] = 0;
+    }
+
+    // Si no hay puntajes, retornar
+    if (contador_puntaje == 0) return;
+
+    // Copiar historial a array temporal
+    int temp[puntaje_maximo];
+    for (int i = 0; i < contador_puntaje; i++) {
+        temp[i] = historial_puntaje[i];
+    }
+
+    // Ordenamiento burbuja descendente (simple para arrays pequeños)
+    for (int i = 0; i < contador_puntaje - 1; i++) {
+        for (int j = 0; j < contador_puntaje - i - 1; j++) {
+            if (temp[j] < temp[j + 1]) {
+                int swap = temp[j];
+                temp[j] = temp[j + 1];
+                temp[j + 1] = swap;
+            }
+        }
+    }
+
+    // Copiar los top 5
+    int limit = (contador_puntaje < 5) ? contador_puntaje : 5;
+    for (int i = 0; i < limit; i++) {
+        top5[i] = temp[i];
+    }
+}
+
+void print_puntajes(void) {
+    xil_printf("\r\n=== HISTORIAL DE PARTIDAS ===\r\n");
+    if (contador_puntaje == 0) {
+        xil_printf("No hay registros todavia.\r\n");
+        return;
+    }
+
+    for (int i = 0; i < contador_puntaje; i++) {
+        xil_printf("Partida %d: %d puntos\r\n", i + 1, historial_puntaje[i]);
+    }
+    xil_printf("==============================\r\n");
+}
+
+
+int escritura_sd(void) {
+    s32 status;
+    FRESULT result;
+    UINT bytes_written;
+    const TCHAR *sd_file = "scores.txt";
+    const TCHAR *path = "0:/";
+    char score_buffer[512];  // Buffer para los datos
+
+    xil_printf("\r\n--- Iniciando escritura en SD ---\r\n");
+
+    // 1. Inicializar driver de SD
+    sd_cfg = XSdPs_LookupConfig(SD_DEVICE_ID);
+    if (NULL == sd_cfg) {
+        xil_printf("ERROR: No se encontro configuracion SD\r\n");
+        return XST_FAILURE;
+    }
+
+    status = XSdPs_CfgInitialize(&sd_ctl, sd_cfg, sd_cfg->BaseAddress);
+    if (status != XST_SUCCESS) {
+        xil_printf("ERROR: Fallo inicializacion SD\r\n");
+        return XST_FAILURE;
+    }
+
+    // 2. Montar sistema de archivos
+    result = f_mount(&fatfs, path, 1);  // 1 = mount now
+    if (result != FR_OK) {
+        xil_printf("ERROR: Fallo mount (codigo %d)\r\n", result);
+        return XST_FAILURE;
+    }
+
+    // 3. Abrir/crear archivo (FA_WRITE | FA_OPEN_APPEND agrega al final)
+    result = f_open(&fil, sd_file, FA_WRITE | FA_CREATE_ALWAYS);
+    if (result != FR_OK) {
+        xil_printf("ERROR: No se pudo abrir archivo (codigo %d)\r\n", result);
+        f_mount(NULL, path, 0);  // Desmontar
+        return XST_FAILURE;
+    }
+
+    // 4. Preparar datos en formato CSV
+    int pos = 0;
+    pos += sprintf(&score_buffer[pos], "Partida,Puntaje\r\n");  // Header
+
+    for (int i = 0; i < contador_puntaje; i++) {
+        pos += sprintf(&score_buffer[pos], "%d,%d\r\n", i + 1, historial_puntaje[i]);
+    }
+
+    // 5. Escribir en SD
+    result = f_write(&fil, (const void *)score_buffer, pos, &bytes_written);
+    if (result != FR_OK) {
+        xil_printf("ERROR: Fallo escritura (codigo %d)\r\n", result);
+        f_close(&fil);
+        f_mount(NULL, path, 0);
+        return XST_FAILURE;
+    }
+
+    // 6. Cerrar archivo
+    result = f_close(&fil);
+    if (result != FR_OK) {
+        xil_printf("ERROR: Fallo cierre archivo\r\n");
+        f_mount(NULL, path, 0);
+        return XST_FAILURE;
+    }
+
+    // 7. Desmontar SD
+    f_mount(NULL, path, 0);
+
+    xil_printf("OK: Se escribieron %d bytes en '%s'\r\n", bytes_written, sd_file);
+    xil_printf("    Total de partidas guardadas: %d\r\n", contador_puntaje);
+
+    return XST_SUCCESS;
+}
