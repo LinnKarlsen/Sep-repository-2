@@ -448,13 +448,13 @@ int main() {
                         Buzzer_Write_Bit12(1);
                     } else if ((btn0 != 1) && btn0_prev) {
                         state = GAME_INIT;
+                        Buzzer_Write_Bit12(0);
                     }
                     break;
 
                 case GAME_INIT:
                     if (game_init_complete) {
                         state = GAME;
-                        Buzzer_Write_Bit12(0);
                     }
                     break;
 

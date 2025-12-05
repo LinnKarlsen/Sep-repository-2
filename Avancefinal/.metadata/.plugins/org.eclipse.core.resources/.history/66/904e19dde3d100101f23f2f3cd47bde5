@@ -81,7 +81,7 @@ static FIL fil;
 static XSdPs sd_ctl;
 static XSdPs_Config *sd_cfg;
 
-// Instancias de hardware -
+// Instancias de hardware - DECLARADAS LOCALMENTE (no extern)
 XGpio gpio1;  // GPIO para sensor de luz
 XGpio gpio2;  // GPIO para botones
 XTmrCtr TimerInstanceGraphics;
@@ -445,7 +445,6 @@ int main() {
                 case START:
                     if (game_sleep) {
                         state = PODIUM;
-                        Buzzer_Write_Bit12(1);
                     } else if ((btn0 != 1) && btn0_prev) {
                         state = GAME_INIT;
                     }
@@ -454,21 +453,17 @@ int main() {
                 case GAME_INIT:
                     if (game_init_complete) {
                         state = GAME;
-                        Buzzer_Write_Bit12(0);
                     }
                     break;
 
                 case GAME:
                     if (game_sleep) {
                         state = PODIUM;
-                        Buzzer_Write_Bit12(1);
                     } else if ((btn0 != 1) && btn0_prev) {
-                    	Buzzer_Write_Bit12(1);
                         sumar_puntajes(score);
                         xil_printf("Partida terminada manualmente. Puntaje: %d\r\n", score);
                         state = START;
                     } else if (song_end) {
-                    	Buzzer_Write_Bit12(1);
                         sumar_puntajes(score);
                         xil_printf("Cancion terminada. Puntaje final: %d\r\n", score);
                         state = PODIUM;

@@ -1,10 +1,29 @@
-10:56:11 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
+11:12:05 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:331:9: warning: variable 'btn1_prev' set but not used [-Wunused-but-set-variable]
+  331 |     int btn1_prev = 1;
+      |         ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: SW_Base_Booster.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/standalone_domain/bsplib/lib -o "SW_Base_Booster.elf"  ./src/ADC.o ./src/Delay.o ./src/I2C.o ./src/LCD_Driver.o ./src/LCD_GUI.o ./src/LCD_SPI.o ./src/careography.o ./src/dance.o ./src/font12.o ./src/font16.o ./src/font20.o ./src/font24.o ./src/font8.o ./src/main.o ./src/melody.o ./src/platform.o ./src/sound.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SW_Base_Booster.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size SW_Base_Booster.elf  |tee "SW_Base_Booster.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1132584	   3694	  31504	1167782	 11d1a6	SW_Base_Booster.elf
+'Finished building: SW_Base_Booster.elf.size'
+' '
 
-10:56:12 Build Finished (took 716ms)
+11:12:14 Build Finished (took 8s.478ms)
 
