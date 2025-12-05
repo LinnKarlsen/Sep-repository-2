@@ -77,11 +77,23 @@ void State_Machine_Timer_Interrupt_Handler(void *CallBackRef);
 extern volatile int state_machine_update_needed;
 void Light_Interrupt_Handler(void *CallbackRef);
 void Buzzer_Mute_UART_Command(void);
+void PrintScores(void);
+void AddScore(int);
+void GetTop5Scores(int top5[5]);
 // ==================== LCD and Sensor Config ====================
 #define BACKGROUND  WHITE
 #define FOREGROUND  BLUE
 #define DELAY       1000
 volatile int pose;
+
+
+
+
+#define MAX_SCORES 20
+int score_history[MAX_SCORES];
+int score_count = 0;
+
+
 
 // ==================== Light threshold ====================
 #define LOW_LIGHT_INTENSITY_THRESHOLD   500
@@ -210,7 +222,7 @@ int blocked_turn_right_window2 = 0;
 
 // ==================== MAIN ====================
 int main() {
-
+	int podium_drawn = 0;
     int Status;
 
     // Initialize UART/platform
@@ -537,63 +549,120 @@ int main() {
     	if(graphics_update_needed)
     		{
 
+
     		switch (state) {
-				case START:
-					if(start_ready==0){
-						// Pagina de bienvenida del juego
-						GUI_INTRO();
-						GUI_DisString_EN(20,105,bienvenida,&Font8,GUI_BACKGROUND,WHITE);
-						start_ready = 1;
-					}
-					break;
-				case GAME_INIT:
-					start_ready = 0;
-					GUI_DisString_EN(34,115,loading,&Font8,GUI_BACKGROUND,WHITE);
+    		    case START:
+    		        if(start_ready==0){
+    		            // Pagina de bienvenida del juego
+    		            GUI_INTRO();
+    		            GUI_DisString_EN(20,105,bienvenida,&Font8,GUI_BACKGROUND,WHITE);
+    		            start_ready = 1;
+    		        }
+    		        break;
 
-					// Revisamos la luminosidad
-					opt_val = read_opt();
+    		    case GAME_INIT:
+    		        start_ready = 0;
+    		        GUI_DisString_EN(34,115,loading,&Font8,GUI_BACKGROUND,WHITE);
 
-					if(opt_val>20000){
-						light_mode = 1;
-					}else{
-						light_mode = 0;
-					}
+    		        // Revisamos la luminosidad
+    		        opt_val = read_opt();
 
-					// Seleccionamos el Dance Floor dependiendo de la luminosidad
-					if(light_mode==0){
-						GUI_DANCE_FLOOR();
-					}
-					else{
-						GUI_DANCE_FLOOR_LIGHT();
-					}
+    		        if(opt_val>20000){
+    		            light_mode = 1;
+    		        }else{
+    		            light_mode = 0;
+    		        }
 
-					// Consiguraciones adicionales
-					GUI_SCORE_BOARD();
-					Reset_Dance_Step_Flags_and_Pose();
-					score = 0;
+    		        // Seleccionamos el Dance Floor dependiendo de la luminosidad
+    		        if(light_mode==0){
+    		            GUI_DANCE_FLOOR();
+    		        }
+    		        else{
+    		            GUI_DANCE_FLOOR_LIGHT();
+    		        }
 
-					// Comienza a reproducir el baile y la música
-					song_end = 0;
-					current_note = 0;
-					current_step = 0;
-					Play_Next_Note();
-					Next_Dance_Step();
+    		        // Consiguraciones adicionales
+    		        GUI_SCORE_BOARD();
+    		        Reset_Dance_Step_Flags_and_Pose();
+    		        score = 0;  // Resetear puntaje de partida actual
 
-					// Termina la inicialización del juego
-					game_init_complete = 1;
+    		        // Comienza a reproducir el baile y la música
+    		        song_end = 0;
+    		        current_note = 0;
+    		        current_step = 0;
+    		        Play_Next_Note();
+    		        Next_Dance_Step();
 
-					break;
-				case GAME:
-					game_init_complete = 0;
+    		        // Termina la inicialización del juego
+    		        game_init_complete = 1;
 
-					// Comienzan a correr las animaciones de las flechas
-					Run_Arrow_Animations(light_mode);
+    		        break;
 
-					break;
-				case PODIUM:
-					LCD_Clear(GUI_BACKGROUND);
-					break;
-			}
+    		    case GAME:
+    		        game_init_complete = 0;
+
+    		        // Comienzan a correr las animaciones de las flechas
+    		        Run_Arrow_Animations(light_mode);
+
+    		        break;
+
+    		    case PODIUM:
+    		        // AQUÍ ES DONDE MOSTRAMOS LOS PUNTAJES
+    		        if (!podium_drawn) {  // Solo dibujar una vez
+    		            LCD_Clear(GUI_BACKGROUND);
+
+    		            // Título del podio
+    		            GUI_DisString_EN(28, 5, "TOP 5 SCORES", &Font12, GUI_BACKGROUND, YELLOW);
+
+    		            // Obtener los mejores 5 puntajes
+    		            int top5[5];
+    		            GetTop5Scores(top5);
+
+    		            // Mostrar los top 5 con diseño optimizado para 128x128
+    		            char rank_display[20];
+    		            int y_position = 25;  // Posición Y inicial
+    		            int y_spacing = 18;   // Espaciado entre líneas
+
+    		            for (int i = 0; i < 5; i++) {
+    		                if (top5[i] > 0) {  // Solo mostrar si hay puntaje
+    		                    // Formato: "1. 1500 pts"
+    		                    sprintf(rank_display, "%d. %d pts", i + 1, top5[i]);
+
+    		                    // Color dorado para el 1er lugar, plateado para 2do, bronce para 3ro
+    		                    int text_color;
+    		                    if (i == 0) text_color = YELLOW;       // Oro
+    		                    else if (i == 1) text_color = CYAN;    // Plata
+    		                    else if (i == 2) text_color = MAGENTA; // Bronce
+    		                    else text_color = WHITE;                // Resto
+
+    		                    // Resaltar si es el puntaje actual
+    		                    if (top5[i] == score && i < 3) {
+    		                        // Dibujar un indicador para el puntaje recién obtenido
+    		                        GUI_DisString_EN(8, y_position, ">", &Font12, GUI_BACKGROUND, text_color);
+    		                    }
+
+    		                    GUI_DisString_EN(18, y_position, rank_display, &Font12, GUI_BACKGROUND, text_color);
+    		                } else {
+    		                    // Mostrar línea vacía
+    		                    sprintf(rank_display, "%d. ---", i + 1);
+    		                    GUI_DisString_EN(18, y_position, rank_display, &Font12, GUI_BACKGROUND, WHITE);
+    		                }
+
+    		                y_position += y_spacing;
+    		            }
+
+    		            // Mostrar puntaje de la última partida
+    		            char last_game[24];
+    		            sprintf(last_game, "Ultima: %d", score);
+    		            GUI_DisString_EN(18, 108, last_game, &Font8, GUI_BACKGROUND, GREEN);
+
+    		            // Mostrar mensaje de continuar
+    		            GUI_DisString_EN(10, 118, "BTN0=volver", &Font8, GUI_BACKGROUND, WHITE);
+
+    		            podium_drawn = 1;  // Marcar como dibujado
+    		        }
+    		        break;
+    		}
 
 
 
@@ -677,27 +746,47 @@ int main() {
 						state = GAME;
 					}
 					break;
+
 				case GAME:
-					if (game_sleep){
-						state = PODIUM;
-					}
-					else if (((btn0!=1)&&btn0_prev)||(song_end)){
-						state = START;
-						//xil_printf("game a podium\n");
-				   }
-					//joyx_val = read_joyx();
-					//joyy_val = read_joyy();
-					GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,GUI_BACKGROUND);
-					sprintf(score_display, "%d", score);
-					GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
-					break;
+				    if (game_sleep){
+				        state = PODIUM;
+				    }
+				    else if ((btn0!=1)&&btn0_prev){
+				        // Guardar puntaje antes de salir
+				        AddScore(score);
+				        xil_printf("Partida terminada. Puntaje guardado: %d\r\n", score);
+				        state = START;
+				    }
+				    else if (song_end){
+				        // Guardar puntaje al terminar la canción
+				        AddScore(score);
+				        xil_printf("Cancion terminada. Puntaje guardado: %d\r\n", score);
+				        state = PODIUM;
+				    }
+				    else if (song_end){
+				        // Guardar puntaje al terminar la canción
+				        AddScore(score);
+				        xil_printf("Cancion terminada. Puntaje guardado: %d\r\n", score);
+				        state = PODIUM;
+				    }
+
+				    // Actualizar puntaje en pantalla
+				    GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,GUI_BACKGROUND);
+				    sprintf(score_display, "%d", score);
+				    GUI_DisString_EN(80,11,score_display,&Font8,GUI_BACKGROUND,YELLOW);
+				    break;
+
+
 				case PODIUM:
-					if ((btn0!=1)&&btn0_prev){
-							state = START;
-							//xil_printf("podium a start\n");
-							game_sleep = 0;
-						}
-					break;
+				    if ((btn0!=1)&&btn0_prev){
+				        state = START;
+				        game_sleep = 0;
+				        podium_drawn = 0;  // Resetear para la próxima vez
+
+				        // Imprimir historial al volver al menú principal
+				        PrintScores();
+				    }
+				    break;
 			}
 
     		btn0_prev = btn0;
@@ -833,8 +922,72 @@ void Buzzer_Mute_UART_Command(void) {
         Buzzer_Write_Bit12(0);
         xil_printf("Mute desactivado.\r\n");
     }
+    else if (input_char == 's' || input_char == 'S') {
+        /* mostrar historial de puntajes */
+        PrintScores();
+    }
     else {
         /* entrada inválida */
-        xil_printf("Error: ingrese solo '1' o '0'.\r\n");
+        xil_printf("Error: '1'=mute ON, '0'=mute OFF, 's'=scores\r\n");
     }
 }
+
+void AddScore(int s) {
+    if (score_count < MAX_SCORES) {
+        score_history[score_count++] = s;
+    } else {
+        // Desplazar hacia arriba para mantener los últimos puntajes
+        for (int i = 1; i < MAX_SCORES; i++) {
+            score_history[i-1] = score_history[i];
+        }
+        score_history[MAX_SCORES - 1] = s;
+    }
+}
+
+// Función para obtener los top 5 puntajes ordenados
+void GetTop5Scores(int top5[5]) {
+    // Inicializar array con ceros
+    for (int i = 0; i < 5; i++) {
+        top5[i] = 0;
+    }
+
+    // Si no hay puntajes, retornar
+    if (score_count == 0) return;
+
+    // Copiar historial a array temporal
+    int temp[MAX_SCORES];
+    for (int i = 0; i < score_count; i++) {
+        temp[i] = score_history[i];
+    }
+
+    // Ordenamiento burbuja descendente (simple para arrays pequeños)
+    for (int i = 0; i < score_count - 1; i++) {
+        for (int j = 0; j < score_count - i - 1; j++) {
+            if (temp[j] < temp[j + 1]) {
+                int swap = temp[j];
+                temp[j] = temp[j + 1];
+                temp[j + 1] = swap;
+            }
+        }
+    }
+
+    // Copiar los top 5
+    int limit = (score_count < 5) ? score_count : 5;
+    for (int i = 0; i < limit; i++) {
+        top5[i] = temp[i];
+    }
+}
+
+void PrintScores(void) {
+    xil_printf("\r\n=== HISTORIAL DE PARTIDAS ===\r\n");
+    if (score_count == 0) {
+        xil_printf("No hay registros todavia.\r\n");
+        return;
+    }
+
+    for (int i = 0; i < score_count; i++) {
+        xil_printf("Partida %d: %d puntos\r\n", i + 1, score_history[i]);
+    }
+    xil_printf("==============================\r\n");
+}
+
