@@ -148,19 +148,25 @@ void Play_Next_Note() {
 // Inicializacion del buzzer:
 void Initialize_Buzzer(uint32_t *frequency, uint32_t *duration_counts, uint16_t *volume) {
 
-	// "dereferencia" de los pointers:
+    // "dereferencia" de los pointers:
     uint32_t freq = *frequency;
     uint32_t duration = *duration_counts;
     uint16_t vol = *volume;
 
-    // Lectura de los bits de control con Xil_in (bits 0-2):
-    uint32_t control_bits = Xil_In32(BUZZER_BASE_ADDR + BUZZER_REG_CONTROL) & 0x00000007;
+    // Leer TODO el registro actual para preservar bit 12
+    uint32_t reg_actual = Xil_In32(BUZZER_BASE_ADDR + BUZZER_REG_CONTROL);
+
+    // Extraemos SOLO los bits 0-2 existentes (enable, modo, etc.)
+    uint32_t control_bits = reg_actual & 0x00000007;
 
     // Prepara los bits de volumen (bits 3-11) para posterior escritura
     uint32_t volume_bits = ((uint32_t)(vol & 0x1FF)) << 3; // 9 bits para 0-511
 
-    // Concatenacion de los bits de control y de volumen
-    uint32_t control_and_volume = control_bits | volume_bits;
+    // Preservar bit 12 (mute) del registro actual
+    uint32_t mute_bit = reg_actual & (1 << 12);
+
+    // Concatenacion de los bits de control y de volumen + el bit 12 preservado
+    uint32_t control_and_volume = control_bits | volume_bits | mute_bit;
 
     // Se escribe la frecuencia deseada al registro 1 (slv_reg1)
     Xil_Out32(BUZZER_BASE_ADDR + BUZZER_REG_FREQUENCY, freq);
@@ -176,4 +182,23 @@ void Initialize_Buzzer(uint32_t *frequency, uint32_t *duration_counts, uint16_t 
     Xil_Out32(BUZZER_BASE_ADDR + BUZZER_REG_CONTROL, control_and_volume | 0x1);
     // Desactiva el buzzer escribiendo bit '0' en el bit 0.
     Xil_Out32(BUZZER_BASE_ADDR + BUZZER_REG_CONTROL, control_and_volume & ~0x1);
+}
+
+
+void Buzzer_Write_Bit12(uint8_t value) {
+    uint32_t reg = Xil_In32(BUZZER_BASE_ADDR + BUZZER_REG_CONTROL);
+
+    if (value) {
+        // Poner bit 12 en 1
+        reg |= (1 << 12);
+        xil_printf("Muteo de la música\n");
+    } else {
+        // Poner bit 12 en 0
+        reg &= ~(1 << 12);
+        xil_printf("Reproducimos música\n");
+    }
+
+    Xil_Out32(BUZZER_BASE_ADDR + BUZZER_REG_CONTROL, reg);
+	u32 reg_debug = Xil_In32(BUZZER_BASE_ADDR + BUZZER_REG_CONTROL);
+	xil_printf("Valor del registro después del mute: 0x%08X\n", reg_debug);
 }

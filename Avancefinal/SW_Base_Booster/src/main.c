@@ -14,6 +14,7 @@
 #include "LCD_GUI.h"
 #include "ADC.h"
 #include "I2C.h"
+#include "xuartps.h"
 
 // Audio system headers
 #include "xscugic.h"
@@ -75,7 +76,7 @@ extern volatile int graphics_update_needed;
 void State_Machine_Timer_Interrupt_Handler(void *CallBackRef);
 extern volatile int state_machine_update_needed;
 void Light_Interrupt_Handler(void *CallbackRef);
-
+void Buzzer_Mute_UART_Command(void);
 // ==================== LCD and Sensor Config ====================
 #define BACKGROUND  WHITE
 #define FOREGROUND  BLUE
@@ -528,10 +529,11 @@ int main() {
 	// Messages
 	char bienvenida[64] = "BTN0 para partir";
 	char loading[16] = "Loading...";
+	Buzzer_Write_Bit12(1);
 
-
+	xil_printf("\nComandos UART: '1' = mute ON, '0' = mute OFF\r\n");
     while (1) {
-
+    	Buzzer_Mute_UART_Command();
     	if(graphics_update_needed)
     		{
 
@@ -797,4 +799,42 @@ void Light_Interrupt_Handler(void *CallbackRef)
 
     (void)XGpio_InterruptClear(&gpio1, XGPIO_IR_CH1_MASK);
     XGpio_InterruptEnable(&gpio1, XGPIO_IR_CH1_MASK);
+}
+
+void Buzzer_Mute_UART_Command(void) {
+    /* Lee comando UART para mutear/desmutear sin bloquear:
+       - '1' -> activar mute (bit 12 = 1)
+       - '0' -> desactivar mute (bit 12 = 0)
+       - cualquier otro -> mensaje de error
+       La función retorna inmediatamente si no hay datos disponibles. */
+
+    /* Si no hay datos pendientes en el RX, salimos rápido (no bloqueante) */
+    if (!XUartPs_IsReceiveData(STDIN_BASEADDRESS)) {
+        return;
+    }
+
+    /* Si hay datos, leemos un byte desde el RX FIFO (XUartPs_RecvByte devuelve u8/unsigned) */
+    u8 raw = XUartPs_RecvByte(STDIN_BASEADDRESS);
+
+    /* casteo seguro a char para comparar e imprimir */
+    char input_char = (char) raw;
+
+    /* eco de lo recibido */
+    xil_printf("\r\nRecibido por UART: '%c' (0x%02X)\r\n", input_char, (unsigned)raw);
+
+    /* Validación y acción sobre el buzzer */
+    if (input_char == '1') {
+        /* activar mute: bit 12 = 1 */
+        Buzzer_Write_Bit12(1);
+        xil_printf("Mute activado.\r\n");
+    }
+    else if (input_char == '0') {
+        /* desactivar mute: bit 12 = 0 */
+        Buzzer_Write_Bit12(0);
+        xil_printf("Mute desactivado.\r\n");
+    }
+    else {
+        /* entrada inválida */
+        xil_printf("Error: ingrese solo '1' o '0'.\r\n");
+    }
 }

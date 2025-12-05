@@ -11,7 +11,6 @@ entity BuzzerBooster_Driver_v1_0_S00_AXI is
 	    -- Puertos creados por nosotros:
 	    ------------------------------------------------------------------------
         PWM                 : out std_logic; -- Senal de estimulo del buzzer 
-        MUTE                : in  std_logic; -- Enable del sistema
         ------------------------------------------------------------------------
 		S_AXI_ACLK	: in std_logic;
 		S_AXI_ARESETN	: in std_logic;
@@ -301,7 +300,7 @@ begin
                 volume      <= to_integer(unsigned(slv_reg0(11 downto 3)));
                 frequency   <= to_integer(unsigned(slv_reg1));
                 duration    <= to_integer(unsigned(slv_reg2));
-                mute_buffer <= mute;
+                mute_buffer <= slv_reg0(12);
     
                 -- Calculo del volumen
                 duty_cycle <= (volume * pwm_cycles) / 512; 

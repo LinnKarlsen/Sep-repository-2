@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="c:/users/fuent/desktop/avancesemanal/avancefinal/avancefinal.tmp/buzzerbooster_driver_v1_0_v1_0_project/BuzzerBooster_Driver_v1_0_v1_0_project.xpr">
+<Project Version="7" Minor="49" Path="c:/users/fuent/desktop/sep-repository-2/avancefinal/avancefinal.tmp/buzzerbooster_driver_v1_0_v1_0_project/BuzzerBooster_Driver_v1_0_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="f98ff1a4c23e48deae976e6d4dce93a6"/>
+    <Option Name="Id" Val="713a2d5745e24b13beeb7220934bbfd9"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -30,7 +30,9 @@
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../Users/fuent/Desktop/Sep-repository-2-main/Sep-repository-2-main/IPCores"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../Users/fuent/Desktop/Avancesemanal/Buzzer_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../Users/fuent/Desktop/Sep-repository-2/IPCores"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../Users/fuent/Desktop/Sep-repository-2/ip_repo"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../Users/fuent/Desktop/Sep-repository-2/Buzzer_repo"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../Users/fuent/Desktop/Sep-repository-2-main/Sep-repository-2-main/ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PSRCDIR/sources_1"/>
@@ -70,27 +72,27 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../../../Users/fuent/Desktop/Avancesemanal/Buzzer_repo/src/BuzzerBooster_Driver_v1_0_S00_AXI.vhd">
+      <File Path="$PPRDIR/../../../../../../../Users/fuent/Desktop/Sep-repository-2/Buzzer_repo/src/BuzzerBooster_Driver_v1_0_S00_AXI.vhd">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../Users/fuent/Desktop/Avancesemanal/Buzzer_repo/src/BuzzerBooster_Driver_v1_0.vhd">
+      <File Path="$PPRDIR/../../../../../../../Users/fuent/Desktop/Sep-repository-2/Buzzer_repo/src/BuzzerBooster_Driver_v1_0.vhd">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../../Users/fuent/Desktop/Avancesemanal/Buzzer_repo/component.xml">
+      <File Path="$PPRDIR/../../../../../../../Users/fuent/Desktop/Sep-repository-2/Buzzer_repo/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="BuzzerBooster_Driver_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../Users/fuent/Desktop/Avancesemanal/Buzzer_repo/src/BuzzerBooster_Driver_v1_0.vhd"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../Users/fuent/Desktop/Sep-repository-2/Buzzer_repo/src/BuzzerBooster_Driver_v1_0.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

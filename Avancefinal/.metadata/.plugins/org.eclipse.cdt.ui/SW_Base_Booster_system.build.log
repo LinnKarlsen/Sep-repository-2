@@ -1,10 +1,10 @@
-23:17:51 **** Build of configuration Debug for project SW_Base_Booster_system ****
+00:53:32 **** Incremental Build of configuration Debug for project SW_Base_Booster_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 57758 C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm standalone_domain C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster_system/Debug/system.bif
-sdcard_gen --xpfm C:/Users/linnh/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm --sys_config HW_Base_Booster --bif C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster_system/Debug/system.bif --bitstream C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new4.bit --elf C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf,ps7_cortexa9_0
-creating BOOT.BIN using C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper_new4.bit
-Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/linnh/Sep-repository-2/Avancefinal/SW_Base_Booster_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+generate_system_bif.bat 51075 C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm standalone_domain C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm --sys_config HW_Base_Booster --bif C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster_system/Debug/system.bif --bitstream C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit --elf C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-23:18:04 Build Finished (took 12s.925ms)
+00:53:46 Build Finished (took 14s.311ms)
 
