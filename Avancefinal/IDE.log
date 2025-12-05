@@ -16489,3 +16489,225 @@ con
 02:32:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
 02:32:28 INFO  : FPGA configured successfully with bitstream "C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit"
 02:32:28 INFO  : Context for 'APU' is selected.
+02:32:31 INFO  : Hardware design and registers information is loaded from 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa'.
+02:32:31 INFO  : 'configparams force-mem-access 1' command is executed.
+02:32:31 INFO  : Context for 'APU' is selected.
+02:32:31 INFO  : Sourcing of 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+02:32:32 INFO  : 'ps7_init' command is executed.
+02:32:32 INFO  : 'ps7_post_config' command is executed.
+02:32:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:32:36 INFO  : The application 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:32:36 INFO  : 'configparams force-mem-access 0' command is executed.
+02:32:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:32:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:32:36 INFO  : 'con' command is executed.
+02:32:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:32:36 INFO  : Launch script is exported to file 'C:\Users\fuent\Desktop\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\systemdebugger_sw_base_booster_system_standalone.tcl'
+02:57:19 INFO  : Disconnected from the channel tcfchan#11.
+02:57:32 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\fuent\Desktop\Sep-repository-2\Avancefinal\temp_xsdb_launch_script.tcl
+02:57:35 INFO  : XSCT server has started successfully.
+02:57:35 INFO  : Successfully done setting XSCT server connection channel  
+02:57:35 INFO  : plnx-install-location is set to ''
+02:57:35 INFO  : Successfully done setting workspace for the tool. 
+02:57:40 INFO  : Platform repository initialization has completed.
+02:57:40 INFO  : Registering command handlers for Vitis TCF services
+02:57:42 INFO  : Successfully done query RDI_DATADIR 
+02:58:45 INFO  : Successfully done sdx_reload_mss "C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+02:59:02 INFO  : (SwPlatform)  Successfully done add_library 
+02:59:03 INFO  : (SwPlatform) Successfully done update_mss 
+02:59:04 INFO  : Successfully done sdx_reload_mss "C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+02:59:55 INFO  : Result from executing command 'getProjects': HW_Base_Booster
+02:59:55 INFO  : Result from executing command 'getPlatforms': HW_Base_Booster|C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm
+03:00:23 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+03:00:25 INFO  : Updating application flags with new BSP settings...
+03:00:26 INFO  : Successfully updated application flags for project SW_Base_Booster.
+03:02:34 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+04:11:11 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+04:11:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:11:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+04:11:43 INFO  : 'jtag frequency' command is executed.
+04:11:43 INFO  : Context for 'APU' is selected.
+04:11:43 INFO  : System reset is completed.
+04:11:46 INFO  : 'after 3000' command is executed.
+04:11:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+04:11:48 INFO  : FPGA configured successfully with bitstream "C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit"
+04:11:48 INFO  : Context for 'APU' is selected.
+04:11:48 INFO  : Hardware design and registers information is loaded from 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa'.
+04:11:48 INFO  : 'configparams force-mem-access 1' command is executed.
+04:11:48 INFO  : Context for 'APU' is selected.
+04:11:48 INFO  : Sourcing of 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+04:11:49 INFO  : 'ps7_init' command is executed.
+04:11:49 INFO  : 'ps7_post_config' command is executed.
+04:11:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:11:53 INFO  : The application 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+04:11:53 INFO  : 'configparams force-mem-access 0' command is executed.
+04:11:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+04:11:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:11:53 INFO  : 'con' command is executed.
+04:11:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+04:11:53 INFO  : Launch script is exported to file 'C:\Users\fuent\Desktop\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\systemdebugger_sw_base_booster_system_standalone.tcl'
+04:19:15 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+04:20:36 INFO  : (SwPlatform) Successfully done update_mss 
+04:20:36 INFO  : No changes in MSS file content so sources will not be generated.
+04:20:40 INFO  : Disconnected from the channel tcfchan#3.
+04:20:58 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\fuent\Desktop\Sep-repository-2\Avancefinal\temp_xsdb_launch_script.tcl
+04:21:01 INFO  : XSCT server has started successfully.
+04:21:01 INFO  : plnx-install-location is set to ''
+04:21:01 INFO  : Successfully done setting XSCT server connection channel  
+04:21:01 INFO  : Successfully done setting workspace for the tool. 
+04:21:05 INFO  : Successfully done query RDI_DATADIR 
+04:21:08 INFO  : Platform repository initialization has completed.
+04:21:09 INFO  : Registering command handlers for Vitis TCF services
+04:21:18 INFO  : Result from executing command 'getProjects': HW_Base_Booster
+04:21:18 INFO  : Result from executing command 'getPlatforms': HW_Base_Booster|C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm
+04:21:27 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+04:22:37 INFO  : Successfully done sdx_reload_mss "C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+04:22:50 INFO  : (SwPlatform) Successfully done removeLibrary 
+04:22:51 INFO  : (SwPlatform)  Successfully done add_library 
+04:22:53 INFO  : (SwPlatform) Successfully done update_mss 
+04:22:53 INFO  : No changes in MSS file content so sources will not be generated.
+04:24:17 INFO  : Result from executing command 'getProjects': HW_Base_Booster
+04:24:17 INFO  : Result from executing command 'getPlatforms': HW_Base_Booster|C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/HW_Base_Booster.xpfm
+04:24:26 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+04:26:17 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+04:26:38 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+04:27:00 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
+04:27:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:27:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+04:27:19 INFO  : 'jtag frequency' command is executed.
+04:27:19 INFO  : Context for 'APU' is selected.
+04:27:19 INFO  : System reset is completed.
+04:27:22 INFO  : 'after 3000' command is executed.
+04:27:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+04:27:24 INFO  : FPGA configured successfully with bitstream "C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit"
+04:27:24 INFO  : Context for 'APU' is selected.
+04:27:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa'.
+04:27:24 INFO  : 'configparams force-mem-access 1' command is executed.
+04:27:24 INFO  : Context for 'APU' is selected.
+04:27:24 INFO  : Sourcing of 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+04:27:25 INFO  : 'ps7_init' command is executed.
+04:27:25 INFO  : 'ps7_post_config' command is executed.
+04:27:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:27:29 INFO  : The application 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+04:27:29 INFO  : 'configparams force-mem-access 0' command is executed.
+04:27:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+04:27:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:27:29 INFO  : 'con' command is executed.
+04:27:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+04:27:29 INFO  : Launch script is exported to file 'C:\Users\fuent\Desktop\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\systemdebugger_sw_base_booster_system_standalone.tcl'
+04:34:37 INFO  : Disconnected from the channel tcfchan#7.
+04:34:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:34:38 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FC69A' is selected.
+04:34:38 INFO  : 'jtag frequency' command is executed.
+04:34:38 INFO  : Context for 'APU' is selected.
+04:34:38 INFO  : System reset is completed.
+04:34:41 INFO  : 'after 3000' command is executed.
+04:34:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}' command is executed.
+04:34:43 INFO  : FPGA configured successfully with bitstream "C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit"
+04:34:43 INFO  : Context for 'APU' is selected.
+04:34:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa'.
+04:34:43 INFO  : 'configparams force-mem-access 1' command is executed.
+04:34:43 INFO  : Context for 'APU' is selected.
+04:34:43 INFO  : Sourcing of 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl' is done.
+04:34:44 INFO  : 'ps7_init' command is executed.
+04:34:44 INFO  : 'ps7_post_config' command is executed.
+04:34:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:34:48 INFO  : The application 'C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf' is downloaded to processor 'ps7_cortexa9_0'.
+04:34:48 INFO  : 'configparams force-mem-access 0' command is executed.
+04:34:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FC69A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FC69A-13722093-0"}
+fpga -file C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bitstream/DEMO_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/hw/DEMO_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+04:34:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:34:48 INFO  : 'con' command is executed.
+04:34:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+04:34:48 INFO  : Launch script is exported to file 'C:\Users\fuent\Desktop\Sep-repository-2\Avancefinal\.sdk\launch_scripts\single_application_debug\systemdebugger_sw_base_booster_system_standalone.tcl'
+04:48:19 INFO  : Invoking Bootgen: bootgen -image SW_Base_Booster.bif -arch zynq -o C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bootimage/BOOT.bin -w on
+04:48:19 INFO  : Overwriting existing bif file C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bootimage/SW_Base_Booster.bif
+04:48:21 INFO  : Bootgen command execution is done.
+05:33:10 INFO  : Checking for BSP changes to sync application flags for project 'SW_Base_Booster'...
