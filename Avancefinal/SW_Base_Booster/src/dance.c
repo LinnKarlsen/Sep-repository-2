@@ -199,6 +199,7 @@ void Dance_Timer_Interrupt_Handler(void *CallBackRef) {
     //Next_Dance_Step();
 }
 
+// Inicializa Flags y Pose en sus valores iniciales
 void Reset_Dance_Step_Flags_and_Pose() {
 
 	// Left arrow variables
@@ -280,8 +281,6 @@ void Next_Dance_Step() {
         uint32_t dance_move = dance[current_step].dancemove;  // Lectura de la dance_move
         uint32_t duration_ms = dance[current_step].duration;   // Lectura de duracion de step
         uint32_t duration_counts = duration_ms * 100000;       // Ajustamos la duracion a ciclos de clk (100 MHz)
-
-
 
         // Left
 		if(dance_move == LEFT_ref){

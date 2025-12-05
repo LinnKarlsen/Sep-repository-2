@@ -51,48 +51,6 @@ int read_tmp(){
 	return temp;
 }
 
-void configure_light_sensor()
-{
-
-
-    xil_printf("Light Sensor is being configured...\n");
-
-	/* ---------------------------
-       1. Configure CONFIG register
-       ---------------------------
-
-       CONFIG = 0xC410
-
-       C4 10 = 1100 0100 0001 0000b
-       Bits:
-       - 15:12 = 1100  Continuous conversions, automatic full-scale
-       - 11:9  = 010   Conversion time = 800ms (stable)
-       - 8      = 0    INT active low (default, works with pull-up)
-       - 7      = 1    Latch enabled (interrupt stays active until RESULT read)
-       - 6:5    = 00   Fault count = 1
-       - 4      = 1    Enable interrupt mode
-       - 3:0    = 0000 No special modes
-    */
-
-    u8 cfg[3] = { 0x01, 0xC4, 0x10 };
-    XIic_Send(iic.BaseAddress, OPT_ADDR, cfg, 3, XIIC_STOP);
-
-    /* ---------------------------
-       2. Set LOW limit threshold
-       --------------------------- */
-    // Example: trigger sleep mode if lux < 0x190
-    u8 low_thresh[3] = {0x02, 0x01, 0xCC};
-    //u8 low_thresh[3] = {0x03, 0x8F, 0x42};
-    XIic_Send(iic.BaseAddress, OPT_ADDR, low_thresh, 3, XIIC_STOP);
-
-    /* ---------------------------
-       3. Set HIGH limit threshold
-       --------------------------- */
-    // Example: trigger awake mode if lux > 0x3E8
-    u8 high_thresh[3] = {0x03, 0x26, 0xC4};
-    //u8 high_thresh[3] = {0x02, 0x62, 0x71};
-    XIic_Send(iic.BaseAddress, OPT_ADDR, high_thresh, 3, XIIC_STOP);
-}
 
 int read_opt(){
 
@@ -102,10 +60,12 @@ int read_opt(){
 
 	// Threshold superior es 88B8 = 35000. Muy elevado, pues el threshold alto no es relevante.
 	u8 configH[3] = {0x03, 0x88, 0xB8};
+	//u8 configH[3] = {0x03, 0x06, 0xB8};
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&configH, 3, XIIC_STOP);
 
 	// Threshold inferior es 0190 = 400. Queremos que se ejecute el handler desde este valor hacia abajo.
 	u8 configL[3] = {0x02, 0x01, 0x90};
+	//u8 configL[3] = {0x02, 0x06, 0x58};
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&configL, 3, XIIC_STOP);
 
 	// Leemos, para así resetear las lecturas

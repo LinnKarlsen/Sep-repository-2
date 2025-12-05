@@ -1,0 +1,93 @@
+#include "I2C.h"
+XIic  iic;
+u8 SendBuffer[2];
+u8 RecvBuffer[2];
+u8 config[3];
+u8 config1[3];
+u8 configH[3];
+u8 configL[3];
+u8 SendBuffer1[2];
+u8 SendBufferH[2];
+u8 SendBufferL[2];
+int Lux;
+int16_t val;
+int temp;
+
+int init_IIC() {
+
+		XIic_Config *iic_conf;
+
+	    init_platform();
+
+	    iic_conf = XIic_LookupConfig(IIC_dev);
+	    XIic_CfgInitialize(&iic, iic_conf, iic_conf->BaseAddress);
+	    XIic_Start(&iic);
+
+
+		SendBuffer[0] = 0xfe;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_REPEATED_START);
+		XIic_Recv(iic.BaseAddress,TMP_ADDR,(u8 *)&RecvBuffer, 2,XIIC_STOP);
+
+
+		SendBuffer[0] = 0x02;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_STOP);
+
+		SendBuffer[0] = 0x80;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_REPEATED_START);
+		SendBuffer[0] = 0x82;
+		XIic_Send(iic.BaseAddress,TMP_ADDR,(u8 *)&SendBuffer, 1,XIIC_REPEATED_START);
+
+
+
+    return XST_SUCCESS;
+}
+
+int read_tmp(){
+	SendBuffer[0] = 0x01; // envia para leer temp
+	XIic_Send(iic.BaseAddress, TMP_ADDR, (u8 *)&SendBuffer, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress, TMP_ADDR, (u8 *)&RecvBuffer, 2, XIIC_STOP);
+	val = (RecvBuffer[0] << 8) | (RecvBuffer[1]);
+	temp = val / 128;
+	return temp;
+}
+
+
+int read_opt(){
+
+	// Configuramos interrupt del sensor de luz con latch y active high
+	u8 config[3] = {0x01, 0xc4, 0x10};
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&config, 3, XIIC_STOP);
+
+	// Threshold superior es 88B8 = 35000. Muy elevado, pues el threshold alto no es relevante.
+	//u8 configH[3] = {0x03, 0x88, 0xB8};
+	u8 configH[3] = {0x03, 0x50, 0xB8};
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&configH, 3, XIIC_STOP);
+
+	// Threshold inferior es 0190 = 400. Queremos que se ejecute el handler desde este valor hacia abajo.
+	//u8 configL[3] = {0x02, 0x01, 0x90};
+	u8 configL[3] = {0x02, 0x06, 0x58};
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&configL, 3, XIIC_STOP);
+
+	// Leemos, para así resetear las lecturas
+	SendBuffer1[0] = 0x01;
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&SendBuffer1, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress,OPT_ADDR,(u8 *)&RecvBuffer, 2, XIIC_STOP);
+
+	SendBufferL[0] = 0x02;
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&SendBufferL, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress,OPT_ADDR,(u8 *)&RecvBuffer, 2, XIIC_STOP);
+
+	SendBufferH[0] = 0x03;
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&SendBufferH, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress,OPT_ADDR,(u8 *)&RecvBuffer, 2, XIIC_STOP);
+
+	// Medición de la intensidad de luz
+	SendBuffer[0] = 0x00;
+	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&SendBuffer, 1, XIIC_REPEATED_START);
+	XIic_Recv(iic.BaseAddress,OPT_ADDR,(u8 *)&RecvBuffer, 2, XIIC_STOP);
+
+	// Realizamos conversión a integer
+	Lux = (int)((RecvBuffer[0])*256 + (RecvBuffer[1]));
+
+	return Lux;
+}
