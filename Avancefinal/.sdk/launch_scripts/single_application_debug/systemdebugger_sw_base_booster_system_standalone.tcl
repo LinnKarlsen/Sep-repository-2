@@ -14,5 +14,4 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/Debug/SW_Base_Booster.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A9*#0"}
-con
+bpadd -addr &main

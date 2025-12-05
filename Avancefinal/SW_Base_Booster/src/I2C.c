@@ -68,7 +68,6 @@ int read_opt(){
 	//u8 configL[3] = {0x02, 0x06, 0x58};
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&configL, 3, XIIC_STOP);
 
-	// Leemos, para así resetear las lecturas
 	SendBuffer1[0] = 0x01;
 	XIic_Send(iic.BaseAddress,OPT_ADDR,(u8 *)&SendBuffer1, 1, XIIC_REPEATED_START);
 	XIic_Recv(iic.BaseAddress,OPT_ADDR,(u8 *)&RecvBuffer, 2, XIIC_STOP);
