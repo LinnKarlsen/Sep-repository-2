@@ -1,4 +1,4 @@
-#include "sound.h" // Header que contiene las funciones utilizadas
+#include "sound.h" // Header que contiene las funciones utilizadas (Código basado en contenido del grupo 4 2024-2: "RoboVolt".
 #include "melody.h" // Header que define la estructura de una nota
 #include "dance.h" // Header que define la estructura de una nota
 #include "ADC.h" // Header que permite realizar la lectura del potenciometro

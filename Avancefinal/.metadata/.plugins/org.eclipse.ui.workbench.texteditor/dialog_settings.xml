@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="print_puntajes" key="selection"/>
+		<item value="game_sleep" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="game_sleep"/>
+			<item value="opt_val_intr"/>
+			<item value="light_mode"/>
+			<item value="puntaje_maximo"/>
 			<item value="PrintScores"/>
 			<item value="AddScore"/>
 			<item value="podium_drawn"/>
@@ -21,6 +25,7 @@
 			<item value="score"/>
 		</list>
 		<list key="replacehistory">
+			<item value="MAX_SCORES"/>
 			<item value="print_puntajes"/>
 			<item value="sumar_puntajes"/>
 			<item value="podio_animado"/>

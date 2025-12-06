@@ -1,4 +1,4 @@
-// Header de sound:
+// Header de sound: (Código basado en contenido del grupo 4 2024-2: "RoboVolt".
 #ifndef SOUND_H
 #define SOUND_H
 

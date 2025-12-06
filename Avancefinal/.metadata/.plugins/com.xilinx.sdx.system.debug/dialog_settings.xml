@@ -13,7 +13,7 @@
 	<item value="qspi-x4-single" key="SW_Base_Booster_system-flashType"/>
 	<item value="C:\Users\fuent\Desktop\Sep-repository-2\Avancefinal\HW_Base_Booster\export\HW_Base_Booster\sw\HW_Base_Booster\boot\fsbl.elf" key="SW_Base_Booster_system-fsblFile"/>
 	<item value="Auto Detect" key="SW_Base_Booster_system-device"/>
-	<item value="C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/SW_Base_Booster/_ide/bootimage/BOOT.bin" key="SW_Base_Booster_system-imgFile"/>
+	<item value="C:/Users/fuent/Desktop/Sep-repository-2/Avancefinal/HW_Base_Booster/export/HW_Base_Booster/sw/HW_Base_Booster/boot/BOOT.bin " key="SW_Base_Booster_system-imgFile"/>
 	<item value="" key="SW_Base_Booster-offSet"/>
 	<item value="" key="SW_Base_Booster_system-offSet"/>
 	<item value="false" key="SW_Base_Booster-blankCheck"/>

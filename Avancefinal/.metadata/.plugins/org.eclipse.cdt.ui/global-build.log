@@ -1,6 +1,7 @@
-Nothing to build in platform 'HW_Base_Booster'
-
-15:36:02 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
+20:00:24 **** Incremental Build of project HW_Base_Booster ****
+buildplatform.bat 49163 HW_Base_Booster no_domain_build 
+XSDB Server Channel: tcfchan#6
+20:00:30 **** Incremental Build of configuration Debug for project SW_Base_Booster ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step

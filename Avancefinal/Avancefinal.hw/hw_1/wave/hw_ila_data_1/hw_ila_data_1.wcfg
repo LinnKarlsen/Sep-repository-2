@@ -9,25 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="494fs"></ZoomStartTime>
-      <ZoomEndTime time="554fs"></ZoomEndTime>
-      <Cursor1Time time="513fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="5328fs"></ZoomEndTime>
+      <Cursor1Time time="200fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="388"></NameColumnWidth>
-      <ValueColumnWidth column_width="189"></ValueColumnWidth>
+      <ValueColumnWidth column_width="169"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="4" />
-   <wave_markers>
-   </wave_markers>
-   <wvobject fp_name="DEMO_i/ps7_0_axi_periph_M04_AXI_AWADDR" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">DEMO_i/ps7_0_axi_periph_M04_AXI_AWADDR[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ps7_0_axi_periph_M04_AXI_AWADDR[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
+   <WVObjectSize size="7" />
    <wvobject fp_name="DEMO_i/ps7_0_axi_periph_M04_AXI_AWVALID" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">DEMO_i/ps7_0_axi_periph_M04_AXI_AWVALID</obj_property>
@@ -47,6 +37,36 @@
       <obj_property name="ElementShortName">DEMO_i/ps7_0_axi_periph_M04_AXI_WDATA[31:0]</obj_property>
       <obj_property name="ObjectShortName">ps7_0_axi_periph_M04_AXI_WDATA[31:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="DEMO_i/ps7_0_axi_periph_M04_AXI_RDATA" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">DEMO_i/ps7_0_axi_periph_M04_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ps7_0_axi_periph_M04_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="DEMO_i/ps7_0_axi_periph_M04_AXI_AWADDR" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">DEMO_i/ps7_0_axi_periph_M04_AXI_AWADDR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ps7_0_axi_periph_M04_AXI_AWADDR[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="DEMO_i/ps7_0_axi_periph_M04_AXI_ARREADY" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">DEMO_i/ps7_0_axi_periph_M04_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">ps7_0_axi_periph_M04_AXI_ARREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="DEMO_i/ps7_0_axi_periph_M04_AXI_ARVALID" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">DEMO_i/ps7_0_axi_periph_M04_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">ps7_0_axi_periph_M04_AXI_ARVALID</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

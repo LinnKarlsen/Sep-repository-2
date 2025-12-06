@@ -1,2 +1,6 @@
-Nothing to build in platform 'HW_Base_Booster'
+20:00:24 **** Incremental Build of project HW_Base_Booster ****
+buildplatform.bat 49163 HW_Base_Booster no_domain_build 
+XSDB Server Channel: tcfchan#6
+
+20:00:29 Build Finished (took 5s.185ms)
 
