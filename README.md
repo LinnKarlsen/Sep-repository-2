@@ -1,4 +1,6 @@
-<img width="900" height="479" alt="arrows" src="https://github.com/user-attachments/assets/b23b38ca-a680-4dd9-8650-e304c9c9f9bf" />
+<img width="1400" height="700" alt="image" src="https://github.com/user-attachments/assets/303f4f0f-0308-4c0f-a48e-57bab5efcee2" />
+
+Image: Original DanceDance Revolution Videogame, from which we drew inspiration.
 
 # DanceDance Revolution Inspired Videogame implemented on a Zybo Z7 System on Chip (SoC) Development Board
 
